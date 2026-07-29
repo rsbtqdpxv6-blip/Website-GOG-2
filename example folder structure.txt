@@ -1,0 +1,28 @@
+my-retro-arcade/
+├── index.html          <-- Clean structural markup
+├── app.js              <-- Application state & geometry runtime
+├── library.json        <-- Generated game list configuration
+├── style.scss          <-- Sassy stylesheet source
+├── style.css           <-- Compiled stylesheet linked in HTML
+├── generate_library.py <-- Run this tool to update library.json
+└── assets/
+    ├── icons/
+    │   ├── snes.png            <-- Transparent PNG logo (350x200)
+    │   ├── gba.png             <-- Transparent PNG logo (350x200)
+    │   ├── default_system.png  <-- Fallback transparent template
+    │   └── default_boxart.png  <-- Fallback box art template
+    ├── backgrounds/
+    │   ├── snes.jpg            <-- Fullscreen backdrop for Super Nintendo
+    │   └── gba.jpg             <-- Fullscreen backdrop for Game Boy Advance
+    └── roms/
+        ├── snes/
+        │   ├── Super Mario World.sfc
+        │   ├── Chrono Trigger.sfc
+        │   └── boxart/
+        │       ├── Super Mario World.png   <-- Game Box Art (300x400)
+        │       ├── Super Mario Worldf.jpg  <-- Optional Game Fanart (16:9)
+        │       └── Chrono Trigger.png      <-- Game Box Art (300x400)
+        └── gba/
+            ├── Sonic Advance.gba
+            └── boxart/
+                └── Sonic Advance.png       <-- Game Box Art (300x400)

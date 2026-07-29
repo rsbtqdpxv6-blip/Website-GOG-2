@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Wheel & Gamelist ES-DE Arcade</title>
+    <!-- Link to the compiled CSS generated from your style.scss file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Global Application Header -->
+    <header class="es-header">
+        <div class="system-title" id="system-display">Loading Wheel...</div>
+        <div class="counter-label" id="counter-display">0 / 0</div>
+    </header>
+
+    <!-- UI LAYER A: 3D Console Wheel Stage -->
+    <div class="wheel-stage" id="wheel-stage">
+        <div class="carousel-viewport" id="carousel-view">
+            <!-- Programmatically built via app.js -->
+        </div>
+    </div>
+
+    <!-- UI LAYER B: Dual Pane Game Selection Gamelist View -->
+    <div class="gamelist-view" id="gamelist-view">
+        <div class="list-sidebar">
+            <div class="scroll-list-container" id="game-titles-column">
+                <!-- Text choices populated via app.js -->
+            </div>
+        </div>
+        
+        <!-- Presentation Display Area: Portrait Boxart layered over 16:9 optional Fanart -->
+        <div class="preview-pane">
+            <div class="media-stack-box" id="game-fanart-box">
+                <div class="boxart-frame">
+                    <img id="game-boxart" src="assets/icons/default_boxart.png" alt="Game Cover">
+                </div>
+            </div>
+            <div class="game-meta">
+                <h2 id="game-title">Game Title</h2>
+            </div>
+        </div>
+    </div>
+
+    <!-- Help System Footer Displays -->
+    <footer class="es-footer">
+        <div class="control-hints" id="control-hints">◄ ► Select System • Enter to Open Menu</div>
+    </footer>
+
+    <!-- Fullscreen Emulator Engine Overlay Display Target Deck -->
+    <div id="emu-overlay" class="emu-overlay">
+        <button class="exit-btn" id="exit-game-btn">✕ QUIT GAME</button>
+        <!-- The structural sandbox frame that completely isolates and destroys the audio threads -->
+        <iframe id="emu-sandbox-frame" style="width: 100%; height: 100%; border: none; background: #000;"></iframe>
+    </div>
+
+    <!-- Script Layer Stack -->
+    <script src="emulator-launcher.js"></script>
+    <script src="html-launcher.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
