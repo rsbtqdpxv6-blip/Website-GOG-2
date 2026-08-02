@@ -25,7 +25,27 @@ CORE_MAP = {
     "ps1": "pcsx_rearmed",
     "n64": "mupen64plus_next",
     "flash": "ruffle",      
-    "html5": "native_html"  
+    "html5": "native_html",
+    "dos": "dosbox",         # Maps straight to your local EmulatorJS DosBox core setup
+    "secret": "dynamic"      # Dynamic core assignment handled per file below
+}
+
+# Auto-detect engine selection for files inside your custom Secret Favorites folder
+EXTENSION_CORE_MAP = {
+    ".nes": "fceumm",
+    ".sfc": "snes9x",
+    ".smc": "snes9x",
+    ".gba": "mgba",
+    ".gbc": "gambatte",
+    ".gb": "gambatte",
+    ".md": "genesis_plus_gx",
+    ".smd": "genesis_plus_gx",
+    ".gen": "genesis_plus_gx",
+    ".bin": "genesis_plus_gx",
+    ".z64": "mupen64plus_next",
+    ".exe": "dosbox",        # Automatically routes loose .exe entries inside Secret to DosBox
+    ".swf": "ruffle",
+    ".wad": "prboom"        # Automatically routes loose .wad entries inside Secret to HTML5
 }
 
 TITLE_MAP = {
@@ -39,7 +59,10 @@ TITLE_MAP = {
     "ps1": "Sony PlayStation",
     "n64": "Nintendo 64",
     "flash": "Adobe Flash Player",
-    "html5": "HTML5 Web Games"
+    "html5": "HTML5 Web Games",
+    "dos": "MS-DOS Classic PC Games",
+    "doom": "Doom",
+    "secret": "My Secret Favorites"
 }
 
 def clean_display_title(filename):
@@ -51,15 +74,11 @@ def clean_display_title(filename):
 def tokenize(text):
     """Reduces a title down to a clean list of lower-case alphanumeric words."""
     cleaned = re.sub(r'\[.*?\]|\(.*?\)', '', text).lower()
-    # Replace common punctuation and separators with a clean space
     cleaned = re.sub(r'[^a-z0-9\s]', ' ', cleaned)
     return [word for word in cleaned.split() if word]
 
 def find_progressive_boxart_match(rom_filename, boxart_files):
-    """
-    Scans through a list of local boxart files and performs a word-by-word
-    progressive check to find the absolute closest match.
-    """
+    """Scans local boxart files and performs progressive word-by-word matching."""
     rom_tokens = tokenize(rom_filename)
     if not rom_tokens:
         return None
@@ -73,7 +92,6 @@ def find_progressive_boxart_match(rom_filename, boxart_files):
         if not box_tokens:
             continue
 
-        # Find how many sequential words match perfectly from the beginning
         current_match_count = 0
         min_length = min(len(rom_tokens), len(box_tokens))
         
@@ -81,15 +99,12 @@ def find_progressive_boxart_match(rom_filename, boxart_files):
             if rom_tokens[i] == box_tokens[i]:
                 current_match_count += 1
             else:
-                break  # Stop checking as soon as a sequential word deviates
+                break 
 
-        # Enforce your rule: Must match at least the first 2 words to qualify
         if current_match_count >= 2:
-            # If this matches more sequential words than our previous best, lock it in!
             if current_match_count > max_matching_words:
                 max_matching_words = current_match_count
                 best_match = boxart_file
-            # Tiebreaker: If they match the exact same number of words, choose the one closer in total word count
             elif current_match_count == max_matching_words and best_match:
                 if abs(len(rom_tokens) - len(box_tokens)) < abs(len(rom_tokens) - len(tokenize(best_match))):
                     best_match = boxart_file
@@ -123,43 +138,51 @@ def generate_arcade_json():
             boxart_dir = os.path.join(system_path, BOXART_DIR_NAME)
             os.makedirs(boxart_dir, exist_ok=True)
             
-            # Read all available image files inside your local boxart pack folder
             available_art_files = []
             if os.path.exists(boxart_dir):
                 available_art_files = [f for f in os.listdir(boxart_dir) if f.lower().endswith(('.png', '.jpg', '.jpeg'))]
 
-            # --- HTML5 SCAN TARGETS ---
-            if system_slug == "html5":
+            # --- TARGET A: LOOSE FOLDER WEB SYSTEMS SCANS (HTML5 & DOS ENGINE FOLDERS) ---
+            if system_slug in ["html5", "dos"]:
                 for game_folder in sorted(os.listdir(system_path)):
                     game_folder_path = os.path.join(system_path, game_folder)
                     if os.path.isdir(game_folder_path) and game_folder != BOXART_DIR_NAME:
                         boxart_path = f"{ASSETS_DIR_NAME}/{ROMS_DIR_NAME}/{system_folder}/{BOXART_DIR_NAME}/{game_folder}.png"
                         
+                        # Find the core launcher executable for local DOS folders
+                        launch_target = "index.html"
+                        if system_slug == "dos":
+                            # Default scanner finds the first .exe file inside the game's folder
+                            executables = [f for f in os.listdir(game_folder_path) if f.lower().endswith('.exe')]
+                            launch_target = executables[0] if executables else "DOSBOX.EXE"
+
                         game_entry = {
-                            "id": f"html5_{game_folder.lower()}",
+                            "id": f"{system_slug}_{game_folder.lower()}",
                             "title": game_folder.replace('-', ' ').replace('_', ' ').title(),
-                            "core": "native_html",
+                            "core": system_core,
                             "boxart": boxart_path if os.path.exists(os.path.join(boxart_dir, f"{game_folder}.png")) else DEFAULT_BOXART,
-                            "rom_path": f"{ASSETS_DIR_NAME}/{ROMS_DIR_NAME}/{system_folder}/{game_folder}/index.html"
+                            "rom_path": f"{ASSETS_DIR_NAME}/{ROMS_DIR_NAME}/{system_folder}/{game_folder}/{launch_target}"
                         }
                         console_node["games"].append(game_entry)
             
-            # --- CONSOLE ROM SYSTEM INDEX GENERATOR ---
+            # --- TARGET B: CONSOLE ROMS, FLASH, & MIXED SECRET FAVORITES SCANS ---
             else:
                 for file in sorted(os.listdir(system_path)):
                     file_path = os.path.join(system_path, file)
                     if os.path.isfile(file_path) and not file.startswith('.'):
-                        raw_game_title, _ = os.path.splitext(file)
+                        raw_game_title, ext = os.path.splitext(file)
                         clean_title = clean_display_title(file)
                         
-                        # Step A: Check for an exact matching filename cover
+                        # Handle multi-core dynamic allocation inside your Secret Favorites tab folder
+                        resolved_core = system_core
+                        if system_slug == "secret":
+                            resolved_core = EXTENSION_CORE_MAP.get(ext.lower(), "snes9x")
+
                         boxart_filename = f"{raw_game_title}.png"
                         local_boxart_path = f"{ASSETS_DIR_NAME}/{ROMS_DIR_NAME}/{system_folder}/{BOXART_DIR_NAME}/{boxart_filename}"
                         
-                        # Step B: If exact file name isn't found, execute the progressive word-matching scanner
                         if not os.path.exists(os.path.join(boxart_dir, boxart_filename)):
                             matched_art_file = find_progressive_boxart_match(raw_game_title, available_art_files)
-                            
                             if matched_art_file:
                                 local_boxart_path = f"{ASSETS_DIR_NAME}/{ROMS_DIR_NAME}/{system_folder}/{BOXART_DIR_NAME}/{matched_art_file}"
                             else:
@@ -168,14 +191,13 @@ def generate_arcade_json():
                         game_entry = {
                             "id": f"{system_slug}_{raw_game_title.lower().replace(' ', '_').replace('-', '_')}",
                             "title": clean_title,
-                            "core": console_node["core"],
+                            "core": resolved_core,
                             "boxart": local_boxart_path,
                             "rom_path": f"{ASSETS_DIR_NAME}/{ROMS_DIR_NAME}/{system_folder}/{file}"
                         }
                         
-                        # Optional game backdrop menu fanart detector
-                        for ext in SUPPORTED_EXTS:
-                            fanart_file = f"{raw_game_title}{FANART_SUFFIX}{ext}"
+                        for ext_img in SUPPORTED_EXTS:
+                            fanart_file = f"{raw_game_title}{FANART_SUFFIX}{ext_img}"
                             if os.path.exists(os.path.join(boxart_dir, fanart_file)):
                                 game_entry["fanart"] = f"{ASSETS_DIR_NAME}/{ROMS_DIR_NAME}/{system_folder}/{BOXART_DIR_NAME}/{fanart_file}"
                                 break 
@@ -184,11 +206,11 @@ def generate_arcade_json():
             
             if len(console_node["games"]) > 0: 
                 library.append(console_node)
-                print(f"✅ Indexed System: {system_title} -> Linked {len(console_node['games'])} games with local art pack.")
+                print(f"✅ Indexed System: {system_title} -> Linked {len(console_node['games'])} games.")
 
     with open(os.path.join(root_dir, "library.json"), "w", encoding="utf-8") as f:
         json.dump(library, f, indent=2, ensure_ascii=False)
-    print("\n🎉 Done! All local titles and your boxart pack are synced into library.json!")
+    print("\n🎉 Done! All local titles, DOS folders, and mixed Secret Cores compiled successfully!")
 
 if __name__ == "__main__":
     generate_arcade_json()

@@ -51,8 +51,17 @@
     <!-- Fullscreen Emulator Engine Overlay Display Target Deck -->
     <div id="emu-overlay" class="emu-overlay">
         <button class="exit-btn" id="exit-game-btn">✕ QUIT GAME</button>
-        <!-- The structural sandbox frame that completely isolates and destroys the audio threads -->
-        <iframe id="emu-sandbox-frame" style="width: 100%; height: 100%; border: none; background: #000;"></iframe>
+        
+        <!-- ============================================================================== -->
+        <!--            THE UNBREAKABLE DIRECT FILE SYSTEM PORT PASS-THROUGH               -->
+        <!-- ============================================================================== -->
+        <iframe id="emu-sandbox-frame" 
+                style="width: 100%; height: 100%; border: none; background: #000; display: block;" 
+                allow="cross-origin-isolated; autoplay; gamepad; clipboard-read; clipboard-write" 
+                sandbox="allow-scripts allow-same-origin allow-forms allow-pointer-lock"
+                src="about:blank">
+        </iframe>
+        <!-- ============================================================================== -->
     </div>
 
     <!-- Script Layer Stack -->

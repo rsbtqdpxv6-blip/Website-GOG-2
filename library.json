@@ -1,5 +1,19 @@
 [
   {
+    "system": "doom",
+    "title": "Doom",
+    "core": "doom",
+    "games": [
+      {
+        "id": "doom_doom_1",
+        "title": "Doom 1",
+        "core": "doom",
+        "boxart": "assets/roms/doom/boxart/Doom 1.png",
+        "rom_path": "assets/roms/doom/Doom 1.wad"
+      }
+    ]
+  },
+  {
     "system": "flash",
     "title": "Adobe Flash Player",
     "core": "ruffle",
@@ -17,6 +31,342 @@
         "core": "ruffle",
         "boxart": "assets/roms/flash/boxart/A Koopa's Revenge.png",
         "rom_path": "assets/roms/flash/A Koopa's Revenge.swf"
+      }
+    ]
+  },
+  {
+    "system": "html5",
+    "title": "HTML5 Web Games",
+    "core": "native_html",
+    "games": [
+      {
+        "id": "html5_eaglercraft",
+        "title": "Eaglercraft",
+        "core": "native_html",
+        "boxart": "assets/roms/html5/boxart/Eaglercraft.png",
+        "rom_path": "assets/roms/html5/Eaglercraft/index.html"
+      },
+      {
+        "id": "html5_five nights at freddy's",
+        "title": "Five Nights At Freddy'S",
+        "core": "native_html",
+        "boxart": "assets/roms/html5/boxart/Five Nights at Freddy's.png",
+        "rom_path": "assets/roms/html5/Five Nights at Freddy's/index.html"
+      },
+      {
+        "id": "html5_super mario 63",
+        "title": "Super Mario 63",
+        "core": "native_html",
+        "boxart": "assets/roms/html5/boxart/Super Mario 63.png",
+        "rom_path": "assets/roms/html5/Super Mario 63/index.html"
+      },
+      {
+        "id": "html5_super mario 64",
+        "title": "Super Mario 64",
+        "core": "native_html",
+        "boxart": "assets/roms/html5/boxart/Super Mario 64.png",
+        "rom_path": "assets/roms/html5/Super Mario 64/index.html"
+      }
+    ]
+  },
+  {
+    "system": "n64",
+    "title": "Nintendo 64",
+    "core": "mupen64plus_next",
+    "games": [
+      {
+        "id": "n64_007___the_world_is_not_enough_(usa)",
+        "title": "007 - The World Is Not Enough",
+        "core": "mupen64plus_next",
+        "boxart": "assets/roms/n64/boxart/007_ The World Is Not Enough-01.png",
+        "rom_path": "assets/roms/n64/007 - The World Is Not Enough (USA).z64"
+      },
+      {
+        "id": "n64_banjo_kazooie_(usa)_(rev_1)",
+        "title": "Banjo-Kazooie",
+        "core": "mupen64plus_next",
+        "boxart": "assets/roms/n64/boxart/Banjo-Kazooie-01.png",
+        "rom_path": "assets/roms/n64/Banjo-Kazooie (USA) (Rev 1).z64"
+      },
+      {
+        "id": "n64_banjo_tooie_(usa)",
+        "title": "Banjo-Tooie",
+        "core": "mupen64plus_next",
+        "boxart": "assets/roms/n64/boxart/Banjo-Tooie-01.png",
+        "rom_path": "assets/roms/n64/Banjo-Tooie (USA).z64"
+      },
+      {
+        "id": "n64_blast_corps_(usa)_(rev_1)",
+        "title": "Blast Corps",
+        "core": "mupen64plus_next",
+        "boxart": "assets/roms/n64/boxart/Blast Corps-01.png",
+        "rom_path": "assets/roms/n64/Blast Corps (USA) (Rev 1).z64"
+      },
+      {
+        "id": "n64_body_harvest_(usa)",
+        "title": "Body Harvest",
+        "core": "mupen64plus_next",
+        "boxart": "assets/roms/n64/boxart/Body Harvest-01.png",
+        "rom_path": "assets/roms/n64/Body Harvest (USA).z64"
+      },
+      {
+        "id": "n64_bomberman_64_(usa)",
+        "title": "Bomberman 64",
+        "core": "mupen64plus_next",
+        "boxart": "assets/roms/n64/boxart/Bomberman 64-01.png",
+        "rom_path": "assets/roms/n64/Bomberman 64 (USA).z64"
+      },
+      {
+        "id": "n64_castlevania_(usa)_(rev_2)",
+        "title": "Castlevania",
+        "core": "mupen64plus_next",
+        "boxart": "assets/icons/default_boxart.png",
+        "rom_path": "assets/roms/n64/Castlevania (USA) (Rev 2).z64"
+      },
+      {
+        "id": "n64_castlevania___legacy_of_darkness_(usa)",
+        "title": "Castlevania - Legacy of Darkness",
+        "core": "mupen64plus_next",
+        "boxart": "assets/roms/n64/boxart/Castlevania_ Legacy of Darkness-01.png",
+        "rom_path": "assets/roms/n64/Castlevania - Legacy of Darkness (USA).z64"
+      },
+      {
+        "id": "n64_diddy_kong_racing_(usa)_(en,fr)_(rev_1)",
+        "title": "Diddy Kong Racing",
+        "core": "mupen64plus_next",
+        "boxart": "assets/roms/n64/boxart/Diddy Kong Racing-01.png",
+        "rom_path": "assets/roms/n64/Diddy Kong Racing (USA) (En,Fr) (Rev 1).z64"
+      },
+      {
+        "id": "n64_donkey_kong_64_(usa)",
+        "title": "Donkey Kong 64",
+        "core": "mupen64plus_next",
+        "boxart": "assets/roms/n64/boxart/Donkey Kong 64-01.png",
+        "rom_path": "assets/roms/n64/Donkey Kong 64 (USA).z64"
+      },
+      {
+        "id": "n64_excitebike_64_(usa)_(rev_1)",
+        "title": "Excitebike 64",
+        "core": "mupen64plus_next",
+        "boxart": "assets/roms/n64/boxart/Excitebike 64-01.png",
+        "rom_path": "assets/roms/n64/Excitebike 64 (USA) (Rev 1).z64"
+      },
+      {
+        "id": "n64_f_zero_x_(usa)",
+        "title": "F-Zero X",
+        "core": "mupen64plus_next",
+        "boxart": "assets/roms/n64/boxart/F-Zero X-01.png",
+        "rom_path": "assets/roms/n64/F-Zero X (USA).z64"
+      },
+      {
+        "id": "n64_goldeneye_007_(usa)",
+        "title": "GoldenEye 007",
+        "core": "mupen64plus_next",
+        "boxart": "assets/roms/n64/boxart/GoldenEye 007-01.png",
+        "rom_path": "assets/roms/n64/GoldenEye 007 (USA).z64"
+      },
+      {
+        "id": "n64_harvest_moon_64_(usa)",
+        "title": "Harvest Moon 64",
+        "core": "mupen64plus_next",
+        "boxart": "assets/roms/n64/boxart/Harvest Moon 64-01.png",
+        "rom_path": "assets/roms/n64/Harvest Moon 64 (USA).z64"
+      },
+      {
+        "id": "n64_indiana_jones_and_the_infernal_machine_(usa)",
+        "title": "Indiana Jones and the Infernal Machine",
+        "core": "mupen64plus_next",
+        "boxart": "assets/roms/n64/boxart/Indiana Jones and the Infernal Machine-01.png",
+        "rom_path": "assets/roms/n64/Indiana Jones and the Infernal Machine (USA).z64"
+      },
+      {
+        "id": "n64_kirby_64___the_crystal_shards_(usa)",
+        "title": "Kirby 64 - The Crystal Shards",
+        "core": "mupen64plus_next",
+        "boxart": "assets/roms/n64/boxart/Kirby 64_ The Crystal Shards-01.png",
+        "rom_path": "assets/roms/n64/Kirby 64 - The Crystal Shards (USA).z64"
+      },
+      {
+        "id": "n64_legend_of_zelda,_the___majora's_mask_(usa)",
+        "title": "Legend of Zelda, The - Majora's Mask",
+        "core": "mupen64plus_next",
+        "boxart": "assets/icons/default_boxart.png",
+        "rom_path": "assets/roms/n64/Legend of Zelda, The - Majora's Mask (USA).z64"
+      },
+      {
+        "id": "n64_mario_golf_(usa)",
+        "title": "Mario Golf",
+        "core": "mupen64plus_next",
+        "boxart": "assets/roms/n64/boxart/Mario Golf-01.png",
+        "rom_path": "assets/roms/n64/Mario Golf (USA).z64"
+      },
+      {
+        "id": "n64_mario_kart_64_(usa)",
+        "title": "Mario Kart 64",
+        "core": "mupen64plus_next",
+        "boxart": "assets/roms/n64/boxart/Mario Kart 64-01.png",
+        "rom_path": "assets/roms/n64/Mario Kart 64 (USA).z64"
+      },
+      {
+        "id": "n64_mario_party_(usa)",
+        "title": "Mario Party",
+        "core": "mupen64plus_next",
+        "boxart": "assets/roms/n64/boxart/Mario Party-01.png",
+        "rom_path": "assets/roms/n64/Mario Party (USA).z64"
+      },
+      {
+        "id": "n64_mario_party_2_(usa)",
+        "title": "Mario Party 2",
+        "core": "mupen64plus_next",
+        "boxart": "assets/roms/n64/boxart/Mario Party 2-01.png",
+        "rom_path": "assets/roms/n64/Mario Party 2 (USA).z64"
+      },
+      {
+        "id": "n64_mario_party_3_(usa)",
+        "title": "Mario Party 3",
+        "core": "mupen64plus_next",
+        "boxart": "assets/roms/n64/boxart/Mario Party 3-01.png",
+        "rom_path": "assets/roms/n64/Mario Party 3 (USA).z64"
+      },
+      {
+        "id": "n64_mario_tennis_(usa)",
+        "title": "Mario Tennis",
+        "core": "mupen64plus_next",
+        "boxart": "assets/roms/n64/boxart/Mario Tennis-01.png",
+        "rom_path": "assets/roms/n64/Mario Tennis (USA).z64"
+      },
+      {
+        "id": "n64_mega_man_64_(usa)",
+        "title": "Mega Man 64",
+        "core": "mupen64plus_next",
+        "boxart": "assets/roms/n64/boxart/Mega Man 64-01.png",
+        "rom_path": "assets/roms/n64/Mega Man 64 (USA).z64"
+      },
+      {
+        "id": "n64_mystical_ninja_starring_goemon_(usa)",
+        "title": "Mystical Ninja Starring Goemon",
+        "core": "mupen64plus_next",
+        "boxart": "assets/roms/n64/boxart/Mystical Ninja Starring Goemon-01.png",
+        "rom_path": "assets/roms/n64/Mystical Ninja Starring Goemon (USA).z64"
+      },
+      {
+        "id": "n64_paper_mario_(usa)",
+        "title": "Paper Mario",
+        "core": "mupen64plus_next",
+        "boxart": "assets/roms/n64/boxart/Paper Mario-01.png",
+        "rom_path": "assets/roms/n64/Paper Mario (USA).z64"
+      },
+      {
+        "id": "n64_perfect_dark_(usa)_(rev_1)",
+        "title": "Perfect Dark",
+        "core": "mupen64plus_next",
+        "boxart": "assets/roms/n64/boxart/Perfect Dark-01.png",
+        "rom_path": "assets/roms/n64/Perfect Dark (USA) (Rev 1).z64"
+      },
+      {
+        "id": "n64_pokemon_snap_(usa)",
+        "title": "Pokemon Snap",
+        "core": "mupen64plus_next",
+        "boxart": "assets/roms/n64/boxart/Pokemon Snap-01.png",
+        "rom_path": "assets/roms/n64/Pokemon Snap (USA).z64"
+      },
+      {
+        "id": "n64_pokemon_stadium_(usa)_(rev_2)",
+        "title": "Pokemon Stadium",
+        "core": "mupen64plus_next",
+        "boxart": "assets/roms/n64/boxart/Pokemon Stadium-01.png",
+        "rom_path": "assets/roms/n64/Pokemon Stadium (USA) (Rev 2).z64"
+      },
+      {
+        "id": "n64_pokemon_stadium_2_(usa)",
+        "title": "Pokemon Stadium 2",
+        "core": "mupen64plus_next",
+        "boxart": "assets/roms/n64/boxart/Pokemon Stadium 2-01.png",
+        "rom_path": "assets/roms/n64/Pokemon Stadium 2 (USA).z64"
+      },
+      {
+        "id": "n64_rayman_2___the_great_escape_(usa)_(en,fr,de,es,it)",
+        "title": "Rayman 2 - The Great Escape",
+        "core": "mupen64plus_next",
+        "boxart": "assets/roms/n64/boxart/Rayman 2_ The Great Escape-01.png",
+        "rom_path": "assets/roms/n64/Rayman 2 - The Great Escape (USA) (En,Fr,De,Es,It).z64"
+      },
+      {
+        "id": "n64_snowboard_kids_(usa)",
+        "title": "Snowboard Kids",
+        "core": "mupen64plus_next",
+        "boxart": "assets/roms/n64/boxart/Snowboard Kids-01.png",
+        "rom_path": "assets/roms/n64/Snowboard Kids (USA).z64"
+      },
+      {
+        "id": "n64_snowboard_kids_2_(usa)",
+        "title": "Snowboard Kids 2",
+        "core": "mupen64plus_next",
+        "boxart": "assets/roms/n64/boxart/Snowboard Kids 2-01.png",
+        "rom_path": "assets/roms/n64/Snowboard Kids 2 (USA).z64"
+      },
+      {
+        "id": "n64_star_fox_64_(usa)_(rev_1)",
+        "title": "Star Fox 64",
+        "core": "mupen64plus_next",
+        "boxart": "assets/roms/n64/boxart/Star Fox 64-01.png",
+        "rom_path": "assets/roms/n64/Star Fox 64 (USA) (Rev 1).z64"
+      },
+      {
+        "id": "n64_star_wars___rogue_squadron_(usa)_(rev_1)",
+        "title": "Star Wars - Rogue Squadron",
+        "core": "mupen64plus_next",
+        "boxart": "assets/roms/n64/boxart/Star Wars_ Rogue Squadron-01.png",
+        "rom_path": "assets/roms/n64/Star Wars - Rogue Squadron (USA) (Rev 1).z64"
+      },
+      {
+        "id": "n64_star_wars___shadows_of_the_empire_(usa)_(rev_2)",
+        "title": "Star Wars - Shadows of the Empire",
+        "core": "mupen64plus_next",
+        "boxart": "assets/roms/n64/boxart/Star Wars_ Shadows of the Empire-01.png",
+        "rom_path": "assets/roms/n64/Star Wars - Shadows of the Empire (USA) (Rev 2).z64"
+      },
+      {
+        "id": "n64_star_wars_episode_i___battle_for_naboo_(usa)",
+        "title": "Star Wars Episode I - Battle for Naboo",
+        "core": "mupen64plus_next",
+        "boxart": "assets/roms/n64/boxart/Star Wars_ Episode I_ Battle for Naboo-01.png",
+        "rom_path": "assets/roms/n64/Star Wars Episode I - Battle for Naboo (USA).z64"
+      },
+      {
+        "id": "n64_star_wars_episode_i___racer_(usa)",
+        "title": "Star Wars Episode I - Racer",
+        "core": "mupen64plus_next",
+        "boxart": "assets/roms/n64/boxart/Star Wars Episode I_  Racer-01.png",
+        "rom_path": "assets/roms/n64/Star Wars Episode I - Racer (USA).z64"
+      },
+      {
+        "id": "n64_super_mario_64_(usa)",
+        "title": "Super Mario 64",
+        "core": "mupen64plus_next",
+        "boxart": "assets/roms/n64/boxart/Super Mario 64-01.png",
+        "rom_path": "assets/roms/n64/Super Mario 64 (USA).z64"
+      },
+      {
+        "id": "n64_super_smash_bros._(usa)",
+        "title": "Super Smash Bros.",
+        "core": "mupen64plus_next",
+        "boxart": "assets/roms/n64/boxart/Super Smash Bros.-01.png",
+        "rom_path": "assets/roms/n64/Super Smash Bros. (USA).z64"
+      },
+      {
+        "id": "n64_the_legend_of_zelda_ocarina_of_time_(usa)_(rev_2)",
+        "title": "The Legend of Zelda Ocarina of Time",
+        "core": "mupen64plus_next",
+        "boxart": "assets/roms/n64/boxart/The Legend of Zelda_ Ocarina of Time-01.png",
+        "rom_path": "assets/roms/n64/The Legend of Zelda Ocarina of Time (USA) (Rev 2).z64"
+      },
+      {
+        "id": "n64_yoshi's_story_(usa)_(en,ja)",
+        "title": "Yoshi's Story",
+        "core": "mupen64plus_next",
+        "boxart": "assets/roms/n64/boxart/Yoshi_s Story-01.png",
+        "rom_path": "assets/roms/n64/Yoshi's Story (USA) (En,Ja).z64"
       }
     ]
   },
@@ -456,7 +806,7 @@
         "id": "nes_metal_storm_(usa)",
         "title": "Metal Storm",
         "core": "fceumm",
-        "boxart": "assets/icons/default_boxart.png",
+        "boxart": "assets/roms/nes/boxart/Metal Storm (USA).png",
         "rom_path": "assets/roms/nes/Metal Storm (USA).nes"
       },
       {
@@ -505,7 +855,7 @@
         "id": "nes_popeye_(world)_(rev_1)",
         "title": "Popeye",
         "core": "fceumm",
-        "boxart": "assets/icons/default_boxart.png",
+        "boxart": "assets/roms/nes/boxart/Popeye (World) (Rev 1).png",
         "rom_path": "assets/roms/nes/Popeye (World) (Rev 1).nes"
       },
       {
@@ -593,13 +943,6 @@
         "rom_path": "assets/roms/nes/Skate or Die 2 - The Search for Double Trouble (USA).nes"
       },
       {
-        "id": "nes_splatterhouse___wanpaku_graffiti_(world)_(namcot_collection,_namco_museum_archives_vol_1)",
-        "title": "Splatterhouse - Wanpaku Graffiti",
-        "core": "fceumm",
-        "boxart": "assets/icons/default_boxart.png",
-        "rom_path": "assets/roms/nes/Splatterhouse - Wanpaku Graffiti (World) (Namcot Collection, Namco Museum Archives Vol 1).nes"
-      },
-      {
         "id": "nes_spy_hunter_(usa)",
         "title": "Spy Hunter",
         "core": "fceumm",
@@ -659,14 +1002,14 @@
         "id": "nes_the_guardian_legend_(usa)",
         "title": "The Guardian Legend",
         "core": "fceumm",
-        "boxart": "assets/icons/default_boxart.png",
+        "boxart": "assets/roms/nes/boxart/The Guardian Legend (USA).png",
         "rom_path": "assets/roms/nes/The Guardian Legend (USA).nes"
       },
       {
         "id": "nes_the_legend_of_zelda_(usa)_(collector's_edition)",
         "title": "The Legend of Zelda",
         "core": "fceumm",
-        "boxart": "assets/icons/default_boxart.png",
+        "boxart": "assets/roms/nes/boxart/The Legend of Zelda (USA) (Collector's Edition).png",
         "rom_path": "assets/roms/nes/The Legend of Zelda (USA) (Collector's Edition).nes"
       },
       {
@@ -705,18 +1048,627 @@
     "core": "snes9x",
     "games": [
       {
-        "id": "snes_donkeykongcountry",
-        "title": "DonkeyKongCountry",
+        "id": "snes_actraiser_(usa)",
+        "title": "ActRaiser",
         "core": "snes9x",
-        "boxart": "assets/roms/snes/boxart/DonkeyKongCountry.png",
-        "rom_path": "assets/roms/snes/DonkeyKongCountry.sfc"
+        "boxart": "assets/roms/snes/boxart/ActRaiser (USA).png",
+        "rom_path": "assets/roms/snes/ActRaiser (USA).sfc"
       },
       {
-        "id": "snes_super_mario_world",
-        "title": "super-mario-world",
+        "id": "snes_actraiser_2_(usa)",
+        "title": "ActRaiser 2",
         "core": "snes9x",
-        "boxart": "assets/roms/snes/boxart/super-mario-world.png",
-        "rom_path": "assets/roms/snes/super-mario-world.sfc"
+        "boxart": "assets/roms/snes/boxart/ActRaiser 2 (USA).png",
+        "rom_path": "assets/roms/snes/ActRaiser 2 (USA).sfc"
+      },
+      {
+        "id": "snes_aladdin_(usa)",
+        "title": "Aladdin",
+        "core": "snes9x",
+        "boxart": "assets/roms/snes/boxart/Aladdin (USA).png",
+        "rom_path": "assets/roms/snes/Aladdin (USA).sfc"
+      },
+      {
+        "id": "snes_alien_3_(usa)",
+        "title": "Alien 3",
+        "core": "snes9x",
+        "boxart": "assets/roms/snes/boxart/Alien 3 (USA).png",
+        "rom_path": "assets/roms/snes/Alien 3 (USA).sfc"
+      },
+      {
+        "id": "snes_axelay_(usa)",
+        "title": "Axelay",
+        "core": "snes9x",
+        "boxart": "assets/roms/snes/boxart/Axelay (USA).png",
+        "rom_path": "assets/roms/snes/Axelay (USA).sfc"
+      },
+      {
+        "id": "snes_blackthorne_(usa)",
+        "title": "Blackthorne",
+        "core": "snes9x",
+        "boxart": "assets/roms/snes/boxart/Blackthorne (USA).png",
+        "rom_path": "assets/roms/snes/Blackthorne (USA).sfc"
+      },
+      {
+        "id": "snes_breath_of_fire_(usa)",
+        "title": "Breath of Fire",
+        "core": "snes9x",
+        "boxart": "assets/roms/snes/boxart/Breath of Fire (USA).png",
+        "rom_path": "assets/roms/snes/Breath of Fire (USA).sfc"
+      },
+      {
+        "id": "snes_breath_of_fire_ii_(usa)",
+        "title": "Breath of Fire II",
+        "core": "snes9x",
+        "boxart": "assets/roms/snes/boxart/Breath of Fire II (USA).png",
+        "rom_path": "assets/roms/snes/Breath of Fire II (USA).sfc"
+      },
+      {
+        "id": "snes_bust_a_move_(usa)",
+        "title": "Bust-A-Move",
+        "core": "snes9x",
+        "boxart": "assets/roms/snes/boxart/Bust-A-Move (USA).png",
+        "rom_path": "assets/roms/snes/Bust-A-Move (USA).sfc"
+      },
+      {
+        "id": "snes_chrono_trigger_(usa)",
+        "title": "Chrono Trigger",
+        "core": "snes9x",
+        "boxart": "assets/roms/snes/boxart/Chrono Trigger (USA).png",
+        "rom_path": "assets/roms/snes/Chrono Trigger (USA).sfc"
+      },
+      {
+        "id": "snes_contra_iii___the_alien_wars_(usa)",
+        "title": "Contra III - The Alien Wars",
+        "core": "snes9x",
+        "boxart": "assets/roms/snes/boxart/Contra III - The Alien Wars (USA).png",
+        "rom_path": "assets/roms/snes/Contra III - The Alien Wars (USA).sfc"
+      },
+      {
+        "id": "snes_demon's_crest_(usa)",
+        "title": "Demon's Crest",
+        "core": "snes9x",
+        "boxart": "assets/roms/snes/boxart/Demon_s Crest (USA).png",
+        "rom_path": "assets/roms/snes/Demon's Crest (USA).sfc"
+      },
+      {
+        "id": "snes_desert_strike___return_to_the_gulf_(usa)",
+        "title": "Desert Strike - Return to the Gulf",
+        "core": "snes9x",
+        "boxart": "assets/roms/snes/boxart/Desert Strike - Return to the Gulf (USA).png",
+        "rom_path": "assets/roms/snes/Desert Strike - Return to the Gulf (USA).sfc"
+      },
+      {
+        "id": "snes_donkey_kong_country_(usa)",
+        "title": "Donkey Kong Country",
+        "core": "snes9x",
+        "boxart": "assets/roms/snes/boxart/Donkey Kong Country (USA).png",
+        "rom_path": "assets/roms/snes/Donkey Kong Country (USA).sfc"
+      },
+      {
+        "id": "snes_donkey_kong_country_2___diddy's_kong_quest_(usa)_(en,fr)_(rev_1)",
+        "title": "Donkey Kong Country 2 - Diddy's Kong Quest",
+        "core": "snes9x",
+        "boxart": "assets/roms/snes/boxart/Donkey Kong Country 2 - Diddy_s Kong Quest (USA).png",
+        "rom_path": "assets/roms/snes/Donkey Kong Country 2 - Diddy's Kong Quest (USA) (En,Fr) (Rev 1).sfc"
+      },
+      {
+        "id": "snes_donkey_kong_country_3___dixie_kong's_double_trouble!_(usa)_(en,fr)",
+        "title": "Donkey Kong Country 3 - Dixie Kong's Double Trouble!",
+        "core": "snes9x",
+        "boxart": "assets/roms/snes/boxart/Donkey Kong Country 3 - Dixie Kong_s Double Trouble! (USA).png",
+        "rom_path": "assets/roms/snes/Donkey Kong Country 3 - Dixie Kong's Double Trouble! (USA) (En,Fr).sfc"
+      },
+      {
+        "id": "snes_doom_troopers___mutant_chronicles_(usa)",
+        "title": "Doom Troopers - Mutant Chronicles",
+        "core": "snes9x",
+        "boxart": "assets/roms/snes/boxart/Doom Troopers - Mutant Chronicles (USA).png",
+        "rom_path": "assets/roms/snes/Doom Troopers - Mutant Chronicles (USA).sfc"
+      },
+      {
+        "id": "snes_e.v.o.___search_for_eden_(usa)",
+        "title": "E.V.O. - Search for Eden",
+        "core": "snes9x",
+        "boxart": "assets/roms/snes/boxart/E.V.O. - Search for Eden (USA).png",
+        "rom_path": "assets/roms/snes/E.V.O. - Search for Eden (USA).sfc"
+      },
+      {
+        "id": "snes_earthbound_(usa)",
+        "title": "EarthBound",
+        "core": "snes9x",
+        "boxart": "assets/roms/snes/boxart/EarthBound (USA).png",
+        "rom_path": "assets/roms/snes/EarthBound (USA).sfc"
+      },
+      {
+        "id": "snes_earthworm_jim_(usa)",
+        "title": "Earthworm Jim",
+        "core": "snes9x",
+        "boxart": "assets/roms/snes/boxart/Earthworm Jim (USA).png",
+        "rom_path": "assets/roms/snes/Earthworm Jim (USA).sfc"
+      },
+      {
+        "id": "snes_earthworm_jim_2_(usa)",
+        "title": "Earthworm Jim 2",
+        "core": "snes9x",
+        "boxart": "assets/roms/snes/boxart/Earthworm Jim 2 (USA).png",
+        "rom_path": "assets/roms/snes/Earthworm Jim 2 (USA).sfc"
+      },
+      {
+        "id": "snes_f_zero_(usa)",
+        "title": "F-Zero",
+        "core": "snes9x",
+        "boxart": "assets/roms/snes/boxart/F-Zero (USA).png",
+        "rom_path": "assets/roms/snes/F-Zero (USA).sfc"
+      },
+      {
+        "id": "snes_final_fantasy_iii_(usa)_(rev_1)",
+        "title": "Final Fantasy III",
+        "core": "snes9x",
+        "boxart": "assets/roms/snes/boxart/Final Fantasy III (USA).png",
+        "rom_path": "assets/roms/snes/Final Fantasy III (USA) (Rev 1).sfc"
+      },
+      {
+        "id": "snes_final_fight_(usa)",
+        "title": "Final Fight",
+        "core": "snes9x",
+        "boxart": "assets/roms/snes/boxart/Final Fight (USA).png",
+        "rom_path": "assets/roms/snes/Final Fight (USA).sfc"
+      },
+      {
+        "id": "snes_flashback___the_quest_for_identity_(usa)_(en,fr,de)",
+        "title": "Flashback - The Quest for Identity",
+        "core": "snes9x",
+        "boxart": "assets/roms/snes/boxart/Flashback - The Quest for Identity (USA).png",
+        "rom_path": "assets/roms/snes/Flashback - The Quest for Identity (USA) (En,Fr,De).sfc"
+      },
+      {
+        "id": "snes_gradius_iii_(usa)",
+        "title": "Gradius III",
+        "core": "snes9x",
+        "boxart": "assets/roms/snes/boxart/Gradius III (USA).png",
+        "rom_path": "assets/roms/snes/Gradius III (USA).sfc"
+      },
+      {
+        "id": "snes_harvest_moon_(usa)",
+        "title": "Harvest Moon",
+        "core": "snes9x",
+        "boxart": "assets/roms/snes/boxart/Harvest Moon (USA).png",
+        "rom_path": "assets/roms/snes/Harvest Moon (USA).sfc"
+      },
+      {
+        "id": "snes_illusion_of_gaia_(usa)",
+        "title": "Illusion of Gaia",
+        "core": "snes9x",
+        "boxart": "assets/roms/snes/boxart/Illusion of Gaia (USA).png",
+        "rom_path": "assets/roms/snes/Illusion of Gaia (USA).sfc"
+      },
+      {
+        "id": "snes_international_superstar_soccer_(usa)",
+        "title": "International Superstar Soccer",
+        "core": "snes9x",
+        "boxart": "assets/roms/snes/boxart/International Superstar Soccer (USA).png",
+        "rom_path": "assets/roms/snes/International Superstar Soccer (USA).sfc"
+      },
+      {
+        "id": "snes_jungle_strike_(usa)",
+        "title": "Jungle Strike",
+        "core": "snes9x",
+        "boxart": "assets/roms/snes/boxart/Jungle Strike (USA).png",
+        "rom_path": "assets/roms/snes/Jungle Strike (USA).sfc"
+      },
+      {
+        "id": "snes_killer_instinct_(usa)_(rev_1)",
+        "title": "Killer Instinct",
+        "core": "snes9x",
+        "boxart": "assets/roms/snes/boxart/Killer Instinct (USA).png",
+        "rom_path": "assets/roms/snes/Killer Instinct (USA) (Rev 1).sfc"
+      },
+      {
+        "id": "snes_kirby_super_star_(usa)",
+        "title": "Kirby Super Star",
+        "core": "snes9x",
+        "boxart": "assets/roms/snes/boxart/Kirby Super Star (USA).png",
+        "rom_path": "assets/roms/snes/Kirby Super Star (USA).sfc"
+      },
+      {
+        "id": "snes_kirby's_avalanche_(usa)",
+        "title": "Kirby's Avalanche",
+        "core": "snes9x",
+        "boxart": "assets/roms/snes/boxart/Kirby_s Avalanche (USA).png",
+        "rom_path": "assets/roms/snes/Kirby's Avalanche (USA).sfc"
+      },
+      {
+        "id": "snes_kirby's_dream_course_(usa)",
+        "title": "Kirby's Dream Course",
+        "core": "snes9x",
+        "boxart": "assets/roms/snes/boxart/Kirby_s Dream Course (USA).png",
+        "rom_path": "assets/roms/snes/Kirby's Dream Course (USA).sfc"
+      },
+      {
+        "id": "snes_kirby's_dream_land_3_(usa)",
+        "title": "Kirby's Dream Land 3",
+        "core": "snes9x",
+        "boxart": "assets/roms/snes/boxart/Kirby_s Dream Land 3 (USA).png",
+        "rom_path": "assets/roms/snes/Kirby's Dream Land 3 (USA).sfc"
+      },
+      {
+        "id": "snes_lufia_ii___rise_of_the_sinistrals_(usa)",
+        "title": "Lufia II - Rise of the Sinistrals",
+        "core": "snes9x",
+        "boxart": "assets/roms/snes/boxart/Lufia II - Rise of the Sinistrals (USA).png",
+        "rom_path": "assets/roms/snes/Lufia II - Rise of the Sinistrals (USA).sfc"
+      },
+      {
+        "id": "snes_mega_man_x_(usa)_(rev_1)",
+        "title": "Mega Man X",
+        "core": "snes9x",
+        "boxart": "assets/roms/snes/boxart/Mega Man X (USA).png",
+        "rom_path": "assets/roms/snes/Mega Man X (USA) (Rev 1).sfc"
+      },
+      {
+        "id": "snes_mega_man_x2_(usa)",
+        "title": "Mega Man X2",
+        "core": "snes9x",
+        "boxart": "assets/roms/snes/boxart/Mega Man X2 (USA).png",
+        "rom_path": "assets/roms/snes/Mega Man X2 (USA).sfc"
+      },
+      {
+        "id": "snes_mega_man_x3_(usa)",
+        "title": "Mega Man X3",
+        "core": "snes9x",
+        "boxart": "assets/roms/snes/boxart/Mega Man X3 (USA).png",
+        "rom_path": "assets/roms/snes/Mega Man X3 (USA).sfc"
+      },
+      {
+        "id": "snes_metal_warriors_(usa)",
+        "title": "Metal Warriors",
+        "core": "snes9x",
+        "boxart": "assets/roms/snes/boxart/Metal Warriors (USA).png",
+        "rom_path": "assets/roms/snes/Metal Warriors (USA).sfc"
+      },
+      {
+        "id": "snes_mortal_kombat_ii_(usa)_(rev_1)",
+        "title": "Mortal Kombat II",
+        "core": "snes9x",
+        "boxart": "assets/roms/snes/boxart/Mortal Kombat (USA).png",
+        "rom_path": "assets/roms/snes/Mortal Kombat II (USA) (Rev 1).sfc"
+      },
+      {
+        "id": "snes_nba_jam_(usa)",
+        "title": "NBA Jam",
+        "core": "snes9x",
+        "boxart": "assets/roms/snes/boxart/NBA Jam (USA).png",
+        "rom_path": "assets/roms/snes/NBA Jam (USA).sfc"
+      },
+      {
+        "id": "snes_ogre_battle___the_march_of_the_black_queen_(usa)",
+        "title": "Ogre Battle - The March of the Black Queen",
+        "core": "snes9x",
+        "boxart": "assets/roms/snes/boxart/Ogre Battle - The March of the Black Queen (USA).png",
+        "rom_path": "assets/roms/snes/Ogre Battle - The March of the Black Queen (USA).sfc"
+      },
+      {
+        "id": "snes_out_of_this_world_(usa)",
+        "title": "Out of this World",
+        "core": "snes9x",
+        "boxart": "assets/roms/snes/boxart/Out of this World (USA).png",
+        "rom_path": "assets/roms/snes/Out of this World (USA).sfc"
+      },
+      {
+        "id": "snes_pilotwings_(usa)",
+        "title": "Pilotwings",
+        "core": "snes9x",
+        "boxart": "assets/roms/snes/boxart/Pilotwings (USA).png",
+        "rom_path": "assets/roms/snes/Pilotwings (USA).sfc"
+      },
+      {
+        "id": "snes_prince_of_persia_(usa)",
+        "title": "Prince of Persia",
+        "core": "snes9x",
+        "boxart": "assets/roms/snes/boxart/Prince of Persia (USA).png",
+        "rom_path": "assets/roms/snes/Prince of Persia (USA).sfc"
+      },
+      {
+        "id": "snes_r_type_iii_(usa)",
+        "title": "R-Type III",
+        "core": "snes9x",
+        "boxart": "assets/roms/snes/boxart/R-Type III (USA).png",
+        "rom_path": "assets/roms/snes/R-Type III (USA).sfc"
+      },
+      {
+        "id": "snes_rock_n'_roll_racing_(usa)",
+        "title": "Rock n' Roll Racing",
+        "core": "snes9x",
+        "boxart": "assets/roms/snes/boxart/Rock n_ Roll Racing (USA).png",
+        "rom_path": "assets/roms/snes/Rock n' Roll Racing (USA).sfc"
+      },
+      {
+        "id": "snes_secret_of_mana_(usa)",
+        "title": "Secret of Mana",
+        "core": "snes9x",
+        "boxart": "assets/roms/snes/boxart/Secret of Mana (USA).png",
+        "rom_path": "assets/roms/snes/Secret of Mana (USA).sfc"
+      },
+      {
+        "id": "snes_shadowrun_(usa)",
+        "title": "Shadowrun",
+        "core": "snes9x",
+        "boxart": "assets/roms/snes/boxart/Shadowrun (USA).png",
+        "rom_path": "assets/roms/snes/Shadowrun (USA).sfc"
+      },
+      {
+        "id": "snes_side_pocket_(usa)",
+        "title": "Side Pocket",
+        "core": "snes9x",
+        "boxart": "assets/roms/snes/boxart/Side Pocket (USA).png",
+        "rom_path": "assets/roms/snes/Side Pocket (USA).sfc"
+      },
+      {
+        "id": "snes_simpsons___bart's_nightmare_(usa)",
+        "title": "Simpsons - Bart's Nightmare",
+        "core": "snes9x",
+        "boxart": "assets/roms/snes/boxart/Simpsons - Bart's Nightmare (USA).png",
+        "rom_path": "assets/roms/snes/Simpsons - Bart's Nightmare (USA).sfc"
+      },
+      {
+        "id": "snes_soul_blazer_(usa)",
+        "title": "Soul Blazer",
+        "core": "snes9x",
+        "boxart": "assets/roms/snes/boxart/Soul Blazer (USA).png",
+        "rom_path": "assets/roms/snes/Soul Blazer (USA).sfc"
+      },
+      {
+        "id": "snes_sparkster_(usa)",
+        "title": "Sparkster",
+        "core": "snes9x",
+        "boxart": "assets/roms/snes/boxart/Sparkster (USA).png",
+        "rom_path": "assets/roms/snes/Sparkster (USA).sfc"
+      },
+      {
+        "id": "snes_spider_man___venom___maximum_carnage_(usa)",
+        "title": "Spider-Man - Venom - Maximum Carnage",
+        "core": "snes9x",
+        "boxart": "assets/roms/snes/boxart/Spider-Man--Venom - Maximum Carnage (USA).png",
+        "rom_path": "assets/roms/snes/Spider-Man - Venom - Maximum Carnage (USA).sfc"
+      },
+      {
+        "id": "snes_star_fox_(usa)_(rev_2)",
+        "title": "Star Fox",
+        "core": "snes9x",
+        "boxart": "assets/roms/snes/boxart/Star Fox (USA).png",
+        "rom_path": "assets/roms/snes/Star Fox (USA) (Rev 2).sfc"
+      },
+      {
+        "id": "snes_star_fox_2_(usa,_europe)",
+        "title": "Star Fox 2",
+        "core": "snes9x",
+        "boxart": "assets/roms/snes/boxart/Star Fox 2 (USA).png",
+        "rom_path": "assets/roms/snes/Star Fox 2 (USA, Europe).sfc"
+      },
+      {
+        "id": "snes_stunt_race_fx_(usa)_(rev_1)",
+        "title": "Stunt Race FX",
+        "core": "snes9x",
+        "boxart": "assets/roms/snes/boxart/Stunt Race FX (USA).png",
+        "rom_path": "assets/roms/snes/Stunt Race FX (USA) (Rev 1).sfc"
+      },
+      {
+        "id": "snes_sunset_riders_(usa)",
+        "title": "Sunset Riders",
+        "core": "snes9x",
+        "boxart": "assets/roms/snes/boxart/Sunset Riders (USA).png",
+        "rom_path": "assets/roms/snes/Sunset Riders (USA).sfc"
+      },
+      {
+        "id": "snes_super_bomberman_(usa)",
+        "title": "Super Bomberman",
+        "core": "snes9x",
+        "boxart": "assets/roms/snes/boxart/Super Bomberman (USA, Variant 2).png",
+        "rom_path": "assets/roms/snes/Super Bomberman (USA).sfc"
+      },
+      {
+        "id": "snes_super_bomberman_2_(usa)",
+        "title": "Super Bomberman 2",
+        "core": "snes9x",
+        "boxart": "assets/roms/snes/boxart/Super Bomberman 2 (USA).png",
+        "rom_path": "assets/roms/snes/Super Bomberman 2 (USA).sfc"
+      },
+      {
+        "id": "snes_super_castlevania_iv_(usa)",
+        "title": "Super Castlevania IV",
+        "core": "snes9x",
+        "boxart": "assets/roms/snes/boxart/Super Castlevania IV (USA).png",
+        "rom_path": "assets/roms/snes/Super Castlevania IV (USA).sfc"
+      },
+      {
+        "id": "snes_super_double_dragon_(usa)",
+        "title": "Super Double Dragon",
+        "core": "snes9x",
+        "boxart": "assets/roms/snes/boxart/Super Double Dragon (USA).png",
+        "rom_path": "assets/roms/snes/Super Double Dragon (USA).sfc"
+      },
+      {
+        "id": "snes_super_ghouls'n_ghosts_(usa)",
+        "title": "Super Ghouls'n Ghosts",
+        "core": "snes9x",
+        "boxart": "assets/roms/snes/boxart/Super Ghouls _n Ghosts (USA).png",
+        "rom_path": "assets/roms/snes/Super Ghouls'n Ghosts (USA).sfc"
+      },
+      {
+        "id": "snes_super_mario_all_stars_(usa)",
+        "title": "Super Mario All-Stars",
+        "core": "snes9x",
+        "boxart": "assets/roms/snes/boxart/Super Mario All-Stars (USA).png",
+        "rom_path": "assets/roms/snes/Super Mario All-Stars (USA).sfc"
+      },
+      {
+        "id": "snes_super_mario_kart_(usa)",
+        "title": "Super Mario Kart",
+        "core": "snes9x",
+        "boxart": "assets/roms/snes/boxart/Super Mario Kart (USA).png",
+        "rom_path": "assets/roms/snes/Super Mario Kart (USA).sfc"
+      },
+      {
+        "id": "snes_super_mario_rpg___legend_of_the_seven_stars_(usa)",
+        "title": "Super Mario RPG - Legend of the Seven Stars",
+        "core": "snes9x",
+        "boxart": "assets/roms/snes/boxart/Super Mario RPG - Legend of the Seven Stars (USA).png",
+        "rom_path": "assets/roms/snes/Super Mario RPG - Legend of the Seven Stars (USA).sfc"
+      },
+      {
+        "id": "snes_super_mario_world_(usa)",
+        "title": "Super Mario World",
+        "core": "snes9x",
+        "boxart": "assets/roms/snes/boxart/Super Mario World (USA).png",
+        "rom_path": "assets/roms/snes/Super Mario World (USA).sfc"
+      },
+      {
+        "id": "snes_super_mario_world_2___yoshi's_island_(usa)_(rev_1)",
+        "title": "Super Mario World 2 - Yoshi's Island",
+        "core": "snes9x",
+        "boxart": "assets/roms/snes/boxart/Super Mario World 2 - Yoshi_s Island (USA).png",
+        "rom_path": "assets/roms/snes/Super Mario World 2 - Yoshi's Island (USA) (Rev 1).sfc"
+      },
+      {
+        "id": "snes_super_metroid_(japan,_usa)_(en,ja)",
+        "title": "Super Metroid",
+        "core": "snes9x",
+        "boxart": "assets/roms/snes/boxart/Super Metroid (USA).png",
+        "rom_path": "assets/roms/snes/Super Metroid (Japan, USA) (En,Ja).sfc"
+      },
+      {
+        "id": "snes_super_punch_out!!_(usa)",
+        "title": "Super Punch-Out!!",
+        "core": "snes9x",
+        "boxart": "assets/roms/snes/boxart/Super Punch-Out!! (USA).png",
+        "rom_path": "assets/roms/snes/Super Punch-Out!! (USA).sfc"
+      },
+      {
+        "id": "snes_super_r_type_(usa)",
+        "title": "Super R-Type",
+        "core": "snes9x",
+        "boxart": "assets/roms/snes/boxart/Super R-Type (USA).png",
+        "rom_path": "assets/roms/snes/Super R-Type (USA).sfc"
+      },
+      {
+        "id": "snes_super_star_wars_ii___the_empire_strikes_back_(usa)_(rev_1)",
+        "title": "Super Star Wars II - The Empire Strikes Back",
+        "core": "snes9x",
+        "boxart": "assets/roms/snes/boxart/Super Star Wars II - The Empire Strikes Back (USA).png",
+        "rom_path": "assets/roms/snes/Super Star Wars II - The Empire Strikes Back (USA) (Rev 1).sfc"
+      },
+      {
+        "id": "snes_super_turrican_2_(usa)",
+        "title": "Super Turrican 2",
+        "core": "snes9x",
+        "boxart": "assets/roms/snes/boxart/Super Turrican 2 (USA).png",
+        "rom_path": "assets/roms/snes/Super Turrican 2 (USA).sfc"
+      },
+      {
+        "id": "snes_super_valis_iv_(usa)",
+        "title": "Super Valis IV",
+        "core": "snes9x",
+        "boxart": "assets/roms/snes/boxart/Super Valis IV (USA).png",
+        "rom_path": "assets/roms/snes/Super Valis IV (USA).sfc"
+      },
+      {
+        "id": "snes_teenage_mutant_ninja_turtles_iv___turtles_in_time_(usa)",
+        "title": "Teenage Mutant Ninja Turtles IV - Turtles in Time",
+        "core": "snes9x",
+        "boxart": "assets/roms/snes/boxart/Teenage Mutant Ninja Turtles IV - Turtles in Time (USA).png",
+        "rom_path": "assets/roms/snes/Teenage Mutant Ninja Turtles IV - Turtles in Time (USA).sfc"
+      },
+      {
+        "id": "snes_tetris_&_dr._mario_(usa)",
+        "title": "Tetris & Dr. Mario",
+        "core": "snes9x",
+        "boxart": "assets/roms/snes/boxart/Tetris & Dr. Mario (USA).png",
+        "rom_path": "assets/roms/snes/Tetris & Dr. Mario (USA).sfc"
+      },
+      {
+        "id": "snes_the_adventures_of_batman_&_robin_(usa)",
+        "title": "The Adventures of Batman & Robin",
+        "core": "snes9x",
+        "boxart": "assets/roms/snes/boxart/The Adventures of Batman & Robin (USA).png",
+        "rom_path": "assets/roms/snes/The Adventures of Batman & Robin (USA).sfc"
+      },
+      {
+        "id": "snes_the_death_and_return_of_superman_(usa)_(rev_1)",
+        "title": "The Death and Return of Superman",
+        "core": "snes9x",
+        "boxart": "assets/roms/snes/boxart/The Death and Return of Superman (USA) (Rev 1).png",
+        "rom_path": "assets/roms/snes/The Death and Return of Superman (USA) (Rev 1).sfc"
+      },
+      {
+        "id": "snes_the_legend_of_zelda___a_link_to_the_past_(usa)",
+        "title": "The Legend of Zelda - A Link to the Past",
+        "core": "snes9x",
+        "boxart": "assets/roms/snes/boxart/The Legend of Zelda - A Link to the Past (USA).png",
+        "rom_path": "assets/roms/snes/The Legend of Zelda - A Link to the Past (USA).sfc"
+      },
+      {
+        "id": "snes_the_legend_of_the_mystical_ninja_(usa)",
+        "title": "The Legend of the Mystical Ninja",
+        "core": "snes9x",
+        "boxart": "assets/roms/snes/boxart/The Legend of the Mystical Ninja (USA).png",
+        "rom_path": "assets/roms/snes/The Legend of the Mystical Ninja (USA).sfc"
+      },
+      {
+        "id": "snes_the_lion_king_(usa)",
+        "title": "The Lion King",
+        "core": "snes9x",
+        "boxart": "assets/roms/snes/boxart/The Lion King (USA).png",
+        "rom_path": "assets/roms/snes/The Lion King (USA).sfc"
+      },
+      {
+        "id": "snes_the_magical_quest_starring_mickey_mouse_(usa)",
+        "title": "The Magical Quest Starring Mickey Mouse",
+        "core": "snes9x",
+        "boxart": "assets/roms/snes/boxart/The Magical Quest Starring Mickey Mouse (USA).png",
+        "rom_path": "assets/roms/snes/The Magical Quest Starring Mickey Mouse (USA).sfc"
+      },
+      {
+        "id": "snes_top_gear_(usa)",
+        "title": "Top Gear",
+        "core": "snes9x",
+        "boxart": "assets/roms/snes/boxart/Top Gear (USA).png",
+        "rom_path": "assets/roms/snes/Top Gear (USA).sfc"
+      },
+      {
+        "id": "snes_ultimate_mortal_kombat_3_(usa)",
+        "title": "Ultimate Mortal Kombat 3",
+        "core": "snes9x",
+        "boxart": "assets/roms/snes/boxart/Ultimate Mortal Kombat 3 (USA).png",
+        "rom_path": "assets/roms/snes/Ultimate Mortal Kombat 3 (USA).sfc"
+      },
+      {
+        "id": "snes_wario's_woods_(usa)",
+        "title": "Wario's Woods",
+        "core": "snes9x",
+        "boxart": "assets/roms/snes/boxart/Wario_s Woods (USA).png",
+        "rom_path": "assets/roms/snes/Wario's Woods (USA).sfc"
+      },
+      {
+        "id": "snes_wild_guns_(usa)",
+        "title": "Wild Guns",
+        "core": "snes9x",
+        "boxart": "assets/roms/snes/boxart/Wild Guns (USA).png",
+        "rom_path": "assets/roms/snes/Wild Guns (USA).sfc"
+      },
+      {
+        "id": "snes_x_men___mutant_apocalypse_(usa)",
+        "title": "X-Men - Mutant Apocalypse",
+        "core": "snes9x",
+        "boxart": "assets/roms/snes/boxart/X-Men - Mutant Apocalypse (USA).png",
+        "rom_path": "assets/roms/snes/X-Men - Mutant Apocalypse (USA).sfc"
+      },
+      {
+        "id": "snes_zombies_ate_my_neighbors_(usa)",
+        "title": "Zombies Ate My Neighbors",
+        "core": "snes9x",
+        "boxart": "assets/roms/snes/boxart/Zombies Ate My Neighbors (USA).png",
+        "rom_path": "assets/roms/snes/Zombies Ate My Neighbors (USA).sfc"
       }
     ]
   }

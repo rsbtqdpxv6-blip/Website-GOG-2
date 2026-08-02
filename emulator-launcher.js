@@ -1,5 +1,5 @@
 // ==============================================================================
-//               STANDALONE LOCAL EMULATORJS LAUNCHER ENGINE (PART 1)
+//               STANDALONE LOCAL EMULATORJS & RUFFLE LAUNCHER ENGINE (PART 1)
 // ==============================================================================
 
 let emulatorReady = false;
@@ -78,7 +78,7 @@ async function launchGame(game, hintsDisplay) {
             </html>
         `;
     } 
-    // --- CASE B: 100% LOCAL EMULATORJS BYPASSING THE 5MB LIMIT ---
+    // --- CASE B: 100% LOCAL EMULATORJS WITH BYPASSED INDEXEDDB BINARY RESTORATION ---
     else {
         if (hintsDisplay) hintsDisplay.textContent = "Mounting local backend emulation modules...";
 
@@ -103,6 +103,10 @@ async function launchGame(game, hintsDisplay) {
             embeddedBase64State = btoa(chunkString);
         }
 
+        // Detect if running a DOS program inside EmulatorJS to adjust command parameters
+        let isDosGame = (game.core === "dosbox" || game.rom_path.toLowerCase().endsWith('.exe'));
+        let dosExecutableMapping = isDosGame ? `window.EJS_dosboxExtension = "${game.rom_path.split('.').pop().toLowerCase()}";` : "";
+
         sandboxedHTML = `
             <!DOCTYPE html>
             <html>
@@ -117,13 +121,19 @@ async function launchGame(game, hintsDisplay) {
             <body>
                 <div id="game-deck"></div>
                 <script>
-                    // Pointing directly to your local workspace files
                     window.EJS_player = "#game-deck";
-                    window.EJS_core = "${game.core}";
+                    window.EJS_core = isNaN("${game.core}") ? "${game.core}" : "dosbox";
                     window.EJS_gameUrl = "${absoluteLocation}";
                     window.EJS_pathtodata = "${projectRootUrl}emulatorjs/data/"; 
                     window.EJS_language = "en-US";
                     window.EJS_startOnLoaded = true;
+                    EJS_threads = true;
+                    window.EJS_cacheConfig = {
+                        enabled: true,
+                        cacheMaxSizeMB: 4096,   // Sets the limit (e.g., 4096 MB = 4 GB)
+                        cacheMaxAgeMins: 10080  // Time before a game is pruned (e.g., 10080 mins = 7 days)
+                    };
+                    ${dosExecutableMapping}
 
                     window.EJS_onLoad = function() {
                         window.parent.postMessage("EMULATOR_STATE_READY", "*");
@@ -138,7 +148,6 @@ async function launchGame(game, hintsDisplay) {
                         }
                     };
 
-                    // Listen for the close message to dump hardware RAM state data arrays back up
                     window.addEventListener("message", function(event) {
                         if (event.data === "EXECUTE_ARCADE_SAVE_SEQUENCE") {
                             if (window.EJS_emulator && typeof window.EJS_emulator.saveState === "function") {
@@ -167,7 +176,6 @@ async function launchGame(game, hintsDisplay) {
         `;
     }
 
-    // Connect message listeners to process incoming binary streams safely
     window.removeEventListener("message", handleIncomingParentMessages);
     window.addEventListener("message", handleIncomingParentMessages);
 
@@ -178,7 +186,7 @@ async function launchGame(game, hintsDisplay) {
     frameDoc.close();
 }
 // ==============================================================================
-//               STANDALONE LOCAL EMULATORJS LAUNCHER ENGINE (PART 2)
+//               STANDALONE LOCAL EMULATORJS & RUFFLE LAUNCHER ENGINE (PART 2)
 // ==============================================================================
 
 /**
@@ -221,7 +229,7 @@ function finalizeArcadeClosure() {
     const emuOverlay = document.getElementById('emu-overlay');
     if (!iframe || !emuOverlay) return;
 
-    iframe.src = "about:blank"; // Forcing frame to blank instantly kills sound contexts and background web workers
+    iframe.src = "about:blank"; 
     emuOverlay.style.display = "none";
     
     window.EJS_player = null;

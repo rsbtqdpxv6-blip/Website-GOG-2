@@ -1,28 +1,51 @@
 // ==============================================================================
 //                    UNIFIED APPLICATION CONTROLLER (PART 1)
 // ==============================================================================
-(() => { // Safely wrapped inside a private block scope to block double-loads
+(() => { 
     let gameLibrary = [];
     let currentSystemIdx = 0;
     let currentGameIdx = 0;
     let currentViewMode = "WHEEL"; 
 
-    const theta = 35; // 3D cylinder step separation angle
-    const radius = 380; // 3D cylinder pushing depth parameter
-    const flatCardSpacing = 340; // Flat horizontal spacing distance for wide logos
+    const theta = 35; 
+    const radius = 380; 
+    const flatCardSpacing = 340; 
 
-    // Centralized audio allocation nodes
+    // --- TRUE NATIVE OFFLINE WAV FILE PATHWAYS RE-ENGAGED ---
     const soundScroll = new Audio('assets/sound/scroll.wav');
     const soundSelect = new Audio('assets/sound/select.wav');
     const soundLaunch = new Audio('assets/sound/launch.wav');
     const soundBack   = new Audio('assets/sound/back.wav');
 
+    // --- THE CHROMIUM HARDWARE AUDIO LOCK BYPASS ENGINE ---
+    let audioContextUnlocked = false;
+
     function playArcadeSound(audioObject) {
+        if (!audioObject) return;
+        
+        // Force-unlock the browser's audio state if it was frozen on boot
+        if (!audioContextUnlocked && window.AudioContext) {
+            const ctx = new (window.AudioContext || window.webkitAudioContext)();
+            if (ctx.state === 'suspended') {
+                ctx.resume();
+            }
+            audioContextUnlocked = true;
+            console.log("🔊 Browser audio hardware layers completely unlocked!");
+        }
+
         try {
             audioObject.currentTime = 0; 
-            audioObject.play();
+            // Pre-load your custom wav bits into browser cache to prevent latency
+            audioObject.load(); 
+            
+            let playPromise = audioObject.play();
+            if (playPromise !== undefined) {
+                playPromise.catch(error => {
+                    console.warn("Audio skipped. Press a key to unlock your speaker pack:", error);
+                });
+            }
         } catch (soundError) {
-            console.warn("Audio Context playback exception:", soundError);
+            console.warn("Audio Context playback exception intercept:", soundError);
         }
     }
 
@@ -46,7 +69,7 @@
             
             if (gameLibrary.length > 0) {
                 renderWheel();
-                updateWheelSelection(0, false); 
+                updateWheelSelection(0, false); // Don't fire sound on first boot to prevent crash
                 setViewMode("WHEEL");
             }
         } catch (error) {
@@ -120,7 +143,6 @@
         if (!titlesColumn) return;
         titlesColumn.innerHTML = '';
         
-        // Clean out override selectors so everything reads the fluid layout
         const previewPane = document.querySelector('.preview-pane');
         if (previewPane) {
             previewPane.classList.remove('nes-box-override'); 
@@ -156,7 +178,6 @@
         
         if (rows[currentGameIdx]) {
             rows[currentGameIdx].classList.add('focused-game');
-            // Native zero-lag snap offloads animation loops to prevent memory crashes
             rows[currentGameIdx].scrollIntoView({ block: 'nearest' });
         }
 
@@ -280,4 +301,4 @@
     });
 
     loadLibrary();
-})(); // End protected scope enclosure closure loop block safely
+})(); 
