@@ -302,9 +302,28 @@ body {
   z-index: 99999;
   .emu-sandbox-frame { width: 100%; height: 100%; border: none; }
   .exit-btn {
-    position: absolute; top: 25px; right: 25px;
-    background: rgba(#ff1e1e, 0.85); color: #fff; border: none;
-    padding: 12px 22px; font-size: 0.9rem; font-weight: 800; border-radius: 8px; cursor: pointer;
+    position: absolute; 
+    top: 0;         // Placed directly against the top edge
+    right: 0;       // Placed directly against the right edge
+    
+    background: rgba(#ff1e1e, 0.85); 
+    color: #fff; 
+    border: none;
+    
+    width: 28px;
+    height: 28px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    font-size: 0.6rem; 
+    font-weight: 700; 
+    
+    // Changes rounding to only the bottom-left corner so it fits the edge cleanly
+    border-radius: 0 0 0 6px; 
+    
+    cursor: pointer;
     z-index: 100000;
   }
 }

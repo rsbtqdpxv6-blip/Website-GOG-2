@@ -70,6 +70,657 @@
     ]
   },
   {
+    "system": "megadrive",
+    "title": "Sega Mega Drive",
+    "core": "genesis_plus_gx",
+    "games": [
+      {
+        "id": "megadrive_adventures_of_batman_&_robin,_the_(usa)",
+        "title": "Adventures of Batman & Robin, The",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/Adventures of Batman & Robin, The (USA).png",
+        "rom_path": "assets/roms/megadrive/Adventures of Batman & Robin, The (USA).md"
+      },
+      {
+        "id": "megadrive_aladdin_(usa)",
+        "title": "Aladdin",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/Aladdin (USA).png",
+        "rom_path": "assets/roms/megadrive/Aladdin (USA).md"
+      },
+      {
+        "id": "megadrive_alien_soldier_(usa)_(virtual_console)",
+        "title": "Alien Soldier",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/Alien Soldier (USA Virtual Console, Custom based on Sega brand cover from 1995).png",
+        "rom_path": "assets/roms/megadrive/Alien Soldier (USA) (Virtual Console).md"
+      },
+      {
+        "id": "megadrive_alisia_dragoon_(usa)",
+        "title": "Alisia Dragoon",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/Alisia Dragoon (USA).png",
+        "rom_path": "assets/roms/megadrive/Alisia Dragoon (USA).md"
+      },
+      {
+        "id": "megadrive_altered_beast_(usa,_europe)",
+        "title": "Altered Beast",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/Altered Beast (USA).png",
+        "rom_path": "assets/roms/megadrive/Altered Beast (USA, Europe).md"
+      },
+      {
+        "id": "megadrive_arcus_odyssey_(usa)",
+        "title": "Arcus Odyssey",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/Arcus Odyssey (USA).png",
+        "rom_path": "assets/roms/megadrive/Arcus Odyssey (USA).md"
+      },
+      {
+        "id": "megadrive_beyond_oasis_(usa)",
+        "title": "Beyond Oasis",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/Beyond Oasis (USA).png",
+        "rom_path": "assets/roms/megadrive/Beyond Oasis (USA).md"
+      },
+      {
+        "id": "megadrive_bio_hazard_battle_(usa,_europe)",
+        "title": "Bio Hazard Battle",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/Bio-Hazard Battle (USA).png",
+        "rom_path": "assets/roms/megadrive/Bio Hazard Battle (USA, Europe).md"
+      },
+      {
+        "id": "megadrive_blades_of_vengeance_(usa,_europe)",
+        "title": "Blades of Vengeance",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/Blades of Vengeance (USA).png",
+        "rom_path": "assets/roms/megadrive/Blades of Vengeance (USA, Europe).md"
+      },
+      {
+        "id": "megadrive_bonanza_bros._(usa,_europe,_korea)_(rev_b)",
+        "title": "Bonanza Bros.",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/Bonanza Bros. (USA, Europe, Korea) (Rev B).png",
+        "rom_path": "assets/roms/megadrive/Bonanza Bros. (USA, Europe, Korea) (Rev B).md"
+      },
+      {
+        "id": "megadrive_castle_of_illusion_starring_mickey_mouse_(usa,_europe)",
+        "title": "Castle of Illusion Starring Mickey Mouse",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/Castle of Illusion Starring Mickey Mouse (USA).png",
+        "rom_path": "assets/roms/megadrive/Castle of Illusion Starring Mickey Mouse (USA, Europe).md"
+      },
+      {
+        "id": "megadrive_castlevania___bloodlines_(usa)",
+        "title": "Castlevania - Bloodlines",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/Castlevania - Bloodlines (USA).png",
+        "rom_path": "assets/roms/megadrive/Castlevania - Bloodlines (USA).md"
+      },
+      {
+        "id": "megadrive_columns_iii_(usa)",
+        "title": "Columns III",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/Columns III (USA).png",
+        "rom_path": "assets/roms/megadrive/Columns III (USA).md"
+      },
+      {
+        "id": "megadrive_comix_zone_(usa)",
+        "title": "Comix Zone",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/Comix Zone (USA).png",
+        "rom_path": "assets/roms/megadrive/Comix Zone (USA).md"
+      },
+      {
+        "id": "megadrive_crusader_of_centy_(usa)",
+        "title": "Crusader of Centy",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/Crusader of Centy (USA).png",
+        "rom_path": "assets/roms/megadrive/Crusader of Centy (USA).md"
+      },
+      {
+        "id": "megadrive_death_and_return_of_superman,_the_(usa)",
+        "title": "Death and Return of Superman, The",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/Death and Return of Superman, The (USA).png",
+        "rom_path": "assets/roms/megadrive/Death and Return of Superman, The (USA).md"
+      },
+      {
+        "id": "megadrive_decap_attack_(usa)",
+        "title": "Decap Attack",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/Decap Attack (USA).png",
+        "rom_path": "assets/roms/megadrive/Decap Attack (USA).md"
+      },
+      {
+        "id": "megadrive_desert_strike___return_to_the_gulf_(usa,_europe)",
+        "title": "Desert Strike - Return to the Gulf",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/Desert Strike - Return to the Gulf (USA).png",
+        "rom_path": "assets/roms/megadrive/Desert Strike - Return to the Gulf (USA, Europe).md"
+      },
+      {
+        "id": "megadrive_devilish___the_next_possession_(usa)",
+        "title": "Devilish - The Next Possession",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/Devilish - The Next Possession (USA).png",
+        "rom_path": "assets/roms/megadrive/Devilish - The Next Possession (USA).md"
+      },
+      {
+        "id": "megadrive_dick_tracy_(world)",
+        "title": "Dick Tracy",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/Dick Tracy (USA).png",
+        "rom_path": "assets/roms/megadrive/Dick Tracy (World).md"
+      },
+      {
+        "id": "megadrive_dune___the_battle_for_arrakis_(usa)",
+        "title": "Dune - The Battle for Arrakis",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/Dune - The Battle for Arrakis (USA).png",
+        "rom_path": "assets/roms/megadrive/Dune - The Battle for Arrakis (USA).md"
+      },
+      {
+        "id": "megadrive_dynamite_headdy_(usa,_europe)",
+        "title": "Dynamite Headdy",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/Dynamite Headdy (USA).png",
+        "rom_path": "assets/roms/megadrive/Dynamite Headdy (USA, Europe).md"
+      },
+      {
+        "id": "megadrive_earthworm_jim_(usa)",
+        "title": "Earthworm Jim",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/Earthworm Jim (USA).png",
+        "rom_path": "assets/roms/megadrive/Earthworm Jim (USA).md"
+      },
+      {
+        "id": "megadrive_earthworm_jim_2_(usa)",
+        "title": "Earthworm Jim 2",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/Earthworm Jim 2 (USA).png",
+        "rom_path": "assets/roms/megadrive/Earthworm Jim 2 (USA).md"
+      },
+      {
+        "id": "megadrive_ecco___the_tides_of_time_(usa)",
+        "title": "Ecco - The Tides of Time",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/Ecco - The Tides of Time (USA).png",
+        "rom_path": "assets/roms/megadrive/Ecco - The Tides of Time (USA).md"
+      },
+      {
+        "id": "megadrive_ecco_the_dolphin_(usa,_europe,_korea)",
+        "title": "Ecco the Dolphin",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/Ecco the Dolphin (USA).png",
+        "rom_path": "assets/roms/megadrive/Ecco the Dolphin (USA, Europe, Korea).md"
+      },
+      {
+        "id": "megadrive_el.viento_(usa)",
+        "title": "El.Viento",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/El.Viento (USA).png",
+        "rom_path": "assets/roms/megadrive/El.Viento (USA).md"
+      },
+      {
+        "id": "megadrive_elemental_master_(usa)",
+        "title": "Elemental Master",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/Elemental Master (USA).png",
+        "rom_path": "assets/roms/megadrive/Elemental Master (USA).md"
+      },
+      {
+        "id": "megadrive_eternal_champions_(usa)",
+        "title": "Eternal Champions",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/Eternal Champions (USA).png",
+        "rom_path": "assets/roms/megadrive/Eternal Champions (USA).md"
+      },
+      {
+        "id": "megadrive_flashback___the_quest_for_identity_(usa)_(en,fr)",
+        "title": "Flashback - The Quest for Identity",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/Flashback - The Quest for Identity (USA) (En,Fr).png",
+        "rom_path": "assets/roms/megadrive/Flashback - The Quest for Identity (USA) (En,Fr).md"
+      },
+      {
+        "id": "megadrive_gauntlet_iv_(usa,_europe)_(en,ja)",
+        "title": "Gauntlet IV",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/Gauntlet IV (USA).png",
+        "rom_path": "assets/roms/megadrive/Gauntlet IV (USA, Europe) (En,Ja).md"
+      },
+      {
+        "id": "megadrive_general_chaos_(usa,_europe)",
+        "title": "General Chaos",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/General Chaos (USA).png",
+        "rom_path": "assets/roms/megadrive/General Chaos (USA, Europe).md"
+      },
+      {
+        "id": "megadrive_golden_axe_(world)_(rev_a)",
+        "title": "Golden Axe",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/Golden Axe (USA).png",
+        "rom_path": "assets/roms/megadrive/Golden Axe (World) (Rev A).md"
+      },
+      {
+        "id": "megadrive_golden_axe_ii_(world)",
+        "title": "Golden Axe II",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/Golden Axe II (USA).png",
+        "rom_path": "assets/roms/megadrive/Golden Axe II (World).md"
+      },
+      {
+        "id": "megadrive_golden_axe_iii_(japan)_(en)",
+        "title": "Golden Axe III",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/Golden Axe III (Custom USA Box Art 1993 Style).png",
+        "rom_path": "assets/roms/megadrive/Golden Axe III (Japan) (En).md"
+      },
+      {
+        "id": "megadrive_great_circus_mystery_starring_mickey_&_minnie,_the_(usa)",
+        "title": "Great Circus Mystery Starring Mickey & Minnie, The",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/Great Circus Mystery Starring Mickey & Minnie, The (USA).png",
+        "rom_path": "assets/roms/megadrive/Great Circus Mystery Starring Mickey & Minnie, The (USA).md"
+      },
+      {
+        "id": "megadrive_gunstar_heroes_(usa)",
+        "title": "Gunstar Heroes",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/Gunstar Heroes (USA).png",
+        "rom_path": "assets/roms/megadrive/Gunstar Heroes (USA).md"
+      },
+      {
+        "id": "megadrive_haunting_starring_polterguy_(usa,_europe)",
+        "title": "Haunting Starring Polterguy",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/Haunting Starring Polterguy (USA).png",
+        "rom_path": "assets/roms/megadrive/Haunting Starring Polterguy (USA, Europe).md"
+      },
+      {
+        "id": "megadrive_herzog_zwei_(usa,_europe)",
+        "title": "Herzog Zwei",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/Herzog Zwei (USA).png",
+        "rom_path": "assets/roms/megadrive/Herzog Zwei (USA, Europe).md"
+      },
+      {
+        "id": "megadrive_immortal,_the_(usa,_europe)",
+        "title": "Immortal, The",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/Immortal, The (USA).png",
+        "rom_path": "assets/roms/megadrive/Immortal, The (USA, Europe).md"
+      },
+      {
+        "id": "megadrive_jurassic_park_(usa)",
+        "title": "Jurassic Park",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/Jurassic Park (USA).png",
+        "rom_path": "assets/roms/megadrive/Jurassic Park (USA).md"
+      },
+      {
+        "id": "megadrive_kid_chameleon_(usa,_europe)",
+        "title": "Kid Chameleon",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/Kid Chameleon (USA).png",
+        "rom_path": "assets/roms/megadrive/Kid Chameleon (USA, Europe).md"
+      },
+      {
+        "id": "megadrive_krusty's_super_fun_house_(usa,_europe)_(rev_a)",
+        "title": "Krusty's Super Fun House",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/Krusty_s Super Fun House (USA).png",
+        "rom_path": "assets/roms/megadrive/Krusty's Super Fun House (USA, Europe) (Rev A).md"
+      },
+      {
+        "id": "megadrive_landstalker_(usa)",
+        "title": "Landstalker",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/Landstalker (USA).png",
+        "rom_path": "assets/roms/megadrive/Landstalker (USA).md"
+      },
+      {
+        "id": "megadrive_light_crusader_(usa)",
+        "title": "Light Crusader",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/Light Crusader (USA).png",
+        "rom_path": "assets/roms/megadrive/Light Crusader (USA).md"
+      },
+      {
+        "id": "megadrive_master_of_monsters_(usa)",
+        "title": "Master of Monsters",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/Master of Monsters (USA).png",
+        "rom_path": "assets/roms/megadrive/Master of Monsters (USA).md"
+      },
+      {
+        "id": "megadrive_mega_bomberman_(usa)",
+        "title": "Mega Bomberman",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/Mega Bomberman (USA).png",
+        "rom_path": "assets/roms/megadrive/Mega Bomberman (USA).md"
+      },
+      {
+        "id": "megadrive_mega_turrican_(usa)",
+        "title": "Mega Turrican",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/Mega Turrican (USA).png",
+        "rom_path": "assets/roms/megadrive/Mega Turrican (USA).md"
+      },
+      {
+        "id": "megadrive_michael_jackson's_moonwalker_(japan,_usa)",
+        "title": "Michael Jackson's Moonwalker",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/Michael Jackson_s Moonwalker (USA).png",
+        "rom_path": "assets/roms/megadrive/Michael Jackson's Moonwalker (Japan, USA).md"
+      },
+      {
+        "id": "megadrive_monster_world_iv_(usa)_(genesis_mini)",
+        "title": "Monster World IV",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/Monster World IV (USA, from Genesis Mini).png",
+        "rom_path": "assets/roms/megadrive/Monster World IV (USA) (Genesis Mini).md"
+      },
+      {
+        "id": "megadrive_mortal_kombat_(world)",
+        "title": "Mortal Kombat",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/Mortal Kombat (USA).png",
+        "rom_path": "assets/roms/megadrive/Mortal Kombat (World).md"
+      },
+      {
+        "id": "megadrive_mortal_kombat_3_(usa)",
+        "title": "Mortal Kombat 3",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/Mortal Kombat 3 (USA).png",
+        "rom_path": "assets/roms/megadrive/Mortal Kombat 3 (USA).md"
+      },
+      {
+        "id": "megadrive_mortal_kombat_ii_(world)",
+        "title": "Mortal Kombat II",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/Mortal Kombat (USA).png",
+        "rom_path": "assets/roms/megadrive/Mortal Kombat II (World).md"
+      },
+      {
+        "id": "megadrive_nba_jam___tournament_edition_(world)",
+        "title": "NBA Jam - Tournament Edition",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/NBA Jam - Tournament Edition (USA).png",
+        "rom_path": "assets/roms/megadrive/NBA Jam - Tournament Edition (World).md"
+      },
+      {
+        "id": "megadrive_out_of_this_world_(usa)",
+        "title": "Out of This World",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/Out of This World (USA).png",
+        "rom_path": "assets/roms/megadrive/Out of This World (USA).md"
+      },
+      {
+        "id": "megadrive_outrun_(usa,_europe)",
+        "title": "OutRun",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/OutRun (USA, Europe).png",
+        "rom_path": "assets/roms/megadrive/OutRun (USA, Europe).md"
+      },
+      {
+        "id": "megadrive_phantasy_star_ii_(usa,_europe)_(rev_a)",
+        "title": "Phantasy Star II",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/Phantasy Star II (USA).png",
+        "rom_path": "assets/roms/megadrive/Phantasy Star II (USA, Europe) (Rev A).md"
+      },
+      {
+        "id": "megadrive_phantasy_star_iii___generations_of_doom_(usa,_europe,_korea)",
+        "title": "Phantasy Star III - Generations of Doom",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/Phantasy Star III (USA).png",
+        "rom_path": "assets/roms/megadrive/Phantasy Star III - Generations of Doom (USA, Europe, Korea).md"
+      },
+      {
+        "id": "megadrive_phantasy_star_iv_(usa)",
+        "title": "Phantasy Star IV",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/Phantasy Star IV (USA).png",
+        "rom_path": "assets/roms/megadrive/Phantasy Star IV (USA).md"
+      },
+      {
+        "id": "megadrive_quackshot_starring_donald_duck_(world)_(rev_a)",
+        "title": "QuackShot Starring Donald Duck",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/Quackshot Starring Donald Duck (USA).png",
+        "rom_path": "assets/roms/megadrive/QuackShot Starring Donald Duck (World) (Rev A).md"
+      },
+      {
+        "id": "megadrive_ranger_x_(usa)",
+        "title": "Ranger X",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/Ranger X (USA).png",
+        "rom_path": "assets/roms/megadrive/Ranger X (USA).md"
+      },
+      {
+        "id": "megadrive_revenge_of_shinobi,_the_(usa,_europe)_(rev_b)",
+        "title": "Revenge of Shinobi, The",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/Revenge of Shinobi, The (USA).png",
+        "rom_path": "assets/roms/megadrive/Revenge of Shinobi, The (USA, Europe) (Rev B).md"
+      },
+      {
+        "id": "megadrive_road_rash_(usa,_europe)",
+        "title": "Road Rash",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/Road Rash (USA).png",
+        "rom_path": "assets/roms/megadrive/Road Rash (USA, Europe).md"
+      },
+      {
+        "id": "megadrive_robocop_versus_the_terminator_(usa)",
+        "title": "RoboCop Versus The Terminator",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/RoboCop Versus The Terminator (USA).png",
+        "rom_path": "assets/roms/megadrive/RoboCop Versus The Terminator (USA).md"
+      },
+      {
+        "id": "megadrive_rocket_knight_adventures_(usa)",
+        "title": "Rocket Knight Adventures",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/Rocket Knight Adventures (USA).png",
+        "rom_path": "assets/roms/megadrive/Rocket Knight Adventures (USA).md"
+      },
+      {
+        "id": "megadrive_shadow_dancer___the_secret_of_shinobi_(world)",
+        "title": "Shadow Dancer - The Secret of Shinobi",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/Shadow Dancer - The Secret of Shinobi (USA).png",
+        "rom_path": "assets/roms/megadrive/Shadow Dancer - The Secret of Shinobi (World).md"
+      },
+      {
+        "id": "megadrive_shadowrun_(usa)",
+        "title": "Shadowrun",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/Shadowrun (USA).png",
+        "rom_path": "assets/roms/megadrive/Shadowrun (USA).md"
+      },
+      {
+        "id": "megadrive_shining_force_(usa)",
+        "title": "Shining Force",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/Shining Force (USA).png",
+        "rom_path": "assets/roms/megadrive/Shining Force (USA).md"
+      },
+      {
+        "id": "megadrive_shining_force_ii_(usa)",
+        "title": "Shining Force II",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/Shining Force II (USA).png",
+        "rom_path": "assets/roms/megadrive/Shining Force II (USA).md"
+      },
+      {
+        "id": "megadrive_shining_in_the_darkness_(usa,_europe)",
+        "title": "Shining in the Darkness",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/Shining in the Darkness (USA).png",
+        "rom_path": "assets/roms/megadrive/Shining in the Darkness (USA, Europe).md"
+      },
+      {
+        "id": "megadrive_shinobi_iii___return_of_the_ninja_master_(usa)",
+        "title": "Shinobi III - Return of the Ninja Master",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/Shinobi III (USA).png",
+        "rom_path": "assets/roms/megadrive/Shinobi III - Return of the Ninja Master (USA).md"
+      },
+      {
+        "id": "megadrive_sonic_&_knuckles_+_sonic_the_hedgehog_3_(usa)",
+        "title": "Sonic & Knuckles + Sonic The Hedgehog 3",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/Sonic & Knuckles (USA).png",
+        "rom_path": "assets/roms/megadrive/Sonic & Knuckles + Sonic The Hedgehog 3 (USA).md"
+      },
+      {
+        "id": "megadrive_sonic_3d_blast_~_sonic_3d_flickies'_island_(usa,_europe,_korea)",
+        "title": "Sonic 3D Blast ~ Sonic 3D Flickies' Island",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/Sonic 3D Blast (USA).png",
+        "rom_path": "assets/roms/megadrive/Sonic 3D Blast ~ Sonic 3D Flickies' Island (USA, Europe, Korea).md"
+      },
+      {
+        "id": "megadrive_sonic_the_hedgehog_(usa,_europe)",
+        "title": "Sonic The Hedgehog",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/Sonic the Hedgehog (USA).png",
+        "rom_path": "assets/roms/megadrive/Sonic The Hedgehog (USA, Europe).md"
+      },
+      {
+        "id": "megadrive_sonic_the_hedgehog_2_(world)_(rev_b)",
+        "title": "Sonic The Hedgehog 2",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/Sonic the Hedgehog 2 (USA).png",
+        "rom_path": "assets/roms/megadrive/Sonic The Hedgehog 2 (World) (Rev B).md"
+      },
+      {
+        "id": "megadrive_splatterhouse_2_(usa)",
+        "title": "Splatterhouse 2",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/Splatterhouse 2 (USA).png",
+        "rom_path": "assets/roms/megadrive/Splatterhouse 2 (USA).md"
+      },
+      {
+        "id": "megadrive_splatterhouse_3_(usa)",
+        "title": "Splatterhouse 3",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/Splatterhouse 3 (USA).png",
+        "rom_path": "assets/roms/megadrive/Splatterhouse 3 (USA).md"
+      },
+      {
+        "id": "megadrive_stormlord_(usa)",
+        "title": "Stormlord",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/Stormlord (USA).png",
+        "rom_path": "assets/roms/megadrive/Stormlord (USA).md"
+      },
+      {
+        "id": "megadrive_streets_of_rage_2_(usa)",
+        "title": "Streets of Rage 2",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/Streets of Rage 2 (USA).png",
+        "rom_path": "assets/roms/megadrive/Streets of Rage 2 (USA).md"
+      },
+      {
+        "id": "megadrive_streets_of_rage_3_(usa)",
+        "title": "Streets of Rage 3",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/Streets of Rage 3 (USA).png",
+        "rom_path": "assets/roms/megadrive/Streets of Rage 3 (USA).md"
+      },
+      {
+        "id": "megadrive_strider_(usa)",
+        "title": "Strider",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/Strider (USA).png",
+        "rom_path": "assets/roms/megadrive/Strider (USA).md"
+      },
+      {
+        "id": "megadrive_super_fantasy_zone_(europe)",
+        "title": "Super Fantasy Zone",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/Super Fantasy Zone (USA, Genesis Mini).png",
+        "rom_path": "assets/roms/megadrive/Super Fantasy Zone (Europe).md"
+      },
+      {
+        "id": "megadrive_sword_of_vermilion_(usa,_europe)",
+        "title": "Sword of Vermilion",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/Sword of Vermillion (USA).png",
+        "rom_path": "assets/roms/megadrive/Sword of Vermilion (USA, Europe).md"
+      },
+      {
+        "id": "megadrive_teenage_mutant_ninja_turtles___the_hyperstone_heist_(usa)",
+        "title": "Teenage Mutant Ninja Turtles - The Hyperstone Heist",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/Teenage Mutant Ninja Turtles - The Hyperstone Heist (USA).png",
+        "rom_path": "assets/roms/megadrive/Teenage Mutant Ninja Turtles - The Hyperstone Heist (USA).md"
+      },
+      {
+        "id": "megadrive_toejam_&_earl_(usa,_europe,_korea)",
+        "title": "ToeJam & Earl",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/ToeJam & Earl (USA).png",
+        "rom_path": "assets/roms/megadrive/ToeJam & Earl (USA, Europe, Korea).md"
+      },
+      {
+        "id": "megadrive_ultimate_mortal_kombat_3_(usa)",
+        "title": "Ultimate Mortal Kombat 3",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/Ultimate Mortal Kombat 3 (USA).png",
+        "rom_path": "assets/roms/megadrive/Ultimate Mortal Kombat 3 (USA).md"
+      },
+      {
+        "id": "megadrive_vectorman_2_(usa)",
+        "title": "Vectorman 2",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/Vectorman 2 (USA).png",
+        "rom_path": "assets/roms/megadrive/Vectorman 2 (USA).md"
+      },
+      {
+        "id": "megadrive_warsong_(usa)",
+        "title": "Warsong",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/Warsong (USA).png",
+        "rom_path": "assets/roms/megadrive/Warsong (USA).md"
+      },
+      {
+        "id": "megadrive_wonder_boy_in_monster_world_(usa,_europe)",
+        "title": "Wonder Boy in Monster World",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/Wonder Boy in Monster World (USA, Europe).png",
+        "rom_path": "assets/roms/megadrive/Wonder Boy in Monster World (USA, Europe).md"
+      },
+      {
+        "id": "megadrive_world_of_illusion_starring_mickey_mouse_and_donald_duck_(usa,_korea)",
+        "title": "World of Illusion Starring Mickey Mouse and Donald Duck",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/World of Illusion Starring Mickey Mouse and Donald Duck (USA).png",
+        "rom_path": "assets/roms/megadrive/World of Illusion Starring Mickey Mouse and Donald Duck (USA, Korea).md"
+      },
+      {
+        "id": "megadrive_x_men_2___clone_wars_(usa,_europe)",
+        "title": "X-Men 2 - Clone Wars",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/X-Men 2 - Clone Wars (USA).png",
+        "rom_path": "assets/roms/megadrive/X-Men 2 - Clone Wars (USA, Europe).md"
+      },
+      {
+        "id": "megadrive_x_perts_(usa)",
+        "title": "X-Perts",
+        "core": "genesis_plus_gx",
+        "boxart": "assets/roms/megadrive/boxart/X-Perts (USA).png",
+        "rom_path": "assets/roms/megadrive/X-Perts (USA).md"
+      }
+    ]
+  },
+  {
     "system": "n64",
     "title": "Nintendo 64",
     "core": "mupen64plus_next",
@@ -120,14 +771,14 @@
         "id": "n64_castlevania_(usa)_(rev_2)",
         "title": "Castlevania",
         "core": "mupen64plus_next",
-        "boxart": "assets/icons/default_boxart.png",
+        "boxart": "assets/roms/n64/boxart/Castlevania (USA) (Rev 2).png",
         "rom_path": "assets/roms/n64/Castlevania (USA) (Rev 2).z64"
       },
       {
         "id": "n64_castlevania___legacy_of_darkness_(usa)",
         "title": "Castlevania - Legacy of Darkness",
         "core": "mupen64plus_next",
-        "boxart": "assets/roms/n64/boxart/Castlevania_ Legacy of Darkness-01.png",
+        "boxart": "assets/roms/n64/boxart/Castlevania - Legacy of Darkness (USA).png",
         "rom_path": "assets/roms/n64/Castlevania - Legacy of Darkness (USA).z64"
       },
       {
@@ -185,13 +836,6 @@
         "core": "mupen64plus_next",
         "boxart": "assets/roms/n64/boxart/Kirby 64_ The Crystal Shards-01.png",
         "rom_path": "assets/roms/n64/Kirby 64 - The Crystal Shards (USA).z64"
-      },
-      {
-        "id": "n64_legend_of_zelda,_the___majora's_mask_(usa)",
-        "title": "Legend of Zelda, The - Majora's Mask",
-        "core": "mupen64plus_next",
-        "boxart": "assets/icons/default_boxart.png",
-        "rom_path": "assets/roms/n64/Legend of Zelda, The - Majora's Mask (USA).z64"
       },
       {
         "id": "n64_mario_golf_(usa)",
@@ -360,6 +1004,13 @@
         "core": "mupen64plus_next",
         "boxart": "assets/roms/n64/boxart/The Legend of Zelda_ Ocarina of Time-01.png",
         "rom_path": "assets/roms/n64/The Legend of Zelda Ocarina of Time (USA) (Rev 2).z64"
+      },
+      {
+        "id": "n64_the_legend_of_zelda,_majora's_mask_(usa)",
+        "title": "The Legend of Zelda, Majora's Mask",
+        "core": "mupen64plus_next",
+        "boxart": "assets/roms/n64/boxart/The Legend of Zelda, Majora's Mask (USA).png",
+        "rom_path": "assets/roms/n64/The Legend of Zelda, Majora's Mask (USA).z64"
       },
       {
         "id": "n64_yoshi's_story_(usa)_(en,ja)",

@@ -88,6 +88,7 @@ body {
 .wheel-stage .carousel-card {
   position: absolute;
   height: 110px;
+  width: -moz-max-content;
   width: max-content;
   min-width: 240px;
   max-width: 500px;
@@ -115,7 +116,8 @@ body {
   height: auto;
   max-height: calc(110px - 30px);
   width: 100%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   filter: drop-shadow(0 6px 8px rgba(0, 0, 0, 0.6));
 }
 .wheel-stage .carousel-card .card-title {
@@ -233,7 +235,8 @@ body {
   width: auto;
   height: 100%;
   max-width: 100%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .gamelist-view .preview-pane .game-meta h2 {
   font-size: 1.8rem;
@@ -264,17 +267,19 @@ body {
 }
 .emu-overlay .exit-btn {
   position: absolute;
-  top: 25px;
-  right: 25px;
+  top: 0;
+  right: 0;
   background: rgba(255, 30, 30, 0.85);
   color: #fff;
   border: none;
-  padding: 12px 22px;
-  font-size: 0.9rem;
-  font-weight: 800;
-  border-radius: 8px;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.6rem;
+  font-weight: 700;
+  border-radius: 0 0 0 6px;
   cursor: pointer;
   z-index: 100000;
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
