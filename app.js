@@ -23,29 +23,47 @@
     function playArcadeSound(audioObject) {
         if (!audioObject) return;
         
-        // Force-unlock the browser's audio state if it was frozen on boot
-        if (!audioContextUnlocked && window.AudioContext) {
-            const ctx = new (window.AudioContext || window.webkitAudioContext)();
-            if (ctx.state === 'suspended') {
-                ctx.resume();
+        if (!audioContextUnlocked) {
+            try {
+                const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+                if (AudioContextClass) {
+                    const ctx = new AudioContextClass();
+                    
+                    if (ctx.state === 'suspended') {
+                        ctx.resume();
+                    }
+                    
+                    const osc = ctx.createOscillator();
+                    const gain = ctx.createGain();
+                    osc.type = 'sine';
+                    gain.gain.setValueAtTime(0.001, ctx.currentTime); 
+                    osc.connect(gain);
+                    gain.connect(ctx.destination);
+                    osc.start(0);
+                    osc.stop(0.01); 
+                    
+                    audioContextUnlocked = true;
+                    console.log("🔊 HARDWARE SYSTEM AUDIO JACK SECURELY ENGAGED!");
+                }
+            } catch (ctxErr) {
+                console.warn("Hardware audio initializer bypassed:", ctxErr);
             }
-            audioContextUnlocked = true;
-            console.log("🔊 Browser audio hardware layers completely unlocked!");
         }
 
         try {
+            audioObject.pause();
             audioObject.currentTime = 0; 
-            // Pre-load your custom wav bits into browser cache to prevent latency
-            audioObject.load(); 
             
             let playPromise = audioObject.play();
             if (playPromise !== undefined) {
                 playPromise.catch(error => {
-                    console.warn("Audio skipped. Press a key to unlock your speaker pack:", error);
+                    if (error.name !== "AbortError") {
+                        console.warn("Speaker track blocked by hardware layer restriction:", error);
+                    }
                 });
             }
         } catch (soundError) {
-            console.warn("Audio Context playback exception intercept:", soundError);
+            console.warn("Audio Context native playback exception:", soundError);
         }
     }
 
@@ -69,7 +87,7 @@
             
             if (gameLibrary.length > 0) {
                 renderWheel();
-                updateWheelSelection(0, false); // Don't fire sound on first boot to prevent crash
+                updateWheelSelection(0, false); 
                 setViewMode("WHEEL");
             }
         } catch (error) {
@@ -125,7 +143,7 @@
         const data = gameLibrary[currentSystemIdx];
         if (systemDisplay) systemDisplay.textContent = data.title.toUpperCase();
         if (counterDisplay) counterDisplay.textContent = `${currentSystemIdx + 1} / ${gameLibrary.length}`;
-        if (hintsDisplay) hintsDisplay.textContent = "◄ ► Select System • Enter to Open Menu";
+        if (hintsDisplay) hintsDisplay.textContent = "◄ ► Select System • [R] Random System • Enter to Open Menu";
         document.body.style.setProperty('--system-bg', `url('assets/backgrounds/${data.system}.jpg')`);
     }
     // ==============================================================================
@@ -210,7 +228,7 @@
 
         if (systemDisplay) systemDisplay.textContent = currentSystem.title.toUpperCase() + " / GAMES";
         if (counterDisplay) counterDisplay.textContent = `${currentGameIdx + 1} / ${currentSystem.games.length}`;
-        if (hintsDisplay) hintsDisplay.textContent = "▲ ▼ Scroll • ◄ ► Page Jump (+/- 10) • Enter to Start • Backspace to Go Back";
+        if (hintsDisplay) hintsDisplay.textContent = "▲ ▼ Scroll • ◄ ► Page Jump (+/- 10) • [R] Random Game • Enter to Start • Backspace to Go Back";
     }
 
     function setViewMode(mode) {
@@ -242,13 +260,27 @@
     window.addEventListener('keydown', (e) => {
         if (emuOverlay && emuOverlay.style.display === "block") return; 
         
+        const keyLower = e.key.toLowerCase();
+
         if (currentViewMode === "WHEEL") {
-            if (e.key === 'ArrowRight' || e.key === 'D' || e.key === 'd') {
+            if (e.key === 'ArrowRight' || keyLower === 'd') {
                 if (currentSystemIdx < gameLibrary.length - 1) updateWheelSelection(currentSystemIdx + 1, true);
-            } else if (e.key === 'ArrowLeft' || e.key === 'A' || e.key === 'a') {
+            } else if (e.key === 'ArrowLeft' || keyLower === 'a') {
                 if (currentSystemIdx > 0) updateWheelSelection(currentSystemIdx - 1, true);
             } else if (e.key === 'Enter') {
                 enterGamelist();
+            } 
+            else if (keyLower === 'r') {
+                e.preventDefault();
+                if (gameLibrary.length > 1) {
+                    let randomSystemIdx;
+                    do {
+                        randomSystemIdx = Math.floor(Math.random() * gameLibrary.length);
+                    } while (randomSystemIdx === currentSystemIdx);
+                    
+                    updateWheelSelection(randomSystemIdx, true);
+                    console.log("🎲 Attract Mode System Selection: " + randomSystemIdx);
+                }
             }
         } 
         else if (currentViewMode === "GAMELIST") {
@@ -258,14 +290,14 @@
                 return;
             }
             
-            if (e.key === 'ArrowDown' || e.key === 'S' || e.key === 's') {
+            if (e.key === 'ArrowDown' || keyLower === 's') {
                 e.preventDefault();
                 if (currentGameIdx < totalGames - 1) {
                     updateGameSelection(currentGameIdx + 1, true);
                 } else {
                     updateGameSelection(0, true); 
                 }
-            } else if (e.key === 'ArrowUp' || e.key === 'W' || e.key === 'w') {
+            } else if (e.key === 'ArrowUp' || keyLower === 'w') {
                 e.preventDefault();
                 if (currentGameIdx > 0) {
                     updateGameSelection(currentGameIdx - 1, true);
@@ -273,15 +305,27 @@
                     updateGameSelection(totalGames - 1, true); 
                 }
             } 
-            else if (e.key === 'ArrowRight' || e.key === 'D' || e.key === 'd') {
+            else if (e.key === 'ArrowRight' || keyLower === 'd') {
                 e.preventDefault();
                 let targetIdx = Math.min(currentGameIdx + 10, totalGames - 1);
                 updateGameSelection(targetIdx, true);
-            } else if (e.key === 'ArrowLeft' || e.key === 'A' || e.key === 'a') {
+            } else if (e.key === 'ArrowLeft' || keyLower === 'a') {
                 e.preventDefault();
                 let targetIdx = Math.max(currentGameIdx - 10, 0);
                 updateGameSelection(targetIdx, true);
             } 
+            else if (keyLower === 'r') {
+                e.preventDefault();
+                if (totalGames > 1) {
+                    let randomGameIdx;
+                    do {
+                        randomGameIdx = Math.floor(Math.random() * totalGames);
+                    } while (randomGameIdx === currentGameIdx);
+                    
+                    updateGameSelection(randomGameIdx, true);
+                    console.log("🎲 Attract Mode Game Selection: " + randomGameIdx);
+                }
+            }
             else if (e.key === 'Enter') {
                 const selectedGame = gameLibrary[currentSystemIdx]?.games?.[currentGameIdx];
                 if (!selectedGame) return;
@@ -299,6 +343,24 @@
             }
         }
     });
+
+    function forceHardwareAudioWake() {
+        console.log("⚡ User Input Caught! Priming audio channels completely offline...");
+        
+        [soundScroll, soundSelect, soundLaunch, soundBack].forEach(track => {
+            if (track) track.load(); 
+        });
+        
+        playArcadeSound(soundScroll);
+        
+        window.removeEventListener('click', forceHardwareAudioWake);
+        window.removeEventListener('keydown', forceHardwareAudioWake);
+        window.removeEventListener('gamepadconnected', forceHardwareAudioWake);
+    }
+
+    window.addEventListener('click', forceHardwareAudioWake);
+    window.addEventListener('keydown', forceHardwareAudioWake);
+    window.addEventListener('gamepadconnected', forceHardwareAudioWake);
 
     loadLibrary();
 })(); 
