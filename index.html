@@ -8,6 +8,17 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div id="entry-screen" class="entry-screen">
+        <div class="entry-screen-card">
+            <h1>Wesley's !-G-a-m-e-s-!</h1>
+            <p class="entry-screen-subtitle">Press go to site!</p>
+            <button id="enter-site-btn" class="entry-screen-btn" type="button">Go to site</button>
+            <div class="entry-screen-updates">
+                <h2>Update logs</h2>
+                <div id="entry-update-list" class="entry-update-list"></div>
+            </div>
+        </div>
+    </div>
 
     <!-- Global Application Header -->
     <header class="es-header">
@@ -46,11 +57,46 @@
     <!-- Help System Footer Displays -->
     <footer class="es-footer">
         <div class="control-hints" id="control-hints">◄ ► Select System • Enter to Open Menu</div>
+        <button class="control-settings-btn" id="controller-settings-btn" type="button">Bindings</button>
     </footer>
+
+    <div class="controller-bindings-overlay" id="controller-bindings-overlay" hidden>
+        <div class="controller-bindings-panel">
+            <div class="controller-bindings-header">
+                <div>
+                    <h3>Controller Bindings</h3>
+                    <p id="controller-status">Waiting for a controller connection…</p>
+                </div>
+                <button class="panel-close-btn" id="controller-bindings-close" type="button">✕</button>
+            </div>
+            <div id="controller-bindings-list" class="controller-bindings-list"></div>
+            <div class="controller-bindings-actions">
+                <button id="controller-bindings-reset" type="button">Reset Defaults</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="flash-bindings-overlay" id="flash-bindings-overlay" hidden>
+        <div class="flash-bindings-panel">
+            <div class="controller-bindings-header">
+                <div>
+                    <h3>Flash Runtime Keybinds</h3>
+                    <p>Choose a keyboard key, assign it to a controller action, add more mappings, and export them as a JSON file.</p>
+                </div>
+                <button class="panel-close-btn" id="flash-bindings-close" type="button">✕</button>
+            </div>
+            <div id="flash-bindings-list" class="flash-bindings-list"></div>
+            <div class="controller-bindings-actions flash-bindings-actions">
+                <button id="flash-bindings-add" type="button">Add Mapping</button>
+                <button id="flash-bindings-export" type="button">Export JSON</button>
+            </div>
+        </div>
+    </div>
 
     <!-- FIND AND OVERWRITE THIS SEGMENT IN YOUR INDEX.HTML -->
     <div id="emu-overlay" class="emu-overlay">
         <button class="exit-btn" id="exit-game-btn">✕</button>
+        <button class="runtime-control-settings-btn" id="runtime-controller-settings-btn" type="button">Bindings</button>
         
         <!-- ============================================================================== -->
         <!--          UNIFIED HIGH-PERFORMANCE STATIC RUNTIME VIEWPORT DECK                -->
@@ -68,6 +114,7 @@
 
 
     <!-- Script Layer Stack -->
+    <script src="coi-serviceworker.js"></script>
     <script src="emulator-launcher.js"></script>
     <script src="html-launcher.js"></script>
     <script src="app.js"></script>

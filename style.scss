@@ -50,8 +50,103 @@ body {
   height: 100vh;
   width: 100vw;
   overflow: hidden;
+}
+
+body.app-ready {
   display: grid;
   grid-template-rows: 90px 1fr 90px;
+}
+
+.entry-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 300000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at center, #101826 0%, #02040a 100%);
+  padding: 24px;
+}
+
+.entry-screen[hidden] {
+  display: none;
+}
+
+.entry-screen-card {
+  width: min(620px, 100%);
+  background: rgba(4, 9, 20, 0.92);
+  border: 1px solid rgba(0, 229, 255, 0.3);
+  border-radius: 20px;
+  padding: 32px;
+  box-shadow: 0 0 0 1px rgba(0, 229, 255, 0.12), 0 0 36px rgba(0, 229, 255, 0.22);
+}
+
+.entry-screen-card h1 {
+  font-size: 2rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  color: $accent-glow;
+}
+
+.entry-screen-subtitle {
+  color: rgba(255, 255, 255, 0.78);
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.entry-screen-btn {
+  background: rgba(0, 0, 0, 0.95);
+  color: $text-main;
+  border: 1px solid rgba(0, 229, 255, 0.35);
+  border-radius: 999px;
+  padding: 10px 18px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: box-shadow 0.25s ease, border-color 0.25s ease, transform 0.2s ease;
+}
+
+.entry-screen-btn:hover {
+  border-color: $accent-glow;
+  box-shadow: 0 0 16px rgba(0, 229, 255, 0.24);
+  transform: translateY(-1px);
+}
+
+.entry-screen-updates {
+  margin-top: 24px;
+}
+
+.entry-screen-updates h2 {
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 12px;
+}
+
+.entry-update-list {
+  display: grid;
+  gap: 10px;
+}
+
+.entry-update-item {
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.entry-update-item strong {
+  color: $accent-glow;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.entry-update-item span {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.9rem;
 }
 
 // ==============================================================================
@@ -292,8 +387,285 @@ body {
 }
 
 // ==============================================================================
-//                       5. FULLSCREEN EMULATORJS OVERLAY DECK
+//                       5. CONTROLLER BINDING OVERLAY
 // ==============================================================================
+.es-footer {
+  position: relative;
+
+  .control-settings-btn {
+    margin-left: 20px;
+    background: rgba(0, 0, 0, 0.85);
+    color: $text-main;
+    border: 1px solid rgba(0, 229, 255, 0.35);
+    border-radius: 999px;
+    padding: 8px 14px;
+    cursor: pointer;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: box-shadow 0.25s ease, border-color 0.25s ease, transform 0.2s ease;
+
+    &:hover {
+      border-color: $accent-glow;
+      box-shadow: 0 0 18px rgba(0, 229, 255, 0.25);
+      transform: translateY(-1px);
+    }
+  }
+}
+
+.controller-bindings-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(2, 6, 16, 0.82);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200000;
+  padding: 24px;
+
+  &[hidden] {
+    display: none;
+  }
+
+  .controller-bindings-panel {
+    width: min(560px, 100%);
+    background: linear-gradient(145deg, rgba(7, 13, 28, 0.97), rgba(3, 8, 18, 0.98));
+    border: 2px solid rgba(0, 229, 255, 0.35);
+    border-radius: 18px;
+    padding: 22px;
+    box-shadow: 0 0 0 1px rgba(0, 229, 255, 0.12), 0 0 28px rgba(0, 229, 255, 0.24), inset 0 0 24px rgba(0, 229, 255, 0.08);
+  }
+
+  .controller-bindings-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 16px;
+
+    h3 {
+      font-size: 1.15rem;
+      margin-bottom: 6px;
+      color: $text-main;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    p {
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 0.9rem;
+    }
+  }
+
+  .panel-close-btn {
+    background: rgba(0, 0, 0, 0.85);
+    border: 1px solid rgba(0, 229, 255, 0.3);
+    color: $text-main;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 999px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: box-shadow 0.25s ease, border-color 0.25s ease;
+
+    &:hover {
+      border-color: $accent-glow;
+      box-shadow: 0 0 14px rgba(0, 229, 255, 0.24);
+    }
+  }
+
+  .controller-bindings-list {
+    display: grid;
+    gap: 10px;
+  }
+
+  .binding-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px 14px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .binding-row span {
+    font-size: 0.95rem;
+    color: $text-main;
+    letter-spacing: 0.06em;
+  }
+
+  .binding-chip {
+    background: rgba(0, 0, 0, 0.95);
+    color: $text-main;
+    border: 1px solid rgba(0, 229, 255, 0.3);
+    border-radius: 999px;
+    padding: 8px 12px;
+    cursor: pointer;
+    min-width: 150px;
+    text-align: center;
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    transition: box-shadow 0.25s ease, border-color 0.25s ease, transform 0.2s ease;
+
+    &:hover {
+      border-color: $accent-glow;
+      box-shadow: 0 0 16px rgba(0, 229, 255, 0.24);
+      transform: translateY(-1px);
+    }
+  }
+
+  .binding-chip.is-waiting {
+    background: rgba(7, 20, 35, 0.95);
+    border-color: $accent-glow;
+    box-shadow: 0 0 18px rgba(0, 229, 255, 0.22);
+    color: $text-main;
+  }
+
+  .controller-bindings-actions {
+    margin-top: 16px;
+    display: flex;
+    justify-content: flex-end;
+
+    button {
+      background: rgba(0, 0, 0, 0.95);
+      color: $text-main;
+      border: 1px solid rgba(0, 229, 255, 0.3);
+      border-radius: 999px;
+      padding: 8px 14px;
+      cursor: pointer;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      transition: box-shadow 0.25s ease, border-color 0.25s ease;
+
+      &:hover {
+        border-color: $accent-glow;
+        box-shadow: 0 0 16px rgba(0, 229, 255, 0.24);
+      }
+    }
+  }
+}
+
+// ============================================================================== 
+//                       6. FLASH RUNTIME KEYBIND OVERLAY
+// ============================================================================== 
+.flash-bindings-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(2, 6, 16, 0.82);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200000;
+  padding: 24px;
+
+  &[hidden] {
+    display: none;
+  }
+
+  .flash-bindings-panel {
+    width: min(640px, 100%);
+    background: linear-gradient(145deg, rgba(7, 13, 28, 0.97), rgba(3, 8, 18, 0.98));
+    border: 2px solid rgba(0, 229, 255, 0.35);
+    border-radius: 18px;
+    padding: 22px;
+    box-shadow: 0 0 0 1px rgba(0, 229, 255, 0.12), 0 0 28px rgba(0, 229, 255, 0.24), inset 0 0 24px rgba(0, 229, 255, 0.08);
+  }
+
+  .flash-bindings-list {
+    display: grid;
+    gap: 10px;
+    margin-top: 8px;
+  }
+
+  .flash-binding-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px 14px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .flash-binding-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .flash-binding-title {
+    color: $text-main;
+    font-size: 0.9rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .flash-binding-key {
+    color: rgba(255, 255, 255, 0.76);
+    font-size: 0.85rem;
+  }
+
+  .flash-binding-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .flash-binding-key-btn,
+  .flash-binding-action-select,
+  .flash-binding-remove-btn,
+  .flash-bindings-actions button {
+    background: rgba(0, 0, 0, 0.95);
+    color: $text-main;
+    border: 1px solid rgba(0, 229, 255, 0.3);
+    border-radius: 999px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    transition: box-shadow 0.25s ease, border-color 0.25s ease, transform 0.2s ease;
+  }
+
+  .flash-binding-key-btn:hover,
+  .flash-binding-action-select:hover,
+  .flash-binding-remove-btn:hover,
+  .flash-bindings-actions button:hover {
+    border-color: $accent-glow;
+    box-shadow: 0 0 16px rgba(0, 229, 255, 0.24);
+    transform: translateY(-1px);
+  }
+
+  .flash-binding-key-btn.is-waiting {
+    background: rgba(7, 20, 35, 0.95);
+    border-color: $accent-glow;
+    box-shadow: 0 0 18px rgba(0, 229, 255, 0.22);
+  }
+
+  .flash-binding-action-select {
+    min-width: 170px;
+    appearance: none;
+  }
+
+  .flash-bindings-actions {
+    margin-top: 16px;
+    justify-content: flex-end;
+    gap: 8px;
+  }
+}
+
+// ============================================================================== 
+//                       7. FULLSCREEN EMULATORJS OVERLAY DECK
+// ============================================================================== 
 .emu-overlay {
   display: none;
   position: fixed;
@@ -301,6 +673,28 @@ body {
   background-color: #000;
   z-index: 99999;
   .emu-sandbox-frame { width: 100%; height: 100%; border: none; }
+  .runtime-control-settings-btn {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    z-index: 100000;
+    background: rgba(0, 0, 0, 0.85);
+    color: $text-main;
+    border: 1px solid rgba(0, 229, 255, 0.35);
+    border-radius: 999px;
+    padding: 8px 14px;
+    cursor: pointer;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    transition: box-shadow 0.25s ease, border-color 0.25s ease, transform 0.2s ease;
+
+    &:hover {
+      border-color: $accent-glow;
+      box-shadow: 0 0 16px rgba(0, 229, 255, 0.24);
+      transform: translateY(-1px);
+    }
+  }
   .exit-btn {
     position: absolute; 
     top: 0;         // Placed directly against the top edge

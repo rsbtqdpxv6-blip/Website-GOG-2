@@ -42,7 +42,7 @@ EXTENSION_CORE_MAP = {
     ".smd": "genesis_plus_gx",
     ".gen": "genesis_plus_gx",
     ".bin": "genesis_plus_gx",
-    ".z64": "mupen64plus_next",
+    ".zip": "mupen64plus_next",
     ".exe": "dosbox",        # Automatically routes loose .exe entries inside Secret to DosBox
     ".swf": "ruffle",
     ".wad": "prboom"        # Automatically routes loose .wad entries inside Secret to HTML5

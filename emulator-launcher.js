@@ -39,6 +39,8 @@ async function launchGame(game, hintsDisplay) {
     if (!emuOverlay || !iframe) return;
 
     emuOverlay.style.display = "block";
+    window.__arcadeActiveRuntimeGame = game;
+    window.dispatchEvent(new CustomEvent('arcade-session-state-changed', { detail: { game } }));
     emulatorReady = false;
 
     // Resolve clean absolute web paths for your local resources to prevent CORS bugs
@@ -231,6 +233,8 @@ function finalizeArcadeClosure() {
 
     iframe.src = "about:blank"; 
     emuOverlay.style.display = "none";
+    window.__arcadeActiveRuntimeGame = null;
+    window.dispatchEvent(new CustomEvent('arcade-session-state-changed', { detail: { game: null } }));
     
     window.EJS_player = null;
     window.EJS_gameUrl = null;
