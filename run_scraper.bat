@@ -22,7 +22,7 @@ echo.
 
 :: 2. Execute the python folder indexer and scraper core script
 echo [STAGE 2] Running folder scanner and database asset scraper...
-python -B generate_library.py
+py -B generate_library.py
 if %errorlevel% neq 0 (
     echo.
     echo ❌ ERROR: The script crashed during the extraction process loop.

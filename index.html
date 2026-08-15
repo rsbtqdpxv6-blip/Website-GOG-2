@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+    <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>3D Wheel & Gamelist ES-DE Arcade</title>
     <!-- Link to the compiled CSS generated from your style.scss file -->
     <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="assets/icons/secret.webp">
 </head>
 <body>
     <div id="entry-screen" class="entry-screen">
@@ -45,7 +46,7 @@
         <div class="preview-pane">
             <div class="media-stack-box" id="game-fanart-box">
                 <div class="boxart-frame">
-                    <img id="game-boxart" src="assets/icons/default_boxart.png" alt="Game Cover">
+                    <img id="game-boxart" src="assets/icons/default_boxart.svg" alt="Game Cover">
                 </div>
             </div>
             <div class="game-meta">
@@ -56,8 +57,16 @@
 
     <!-- Help System Footer Displays -->
     <footer class="es-footer">
-        <div class="control-hints" id="control-hints">◄ ► Select System • Enter to Open Menu</div>
+        <div style="display:flex; gap:10px; align-items:center;">
+            <div class="control-hints" id="control-hints">◄ ► Select System • Enter to Open Menu</div>
+            <div style="display:flex; gap:8px; margin-left:12px;">
+                <button class="control-settings-btn" id="backup-btn" type="button">Backup Data</button>
+                <button class="control-settings-btn" id="restore-btn" type="button">Restore Data</button>
+                <input id="backup-file-input" type="file" accept="application/json" hidden />
+            </div>
+        </div>
         <button class="control-settings-btn" id="controller-settings-btn" type="button">Bindings</button>
+        <button class="control-settings-btn" id="settings-menu-btn" type="button">Settings</button>
     </footer>
 
     <div class="controller-bindings-overlay" id="controller-bindings-overlay" hidden>
@@ -72,6 +81,28 @@
             <div id="controller-bindings-list" class="controller-bindings-list"></div>
             <div class="controller-bindings-actions">
                 <button id="controller-bindings-reset" type="button">Reset Defaults</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="controller-bindings-overlay" id="settings-overlay" hidden>
+        <div class="controller-bindings-panel">
+            <div class="controller-bindings-header">
+                <div>
+                    <h3>Emulator Settings</h3>
+                    <p>Toggle the threaded core option used by EmulatorJS sandboxed games.</p>
+                </div>
+                <button class="panel-close-btn" id="settings-close" type="button">✕</button>
+            </div>
+            <div class="controller-bindings-list">
+                <label class="binding-row" for="settings-threaded-cores">
+                    <span>Turn on threaded cores</span>
+                    <input id="settings-threaded-cores" type="checkbox" />
+                </label>
+                <label class="binding-row" for="settings-crt-enabled">
+                    <span>Enable CRT overlay</span>
+                    <input id="settings-crt-enabled" type="checkbox" />
+                </label>
             </div>
         </div>
     </div>
@@ -96,7 +127,7 @@
     <!-- FIND AND OVERWRITE THIS SEGMENT IN YOUR INDEX.HTML -->
     <div id="emu-overlay" class="emu-overlay">
         <button class="exit-btn" id="exit-game-btn">✕</button>
-        <button class="runtime-control-settings-btn" id="runtime-controller-settings-btn" type="button">Bindings</button>
+        <button class="runtime-control-settings-btn" id="runtime-controller-settings-btn" type="button" hidden>Flash Keys</button>
         
         <!-- ============================================================================== -->
         <!--          UNIFIED HIGH-PERFORMANCE STATIC RUNTIME VIEWPORT DECK                -->
@@ -104,12 +135,17 @@
         <!-- Stripping out the sandbox attribute string clears the browser error logs while -->
         <!-- giving your WASM-GC single-file game direct native hardware access!           -->
         <iframe id="emu-sandbox-frame" 
-                style="width: 100%; height: 100%; border: none; background: #000; display: block;" 
-                allow="cross-origin-isolated; autoplay; gamepad; clipboard-read; clipboard-write" 
-                crossorigin="anonymous"
-                src="about:blank">
+            style="width: 100%; height: 100%; border: none; background: #000; display: block;" 
+            allow="autoplay; gamepad *; clipboard-read; clipboard-write" 
+            crossorigin="anonymous"
+            src="about:blank">
         </iframe>
         <!-- ============================================================================== -->
+    </div>
+
+    <div id="crt-overlay" class="crt-overlay" aria-hidden="true">
+        <div class="crt-scanline-layer"></div>
+        <canvas id="crt-distortion-canvas"></canvas>
     </div>
 
 

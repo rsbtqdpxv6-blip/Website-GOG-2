@@ -108,6 +108,7 @@ async function launchGame(game, hintsDisplay) {
         // Detect if running a DOS program inside EmulatorJS to adjust command parameters
         let isDosGame = (game.core === "dosbox" || game.rom_path.toLowerCase().endsWith('.exe'));
         let dosExecutableMapping = isDosGame ? `window.EJS_dosboxExtension = "${game.rom_path.split('.').pop().toLowerCase()}";` : "";
+        const threadedCoresEnabled = window.__arcadeEmulatorSettings?.threadedCores === true;
 
         sandboxedHTML = `
             <!DOCTYPE html>
@@ -129,11 +130,11 @@ async function launchGame(game, hintsDisplay) {
                     window.EJS_pathtodata = "${projectRootUrl}emulatorjs/data/"; 
                     window.EJS_language = "en-US";
                     window.EJS_startOnLoaded = true;
-                    EJS_threads = true;
+                    window.EJS_threads = ${threadedCoresEnabled};
                     window.EJS_cacheConfig = {
                         enabled: true,
-                        cacheMaxSizeMB: 4096,   // Sets the limit (e.g., 4096 MB = 4 GB)
-                        cacheMaxAgeMins: 10080  // Time before a game is pruned (e.g., 10080 mins = 7 days)
+                        cacheMaxSizeMB: 256,   // Lower memory usage from the previous 4 GB default
+                        cacheMaxAgeMins: 120   // Keep cache data shorter-lived to reduce footprint
                     };
                     ${dosExecutableMapping}
 

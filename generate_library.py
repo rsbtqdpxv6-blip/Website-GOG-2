@@ -12,7 +12,18 @@ FANART_SUFFIX    = "f"
 SUPPORTED_EXTS   = [".jpg", ".png", ".jpeg", ".webp"]
 
 # Fallback asset if an image is completely missing from your pack
-DEFAULT_BOXART   = f"{ASSETS_DIR_NAME}/icons/default_boxart.png"
+# Prefer WebP when present, otherwise fall back to SVG or PNG
+icons_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), ASSETS_DIR_NAME, 'icons')
+preferred_defaults = [
+    f"{ASSETS_DIR_NAME}/icons/default_boxart.webp",
+    f"{ASSETS_DIR_NAME}/icons/default_boxart.svg",
+    f"{ASSETS_DIR_NAME}/icons/default_boxart.png"
+]
+DEFAULT_BOXART = preferred_defaults[0]
+for candidate in preferred_defaults:
+    if os.path.exists(os.path.join(os.path.dirname(os.path.abspath(__file__)), candidate)):
+        DEFAULT_BOXART = candidate
+        break
 
 CORE_MAP = {
     "nes": "fceumm",
@@ -20,8 +31,8 @@ CORE_MAP = {
     "gba": "mgba",           
     "gbc": "gambatte",
     "gb": "gambatte",
-    "genesis": "genesis_plus_gx",
-    "megadrive": "genesis_plus_gx",
+    "genesis": "genesis_plus_gx_wide_wide",
+    "megadrive": "genesis_plus_gx_wide_wide",
     "ps1": "pcsx_rearmed",
     "n64": "mupen64plus_next",
     "flash": "ruffle",      
@@ -38,10 +49,10 @@ EXTENSION_CORE_MAP = {
     ".gba": "mgba",
     ".gbc": "gambatte",
     ".gb": "gambatte",
-    ".md": "genesis_plus_gx",
-    ".smd": "genesis_plus_gx",
-    ".gen": "genesis_plus_gx",
-    ".bin": "genesis_plus_gx",
+    ".md": "genesis_plus_gx_wide",
+    ".smd": "genesis_plus_gx_wide",
+    ".gen": "genesis_plus_gx_wide",
+    ".bin": "genesis_plus_gx_wide",
     ".zip": "mupen64plus_next",
     ".exe": "dosbox",        # Automatically routes loose .exe entries inside Secret to DosBox
     ".swf": "ruffle",
@@ -62,7 +73,7 @@ TITLE_MAP = {
     "html5": "HTML5 Web Games",
     "dos": "MS-DOS Classic PC Games",
     "doom": "Doom",
-    "secret": "My Secret Favorites"
+    "secret": "Wesley's Favorites"
 }
 
 def clean_display_title(filename):
@@ -76,6 +87,12 @@ def tokenize(text):
     cleaned = re.sub(r'\[.*?\]|\(.*?\)', '', text).lower()
     cleaned = re.sub(r'[^a-z0-9\s]', ' ', cleaned)
     return [word for word in cleaned.split() if word]
+
+
+def is_boxart_directory_name(name):
+    """Returns True for any directory named boxart, regardless of casing."""
+    return (name or '').lower() == BOXART_DIR_NAME
+
 
 def find_progressive_boxart_match(rom_filename, boxart_files):
     """Scans local boxart files and performs progressive word-by-word matching."""
@@ -140,14 +157,45 @@ def generate_arcade_json():
             
             available_art_files = []
             if os.path.exists(boxart_dir):
-                available_art_files = [f for f in os.listdir(boxart_dir) if f.lower().endswith(('.png', '.jpg', '.jpeg'))]
+                # include all supported image extensions (including .webp)
+                available_art_files = [f for f in os.listdir(boxart_dir) if f.lower().endswith(tuple(SUPPORTED_EXTS))]
 
             # --- TARGET A: LOOSE FOLDER WEB SYSTEMS SCANS (HTML5 & DOS ENGINE FOLDERS) ---
             if system_slug in ["html5", "dos"]:
                 for game_folder in sorted(os.listdir(system_path)):
                     game_folder_path = os.path.join(system_path, game_folder)
-                    if os.path.isdir(game_folder_path) and game_folder != BOXART_DIR_NAME:
-                        boxart_path = f"{ASSETS_DIR_NAME}/{ROMS_DIR_NAME}/{system_folder}/{BOXART_DIR_NAME}/{game_folder}.png"
+                    if os.path.isdir(game_folder_path) and not is_boxart_directory_name(game_folder):
+                        # prefer any supported boxart extension for folder-level art
+                        boxart_path = DEFAULT_BOXART
+                        found_local_art = False
+
+                        # 1) Check inside the game's own folder for art (e.g. GameFolder/GameFolder.webp or boxart.webp)
+                        for ext in SUPPORTED_EXTS:
+                            candidate = os.path.join(game_folder_path, f"{game_folder}{ext}")
+                            if os.path.exists(candidate):
+                                boxart_path = f"{ASSETS_DIR_NAME}/{ROMS_DIR_NAME}/{system_slug}/{game_folder}/{game_folder}{ext}"
+                                found_local_art = True
+                                break
+
+                        if not found_local_art:
+                            for base in ["boxart", "cover", "folder"]:
+                                for ext in SUPPORTED_EXTS:
+                                    candidate = os.path.join(game_folder_path, f"{base}{ext}")
+                                    if os.path.exists(candidate):
+                                        boxart_path = f"{ASSETS_DIR_NAME}/{ROMS_DIR_NAME}/{system_slug}/{game_folder}/{base}{ext}"
+                                        found_local_art = True
+                                        break
+                                if found_local_art:
+                                    break
+
+                        # 2) If no art inside the folder, check the system-level boxart directory for matching names
+                        if not found_local_art and os.path.exists(boxart_dir):
+                            for ext in SUPPORTED_EXTS:
+                                candidate = os.path.join(boxart_dir, f"{game_folder}{ext}")
+                                if os.path.exists(candidate):
+                                    boxart_path = f"{ASSETS_DIR_NAME}/{ROMS_DIR_NAME}/{system_slug}/{BOXART_DIR_NAME}/{game_folder}{ext}"
+                                    found_local_art = True
+                                    break
                         
                         # Find the core launcher executable for local DOS folders
                         launch_target = "index.html"
@@ -160,47 +208,111 @@ def generate_arcade_json():
                             "id": f"{system_slug}_{game_folder.lower()}",
                             "title": game_folder.replace('-', ' ').replace('_', ' ').title(),
                             "core": system_core,
-                            "boxart": boxart_path if os.path.exists(os.path.join(boxart_dir, f"{game_folder}.png")) else DEFAULT_BOXART,
-                            "rom_path": f"{ASSETS_DIR_NAME}/{ROMS_DIR_NAME}/{system_folder}/{game_folder}/{launch_target}"
+                            "boxart": boxart_path,
+                            "rom_path": f"{ASSETS_DIR_NAME}/{ROMS_DIR_NAME}/{system_slug}/{game_folder}/{launch_target}"
                         }
                         console_node["games"].append(game_entry)
             
             # --- TARGET B: CONSOLE ROMS, FLASH, & MIXED SECRET FAVORITES SCANS ---
             else:
-                for file in sorted(os.listdir(system_path)):
-                    file_path = os.path.join(system_path, file)
-                    if os.path.isfile(file_path) and not file.startswith('.'):
+                # Walk the system folder recursively so nested directories and files are indexed.
+                for root, dirs, files in os.walk(system_path):
+                    dirs[:] = [d for d in dirs if not is_boxart_directory_name(d)]
+
+                    # skip the system-level boxart directory (and any casing variant)
+                    if os.path.abspath(root) == os.path.abspath(boxart_dir) or is_boxart_directory_name(os.path.basename(root)):
+                        continue
+
+                    rel_root = os.path.relpath(root, system_path)
+                    rel_prefix = '' if rel_root == '.' else rel_root.replace(os.sep, '/')
+
+                    for file in sorted(files):
+                        if file.startswith('.'): 
+                            continue
+
+                        file_path = os.path.join(root, file)
+                        if not os.path.isfile(file_path):
+                            continue
+
                         raw_game_title, ext = os.path.splitext(file)
                         clean_title = clean_display_title(file)
-                        
+
                         # Handle multi-core dynamic allocation inside your Secret Favorites tab folder
                         resolved_core = system_core
                         if system_slug == "secret":
                             resolved_core = EXTENSION_CORE_MAP.get(ext.lower(), "snes9x")
 
-                        boxart_filename = f"{raw_game_title}.png"
-                        local_boxart_path = f"{ASSETS_DIR_NAME}/{ROMS_DIR_NAME}/{system_folder}/{BOXART_DIR_NAME}/{boxart_filename}"
-                        
-                        if not os.path.exists(os.path.join(boxart_dir, boxart_filename)):
-                            matched_art_file = find_progressive_boxart_match(raw_game_title, available_art_files)
-                            if matched_art_file:
-                                local_boxart_path = f"{ASSETS_DIR_NAME}/{ROMS_DIR_NAME}/{system_folder}/{BOXART_DIR_NAME}/{matched_art_file}"
-                            else:
-                                local_boxart_path = DEFAULT_BOXART
+                        # Build web-relative rom path including nested folders
+                        if rel_prefix:
+                            rom_rel_path = f"{ASSETS_DIR_NAME}/{ROMS_DIR_NAME}/{system_slug}/{rel_prefix}/{file}"
+                        else:
+                            rom_rel_path = f"{ASSETS_DIR_NAME}/{ROMS_DIR_NAME}/{system_slug}/{file}"
+
+                        # Prefer boxart inside the same folder as the game file
+                        local_boxart_path = DEFAULT_BOXART
+                        found_local_art = False
+                        for ext_img in SUPPORTED_EXTS:
+                            candidate = os.path.join(root, f"{raw_game_title}{ext_img}")
+                            if os.path.exists(candidate):
+                                if rel_prefix:
+                                    local_boxart_path = f"{ASSETS_DIR_NAME}/{ROMS_DIR_NAME}/{system_slug}/{rel_prefix}/{raw_game_title}{ext_img}"
+                                else:
+                                    local_boxart_path = f"{ASSETS_DIR_NAME}/{ROMS_DIR_NAME}/{system_slug}/{raw_game_title}{ext_img}"
+                                found_local_art = True
+                                break
+
+                        if not found_local_art:
+                            # check for common boxart names and supported extensions
+                            candidate_names = []
+                            for ext in SUPPORTED_EXTS:
+                                candidate_names.append(f"{raw_game_title}{ext}")
+                            for base in ["boxart", "cover", "folder"]:
+                                for ext in SUPPORTED_EXTS:
+                                    candidate_names.append(f"{base}{ext}")
+
+                            for candidate_name in candidate_names:
+                                if os.path.exists(os.path.join(root, candidate_name)):
+                                    if rel_prefix:
+                                        local_boxart_path = f"{ASSETS_DIR_NAME}/{ROMS_DIR_NAME}/{system_slug}/{rel_prefix}/{candidate_name}"
+                                    else:
+                                        local_boxart_path = f"{ASSETS_DIR_NAME}/{ROMS_DIR_NAME}/{system_slug}/{candidate_name}"
+                                    found_local_art = True
+                                    break
+
+                        if not found_local_art:
+                            # fallback to system boxart directory or progressive matching
+                            # check system-level boxart directory for matching files across supported extensions
+                            found_sys_box = False
+                            for ext in SUPPORTED_EXTS:
+                                sys_box_candidate = os.path.join(boxart_dir, f"{raw_game_title}{ext}")
+                                if os.path.exists(sys_box_candidate):
+                                    local_boxart_path = f"{ASSETS_DIR_NAME}/{ROMS_DIR_NAME}/{system_slug}/{BOXART_DIR_NAME}/{raw_game_title}{ext}"
+                                    found_sys_box = True
+                                    break
+                            if not found_sys_box:
+                                matched_art_file = find_progressive_boxart_match(raw_game_title, available_art_files)
+                                if matched_art_file:
+                                    local_boxart_path = f"{ASSETS_DIR_NAME}/{ROMS_DIR_NAME}/{system_slug}/{BOXART_DIR_NAME}/{matched_art_file}"
+                                else:
+                                    local_boxart_path = DEFAULT_BOXART
 
                         game_entry = {
                             "id": f"{system_slug}_{raw_game_title.lower().replace(' ', '_').replace('-', '_')}",
                             "title": clean_title,
                             "core": resolved_core,
                             "boxart": local_boxart_path,
-                            "rom_path": f"{ASSETS_DIR_NAME}/{ROMS_DIR_NAME}/{system_folder}/{file}"
+                            "rom_path": rom_rel_path
                         }
-                        
+
+                        # Fanart check: prefer fanart in same folder as the game
                         for ext_img in SUPPORTED_EXTS:
                             fanart_file = f"{raw_game_title}{FANART_SUFFIX}{ext_img}"
-                            if os.path.exists(os.path.join(boxart_dir, fanart_file)):
-                                game_entry["fanart"] = f"{ASSETS_DIR_NAME}/{ROMS_DIR_NAME}/{system_folder}/{BOXART_DIR_NAME}/{fanart_file}"
-                                break 
+                            if os.path.exists(os.path.join(root, fanart_file)):
+                                if rel_prefix:
+                                    game_entry["fanart"] = f"{ASSETS_DIR_NAME}/{ROMS_DIR_NAME}/{system_slug}/{rel_prefix}/{fanart_file}"
+                                else:
+                                    game_entry["fanart"] = f"{ASSETS_DIR_NAME}/{ROMS_DIR_NAME}/{system_slug}/{fanart_file}"
+                                break
 
                         console_node["games"].append(game_entry)
             
