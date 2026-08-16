@@ -33,12 +33,26 @@ CORE_MAP = {
     "gb": "gambatte",
     "genesis": "genesis_plus_gx_wide_wide",
     "megadrive": "genesis_plus_gx_wide_wide",
+    "sms": "segaMD",
     "ps1": "pcsx_rearmed",
     "n64": "mupen64plus_next",
     "flash": "ruffle",      
     "html5": "native_html",
-    "dos": "dosbox",         # Maps straight to your local EmulatorJS DosBox core setup
-    "secret": "dynamic"      # Dynamic core assignment handled per file below
+    "dos": "dosbox",         # Custom local EmulatorJS DosBox core setup
+    "secret": "dynamic",     # Dynamic core assignment handled per file below
+    
+    # Accurate EmulatorJS Additions
+    "gamegear": "segaGG",
+    "sega32x": "sega32x",
+    "segacd": "segaCD",
+    "mame": "mame2003",       # Standard EmulatorJS MAME engine
+    "arcade": "arcade",       # EmulatorJS FBNeo arcade player wrapper
+    "nds": "desmume",
+    "psp": "ppsspp",          # Requires SharedArrayBuffer/HTTPS environment
+    "saturn": "yabause",
+    "virtualboy": "virtualboy",
+    "atari2600": "stella",
+    "c64": "vice_c64"
 }
 
 # Auto-detect engine selection for files inside your custom Secret Favorites folder
@@ -53,10 +67,27 @@ EXTENSION_CORE_MAP = {
     ".smd": "genesis_plus_gx_wide",
     ".gen": "genesis_plus_gx_wide",
     ".bin": "genesis_plus_gx_wide",
-    ".zip": "mupen64plus_next",
+    ".sms": "segaMD",
+    ".gg": "segaGG",
+    ".32x": "sega32x",
+    ".zip": "mupen64plus_next",  # N64, Arcade, MAME, and SegaCD all use .zip, so this is a catch-all
+    ".z64": "mupen64plus_next",
+    ".n64": "mupen64plus_next",
     ".exe": "dosbox",        # Automatically routes loose .exe entries inside Secret to DosBox
     ".swf": "ruffle",
-    ".wad": "prboom"        # Automatically routes loose .wad entries inside Secret to HTML5
+    ".wad": "prboom",        # Automatically routes loose .wad entries inside Secret to HTML5
+    
+    # Accurate Extension Additions
+    ".nds": "desmume",
+    ".pbp": "ppsspp",        # PSP EBOOT executables
+    ".iso": "pcsx_rearmed",  # Disc image fallback (handled dynamically per core if needed)
+    ".a26": "stella",
+    ".d64": "vice_c64",
+    
+    # Zip Rule Priority handling
+    # Since .zip applies to N64, Arcade, MAME, and SegaCD, your router must inspect the
+    # system key first. If checking by extension alone, arcade is set as the catch-all:
+    ".zip": "arcade"         
 }
 
 TITLE_MAP = {
@@ -66,6 +97,7 @@ TITLE_MAP = {
     "gbc": "Game Boy Color",
     "gb": "Game Boy",
     "genesis": "Sega Genesis",
+    "sms": "Sega Master System",
     "megadrive": "Sega Mega Drive",
     "ps1": "Sony PlayStation",
     "n64": "Nintendo 64",
@@ -73,7 +105,20 @@ TITLE_MAP = {
     "html5": "HTML5 Web Games",
     "dos": "MS-DOS Classic PC Games",
     "doom": "Doom",
-    "secret": "Wesley's Favorites"
+    "secret": "Wesley's Favorites",
+    
+    # Title Additions
+    "gamegear": "Sega Game Gear",
+    "sega32x": "Sega 32X",
+    "segacd": "Sega CD",
+    "mame": "MAME 2003 Arcade",
+    "arcade": "FinalBurn Neo Arcade",
+    "nds": "Nintendo DS",
+    "psp": "Sony PlayStation Portable",
+    "saturn": "Sega Saturn",
+    "virtualboy": "Nintendo Virtual Boy",
+    "atari2600": "Atari 2600",
+    "c64": "Commodore 64"
 }
 
 def clean_display_title(filename):

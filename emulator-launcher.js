@@ -188,13 +188,7 @@ async function launchGame(game, hintsDisplay) {
     frameDoc.write(sandboxedHTML);
     frameDoc.close();
 }
-// ==============================================================================
-//               STANDALONE LOCAL EMULATORJS & RUFFLE LAUNCHER ENGINE (PART 2)
-// ==============================================================================
 
-/**
- * Capture incoming memory array payloads traveling up out of the sandboxed iframe
- */
 async function handleIncomingParentMessages(event) {
     if (event.data === "EMULATOR_STATE_READY") {
         emulatorReady = true;
@@ -224,9 +218,6 @@ async function handleIncomingParentMessages(event) {
     }
 }
 
-/**
- * Shuts down all active child frames and clears persistent loop threads completely
- */
 function finalizeArcadeClosure() {
     const iframe = document.getElementById('emu-sandbox-frame');
     const emuOverlay = document.getElementById('emu-overlay');
@@ -241,10 +232,6 @@ function finalizeArcadeClosure() {
     window.EJS_gameUrl = null;
 }
 
-/**
- * Signals save captures for emulated engines, wipes frame content anchors, 
- * and cleanly silences all active sound processes instantly.
- */
 function closeGameWithSave(game, hintsDisplay) {
     const iframe = document.getElementById('emu-sandbox-frame');
     const emuOverlay = document.getElementById('emu-overlay');

@@ -1043,6 +1043,1630 @@
     ]
   },
   {
+    "system": "gba",
+    "title": "Game Boy Advance",
+    "core": "mgba",
+    "games": [
+      {
+        "id": "gba_advance_wars_(usa)_(rev_1)",
+        "title": "Advance Wars",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Advance Wars (USA).webp",
+        "rom_path": "assets/roms/gba/Advance Wars (USA) (Rev 1).gba"
+      },
+      {
+        "id": "gba_advance_wars_2___black_hole_rising_(usa)",
+        "title": "Advance Wars 2 - Black Hole Rising",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Advance Wars 2 - Black Hole Rising (USA).webp",
+        "rom_path": "assets/roms/gba/Advance Wars 2 - Black Hole Rising (USA).gba"
+      },
+      {
+        "id": "gba_astro_boy___omega_factor_(usa)_(en,ja,fr,de,es,it)",
+        "title": "Astro Boy - Omega Factor",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Astro Boy - Omega Factor (USA).webp",
+        "rom_path": "assets/roms/gba/Astro Boy - Omega Factor (USA) (En,Ja,Fr,De,Es,It).gba"
+      },
+      {
+        "id": "gba_banjo_kazooie___grunty's_revenge_(usa,_europe)",
+        "title": "Banjo-Kazooie - Grunty's Revenge",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Banjo-Kazooie - Grunty's Revenge (USA, Europe).webp",
+        "rom_path": "assets/roms/gba/Banjo-Kazooie - Grunty's Revenge (USA, Europe).gba"
+      },
+      {
+        "id": "gba_broken_sword___the_shadow_of_the_templars_(usa)_(en,fr,de,es,it)",
+        "title": "Broken Sword - The Shadow of the Templars",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Broken Sword - The Shadow of the Templars (USA).webp",
+        "rom_path": "assets/roms/gba/Broken Sword - The Shadow of the Templars (USA) (En,Fr,De,Es,It).gba"
+      },
+      {
+        "id": "gba_bruce_lee___return_of_the_legend_(usa)",
+        "title": "Bruce Lee - Return of the Legend",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Bruce Lee - Return of the Legend (USA).webp",
+        "rom_path": "assets/roms/gba/Bruce Lee - Return of the Legend (USA).gba"
+      },
+      {
+        "id": "gba_car_battler_joe_(usa)",
+        "title": "Car Battler Joe",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Car Battler Joe (USA).webp",
+        "rom_path": "assets/roms/gba/Car Battler Joe (USA).gba"
+      },
+      {
+        "id": "gba_castlevania___aria_of_sorrow_(usa)",
+        "title": "Castlevania - Aria of Sorrow",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Castlevania - Aria of Sorrow (USA).webp",
+        "rom_path": "assets/roms/gba/Castlevania - Aria of Sorrow (USA).gba"
+      },
+      {
+        "id": "gba_castlevania___circle_of_the_moon_(usa)",
+        "title": "Castlevania - Circle of the Moon",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Castlevania - Circle of the Moon (USA).webp",
+        "rom_path": "assets/roms/gba/Castlevania - Circle of the Moon (USA).gba"
+      },
+      {
+        "id": "gba_castlevania___harmony_of_dissonance_(usa)",
+        "title": "Castlevania - Harmony of Dissonance",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Castlevania - Harmony of Dissonance (USA).webp",
+        "rom_path": "assets/roms/gba/Castlevania - Harmony of Dissonance (USA).gba"
+      },
+      {
+        "id": "gba_chuchu_rocket!_(usa)_(en,ja,fr,de,es)",
+        "title": "ChuChu Rocket!",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/ChuChu Rocket! (USA).webp",
+        "rom_path": "assets/roms/gba/ChuChu Rocket! (USA) (En,Ja,Fr,De,Es).gba"
+      },
+      {
+        "id": "gba_crash_nitro_kart_(usa)",
+        "title": "Crash Nitro Kart",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Crash Nitro Kart (USA).webp",
+        "rom_path": "assets/roms/gba/Crash Nitro Kart (USA).gba"
+      },
+      {
+        "id": "gba_dk___king_of_swing_(usa)",
+        "title": "DK - King of Swing",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/DK - King of Swing (USA).webp",
+        "rom_path": "assets/roms/gba/DK - King of Swing (USA).gba"
+      },
+      {
+        "id": "gba_denki_blocks!_(usa)_(en,es)",
+        "title": "Denki Blocks!",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Denki Blocks! (USA).webp",
+        "rom_path": "assets/roms/gba/Denki Blocks! (USA) (En,Es).gba"
+      },
+      {
+        "id": "gba_double_dragon_advance_(usa)",
+        "title": "Double Dragon Advance",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Double Dragon Advance (USA).webp",
+        "rom_path": "assets/roms/gba/Double Dragon Advance (USA).gba"
+      },
+      {
+        "id": "gba_drill_dozer_(usa)",
+        "title": "Drill Dozer",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Drill Dozer (USA).webp",
+        "rom_path": "assets/roms/gba/Drill Dozer (USA).gba"
+      },
+      {
+        "id": "gba_f_zero___gp_legend_(usa)",
+        "title": "F-Zero - GP Legend",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/F-Zero - GP Legend (USA).webp",
+        "rom_path": "assets/roms/gba/F-Zero - GP Legend (USA).gba"
+      },
+      {
+        "id": "gba_f_zero___maximum_velocity_(usa,_europe)",
+        "title": "F-Zero - Maximum Velocity",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/F-Zero - Maximum Velocity (USA, Europe).webp",
+        "rom_path": "assets/roms/gba/F-Zero - Maximum Velocity (USA, Europe).gba"
+      },
+      {
+        "id": "gba_final_fantasy_i_&_ii___dawn_of_souls_(usa)",
+        "title": "Final Fantasy I & II - Dawn of Souls",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Final Fantasy I & II - Dawn of Souls (USA).webp",
+        "rom_path": "assets/roms/gba/Final Fantasy I & II - Dawn of Souls (USA).gba"
+      },
+      {
+        "id": "gba_final_fantasy_iv_advance_(usa)",
+        "title": "Final Fantasy IV Advance",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Final Fantasy IV Advance (USA).webp",
+        "rom_path": "assets/roms/gba/Final Fantasy IV Advance (USA).gba"
+      },
+      {
+        "id": "gba_final_fantasy_tactics_advance_(usa)",
+        "title": "Final Fantasy Tactics Advance",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Final Fantasy Tactics Advance (USA).webp",
+        "rom_path": "assets/roms/gba/Final Fantasy Tactics Advance (USA).gba"
+      },
+      {
+        "id": "gba_final_fantasy_v_advance_(usa)",
+        "title": "Final Fantasy V Advance",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Final Fantasy V Advance (USA).webp",
+        "rom_path": "assets/roms/gba/Final Fantasy V Advance (USA).gba"
+      },
+      {
+        "id": "gba_final_fantasy_vi_advance_(usa)",
+        "title": "Final Fantasy VI Advance",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Final Fantasy VI Advance (USA).webp",
+        "rom_path": "assets/roms/gba/Final Fantasy VI Advance (USA).gba"
+      },
+      {
+        "id": "gba_final_fight_one_(usa)",
+        "title": "Final Fight One",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Final Fight One (USA).webp",
+        "rom_path": "assets/roms/gba/Final Fight One (USA).gba"
+      },
+      {
+        "id": "gba_fire_emblem_(usa,_australia)",
+        "title": "Fire Emblem",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Fire Emblem (USA, Australia).webp",
+        "rom_path": "assets/roms/gba/Fire Emblem (USA, Australia).gba"
+      },
+      {
+        "id": "gba_fire_emblem___the_sacred_stones_(usa,_australia)",
+        "title": "Fire Emblem - The Sacred Stones",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Fire Emblem - The Sacred Stones (USA, Australia).webp",
+        "rom_path": "assets/roms/gba/Fire Emblem - The Sacred Stones (USA, Australia).gba"
+      },
+      {
+        "id": "gba_gt_advance___championship_racing_(usa,_europe)",
+        "title": "GT Advance - Championship Racing",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/GT Advance - Championship Racing (USA, Europe).webp",
+        "rom_path": "assets/roms/gba/GT Advance - Championship Racing (USA, Europe).gba"
+      },
+      {
+        "id": "gba_game_&_watch_gallery_4_(usa)",
+        "title": "Game & Watch Gallery 4",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Game & Watch Gallery 4 (USA).webp",
+        "rom_path": "assets/roms/gba/Game & Watch Gallery 4 (USA).gba"
+      },
+      {
+        "id": "gba_golden_sun_(usa,_europe)",
+        "title": "Golden Sun",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Golden Sun (USA, Europe).webp",
+        "rom_path": "assets/roms/gba/Golden Sun (USA, Europe).gba"
+      },
+      {
+        "id": "gba_golden_sun___the_lost_age_(usa,_europe)",
+        "title": "Golden Sun - The Lost Age",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Golden Sun - The Lost Age (USA, Europe).webp",
+        "rom_path": "assets/roms/gba/Golden Sun - The Lost Age (USA, Europe).gba"
+      },
+      {
+        "id": "gba_gunstar_super_heroes_(usa)",
+        "title": "Gunstar Super Heroes",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Gunstar Super Heroes (USA).webp",
+        "rom_path": "assets/roms/gba/Gunstar Super Heroes (USA).gba"
+      },
+      {
+        "id": "gba_harvest_moon___friends_of_mineral_town_(usa)",
+        "title": "Harvest Moon - Friends of Mineral Town",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Harvest Moon - Friends of Mineral Town (USA).webp",
+        "rom_path": "assets/roms/gba/Harvest Moon - Friends of Mineral Town (USA).gba"
+      },
+      {
+        "id": "gba_harvest_moon___more_friends_of_mineral_town_(usa)",
+        "title": "Harvest Moon - More Friends of Mineral Town",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Harvest Moon - More Friends of Mineral Town (USA).webp",
+        "rom_path": "assets/roms/gba/Harvest Moon - More Friends of Mineral Town (USA).gba"
+      },
+      {
+        "id": "gba_iridion_ii_(usa)",
+        "title": "Iridion II",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Iridion II (USA).webp",
+        "rom_path": "assets/roms/gba/Iridion II (USA).gba"
+      },
+      {
+        "id": "gba_jet_grind_radio_(usa)",
+        "title": "Jet Grind Radio",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Jet Grind Radio (USA).webp",
+        "rom_path": "assets/roms/gba/Jet Grind Radio (USA).gba"
+      },
+      {
+        "id": "gba_kao_the_kangaroo_(usa)_(en,fr,de,es,it,nl)",
+        "title": "Kao the Kangaroo",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Kao the Kangaroo (USA).webp",
+        "rom_path": "assets/roms/gba/Kao the Kangaroo (USA) (En,Fr,De,Es,It,Nl).gba"
+      },
+      {
+        "id": "gba_kirby_&_the_amazing_mirror_(usa)",
+        "title": "Kirby & The Amazing Mirror",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Kirby & The Amazing Mirror (USA).webp",
+        "rom_path": "assets/roms/gba/Kirby & The Amazing Mirror (USA).gba"
+      },
+      {
+        "id": "gba_kirby___nightmare_in_dream_land_(usa)",
+        "title": "Kirby - Nightmare in Dream Land",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Kirby - Nightmare in Dream Land (USA).webp",
+        "rom_path": "assets/roms/gba/Kirby - Nightmare in Dream Land (USA).gba"
+      },
+      {
+        "id": "gba_klonoa___empire_of_dreams_(usa)",
+        "title": "Klonoa - Empire of Dreams",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Klonoa - Empire of Dreams (USA).webp",
+        "rom_path": "assets/roms/gba/Klonoa - Empire of Dreams (USA).gba"
+      },
+      {
+        "id": "gba_klonoa_2___dream_champ_tournament_(usa)",
+        "title": "Klonoa 2 - Dream Champ Tournament",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Klonoa 2 - Dream Champ Tournament (USA).webp",
+        "rom_path": "assets/roms/gba/Klonoa 2 - Dream Champ Tournament (USA).gba"
+      },
+      {
+        "id": "gba_konami_krazy_racers_(usa)",
+        "title": "Konami Krazy Racers",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Konami Krazy Racers (USA).webp",
+        "rom_path": "assets/roms/gba/Konami Krazy Racers (USA).gba"
+      },
+      {
+        "id": "gba_lady_sia_(usa)_(en,fr,de,es,it,nl)",
+        "title": "Lady Sia",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Lady Sia (USA).webp",
+        "rom_path": "assets/roms/gba/Lady Sia (USA) (En,Fr,De,Es,It,Nl).gba"
+      },
+      {
+        "id": "gba_legend_of_zelda,_the___a_link_to_the_past_&_four_swords_(usa)",
+        "title": "Legend of Zelda, The - A Link to the Past & Four Swords",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Legend of Zelda, The - A Link to the Past & Four Swords (USA).webp",
+        "rom_path": "assets/roms/gba/Legend of Zelda, The - A Link to the Past & Four Swords (USA).gba"
+      },
+      {
+        "id": "gba_legend_of_zelda,_the___the_minish_cap_(usa)",
+        "title": "Legend of Zelda, The - The Minish Cap",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Legend of Zelda, The - The Minish Cap (USA).webp",
+        "rom_path": "assets/roms/gba/Legend of Zelda, The - The Minish Cap (USA).gba"
+      },
+      {
+        "id": "gba_lilo_&_stitch_(usa)",
+        "title": "Lilo & Stitch",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Lilo & Stitch (USA).webp",
+        "rom_path": "assets/roms/gba/Lilo & Stitch (USA).gba"
+      },
+      {
+        "id": "gba_lilo_&_stitch_2___haemsterviel_havoc_(usa)",
+        "title": "Lilo & Stitch 2 - Haemsterviel Havoc",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Lilo & Stitch 2 - Haemsterviel Havoc (USA).webp",
+        "rom_path": "assets/roms/gba/Lilo & Stitch 2 - Haemsterviel Havoc (USA).gba"
+      },
+      {
+        "id": "gba_lunar_legend_(usa)",
+        "title": "Lunar Legend",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Lunar Legend (USA).webp",
+        "rom_path": "assets/roms/gba/Lunar Legend (USA).gba"
+      },
+      {
+        "id": "gba_mario_&_luigi___superstar_saga_(usa)",
+        "title": "Mario & Luigi - Superstar Saga",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Mario & Luigi - Superstar Saga (USA).webp",
+        "rom_path": "assets/roms/gba/Mario & Luigi - Superstar Saga (USA).gba"
+      },
+      {
+        "id": "gba_mario_golf___advance_tour_(usa)",
+        "title": "Mario Golf - Advance Tour",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Mario Golf - Advance Tour (USA).webp",
+        "rom_path": "assets/roms/gba/Mario Golf - Advance Tour (USA).gba"
+      },
+      {
+        "id": "gba_mario_kart___super_circuit_(usa)",
+        "title": "Mario Kart - Super Circuit",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Mario Kart - Super Circuit (USA).webp",
+        "rom_path": "assets/roms/gba/Mario Kart - Super Circuit (USA).gba"
+      },
+      {
+        "id": "gba_mario_pinball_land_(usa,_australia)",
+        "title": "Mario Pinball Land",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Mario Pinball Land (USA, Australia).webp",
+        "rom_path": "assets/roms/gba/Mario Pinball Land (USA, Australia).gba"
+      },
+      {
+        "id": "gba_mario_tennis___power_tour_(usa,_australia)_(en,fr,de,es,it)",
+        "title": "Mario Tennis - Power Tour",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Mario Tennis - Power Tour (USA, Australia).webp",
+        "rom_path": "assets/roms/gba/Mario Tennis - Power Tour (USA, Australia) (En,Fr,De,Es,It).gba"
+      },
+      {
+        "id": "gba_mario_vs._donkey_kong_(usa,_australia)",
+        "title": "Mario vs. Donkey Kong",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Mario vs. Donkey Kong (USA, Australia).webp",
+        "rom_path": "assets/roms/gba/Mario vs. Donkey Kong (USA, Australia).gba"
+      },
+      {
+        "id": "gba_medabots___metabee_(usa)",
+        "title": "Medabots - Metabee",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Medabots - Metabee (USA).webp",
+        "rom_path": "assets/roms/gba/Medabots - Metabee (USA).gba"
+      },
+      {
+        "id": "gba_mega_man_&_bass_(usa)",
+        "title": "Mega Man & Bass",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Mega Man & Bass (USA).webp",
+        "rom_path": "assets/roms/gba/Mega Man & Bass (USA).gba"
+      },
+      {
+        "id": "gba_mega_man_battle_network_(usa)",
+        "title": "Mega Man Battle Network",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Mega Man Battle Network (USA).webp",
+        "rom_path": "assets/roms/gba/Mega Man Battle Network (USA).gba"
+      },
+      {
+        "id": "gba_mega_man_battle_network_2_(usa)",
+        "title": "Mega Man Battle Network 2",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Mega Man Battle Network 2 (USA).webp",
+        "rom_path": "assets/roms/gba/Mega Man Battle Network 2 (USA).gba"
+      },
+      {
+        "id": "gba_mega_man_battle_network_3___blue_version_(usa)",
+        "title": "Mega Man Battle Network 3 - Blue Version",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Mega Man Battle Network 3 - Blue Version (USA).webp",
+        "rom_path": "assets/roms/gba/Mega Man Battle Network 3 - Blue Version (USA).gba"
+      },
+      {
+        "id": "gba_mega_man_battle_network_3___white_version_(usa)",
+        "title": "Mega Man Battle Network 3 - White Version",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Mega Man Battle Network 3 - White Version (USA).webp",
+        "rom_path": "assets/roms/gba/Mega Man Battle Network 3 - White Version (USA).gba"
+      },
+      {
+        "id": "gba_mega_man_battle_network_4___blue_moon_(usa)",
+        "title": "Mega Man Battle Network 4 - Blue Moon",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Mega Man Battle Network 4 - Blue Moon (USA).webp",
+        "rom_path": "assets/roms/gba/Mega Man Battle Network 4 - Blue Moon (USA).gba"
+      },
+      {
+        "id": "gba_mega_man_battle_network_4___red_sun_(usa)",
+        "title": "Mega Man Battle Network 4 - Red Sun",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Mega Man Battle Network 4 - Red Sun (USA).webp",
+        "rom_path": "assets/roms/gba/Mega Man Battle Network 4 - Red Sun (USA).gba"
+      },
+      {
+        "id": "gba_mega_man_battle_network_5___team_colonel_(usa)",
+        "title": "Mega Man Battle Network 5 - Team Colonel",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Mega Man Battle Network 5 - Team Colonel (USA).webp",
+        "rom_path": "assets/roms/gba/Mega Man Battle Network 5 - Team Colonel (USA).gba"
+      },
+      {
+        "id": "gba_mega_man_battle_network_5___team_protoman_(usa)",
+        "title": "Mega Man Battle Network 5 - Team Protoman",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Mega Man Battle Network 5 - Team Protoman (USA).webp",
+        "rom_path": "assets/roms/gba/Mega Man Battle Network 5 - Team Protoman (USA).gba"
+      },
+      {
+        "id": "gba_mega_man_battle_network_6___cybeast_falzar_(usa)",
+        "title": "Mega Man Battle Network 6 - Cybeast Falzar",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Mega Man Battle Network 6 - Cybeast Falzar (USA).webp",
+        "rom_path": "assets/roms/gba/Mega Man Battle Network 6 - Cybeast Falzar (USA).gba"
+      },
+      {
+        "id": "gba_mega_man_battle_network_6___cybeast_gregar_(usa)",
+        "title": "Mega Man Battle Network 6 - Cybeast Gregar",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Mega Man Battle Network 6 - Cybeast Gregar (USA).webp",
+        "rom_path": "assets/roms/gba/Mega Man Battle Network 6 - Cybeast Gregar (USA).gba"
+      },
+      {
+        "id": "gba_mega_man_zero_(usa,_europe)",
+        "title": "Mega Man Zero",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Mega Man Zero (USA, Europe).webp",
+        "rom_path": "assets/roms/gba/Mega Man Zero (USA, Europe).gba"
+      },
+      {
+        "id": "gba_mega_man_zero_2_(usa)",
+        "title": "Mega Man Zero 2",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Mega Man Zero 2 (USA).webp",
+        "rom_path": "assets/roms/gba/Mega Man Zero 2 (USA).gba"
+      },
+      {
+        "id": "gba_mega_man_zero_3_(usa)",
+        "title": "Mega Man Zero 3",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Mega Man Zero 3 (USA).webp",
+        "rom_path": "assets/roms/gba/Mega Man Zero 3 (USA).gba"
+      },
+      {
+        "id": "gba_mega_man_zero_4_(usa)",
+        "title": "Mega Man Zero 4",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Mega Man Zero 4 (USA).webp",
+        "rom_path": "assets/roms/gba/Mega Man Zero 4 (USA).gba"
+      },
+      {
+        "id": "gba_metal_slug_advance_(usa)",
+        "title": "Metal Slug Advance",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Metal Slug Advance (USA).webp",
+        "rom_path": "assets/roms/gba/Metal Slug Advance (USA).gba"
+      },
+      {
+        "id": "gba_metroid___zero_mission_(usa)",
+        "title": "Metroid - Zero Mission",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Metroid - Zero Mission (USA).webp",
+        "rom_path": "assets/roms/gba/Metroid - Zero Mission (USA).gba"
+      },
+      {
+        "id": "gba_metroid_fusion_(usa)",
+        "title": "Metroid Fusion",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Metroid Fusion (USA).webp",
+        "rom_path": "assets/roms/gba/Metroid Fusion (USA).gba"
+      },
+      {
+        "id": "gba_motocross_maniacs_advance_(usa)_(en,es)",
+        "title": "Motocross Maniacs Advance",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Motocross Maniacs Advance (USA).webp",
+        "rom_path": "assets/roms/gba/Motocross Maniacs Advance (USA) (En,Es).gba"
+      },
+      {
+        "id": "gba_motoracer_advance_(usa)_(en,fr,de,es,it)",
+        "title": "Motoracer Advance",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Motoracer Advance (USA).webp",
+        "rom_path": "assets/roms/gba/Motoracer Advance (USA) (En,Fr,De,Es,It).gba"
+      },
+      {
+        "id": "gba_mr._driller_2_(usa)",
+        "title": "Mr. Driller 2",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Mr. Driller 2 (USA).webp",
+        "rom_path": "assets/roms/gba/Mr. Driller 2 (USA).gba"
+      },
+      {
+        "id": "gba_ninja_five_0_(usa)",
+        "title": "Ninja Five-0",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Ninja Five-0 (USA).webp",
+        "rom_path": "assets/roms/gba/Ninja Five-0 (USA).gba"
+      },
+      {
+        "id": "gba_pinball_of_the_dead,_the_(usa)",
+        "title": "Pinball of the Dead, The",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Pinball of the Dead, The (USA).webp",
+        "rom_path": "assets/roms/gba/Pinball of the Dead, The (USA).gba"
+      },
+      {
+        "id": "gba_pokemon___leafgreen_version_(usa,_europe)_(rev_1)",
+        "title": "Pokemon - LeafGreen Version",
+        "core": "mgba",
+        "boxart": "assets/icons/default_boxart.svg",
+        "rom_path": "assets/roms/gba/Pokemon - LeafGreen Version (USA, Europe) (Rev 1).gba"
+      },
+      {
+        "id": "gba_pokémon___emerald_version_(usa,_europe)",
+        "title": "Pokémon - Emerald Version",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Pokémon - Emerald Version (USA, Europe).webp",
+        "rom_path": "assets/roms/gba/Pokémon - Emerald Version (USA, Europe).gba"
+      },
+      {
+        "id": "gba_pokémon___firered_version_(usa)",
+        "title": "Pokémon - FireRed Version",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Pokémon - FireRed Version (USA).webp",
+        "rom_path": "assets/roms/gba/Pokémon - FireRed Version (USA).gba"
+      },
+      {
+        "id": "gba_pokémon___ruby_version_(usa)",
+        "title": "Pokémon - Ruby Version",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Pokémon - Ruby Version (USA).webp",
+        "rom_path": "assets/roms/gba/Pokémon - Ruby Version (USA).gba"
+      },
+      {
+        "id": "gba_pokémon___sapphire_version_(usa)",
+        "title": "Pokémon - Sapphire Version",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Pokémon - Sapphire Version (USA).webp",
+        "rom_path": "assets/roms/gba/Pokémon - Sapphire Version (USA).gba"
+      },
+      {
+        "id": "gba_pokémon_pinball___ruby_&_sapphire_(usa)",
+        "title": "Pokémon Pinball - Ruby & Sapphire",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Pokémon Pinball - Ruby & Sapphire (USA).webp",
+        "rom_path": "assets/roms/gba/Pokémon Pinball - Ruby & Sapphire (USA).gba"
+      },
+      {
+        "id": "gba_puyo_pop_(usa)_(en,ja)",
+        "title": "Puyo Pop",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Puyo Pop (USA).webp",
+        "rom_path": "assets/roms/gba/Puyo Pop (USA) (En,Ja).gba"
+      },
+      {
+        "id": "gba_racing_gears_advance_(usa)",
+        "title": "Racing Gears Advance",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Racing Gears Advance (USA).webp",
+        "rom_path": "assets/roms/gba/Racing Gears Advance (USA).gba"
+      },
+      {
+        "id": "gba_rayman_advance_(usa)_(en,fr,de,es,it)",
+        "title": "Rayman Advance",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Rayman Advance (USA).webp",
+        "rom_path": "assets/roms/gba/Rayman Advance (USA) (En,Fr,De,Es,It).gba"
+      },
+      {
+        "id": "gba_rebelstar___tactical_command_(usa)",
+        "title": "Rebelstar - Tactical Command",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Rebelstar - Tactical Command (USA).webp",
+        "rom_path": "assets/roms/gba/Rebelstar - Tactical Command (USA).gba"
+      },
+      {
+        "id": "gba_river_city_ransom_ex_(usa)",
+        "title": "River City Ransom EX",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/River City Ransom EX (USA).webp",
+        "rom_path": "assets/roms/gba/River City Ransom EX (USA).gba"
+      },
+      {
+        "id": "gba_sabre_wulf_(usa)",
+        "title": "Sabre Wulf",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Sabre Wulf (USA).webp",
+        "rom_path": "assets/roms/gba/Sabre Wulf (USA).gba"
+      },
+      {
+        "id": "gba_silent_scope_(usa)_(en,fr,de,es,it)",
+        "title": "Silent Scope",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Silent Scope (USA).webp",
+        "rom_path": "assets/roms/gba/Silent Scope (USA) (En,Fr,De,Es,It).gba"
+      },
+      {
+        "id": "gba_sonic_advance_(usa)_(en,ja)",
+        "title": "Sonic Advance",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Sonic Advance (USA).webp",
+        "rom_path": "assets/roms/gba/Sonic Advance (USA) (En,Ja).gba"
+      },
+      {
+        "id": "gba_sonic_advance_2_(usa)_(en,ja,fr,de,es,it)",
+        "title": "Sonic Advance 2",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Sonic Advance 2 (USA).webp",
+        "rom_path": "assets/roms/gba/Sonic Advance 2 (USA) (En,Ja,Fr,De,Es,It).gba"
+      },
+      {
+        "id": "gba_sonic_advance_3_(usa)_(en,ja,fr,de,es,it)",
+        "title": "Sonic Advance 3",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Sonic Advance 3 (USA).webp",
+        "rom_path": "assets/roms/gba/Sonic Advance 3 (USA) (En,Ja,Fr,De,Es,It).gba"
+      },
+      {
+        "id": "gba_sonic_battle_(usa)_(en,ja,fr,de,es,it)",
+        "title": "Sonic Battle",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Sonic Battle (USA).webp",
+        "rom_path": "assets/roms/gba/Sonic Battle (USA) (En,Ja,Fr,De,Es,It).gba"
+      },
+      {
+        "id": "gba_sonic_pinball_party_(usa)_(en,ja,fr,de,es,it)",
+        "title": "Sonic Pinball Party",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Sonic Pinball Party (USA).webp",
+        "rom_path": "assets/roms/gba/Sonic Pinball Party (USA) (En,Ja,Fr,De,Es,It).gba"
+      },
+      {
+        "id": "gba_spider_man___mysterio's_menace_(usa,_europe)",
+        "title": "Spider-Man - Mysterio's Menace",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Spider-Man - Mysterio's Menace (USA, Europe).webp",
+        "rom_path": "assets/roms/gba/Spider-Man - Mysterio's Menace (USA, Europe).gba"
+      },
+      {
+        "id": "gba_spyro___attack_of_the_rhynocs_(usa)",
+        "title": "Spyro - Attack of the Rhynocs",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Spyro - Attack of the Rhynocs (USA).webp",
+        "rom_path": "assets/roms/gba/Spyro - Attack of the Rhynocs (USA).gba"
+      },
+      {
+        "id": "gba_spyro___season_of_ice_(usa)",
+        "title": "Spyro - Season of Ice",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Spyro - Season of Ice (USA).webp",
+        "rom_path": "assets/roms/gba/Spyro - Season of Ice (USA).gba"
+      },
+      {
+        "id": "gba_spyro_2___season_of_flame_(usa)",
+        "title": "Spyro 2 - Season of Flame",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Spyro 2 - Season of Flame (USA).webp",
+        "rom_path": "assets/roms/gba/Spyro 2 - Season of Flame (USA).gba"
+      },
+      {
+        "id": "gba_street_fighter_alpha_3_(usa)",
+        "title": "Street Fighter Alpha 3",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Street Fighter Alpha 3 (USA).webp",
+        "rom_path": "assets/roms/gba/Street Fighter Alpha 3 (USA).gba"
+      },
+      {
+        "id": "gba_summon_night___swordcraft_story_(usa)",
+        "title": "Summon Night - Swordcraft Story",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Summon Night - Swordcraft Story (USA).webp",
+        "rom_path": "assets/roms/gba/Summon Night - Swordcraft Story (USA).gba"
+      },
+      {
+        "id": "gba_summon_night___swordcraft_story_2_(usa)",
+        "title": "Summon Night - Swordcraft Story 2",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Summon Night - Swordcraft Story 2 (USA).webp",
+        "rom_path": "assets/roms/gba/Summon Night - Swordcraft Story 2 (USA).gba"
+      },
+      {
+        "id": "gba_super_mario_advance_(usa,_europe)",
+        "title": "Super Mario Advance",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Super Mario Advance (USA, Europe).webp",
+        "rom_path": "assets/roms/gba/Super Mario Advance (USA, Europe).gba"
+      },
+      {
+        "id": "gba_super_mario_advance_2___super_mario_world_(usa,_australia)",
+        "title": "Super Mario Advance 2 - Super Mario World",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Super Mario Advance 2 - Super Mario World (USA, Australia).webp",
+        "rom_path": "assets/roms/gba/Super Mario Advance 2 - Super Mario World (USA, Australia).gba"
+      },
+      {
+        "id": "gba_super_mario_advance_3___yoshi's_island_(usa)",
+        "title": "Super Mario Advance 3 - Yoshi's Island",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Super Mario Advance 3 - Yoshi's Island (USA).webp",
+        "rom_path": "assets/roms/gba/Super Mario Advance 3 - Yoshi's Island (USA).gba"
+      },
+      {
+        "id": "gba_super_mario_advance_4___super_mario_bros._3_(usa,_australia)_(rev_1)",
+        "title": "Super Mario Advance 4 - Super Mario Bros. 3",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Super Mario Advance 4 - Super Mario Bros. 3 (USA).webp",
+        "rom_path": "assets/roms/gba/Super Mario Advance 4 - Super Mario Bros. 3 (USA, Australia) (Rev 1).gba"
+      },
+      {
+        "id": "gba_super_monkey_ball_jr._(usa)",
+        "title": "Super Monkey Ball Jr.",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Super Monkey Ball Jr. (USA).webp",
+        "rom_path": "assets/roms/gba/Super Monkey Ball Jr. (USA).gba"
+      },
+      {
+        "id": "gba_super_puzzle_fighter_ii_(usa)_(rev_1)",
+        "title": "Super Puzzle Fighter II",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Super Puzzle Fighter II (USA).webp",
+        "rom_path": "assets/roms/gba/Super Puzzle Fighter II (USA) (Rev 1).gba"
+      },
+      {
+        "id": "gba_super_robot_taisen_r_(japan)_[t_en_by_shadownall_v090202]_[i]",
+        "title": "Super Robot Taisen R",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Super Robot Taisen - Original Generation (USA).webp",
+        "rom_path": "assets/roms/gba/Super Robot Taisen R (Japan) [T-En by Shadownall v090202] [i].gba"
+      },
+      {
+        "id": "gba_super_street_fighter_ii_turbo___revival_(usa)",
+        "title": "Super Street Fighter II Turbo - Revival",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Super Street Fighter II Turbo - Revival (USA).webp",
+        "rom_path": "assets/roms/gba/Super Street Fighter II Turbo - Revival (USA).gba"
+      },
+      {
+        "id": "gba_sword_of_mana_(usa,_australia)",
+        "title": "Sword of Mana",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Sword of Mana (USA, Australia).webp",
+        "rom_path": "assets/roms/gba/Sword of Mana (USA, Australia).gba"
+      },
+      {
+        "id": "gba_tmnt_(usa)",
+        "title": "TMNT",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/TMNT (USA).webp",
+        "rom_path": "assets/roms/gba/TMNT (USA).gba"
+      },
+      {
+        "id": "gba_tactics_ogre___the_knight_of_lodis_(usa)",
+        "title": "Tactics Ogre - The Knight of Lodis",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Tactics Ogre - The Knight of Lodis (USA).webp",
+        "rom_path": "assets/roms/gba/Tactics Ogre - The Knight of Lodis (USA).gba"
+      },
+      {
+        "id": "gba_teenage_mutant_ninja_turtles_(usa)",
+        "title": "Teenage Mutant Ninja Turtles",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Teenage Mutant Ninja Turtles (USA).webp",
+        "rom_path": "assets/roms/gba/Teenage Mutant Ninja Turtles (USA).gba"
+      },
+      {
+        "id": "gba_teenage_mutant_ninja_turtles_2___battle_nexus_(usa)",
+        "title": "Teenage Mutant Ninja Turtles 2 - Battle Nexus",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Teenage Mutant Ninja Turtles 2 - Battle Nexus (USA).webp",
+        "rom_path": "assets/roms/gba/Teenage Mutant Ninja Turtles 2 - Battle Nexus (USA).gba"
+      },
+      {
+        "id": "gba_tony_hawk's_pro_skater_2_(usa,_europe)",
+        "title": "Tony Hawk's Pro Skater 2",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Tony Hawk's Pro Skater 2 (USA, Europe).webp",
+        "rom_path": "assets/roms/gba/Tony Hawk's Pro Skater 2 (USA, Europe).gba"
+      },
+      {
+        "id": "gba_tony_hawk's_pro_skater_3_(usa,_europe)",
+        "title": "Tony Hawk's Pro Skater 3",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Tony Hawk's Pro Skater 3 (USA, Europe).webp",
+        "rom_path": "assets/roms/gba/Tony Hawk's Pro Skater 3 (USA, Europe).gba"
+      },
+      {
+        "id": "gba_tony_hawk's_pro_skater_4_(usa,_europe)",
+        "title": "Tony Hawk's Pro Skater 4",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Tony Hawk's Pro Skater 4 (USA, Europe).webp",
+        "rom_path": "assets/roms/gba/Tony Hawk's Pro Skater 4 (USA, Europe).gba"
+      },
+      {
+        "id": "gba_tony_hawk's_underground_(usa,_europe)",
+        "title": "Tony Hawk's Underground",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Tony Hawk's Underground (USA, Europe).webp",
+        "rom_path": "assets/roms/gba/Tony Hawk's Underground (USA, Europe).gba"
+      },
+      {
+        "id": "gba_tony_hawk's_underground_2_(usa,_europe)",
+        "title": "Tony Hawk's Underground 2",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Tony Hawk's Underground 2 (USA, Europe).webp",
+        "rom_path": "assets/roms/gba/Tony Hawk's Underground 2 (USA, Europe).gba"
+      },
+      {
+        "id": "gba_ultimate_brain_games_(usa,_europe)",
+        "title": "Ultimate Brain Games",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Ultimate Brain Games (USA, Europe).webp",
+        "rom_path": "assets/roms/gba/Ultimate Brain Games (USA, Europe).gba"
+      },
+      {
+        "id": "gba_urban_yeti!_(usa,_europe)",
+        "title": "Urban Yeti!",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Urban Yeti! (USA, Europe).webp",
+        "rom_path": "assets/roms/gba/Urban Yeti! (USA, Europe).gba"
+      },
+      {
+        "id": "gba_v_rally_3_(usa)_(en,fr,es)",
+        "title": "V-Rally 3",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/V-Rally 3 (USA).webp",
+        "rom_path": "assets/roms/gba/V-Rally 3 (USA) (En,Fr,Es).gba"
+      },
+      {
+        "id": "gba_virtua_tennis_(usa)",
+        "title": "Virtua Tennis",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Virtua Tennis (USA).webp",
+        "rom_path": "assets/roms/gba/Virtua Tennis (USA).gba"
+      },
+      {
+        "id": "gba_wario_land_4_(usa,_europe)",
+        "title": "Wario Land 4",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Wario Land 4 (USA, Europe).webp",
+        "rom_path": "assets/roms/gba/Wario Land 4 (USA, Europe).gba"
+      },
+      {
+        "id": "gba_warioware___twisted!_(usa)",
+        "title": "WarioWare - Twisted!",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/WarioWare - Twisted! (USA).webp",
+        "rom_path": "assets/roms/gba/WarioWare - Twisted! (USA).gba"
+      },
+      {
+        "id": "gba_warioware,_inc.___mega_microgame$!_(usa)",
+        "title": "WarioWare, Inc. - Mega Microgame$!",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/WarioWare, Inc. - Mega Microgame$! (USA).webp",
+        "rom_path": "assets/roms/gba/WarioWare, Inc. - Mega Microgame$! (USA).gba"
+      },
+      {
+        "id": "gba_wing_commander___prophecy_(usa)",
+        "title": "Wing Commander - Prophecy",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Wing Commander - Prophecy (USA).webp",
+        "rom_path": "assets/roms/gba/Wing Commander - Prophecy (USA).gba"
+      },
+      {
+        "id": "gba_wings_(usa)",
+        "title": "Wings",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Wings (USA).webp",
+        "rom_path": "assets/roms/gba/Wings (USA).gba"
+      },
+      {
+        "id": "gba_worms_world_party_(usa)_(en,fr,de,es,it)",
+        "title": "Worms World Party",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Worms World Party (USA).webp",
+        "rom_path": "assets/roms/gba/Worms World Party (USA) (En,Fr,De,Es,It).gba"
+      },
+      {
+        "id": "gba_zone_of_the_enders___the_fist_of_mars_(usa)",
+        "title": "Zone of the Enders - The Fist of Mars",
+        "core": "mgba",
+        "boxart": "assets/roms/gba/boxart/Zone of the Enders - The Fist of Mars (USA).webp",
+        "rom_path": "assets/roms/gba/Zone of the Enders - The Fist of Mars (USA).gba"
+      }
+    ]
+  },
+  {
+    "system": "gbc",
+    "title": "Game Boy Color",
+    "core": "gambatte",
+    "games": [
+      {
+        "id": "gbc_aliens___thanatos_encounter_(usa,_europe)",
+        "title": "Aliens - Thanatos Encounter",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Aliens - Thanatos Encounter (USA, Europe).webp",
+        "rom_path": "assets/roms/gbc/Aliens - Thanatos Encounter (USA, Europe).gbc"
+      },
+      {
+        "id": "gbc_alone_in_the_dark___the_new_nightmare_(usa)_(en,fr,es)",
+        "title": "Alone in the Dark - The New Nightmare",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Alone in the Dark - The New Nightmare (USA) (En,Fr,Es).webp",
+        "rom_path": "assets/roms/gbc/Alone in the Dark - The New Nightmare (USA) (En,Fr,Es).gbc"
+      },
+      {
+        "id": "gbc_animorphs_(usa)",
+        "title": "Animorphs",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Animorphs (USA).webp",
+        "rom_path": "assets/roms/gbc/Animorphs (USA).gbc"
+      },
+      {
+        "id": "gbc_asterix_&_obelix_(europe)_(en,fr,de,es)",
+        "title": "Asterix & Obelix",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Asterix _ Obelix (Europe) (En,Fr,De,Es).webp",
+        "rom_path": "assets/roms/gbc/Asterix & Obelix (Europe) (En,Fr,De,Es).gbc"
+      },
+      {
+        "id": "gbc_azure_dreams_(usa)_(sgb_enhanced)_(gb_compatible)",
+        "title": "Azure Dreams",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Azure Dreams (USA) (SGB Enhanced) (GB Compatible).webp",
+        "rom_path": "assets/roms/gbc/Azure Dreams (USA) (SGB Enhanced) (GB Compatible).gbc"
+      },
+      {
+        "id": "gbc_batman___chaos_in_gotham_(usa)",
+        "title": "Batman - Chaos in Gotham",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Batman - Chaos in Gotham (USA).webp",
+        "rom_path": "assets/roms/gbc/Batman - Chaos in Gotham (USA).gbc"
+      },
+      {
+        "id": "gbc_batman_beyond___return_of_the_joker_(usa)",
+        "title": "Batman Beyond - Return of the Joker",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Batman Beyond - Return of the Joker (USA).webp",
+        "rom_path": "assets/roms/gbc/Batman Beyond - Return of the Joker (USA).gbc"
+      },
+      {
+        "id": "gbc_bionic_commando___elite_forces_(usa,_australia)",
+        "title": "Bionic Commando - Elite Forces",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Bionic Commando - Elite Forces (USA, Australia).webp",
+        "rom_path": "assets/roms/gbc/Bionic Commando - Elite Forces (USA, Australia).gbc"
+      },
+      {
+        "id": "gbc_blade_(usa,_europe)",
+        "title": "Blade",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Blade (USA, Europe).webp",
+        "rom_path": "assets/roms/gbc/Blade (USA, Europe).gbc"
+      },
+      {
+        "id": "gbc_blaster_master___enemy_below_(usa,_europe)_(sgb_enhanced)_(gb_compatible)",
+        "title": "Blaster Master - Enemy Below",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Blaster Master - Enemy Below (USA, Europe) (SGB Enhanced) (GB Compatible).webp",
+        "rom_path": "assets/roms/gbc/Blaster Master - Enemy Below (USA, Europe) (SGB Enhanced) (GB Compatible).gbc"
+      },
+      {
+        "id": "gbc_bomberman_max___blue_champion_(usa)",
+        "title": "Bomberman Max - Blue Champion",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Bomberman Max - Blue Champion (USA).webp",
+        "rom_path": "assets/roms/gbc/Bomberman Max - Blue Champion (USA).gbc"
+      },
+      {
+        "id": "gbc_bomberman_max___red_challenger_(usa)",
+        "title": "Bomberman Max - Red Challenger",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Bomberman Max - Red Challenger (USA).webp",
+        "rom_path": "assets/roms/gbc/Bomberman Max - Red Challenger (USA).gbc"
+      },
+      {
+        "id": "gbc_bomberman_quest_(usa)_(sgb_enhanced)_(gb_compatible)",
+        "title": "Bomberman Quest",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Bomberman Quest (USA) (SGB Enhanced) (GB Compatible).webp",
+        "rom_path": "assets/roms/gbc/Bomberman Quest (USA) (SGB Enhanced) (GB Compatible).gbc"
+      },
+      {
+        "id": "gbc_bugs_bunny___crazy_castle_3_(usa,_europe)_(gb_compatible)",
+        "title": "Bugs Bunny - Crazy Castle 3",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Bugs Bunny - Crazy Castle 3 (USA, Europe) (GB Compatible).webp",
+        "rom_path": "assets/roms/gbc/Bugs Bunny - Crazy Castle 3 (USA, Europe) (GB Compatible).gbc"
+      },
+      {
+        "id": "gbc_bugs_bunny_in___crazy_castle_4_(usa)",
+        "title": "Bugs Bunny in - Crazy Castle 4",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Bugs Bunny in - Crazy Castle 4 (USA).webp",
+        "rom_path": "assets/roms/gbc/Bugs Bunny in - Crazy Castle 4 (USA).gbc"
+      },
+      {
+        "id": "gbc_bust_a_move_millennium_(usa,_europe)",
+        "title": "Bust-A-Move Millennium",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Bust-A-Move Millennium (USA, Europe).webp",
+        "rom_path": "assets/roms/gbc/Bust-A-Move Millennium (USA, Europe).gbc"
+      },
+      {
+        "id": "gbc_conker's_pocket_tales_(usa,_europe)_(en,fr,de)_(sgb_enhanced)_(gb_compatible)",
+        "title": "Conker's Pocket Tales",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Conker's Pocket Tales (USA, Europe) (En,Fr,De) (SGB Enhanced) (GB Compatible).webp",
+        "rom_path": "assets/roms/gbc/Conker's Pocket Tales (USA, Europe) (En,Fr,De) (SGB Enhanced) (GB Compatible).gbc"
+      },
+      {
+        "id": "gbc_croc_(usa,_europe)",
+        "title": "Croc",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Croc (USA, Europe).webp",
+        "rom_path": "assets/roms/gbc/Croc (USA, Europe).gbc"
+      },
+      {
+        "id": "gbc_croc_2_(usa,_europe)",
+        "title": "Croc 2",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Croc 2 (USA, Europe).webp",
+        "rom_path": "assets/roms/gbc/Croc 2 (USA, Europe).gbc"
+      },
+      {
+        "id": "gbc_crystalis_(usa)",
+        "title": "Crystalis",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Crystalis (USA).webp",
+        "rom_path": "assets/roms/gbc/Crystalis (USA).gbc"
+      },
+      {
+        "id": "gbc_dexter's_laboratory___robot_rampage_(usa,_europe)",
+        "title": "Dexter's Laboratory - Robot Rampage",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Dexter's Laboratory - Robot Rampage (USA, Europe).webp",
+        "rom_path": "assets/roms/gbc/Dexter's Laboratory - Robot Rampage (USA, Europe).gbc"
+      },
+      {
+        "id": "gbc_donald_duck___quack_attack_(europe)_(en,fr,de,es,it)",
+        "title": "Donald Duck - Quack Attack",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Donald Duck - Quack Attack (Europe) (En,Fr,De,Es,It).webp",
+        "rom_path": "assets/roms/gbc/Donald Duck - Quack Attack (Europe) (En,Fr,De,Es,It).gbc"
+      },
+      {
+        "id": "gbc_donkey_kong_country_(usa,_europe)_(en,fr,de,es,it)",
+        "title": "Donkey Kong Country",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Donkey Kong Country (USA, Europe) (En,Fr,De,Es,It).webp",
+        "rom_path": "assets/roms/gbc/Donkey Kong Country (USA, Europe) (En,Fr,De,Es,It).gbc"
+      },
+      {
+        "id": "gbc_dragon_ball_z___legendary_super_warriors_(usa)",
+        "title": "Dragon Ball Z - Legendary Super Warriors",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Dragon Ball Z - Legendary Super Warriors (USA).webp",
+        "rom_path": "assets/roms/gbc/Dragon Ball Z - Legendary Super Warriors (USA).gbc"
+      },
+      {
+        "id": "gbc_dragon_warrior_i_&_ii_(usa)_(sgb_enhanced)_(gb_compatible)",
+        "title": "Dragon Warrior I & II",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Dragon Warrior I _ II (USA) (SGB Enhanced) (GB Compatible).webp",
+        "rom_path": "assets/roms/gbc/Dragon Warrior I & II (USA) (SGB Enhanced) (GB Compatible).gbc"
+      },
+      {
+        "id": "gbc_dragon_warrior_iii_(usa)",
+        "title": "Dragon Warrior III",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Dragon Warrior III (USA).webp",
+        "rom_path": "assets/roms/gbc/Dragon Warrior III (USA).gbc"
+      },
+      {
+        "id": "gbc_dragon_warrior_monsters_(usa,_europe)_(sgb_enhanced)_(gb_compatible)",
+        "title": "Dragon Warrior Monsters",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Dragon Warrior Monsters (USA, Europe) (SGB Enhanced) (GB Compatible).webp",
+        "rom_path": "assets/roms/gbc/Dragon Warrior Monsters (USA, Europe) (SGB Enhanced) (GB Compatible).gbc"
+      },
+      {
+        "id": "gbc_dragon_warrior_monsters_2___cobi's_journey_(usa)_(sgb_enhanced)_(gb_compatible)",
+        "title": "Dragon Warrior Monsters 2 - Cobi's Journey",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Dragon Warrior Monsters 2 - Cobi's Journey (USA) (SGB Enhanced) (GB Compatible).webp",
+        "rom_path": "assets/roms/gbc/Dragon Warrior Monsters 2 - Cobi's Journey (USA) (SGB Enhanced) (GB Compatible).gbc"
+      },
+      {
+        "id": "gbc_dragon_warrior_monsters_2___tara's_adventure_(usa)_(sgb_enhanced)_(gb_compatible)",
+        "title": "Dragon Warrior Monsters 2 - Tara's Adventure",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Dragon Warrior Monsters 2 - Tara's Adventure (USA) (SGB Enhanced) (GB Compatible).webp",
+        "rom_path": "assets/roms/gbc/Dragon Warrior Monsters 2 - Tara's Adventure (USA) (SGB Enhanced) (GB Compatible).gbc"
+      },
+      {
+        "id": "gbc_driver___you_are_the_wheelman_(usa)_(en,fr,de,es,it)",
+        "title": "Driver - You Are the Wheelman",
+        "core": "gambatte",
+        "boxart": "assets/icons/default_boxart.svg",
+        "rom_path": "assets/roms/gbc/Driver - You Are the Wheelman (USA) (En,Fr,De,Es,It).gbc"
+      },
+      {
+        "id": "gbc_game_&_watch_gallery_2_(usa,_europe)_(sgb_enhanced)_(gb_compatible)",
+        "title": "Game & Watch Gallery 2",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Game _ Watch Gallery 2 (USA, Europe) (SGB Enhanced) (GB Compatible).webp",
+        "rom_path": "assets/roms/gbc/Game & Watch Gallery 2 (USA, Europe) (SGB Enhanced) (GB Compatible).gbc"
+      },
+      {
+        "id": "gbc_game_&_watch_gallery_3_(usa,_europe)_(sgb_enhanced)_(gb_compatible)",
+        "title": "Game & Watch Gallery 3",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Game _ Watch Gallery 3 (USA, Europe) (SGB Enhanced) (GB Compatible).webp",
+        "rom_path": "assets/roms/gbc/Game & Watch Gallery 3 (USA, Europe) (SGB Enhanced) (GB Compatible).gbc"
+      },
+      {
+        "id": "gbc_grandia___parallel_trippers_(japan)_[t_en_by_adventurous_translations_v1.03]",
+        "title": "Grandia - Parallel Trippers",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Grandia - Parallel Trippers (Japan).webp",
+        "rom_path": "assets/roms/gbc/Grandia - Parallel Trippers (Japan) [T-En by Adventurous Translations v1.03].gbc"
+      },
+      {
+        "id": "gbc_gremlins___unleashed_(europe)_(en,fr,de,es,it,pt)",
+        "title": "Gremlins - Unleashed",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Gremlins - Unleashed (Europe) (En,Fr,De,Es,It,Pt).webp",
+        "rom_path": "assets/roms/gbc/Gremlins - Unleashed (Europe) (En,Fr,De,Es,It,Pt).gbc"
+      },
+      {
+        "id": "gbc_hamtaro___ham_hams_unite!_(usa)",
+        "title": "Hamtaro - Ham-Hams Unite!",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Hamtaro - Ham-Hams Unite! (USA).webp",
+        "rom_path": "assets/roms/gbc/Hamtaro - Ham-Hams Unite! (USA).gbc"
+      },
+      {
+        "id": "gbc_hands_of_time_(usa,_europe)_(en,fr,de,es,it,nl)",
+        "title": "Hands of Time",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Hands of Time (USA, Europe) (En,Fr,De,Es,It,Nl).webp",
+        "rom_path": "assets/roms/gbc/Hands of Time (USA, Europe) (En,Fr,De,Es,It,Nl).gbc"
+      },
+      {
+        "id": "gbc_harry_potter_and_the_chamber_of_secrets_(usa,_europe)_(en,fr,de,es,it,nl,pt,sv,da)",
+        "title": "Harry Potter and the Chamber of Secrets",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Harry Potter and the Chamber of Secrets (USA, Europe) (En,Fr,De,Es,It,Nl,Pt,Sv,Da).webp",
+        "rom_path": "assets/roms/gbc/Harry Potter and the Chamber of Secrets (USA, Europe) (En,Fr,De,Es,It,Nl,Pt,Sv,Da).gbc"
+      },
+      {
+        "id": "gbc_harry_potter_and_the_sorcerer's_stone_(usa,_europe)_(en,fr,de,es,it,nl,pt,sv,no,da,fi)",
+        "title": "Harry Potter and the Sorcerer's Stone",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Harry Potter and the Sorcerer's Stone (USA, Europe) (En,Fr,De,Es,It,Nl,Pt,Sv,No,Da,Fi).webp",
+        "rom_path": "assets/roms/gbc/Harry Potter and the Sorcerer's Stone (USA, Europe) (En,Fr,De,Es,It,Nl,Pt,Sv,No,Da,Fi).gbc"
+      },
+      {
+        "id": "gbc_harvest_moon_2_gbc_(usa)_(sgb_enhanced)_(gb_compatible)",
+        "title": "Harvest Moon 2 GBC",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Harvest Moon 2 GBC (USA) (SGB Enhanced) (GB Compatible).webp",
+        "rom_path": "assets/roms/gbc/Harvest Moon 2 GBC (USA) (SGB Enhanced) (GB Compatible).gbc"
+      },
+      {
+        "id": "gbc_harvest_moon_3_gbc_(usa)",
+        "title": "Harvest Moon 3 GBC",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Harvest Moon 3 GBC (USA).webp",
+        "rom_path": "assets/roms/gbc/Harvest Moon 3 GBC (USA).gbc"
+      },
+      {
+        "id": "gbc_harvest_moon_gbc_(usa)_(sgb_enhanced)_(gb_compatible)",
+        "title": "Harvest Moon GBC",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Harvest Moon GBC (USA) (SGB Enhanced) (GB Compatible).webp",
+        "rom_path": "assets/roms/gbc/Harvest Moon GBC (USA) (SGB Enhanced) (GB Compatible).gbc"
+      },
+      {
+        "id": "gbc_john_romero's_daikatana_(europe)_(en,fr,it)",
+        "title": "John Romero's Daikatana",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/John Romero's Daikatana (Europe) (En,Fr,It).webp",
+        "rom_path": "assets/roms/gbc/John Romero's Daikatana (Europe) (En,Fr,It).gbc"
+      },
+      {
+        "id": "gbc_jungle_book,_the___mowgli's_wild_adventure_(usa)_(en,fr,de,es,it)",
+        "title": "Jungle Book, The - Mowgli's Wild Adventure",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Jungle Book, The - Mowgli's Wild Adventure (USA) (En,Fr,De,Es,It).webp",
+        "rom_path": "assets/roms/gbc/Jungle Book, The - Mowgli's Wild Adventure (USA) (En,Fr,De,Es,It).gbc"
+      },
+      {
+        "id": "gbc_kirby___tilt_'n'_tumble_(usa)",
+        "title": "Kirby - Tilt 'n' Tumble",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Kirby - Tilt 'n' Tumble (USA).webp",
+        "rom_path": "assets/roms/gbc/Kirby - Tilt 'n' Tumble (USA).gbc"
+      },
+      {
+        "id": "gbc_legend_of_zelda,_the___link's_awakening_dx_(usa,_europe)_(rev_2)_(sgb_enhanced)_(gb_compatible)",
+        "title": "Legend of Zelda, The - Link's Awakening DX",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Legend of Zelda, The - Link's Awakening DX (USA, Europe) (Rev 2) (SGB Enhanced) (GB Compatible).webp",
+        "rom_path": "assets/roms/gbc/Legend of Zelda, The - Link's Awakening DX (USA, Europe) (Rev 2) (SGB Enhanced) (GB Compatible).gbc"
+      },
+      {
+        "id": "gbc_legend_of_zelda,_the___oracle_of_ages_(usa,_australia)",
+        "title": "Legend of Zelda, The - Oracle of Ages",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Legend of Zelda, The - Oracle of Ages (USA, Australia).webp",
+        "rom_path": "assets/roms/gbc/Legend of Zelda, The - Oracle of Ages (USA, Australia).gbc"
+      },
+      {
+        "id": "gbc_legend_of_zelda,_the___oracle_of_seasons_(usa,_australia)",
+        "title": "Legend of Zelda, The - Oracle of Seasons",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Legend of Zelda, The - Oracle of Seasons (USA, Australia).webp",
+        "rom_path": "assets/roms/gbc/Legend of Zelda, The - Oracle of Seasons (USA, Australia).gbc"
+      },
+      {
+        "id": "gbc_legend_of_the_river_king_2_(usa)_(sgb_enhanced)_(gb_compatible)",
+        "title": "Legend of the River King 2",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Legend of the River King 2 (USA) (SGB Enhanced) (GB Compatible).webp",
+        "rom_path": "assets/roms/gbc/Legend of the River King 2 (USA) (SGB Enhanced) (GB Compatible).gbc"
+      },
+      {
+        "id": "gbc_legend_of_the_river_king_gbc_(usa)_(sgb_enhanced)_(gb_compatible)",
+        "title": "Legend of the River King GBC",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Legend of the River King GBC (USA) (SGB Enhanced) (GB Compatible).webp",
+        "rom_path": "assets/roms/gbc/Legend of the River King GBC (USA) (SGB Enhanced) (GB Compatible).gbc"
+      },
+      {
+        "id": "gbc_lufia___the_legend_returns_(usa)",
+        "title": "Lufia - The Legend Returns",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Lufia - The Legend Returns (USA).webp",
+        "rom_path": "assets/roms/gbc/Lufia - The Legend Returns (USA).gbc"
+      },
+      {
+        "id": "gbc_magi_nation_(usa)",
+        "title": "Magi Nation",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Magi Nation (USA).webp",
+        "rom_path": "assets/roms/gbc/Magi Nation (USA).gbc"
+      },
+      {
+        "id": "gbc_mario_golf_(usa)",
+        "title": "Mario Golf",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Mario Golf (USA).webp",
+        "rom_path": "assets/roms/gbc/Mario Golf (USA).gbc"
+      },
+      {
+        "id": "gbc_mario_tennis_(usa)",
+        "title": "Mario Tennis",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Mario Tennis (USA).webp",
+        "rom_path": "assets/roms/gbc/Mario Tennis (USA).gbc"
+      },
+      {
+        "id": "gbc_mega_man_xtreme_(usa,_europe)_(gb_compatible)",
+        "title": "Mega Man Xtreme",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Mega Man Xtreme (USA, Europe) (GB Compatible).webp",
+        "rom_path": "assets/roms/gbc/Mega Man Xtreme (USA, Europe) (GB Compatible).gbc"
+      },
+      {
+        "id": "gbc_mega_man_xtreme_2_(usa,_europe)",
+        "title": "Mega Man Xtreme 2",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Mega Man Xtreme 2 (USA, Europe).webp",
+        "rom_path": "assets/roms/gbc/Mega Man Xtreme 2 (USA, Europe).gbc"
+      },
+      {
+        "id": "gbc_metal_gear_solid_(usa)",
+        "title": "Metal Gear Solid",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Metal Gear Solid (USA).webp",
+        "rom_path": "assets/roms/gbc/Metal Gear Solid (USA).gbc"
+      },
+      {
+        "id": "gbc_metal_walker_(usa)_(gb_compatible)",
+        "title": "Metal Walker",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Metal Walker (USA) (GB Compatible).webp",
+        "rom_path": "assets/roms/gbc/Metal Walker (USA) (GB Compatible).gbc"
+      },
+      {
+        "id": "gbc_mickey's_racing_adventure_(usa,_europe)_(en,fr,de,es,it)",
+        "title": "Mickey's Racing Adventure",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Mickey's Racing Adventure (USA, Europe) (En,Fr,De,Es,It).webp",
+        "rom_path": "assets/roms/gbc/Mickey's Racing Adventure (USA, Europe) (En,Fr,De,Es,It).gbc"
+      },
+      {
+        "id": "gbc_mickey's_speedway_usa_(usa,_europe)_(en,fr,de,es)",
+        "title": "Mickey's Speedway USA",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Mickey's Speedway USA (USA, Europe) (En,Fr,De,Es).webp",
+        "rom_path": "assets/roms/gbc/Mickey's Speedway USA (USA, Europe) (En,Fr,De,Es).gbc"
+      },
+      {
+        "id": "gbc_mission___impossible_(usa)_(en,fr,es)",
+        "title": "Mission - Impossible",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Mission - Impossible (USA) (En,Fr,Es).webp",
+        "rom_path": "assets/roms/gbc/Mission - Impossible (USA) (En,Fr,Es).gbc"
+      },
+      {
+        "id": "gbc_mobile_golf_(japan)_[t_en_by_prostatepunch_&_darkshade_&_reon_dev_team_&_marc_max_v1.1]_[vanilla_unlock]",
+        "title": "Mobile Golf",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Mobile Golf (Japan).webp",
+        "rom_path": "assets/roms/gbc/Mobile Golf (Japan) [T-En by ProstatePunch & Darkshade & REON Dev Team & Marc_Max v1.1] [Vanilla Unlock].gbc"
+      },
+      {
+        "id": "gbc_monkey_puncher_(europe)_(sgb_enhanced)_(gb_compatible)",
+        "title": "Monkey Puncher",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Monkey Puncher (Europe) (SGB Enhanced) (GB Compatible).webp",
+        "rom_path": "assets/roms/gbc/Monkey Puncher (Europe) (SGB Enhanced) (GB Compatible).gbc"
+      },
+      {
+        "id": "gbc_monster_rancher_explorer_(usa)",
+        "title": "Monster Rancher Explorer",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Monster Rancher Explorer (USA).webp",
+        "rom_path": "assets/roms/gbc/Monster Rancher Explorer (USA).gbc"
+      },
+      {
+        "id": "gbc_motocross_maniacs_2_(usa)",
+        "title": "Motocross Maniacs 2",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Motocross Maniacs 2 (USA).webp",
+        "rom_path": "assets/roms/gbc/Motocross Maniacs 2 (USA).gbc"
+      },
+      {
+        "id": "gbc_mr._driller_(usa)",
+        "title": "Mr. Driller",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Mr. Driller (USA).webp",
+        "rom_path": "assets/roms/gbc/Mr. Driller (USA).gbc"
+      },
+      {
+        "id": "gbc_pocket_bomberman_(usa,_europe)_(sgb_enhanced)_(gb_compatible)",
+        "title": "Pocket Bomberman",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Pocket Bomberman (USA, Europe) (SGB Enhanced) (GB Compatible).webp",
+        "rom_path": "assets/roms/gbc/Pocket Bomberman (USA, Europe) (SGB Enhanced) (GB Compatible).gbc"
+      },
+      {
+        "id": "gbc_pokemon___crystal_version_(usa)",
+        "title": "Pokemon - Crystal Version",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Pokemon - Crystal Version (USA).webp",
+        "rom_path": "assets/roms/gbc/Pokemon - Crystal Version (USA).gbc"
+      },
+      {
+        "id": "gbc_pokemon___gold_version_(usa,_europe)_(sgb_enhanced)_(gb_compatible)",
+        "title": "Pokemon - Gold Version",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Pokemon - Gold Version (USA, Europe) (SGB Enhanced) (GB Compatible).webp",
+        "rom_path": "assets/roms/gbc/Pokemon - Gold Version (USA, Europe) (SGB Enhanced) (GB Compatible).gbc"
+      },
+      {
+        "id": "gbc_pokemon___silver_version_(usa,_europe)_(sgb_enhanced)_(gb_compatible)",
+        "title": "Pokemon - Silver Version",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Pokemon - Silver Version (USA, Europe) (SGB Enhanced) (GB Compatible).webp",
+        "rom_path": "assets/roms/gbc/Pokemon - Silver Version (USA, Europe) (SGB Enhanced) (GB Compatible).gbc"
+      },
+      {
+        "id": "gbc_pokemon_card_gb2___gr_dan_sanjou!_(japan)",
+        "title": "Pokemon Card GB2 - GR Dan Sanjou!",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Pokemon Card GB 2 - GR Dan Sanjou! (Japan).webp",
+        "rom_path": "assets/roms/gbc/Pokemon Card GB2 - GR Dan Sanjou! (Japan).gbc"
+      },
+      {
+        "id": "gbc_pokemon_pinball_(usa,_australia)_(rumble_version)_(sgb_enhanced)_(gb_compatible)",
+        "title": "Pokemon Pinball",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Pokemon Pinball (USA, Australia) (Rumble Version) (SGB Enhanced) (GB Compatible).webp",
+        "rom_path": "assets/roms/gbc/Pokemon Pinball (USA, Australia) (Rumble Version) (SGB Enhanced) (GB Compatible).gbc"
+      },
+      {
+        "id": "gbc_pokemon_puzzle_challenge_(usa,_australia)",
+        "title": "Pokemon Puzzle Challenge",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Pokemon Puzzle Challenge (USA, Australia).webp",
+        "rom_path": "assets/roms/gbc/Pokemon Puzzle Challenge (USA, Australia).gbc"
+      },
+      {
+        "id": "gbc_pokemon_trading_card_game_(usa,_australia)_(sgb_enhanced)_(gb_compatible)",
+        "title": "Pokemon Trading Card Game",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Pokemon Trading Card Game (USA, Australia) (SGB Enhanced) (GB Compatible).webp",
+        "rom_path": "assets/roms/gbc/Pokemon Trading Card Game (USA, Australia) (SGB Enhanced) (GB Compatible).gbc"
+      },
+      {
+        "id": "gbc_project_s_11_(usa)",
+        "title": "Project S-11",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Project S-11 (USA).webp",
+        "rom_path": "assets/roms/gbc/Project S-11 (USA).gbc"
+      },
+      {
+        "id": "gbc_r_type_dx_(usa,_europe)_(gb_compatible)",
+        "title": "R-Type DX",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/R-Type DX (USA, Europe) (GB Compatible).webp",
+        "rom_path": "assets/roms/gbc/R-Type DX (USA, Europe) (GB Compatible).gbc"
+      },
+      {
+        "id": "gbc_rayman_(usa)_(en,fr,de,es,it,nl)",
+        "title": "Rayman",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Rayman (USA) (En,Fr,De,Es,It,Nl).webp",
+        "rom_path": "assets/roms/gbc/Rayman (USA) (En,Fr,De,Es,It,Nl).gbc"
+      },
+      {
+        "id": "gbc_rayman_2_(usa)_(en,fr,de,es,it)",
+        "title": "Rayman 2",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Rayman 2 (USA) (En,Fr,De,Es,It).webp",
+        "rom_path": "assets/roms/gbc/Rayman 2 (USA) (En,Fr,De,Es,It).gbc"
+      },
+      {
+        "id": "gbc_resident_evil_gaiden_(usa)",
+        "title": "Resident Evil Gaiden",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Resident Evil Gaiden (USA).webp",
+        "rom_path": "assets/roms/gbc/Resident Evil Gaiden (USA).gbc"
+      },
+      {
+        "id": "gbc_return_of_the_ninja_(usa)",
+        "title": "Return of the Ninja",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Return of the Ninja (USA).webp",
+        "rom_path": "assets/roms/gbc/Return of the Ninja (USA).gbc"
+      },
+      {
+        "id": "gbc_revelations___the_demon_slayer_(usa)_(sgb_enhanced)_(gb_compatible)",
+        "title": "Revelations - The Demon Slayer",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Revelations - The Demon Slayer (USA) (SGB Enhanced) (GB Compatible).webp",
+        "rom_path": "assets/roms/gbc/Revelations - The Demon Slayer (USA) (SGB Enhanced) (GB Compatible).gbc"
+      },
+      {
+        "id": "gbc_shantae_(usa)",
+        "title": "Shantae",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Shantae (USA).webp",
+        "rom_path": "assets/roms/gbc/Shantae (USA).gbc"
+      },
+      {
+        "id": "gbc_shin_megami_tensei_devil_children___kuro_no_sho_(japan)_(sgb_enhanced)_(gb_compatible)_[t_en_by_higsby_&_specialagentape_v1.2]",
+        "title": "Shin Megami Tensei Devil Children - Kuro no Sho",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Shin Megami Tensei Devil Children - Kuro no Sho (Japan) (SGB Enhanced) (GB Compatible).webp",
+        "rom_path": "assets/roms/gbc/Shin Megami Tensei Devil Children - Kuro no Sho (Japan) (SGB Enhanced) (GB Compatible) [T-En by Higsby & SpecialAgentApe v1.2].gbc"
+      },
+      {
+        "id": "gbc_super_mario_bros._deluxe_(usa,_europe)_(rev_2)",
+        "title": "Super Mario Bros. Deluxe",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Super Mario Bros. Deluxe (USA, Europe).webp",
+        "rom_path": "assets/roms/gbc/Super Mario Bros. Deluxe (USA, Europe) (Rev 2).gbc"
+      },
+      {
+        "id": "gbc_super_robot_pinball_(japan)_[t_en_by_kurenaikurai_&_luis16bits_&_marc_max_v1.0]",
+        "title": "Super Robot Pinball",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Super Robot Pinball (Japan).webp",
+        "rom_path": "assets/roms/gbc/Super Robot Pinball (Japan) [T-En by Kurenaikurai & Luis16bits & Marc_max v1.0].gbc"
+      },
+      {
+        "id": "gbc_survival_kids_(usa)_(sgb_enhanced)_(gb_compatible)",
+        "title": "Survival Kids",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Survival Kids (USA) (SGB Enhanced) (GB Compatible).webp",
+        "rom_path": "assets/roms/gbc/Survival Kids (USA) (SGB Enhanced) (GB Compatible).gbc"
+      },
+      {
+        "id": "gbc_survival_kids_2___dasshutsu!!_futago_jima!_(japan)_(sgb_enhanced)_(gb_compatible)_[t_en_by_hattontown_&_nikcdc_v0.9]",
+        "title": "Survival Kids 2 - Dasshutsu!! Futago-Jima!",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Survival Kids 2 - Dasshutsu!! Futago-Jima! (Japan) (SGB Enhanced) (GB Compatible).webp",
+        "rom_path": "assets/roms/gbc/Survival Kids 2 - Dasshutsu!! Futago-Jima! (Japan) (SGB Enhanced) (GB Compatible) [T-En by Hattontown & NikcDC v0.9].gbc"
+      },
+      {
+        "id": "gbc_tetris_dx_(world)_(sgb_enhanced)_(gb_compatible)",
+        "title": "Tetris DX",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Tetris DX (World) (SGB Enhanced) (GB Compatible).webp",
+        "rom_path": "assets/roms/gbc/Tetris DX (World) (SGB Enhanced) (GB Compatible).gbc"
+      },
+      {
+        "id": "gbc_toki_tori_(usa,_europe)_(en,ja,fr,de,es)",
+        "title": "Toki Tori",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Toki Tori (USA, Europe) (En,Ja,Fr,De,Es).webp",
+        "rom_path": "assets/roms/gbc/Toki Tori (USA, Europe) (En,Ja,Fr,De,Es).gbc"
+      },
+      {
+        "id": "gbc_tomb_raider_(usa,_europe)_(en,fr,de,es,it)",
+        "title": "Tomb Raider",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Tomb Raider (USA, Europe) (En,Fr,De,Es,It).webp",
+        "rom_path": "assets/roms/gbc/Tomb Raider (USA, Europe) (En,Fr,De,Es,It).gbc"
+      },
+      {
+        "id": "gbc_tomb_raider___curse_of_the_sword_(usa,_europe)",
+        "title": "Tomb Raider - Curse of the Sword",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Tomb Raider - Curse of the Sword (USA, Europe).webp",
+        "rom_path": "assets/roms/gbc/Tomb Raider - Curse of the Sword (USA, Europe).gbc"
+      },
+      {
+        "id": "gbc_turok___rage_wars_(usa,_europe)_(en,fr,de,es)",
+        "title": "Turok - Rage Wars",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Turok - Rage Wars (USA, Europe) (En,Fr,De,Es).webp",
+        "rom_path": "assets/roms/gbc/Turok - Rage Wars (USA, Europe) (En,Fr,De,Es).gbc"
+      },
+      {
+        "id": "gbc_turok_2___seeds_of_evil_(usa,_europe)_(en,fr,de,es)_(gb_compatible)",
+        "title": "Turok 2 - Seeds of Evil",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Turok 2 - Seeds of Evil (USA, Europe) (En,Fr,De,Es) (GB Compatible).webp",
+        "rom_path": "assets/roms/gbc/Turok 2 - Seeds of Evil (USA, Europe) (En,Fr,De,Es) (GB Compatible).gbc"
+      },
+      {
+        "id": "gbc_turok_3___shadow_of_oblivion_(usa,_europe)_(en,fr,de,es)",
+        "title": "Turok 3 - Shadow of Oblivion",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Turok 3 - Shadow of Oblivion (USA, Europe) (En,Fr,De,Es).webp",
+        "rom_path": "assets/roms/gbc/Turok 3 - Shadow of Oblivion (USA, Europe) (En,Fr,De,Es).gbc"
+      },
+      {
+        "id": "gbc_wacky_races_(usa)_(en,fr,es)",
+        "title": "Wacky Races",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Wacky Races (USA) (En,Fr,Es).webp",
+        "rom_path": "assets/roms/gbc/Wacky Races (USA) (En,Fr,Es).gbc"
+      },
+      {
+        "id": "gbc_wario_land_3_(world)_(en,ja)",
+        "title": "Wario Land 3",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Wario Land 3 (World) (En,Ja).webp",
+        "rom_path": "assets/roms/gbc/Wario Land 3 (World) (En,Ja).gbc"
+      },
+      {
+        "id": "gbc_wario_land_ii_(usa,_europe)_(sgb_enhanced)_(gb_compatible)",
+        "title": "Wario Land II",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Wario Land II (USA, Europe) (SGB Enhanced) (GB Compatible).webp",
+        "rom_path": "assets/roms/gbc/Wario Land II (USA, Europe) (SGB Enhanced) (GB Compatible).gbc"
+      },
+      {
+        "id": "gbc_warlocked_(usa)",
+        "title": "Warlocked",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Warlocked (USA).webp",
+        "rom_path": "assets/roms/gbc/Warlocked (USA).gbc"
+      },
+      {
+        "id": "gbc_wendy___every_witch_way_(usa,_europe)",
+        "title": "Wendy - Every Witch Way",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Wendy - Every Witch Way (USA, Europe).webp",
+        "rom_path": "assets/roms/gbc/Wendy - Every Witch Way (USA, Europe).gbc"
+      },
+      {
+        "id": "gbc_yu_gi_oh!___dark_duel_stories_(usa)",
+        "title": "Yu-Gi-Oh! - Dark Duel Stories",
+        "core": "gambatte",
+        "boxart": "assets/roms/gbc/boxart/Yu-Gi-Oh! - Dark Duel Stories (USA).webp",
+        "rom_path": "assets/roms/gbc/Yu-Gi-Oh! - Dark Duel Stories (USA).gbc"
+      }
+    ]
+  },
+  {
     "system": "html5",
     "title": "HTML5 Web Games",
     "core": "native_html",
@@ -2488,6 +4112,363 @@
         "core": "snes9x",
         "boxart": "assets/icons/default_boxart.svg",
         "rom_path": "assets/roms/secret/Donkey Kong Country (USA).sfc"
+      }
+    ]
+  },
+  {
+    "system": "sms",
+    "title": "SMS",
+    "core": "segaMD",
+    "games": [
+      {
+        "id": "sms_action_fighter_(usa,_europe,_brazil)_(rev_1)",
+        "title": "Action Fighter",
+        "core": "segaMD",
+        "boxart": "assets/roms/sms/boxart/Action Fighter (USA, Europe, Brazil) (En) (Rev 1).webp",
+        "rom_path": "assets/roms/sms/Action Fighter (USA, Europe, Brazil) (Rev 1).sms"
+      },
+      {
+        "id": "sms_aladdin_(europe,_brazil)_(en)",
+        "title": "Aladdin",
+        "core": "segaMD",
+        "boxart": "assets/roms/sms/boxart/Aladdin (Europe, Brazil) (En).webp",
+        "rom_path": "assets/roms/sms/Aladdin (Europe, Brazil) (En).sms"
+      },
+      {
+        "id": "sms_alex_kidd_in_miracle_world_(world)_(sega_ages)",
+        "title": "Alex Kidd in Miracle World",
+        "core": "segaMD",
+        "boxart": "assets/roms/sms/boxart/Alex Kidd in Miracle World (USA, Europe, Brazil) (En) (Rev 1).webp",
+        "rom_path": "assets/roms/sms/Alex Kidd in Miracle World (World) (Sega Ages).sms"
+      },
+      {
+        "id": "sms_alex_kidd_in_shinobi_world_(usa,_europe,_brazil)",
+        "title": "Alex Kidd in Shinobi World",
+        "core": "segaMD",
+        "boxart": "assets/roms/sms/boxart/Alex Kidd in Shinobi World (USA, Europe, Brazil) (En).webp",
+        "rom_path": "assets/roms/sms/Alex Kidd in Shinobi World (USA, Europe, Brazil).sms"
+      },
+      {
+        "id": "sms_asterix_(europe,_brazil)_(en,fr)_(rev_1)",
+        "title": "Asterix",
+        "core": "segaMD",
+        "boxart": "assets/roms/sms/boxart/Asterix (Europe, Brazil) (En,Fr) (Rev 1).webp",
+        "rom_path": "assets/roms/sms/Asterix (Europe, Brazil) (En,Fr) (Rev 1).sms"
+      },
+      {
+        "id": "sms_aztec_adventure_~_nazca_'88___the_golden_road_to_paradise_(world)",
+        "title": "Aztec Adventure ~ Nazca '88 - The Golden Road to Paradise",
+        "core": "segaMD",
+        "boxart": "assets/roms/sms/boxart/Aztec Adventure _ Nazca '88 - The Golden Road to Paradise (World).webp",
+        "rom_path": "assets/roms/sms/Aztec Adventure ~ Nazca '88 - The Golden Road to Paradise (World).sms"
+      },
+      {
+        "id": "sms_battle_out_run_(europe,_brazil)",
+        "title": "Battle Out Run",
+        "core": "segaMD",
+        "boxart": "assets/roms/sms/boxart/Battle Out Run (Europe, Brazil) (En).webp",
+        "rom_path": "assets/roms/sms/Battle Out Run (Europe, Brazil).sms"
+      },
+      {
+        "id": "sms_bomber_raid_(world)",
+        "title": "Bomber Raid",
+        "core": "segaMD",
+        "boxart": "assets/roms/sms/boxart/Bomber Raid (World).webp",
+        "rom_path": "assets/roms/sms/Bomber Raid (World).sms"
+      },
+      {
+        "id": "sms_buggy_run_(europe,_brazil)_(en)",
+        "title": "Buggy Run",
+        "core": "segaMD",
+        "boxart": "assets/roms/sms/boxart/Buggy Run (Europe, Brazil) (En).webp",
+        "rom_path": "assets/roms/sms/Buggy Run (Europe, Brazil) (En).sms"
+      },
+      {
+        "id": "sms_california_games_ii_(europe)",
+        "title": "California Games II",
+        "core": "segaMD",
+        "boxart": "assets/roms/sms/boxart/California Games II (Europe).webp",
+        "rom_path": "assets/roms/sms/California Games II (Europe).sms"
+      },
+      {
+        "id": "sms_california_games_~_jogos_de_verao_(usa,_europe,_brazil)",
+        "title": "California Games ~ Jogos de Verao",
+        "core": "segaMD",
+        "boxart": "assets/roms/sms/boxart/California Games _ Jogos de Verao (USA, Europe, Brazil) (En).webp",
+        "rom_path": "assets/roms/sms/California Games ~ Jogos de Verao (USA, Europe, Brazil).sms"
+      },
+      {
+        "id": "sms_castle_of_illusion_starring_mickey_mouse_(usa,_europe,_brazil)_(rev_1)",
+        "title": "Castle of Illusion Starring Mickey Mouse",
+        "core": "segaMD",
+        "boxart": "assets/roms/sms/boxart/Castle of Illusion Starring Mickey Mouse (USA, Europe, Brazil) (En).webp",
+        "rom_path": "assets/roms/sms/Castle of Illusion Starring Mickey Mouse (USA, Europe, Brazil) (Rev 1).sms"
+      },
+      {
+        "id": "sms_cyber_shinobi,_the_(europe,_brazil)",
+        "title": "Cyber Shinobi, The",
+        "core": "segaMD",
+        "boxart": "assets/roms/sms/boxart/Cyber Shinobi, The (Europe, Brazil) (En).webp",
+        "rom_path": "assets/roms/sms/Cyber Shinobi, The (Europe, Brazil).sms"
+      },
+      {
+        "id": "sms_danan___the_jungle_fighter_(europe,_brazil)_(en)",
+        "title": "Danan - The Jungle Fighter",
+        "core": "segaMD",
+        "boxart": "assets/roms/sms/boxart/Danan - The Jungle Fighter (Europe, Brazil) (En).webp",
+        "rom_path": "assets/roms/sms/Danan - The Jungle Fighter (Europe, Brazil) (En).sms"
+      },
+      {
+        "id": "sms_double_dragon_(world)",
+        "title": "Double Dragon",
+        "core": "segaMD",
+        "boxart": "assets/roms/sms/boxart/Double Dragon (World).webp",
+        "rom_path": "assets/roms/sms/Double Dragon (World).sms"
+      },
+      {
+        "id": "sms_dragon_crystal_(europe,_brazil)_(en)",
+        "title": "Dragon Crystal",
+        "core": "segaMD",
+        "boxart": "assets/roms/sms/boxart/Dragon Crystal (Europe, Brazil) (En).webp",
+        "rom_path": "assets/roms/sms/Dragon Crystal (Europe, Brazil) (En).sms"
+      },
+      {
+        "id": "sms_enduro_racer_(usa,_europe,_brazil)_(en)",
+        "title": "Enduro Racer",
+        "core": "segaMD",
+        "boxart": "assets/roms/sms/boxart/Enduro Racer (Japan) (En).webp",
+        "rom_path": "assets/roms/sms/Enduro Racer (USA, Europe, Brazil) (En).sms"
+      },
+      {
+        "id": "sms_fantasy_zone_(world)_(rev_1)",
+        "title": "Fantasy Zone",
+        "core": "segaMD",
+        "boxart": "assets/roms/sms/boxart/Fantasy Zone (World) (Rev 1).webp",
+        "rom_path": "assets/roms/sms/Fantasy Zone (World) (Rev 1).sms"
+      },
+      {
+        "id": "sms_fantasy_zone_ii_(usa,_europe,_brazil)",
+        "title": "Fantasy Zone II",
+        "core": "segaMD",
+        "boxart": "assets/roms/sms/boxart/Fantasy Zone II (USA, Europe, Brazil) (En).webp",
+        "rom_path": "assets/roms/sms/Fantasy Zone II (USA, Europe, Brazil).sms"
+      },
+      {
+        "id": "sms_golden_axe_(usa,_europe,_brazil)",
+        "title": "Golden Axe",
+        "core": "segaMD",
+        "boxart": "assets/roms/sms/boxart/Golden Axe (USA, Europe, Brazil) (En).webp",
+        "rom_path": "assets/roms/sms/Golden Axe (USA, Europe, Brazil).sms"
+      },
+      {
+        "id": "sms_golden_axe_warrior_(usa,_europe,_brazil)",
+        "title": "Golden Axe Warrior",
+        "core": "segaMD",
+        "boxart": "assets/roms/sms/boxart/Golden Axe Warrior (USA, Europe, Brazil) (En).webp",
+        "rom_path": "assets/roms/sms/Golden Axe Warrior (USA, Europe, Brazil).sms"
+      },
+      {
+        "id": "sms_golvellius___valley_of_doom_(usa,_europe,_brazil)",
+        "title": "Golvellius - Valley of Doom",
+        "core": "segaMD",
+        "boxart": "assets/roms/sms/boxart/Golvellius - Valley of Doom (USA, Europe, Brazil) (En).webp",
+        "rom_path": "assets/roms/sms/Golvellius - Valley of Doom (USA, Europe, Brazil).sms"
+      },
+      {
+        "id": "sms_kenseiden_(usa,_europe,_brazil)_(en)",
+        "title": "Kenseiden",
+        "core": "segaMD",
+        "boxart": "assets/roms/sms/boxart/Kenseiden (USA, Europe, Brazil) (En).webp",
+        "rom_path": "assets/roms/sms/Kenseiden (USA, Europe, Brazil) (En).sms"
+      },
+      {
+        "id": "sms_land_of_illusion_starring_mickey_mouse_(europe,_brazil)",
+        "title": "Land of Illusion Starring Mickey Mouse",
+        "core": "segaMD",
+        "boxart": "assets/roms/sms/boxart/Land of Illusion Starring Mickey Mouse (Europe, Brazil) (En).webp",
+        "rom_path": "assets/roms/sms/Land of Illusion Starring Mickey Mouse (Europe, Brazil).sms"
+      },
+      {
+        "id": "sms_lord_of_the_sword_(usa,_europe,_brazil)",
+        "title": "Lord of the Sword",
+        "core": "segaMD",
+        "boxart": "assets/roms/sms/boxart/Lord of the Sword (USA, Europe, Brazil) (En).webp",
+        "rom_path": "assets/roms/sms/Lord of the Sword (USA, Europe, Brazil).sms"
+      },
+      {
+        "id": "sms_lucky_dime_caper_starring_donald_duck,_the_(europe,_brazil)",
+        "title": "Lucky Dime Caper Starring Donald Duck, The",
+        "core": "segaMD",
+        "boxart": "assets/roms/sms/boxart/Lucky Dime Caper Starring Donald Duck, The (Europe, Brazil) (En).webp",
+        "rom_path": "assets/roms/sms/Lucky Dime Caper Starring Donald Duck, The (Europe, Brazil).sms"
+      },
+      {
+        "id": "sms_master_of_darkness_(europe,_brazil)",
+        "title": "Master of Darkness",
+        "core": "segaMD",
+        "boxart": "assets/roms/sms/boxart/Master of Darkness (Europe, Brazil) (En).webp",
+        "rom_path": "assets/roms/sms/Master of Darkness (Europe, Brazil).sms"
+      },
+      {
+        "id": "sms_miracle_warriors___seal_of_the_dark_lord_(usa,_europe,_brazil)_(en)",
+        "title": "Miracle Warriors - Seal of The Dark Lord",
+        "core": "segaMD",
+        "boxart": "assets/roms/sms/boxart/Miracle Warriors - Seal of The Dark Lord (USA, Europe, Brazil) (En).webp",
+        "rom_path": "assets/roms/sms/Miracle Warriors - Seal of The Dark Lord (USA, Europe, Brazil) (En).sms"
+      },
+      {
+        "id": "sms_ninja_gaiden_(europe,_brazil)",
+        "title": "Ninja Gaiden",
+        "core": "segaMD",
+        "boxart": "assets/roms/sms/boxart/Ninja Gaiden (Europe, Brazil) (En).webp",
+        "rom_path": "assets/roms/sms/Ninja Gaiden (Europe, Brazil).sms"
+      },
+      {
+        "id": "sms_ninja,_the_(usa,_europe,_brazil)_(en)",
+        "title": "Ninja, The",
+        "core": "segaMD",
+        "boxart": "assets/roms/sms/boxart/Ninja, The (USA, Europe, Brazil) (En).webp",
+        "rom_path": "assets/roms/sms/Ninja, The (USA, Europe, Brazil) (En).sms"
+      },
+      {
+        "id": "sms_outrun_(world)",
+        "title": "OutRun",
+        "core": "segaMD",
+        "boxart": "assets/roms/sms/boxart/OutRun (World).webp",
+        "rom_path": "assets/roms/sms/OutRun (World).sms"
+      },
+      {
+        "id": "sms_penguin_land_(usa,_europe)",
+        "title": "Penguin Land",
+        "core": "segaMD",
+        "boxart": "assets/roms/sms/boxart/Penguin Land (USA, Europe).webp",
+        "rom_path": "assets/roms/sms/Penguin Land (USA, Europe).sms"
+      },
+      {
+        "id": "sms_phantasy_star_(world)_(sega_ages)",
+        "title": "Phantasy Star",
+        "core": "segaMD",
+        "boxart": "assets/roms/sms/boxart/Phantasy Star (World) (Ja) (Sega Ages).webp",
+        "rom_path": "assets/roms/sms/Phantasy Star (World) (Sega Ages).sms"
+      },
+      {
+        "id": "sms_power_strike_(usa,_europe,_brazil)_(en)",
+        "title": "Power Strike",
+        "core": "segaMD",
+        "boxart": "assets/roms/sms/boxart/Power Strike (USA, Europe, Brazil) (En).webp",
+        "rom_path": "assets/roms/sms/Power Strike (USA, Europe, Brazil) (En).sms"
+      },
+      {
+        "id": "sms_power_strike_ii_(europe,_brazil)_(en)",
+        "title": "Power Strike II",
+        "core": "segaMD",
+        "boxart": "assets/roms/sms/boxart/Power Strike II (Europe, Brazil) (En).webp",
+        "rom_path": "assets/roms/sms/Power Strike II (Europe, Brazil) (En).sms"
+      },
+      {
+        "id": "sms_psycho_fox_(usa,_europe,_brazil)",
+        "title": "Psycho Fox",
+        "core": "segaMD",
+        "boxart": "assets/roms/sms/boxart/Psycho Fox (USA, Europe, Brazil) (En).webp",
+        "rom_path": "assets/roms/sms/Psycho Fox (USA, Europe, Brazil).sms"
+      },
+      {
+        "id": "sms_r_type_(world)",
+        "title": "R-Type",
+        "core": "segaMD",
+        "boxart": "assets/roms/sms/boxart/R-Type (World).webp",
+        "rom_path": "assets/roms/sms/R-Type (World).sms"
+      },
+      {
+        "id": "sms_shinobi_(usa,_europe,_brazil)_(rev_1)",
+        "title": "Shinobi",
+        "core": "segaMD",
+        "boxart": "assets/roms/sms/boxart/Shinobi (USA, Europe, Brazil) (Rev 1).webp",
+        "rom_path": "assets/roms/sms/Shinobi (USA, Europe, Brazil) (Rev 1).sms"
+      },
+      {
+        "id": "sms_sonic_chaos_(europe,_brazil)",
+        "title": "Sonic Chaos",
+        "core": "segaMD",
+        "boxart": "assets/roms/sms/boxart/Sonic Chaos (Europe, Brazil) (En).webp",
+        "rom_path": "assets/roms/sms/Sonic Chaos (Europe, Brazil).sms"
+      },
+      {
+        "id": "sms_sonic_spinball_(europe,_brazil)",
+        "title": "Sonic Spinball",
+        "core": "segaMD",
+        "boxart": "assets/roms/sms/boxart/Sonic Spinball (Europe, Brazil) (En).webp",
+        "rom_path": "assets/roms/sms/Sonic Spinball (Europe, Brazil).sms"
+      },
+      {
+        "id": "sms_sonic_the_hedgehog_(usa,_europe,_brazil)",
+        "title": "Sonic The Hedgehog",
+        "core": "segaMD",
+        "boxart": "assets/roms/sms/boxart/Sonic The Hedgehog (USA, Europe, Brazil) (En).webp",
+        "rom_path": "assets/roms/sms/Sonic The Hedgehog (USA, Europe, Brazil).sms"
+      },
+      {
+        "id": "sms_sonic_the_hedgehog_2_(europe,_brazil)_(rev_1)",
+        "title": "Sonic The Hedgehog 2",
+        "core": "segaMD",
+        "boxart": "assets/roms/sms/boxart/Sonic The Hedgehog 2 (Europe, Brazil) (En).webp",
+        "rom_path": "assets/roms/sms/Sonic The Hedgehog 2 (Europe, Brazil) (Rev 1).sms"
+      },
+      {
+        "id": "sms_spellcaster_(usa,_europe,_brazil)_(en)",
+        "title": "SpellCaster",
+        "core": "segaMD",
+        "boxart": "assets/roms/sms/boxart/SpellCaster (USA, Europe, Brazil) (En).webp",
+        "rom_path": "assets/roms/sms/SpellCaster (USA, Europe, Brazil) (En).sms"
+      },
+      {
+        "id": "sms_wonder_boy_(usa,_europe,_brazil)_(rev_1)",
+        "title": "Wonder Boy",
+        "core": "segaMD",
+        "boxart": "assets/roms/sms/boxart/Wonder Boy (USA, Europe, Brazil) (En) (Rev 1).webp",
+        "rom_path": "assets/roms/sms/Wonder Boy (USA, Europe, Brazil) (Rev 1).sms"
+      },
+      {
+        "id": "sms_wonder_boy_iii___the_dragon's_trap_(usa,_europe)",
+        "title": "Wonder Boy III - The Dragon's Trap",
+        "core": "segaMD",
+        "boxart": "assets/roms/sms/boxart/Wonder Boy III - The Dragon's Trap (USA, Europe).webp",
+        "rom_path": "assets/roms/sms/Wonder Boy III - The Dragon's Trap (USA, Europe).sms"
+      },
+      {
+        "id": "sms_wonder_boy_in_monster_land_(usa,_europe)",
+        "title": "Wonder Boy in Monster Land",
+        "core": "segaMD",
+        "boxart": "assets/roms/sms/boxart/Wonder Boy in Monster Land (USA, Europe).webp",
+        "rom_path": "assets/roms/sms/Wonder Boy in Monster Land (USA, Europe).sms"
+      },
+      {
+        "id": "sms_wonder_boy_in_monster_world_(europe)",
+        "title": "Wonder Boy in Monster World",
+        "core": "segaMD",
+        "boxart": "assets/roms/sms/boxart/Wonder Boy in Monster World (Europe).webp",
+        "rom_path": "assets/roms/sms/Wonder Boy in Monster World (Europe).sms"
+      },
+      {
+        "id": "sms_ys___the_vanished_omens_(usa,_europe,_brazil)_(en)",
+        "title": "Ys - The Vanished Omens",
+        "core": "segaMD",
+        "boxart": "assets/roms/sms/boxart/Ys - The Vanished Omens (Proto).webp",
+        "rom_path": "assets/roms/sms/Ys - The Vanished Omens (USA, Europe, Brazil) (En).sms"
+      },
+      {
+        "id": "sms_zillion_(usa,_europe)_(rev_1)",
+        "title": "Zillion",
+        "core": "segaMD",
+        "boxart": "assets/roms/sms/boxart/Zillion (USA, Europe) (Rev 1).webp",
+        "rom_path": "assets/roms/sms/Zillion (USA, Europe) (Rev 1).sms"
+      },
+      {
+        "id": "sms_zillion_ii___the_tri_formation_(world)",
+        "title": "Zillion II - The Tri Formation",
+        "core": "segaMD",
+        "boxart": "assets/roms/sms/boxart/Zillion II - The Tri Formation (World).webp",
+        "rom_path": "assets/roms/sms/Zillion II - The Tri Formation (World).sms"
       }
     ]
   },
