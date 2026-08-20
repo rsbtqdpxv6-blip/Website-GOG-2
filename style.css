@@ -5,7 +5,7 @@
 }
 
 body {
-  background: radial-gradient(circle at center, #1b1e24 0%, #050608 100%);
+  background: radial-gradient(circle at center, color-mix(in srgb, var(--system-bg-color, #1b1e24) 72%, white), var(--system-bg-color, #050608));
   color: #ffffff;
   font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
   height: 100vh;
@@ -225,6 +225,13 @@ body.app-ready {
   filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.65));
   transform: translateZ(8px);
 }
+.wheel-stage .carousel-card .favorites-wheel-icon {
+  color: #ffd43b;
+  font-size: 4.5rem;
+  line-height: 1;
+  text-shadow: 0 0 22px rgba(255, 212, 59, 0.55);
+  transform: translateZ(8px);
+}
 .wheel-stage .carousel-card .card-title {
   display: none;
 }
@@ -359,6 +366,15 @@ body.app-ready {
   -o-object-fit: contain;
      object-fit: contain;
 }
+.gamelist-view .preview-pane .game-meta {
+  width: 100%;
+}
+.gamelist-view .preview-pane .game-meta .game-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
 .gamelist-view .preview-pane .game-meta h2 {
   font-size: 1.8rem;
   font-weight: 800;
@@ -369,6 +385,31 @@ body.app-ready {
   word-break: break-word !important;
   overflow: visible !important;
   text-overflow: clip !important;
+}
+.gamelist-view .preview-pane .game-meta .favorite-game-btn {
+  flex: 0 0 auto;
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.55);
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 1.8rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: color 0.2s ease, border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+.gamelist-view .preview-pane .game-meta .favorite-game-btn:hover, .gamelist-view .preview-pane .game-meta .favorite-game-btn:focus-visible {
+  color: #ffd43b;
+  border-color: #ffd43b;
+  box-shadow: 0 0 16px rgba(255, 212, 59, 0.24);
+  transform: scale(1.06);
+  outline: none;
+}
+.gamelist-view .preview-pane .game-meta .favorite-game-btn.is-favorite {
+  color: #ffd43b;
+  border-color: #ffd43b;
+  text-shadow: 0 0 12px rgba(255, 212, 59, 0.6);
 }
 
 @keyframes folder-enter {
@@ -401,6 +442,57 @@ body.app-ready {
   border-color: #00e5ff;
   box-shadow: 0 0 18px rgba(0, 229, 255, 0.25);
   transform: translateY(-1px);
+}
+
+.gamelist-search-panel {
+  position: fixed;
+  top: 110px;
+  right: 40px;
+  z-index: 1500;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: rgba(4, 9, 20, 0.95);
+  border: 1px solid rgba(0, 229, 255, 0.35);
+  border-radius: 14px;
+  padding: 10px 12px;
+  box-shadow: 0 0 0 1px rgba(0, 229, 255, 0.12), 0 0 24px rgba(0, 229, 255, 0.2);
+}
+.gamelist-search-panel[hidden] {
+  display: none;
+}
+.gamelist-search-panel .gamelist-search-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.gamelist-search-panel .gamelist-search-label {
+  color: rgba(255, 255, 255, 0.75);
+}
+.gamelist-search-panel select,
+.gamelist-search-panel input {
+  width: min(320px, 68vw);
+  background: rgba(0, 0, 0, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  color: #ffffff;
+  padding: 10px 12px;
+  font-size: 0.95rem;
+  outline: none;
+}
+.gamelist-search-panel select {
+  width: auto;
+  min-width: 140px;
+  cursor: pointer;
+}
+.gamelist-search-panel input:focus {
+  border-color: rgba(0, 229, 255, 0.8);
+  box-shadow: 0 0 0 3px rgba(0, 229, 255, 0.16);
 }
 
 .controller-bindings-overlay {
@@ -471,6 +563,42 @@ body.app-ready {
 .controller-bindings-overlay .controller-bindings-list {
   display: grid;
   gap: 10px;
+}
+.controller-bindings-overlay .settings-system-list {
+  display: grid;
+  gap: 10px;
+  margin-top: 6px;
+  max-height: 280px;
+  overflow-y: auto;
+}
+.controller-bindings-overlay .settings-system-row {
+  display: grid;
+  grid-template-columns: minmax(130px, 1fr) minmax(130px, 1fr) minmax(130px, 1fr);
+  align-items: center;
+  gap: 8px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+}
+.controller-bindings-overlay .settings-system-row strong {
+  color: #ffffff;
+  font-size: 0.82rem;
+}
+.controller-bindings-overlay .settings-system-row label {
+  display: grid;
+  gap: 4px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.68rem;
+  text-transform: uppercase;
+}
+.controller-bindings-overlay .settings-system-row input {
+  min-width: 0;
+  padding: 6px 8px;
+  border: 1px solid rgba(0, 229, 255, 0.24);
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.55);
+  color: #ffffff;
 }
 .controller-bindings-overlay .binding-row {
   display: flex;

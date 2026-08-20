@@ -109,6 +109,7 @@ async function launchGame(game, hintsDisplay) {
         let isDosGame = (game.core === "dosbox" || game.rom_path.toLowerCase().endsWith('.exe'));
         let dosExecutableMapping = isDosGame ? `window.EJS_dosboxExtension = "${game.rom_path.split('.').pop().toLowerCase()}";` : "";
         const threadedCoresEnabled = window.__arcadeEmulatorSettings?.threadedCores === true;
+        const gameId = Number.isInteger(game.game_id) && game.game_id > 0 ? game.game_id : 1;
 
         sandboxedHTML = `
             <!DOCTYPE html>
@@ -127,6 +128,7 @@ async function launchGame(game, hintsDisplay) {
                     window.EJS_player = "#game-deck";
                     window.EJS_core = isNaN("${game.core}") ? "${game.core}" : "dosbox";
                     window.EJS_gameUrl = "${absoluteLocation}";
+                    window.EJS_gameID = ${gameId};
                     window.EJS_pathtodata = "${projectRootUrl}emulatorjs/data/"; 
                     window.EJS_language = "en-US";
                     window.EJS_startOnLoaded = true;

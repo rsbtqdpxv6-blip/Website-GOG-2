@@ -1,6 +1,5 @@
-// ==============================================================================
-//                    UNIFIED APPLICATION CONTROLLER (PART 1)
-// ==============================================================================
+// sorry if code is unoptimized, I am not THE GREATEST programmer. I just wanted to make a website for my personal use, and I wanted to share it with the world. BUT DW I WILL UPDATE THIS MORE., but if you want to use it, feel free to do so (ITS OPEN SOURCE FOR A REASON). I will not be responsible for any issues that may arise from using this code, fix it yourself lol. But i have specified a lot of stuff below. Enjoy! (holy crap this is a lot of code, I will try to comment it as much as possible, but if you have any questions, feel free to ask me on discord: xexo0059)
+//EVERYTHINGS IN ASSETS FOLDER, SO IF YOU WANT TO CHANGE ANYTHING, GO THERE. (I will add more stuff to the assets folder later, but for now, this is all you need to know)
 (() => { 
     let gameLibrary = [];
     let currentSystemIdx = 0;
@@ -11,45 +10,19 @@
     const radius = 380; 
     const flatCardSpacing = 340; 
 
-    // --- TRUE NATIVE OFFLINE WAV FILE PATHWAYS RE-ENGAGED ---
+    // --- sounds---
     const soundScroll = new Audio('assets/sound/scroll.wav');
     const soundSelect = new Audio('assets/sound/select.wav');
     const soundLaunch = new Audio('assets/sound/launch.wav');
     const soundBack   = new Audio('assets/sound/back.wav');
 
-    // --- THE CHROMIUM HARDWARE AUDIO LOCK BYPASS ENGINE ---
-    let audioContextUnlocked = false;
+    // --- better audio handling ---
     let audioPrimed = false;
+    let audioUnlocked = false;
 
+    // Browser audio must be started by a trusted user gesture.
     function playArcadeSound(audioObject) {
         if (!audioObject) return;
-        
-        if (!audioContextUnlocked) {
-            try {
-                const AudioContextClass = window.AudioContext || window.webkitAudioContext;
-                if (AudioContextClass) {
-                    const ctx = new AudioContextClass();
-                    
-                    if (ctx.state === 'suspended') {
-                        ctx.resume();
-                    }
-                    
-                    const osc = ctx.createOscillator();
-                    const gain = ctx.createGain();
-                    osc.type = 'sine';
-                    gain.gain.setValueAtTime(0.001, ctx.currentTime); 
-                    osc.connect(gain);
-                    gain.connect(ctx.destination);
-                    osc.start(0);
-                    osc.stop(0.01); 
-                    
-                    audioContextUnlocked = true;
-                    console.log("🔊 HARDWARE SYSTEM AUDIO JACK SECURELY ENGAGED!");
-                }
-            } catch (ctxErr) {
-                console.warn("Hardware audio initializer bypassed:", ctxErr);
-            }
-        }
 
         try {
             audioObject.pause();
@@ -57,8 +30,10 @@
             
             let playPromise = audioObject.play();
             if (playPromise !== undefined) {
-                playPromise.catch(error => {
-                    if (error.name !== "AbortError") {
+                playPromise.then(() => {
+                    audioUnlocked = true;
+                }).catch(error => {
+                    if (error.name !== "AbortError" && error.name !== "NotAllowedError") {
                         console.warn("Speaker track blocked by hardware layer restriction:", error);
                     }
                 });
@@ -68,7 +43,7 @@
         }
     }
 
-    // DOM Interface Element Hooks
+    // const DOM elements
     const wheelStage = document.getElementById('wheel-stage');
     const gamelistView = document.getElementById('gamelist-view');
     const carousel = document.getElementById('carousel-view');
@@ -77,6 +52,7 @@
     const counterDisplay = document.getElementById('counter-display');
     const hintsDisplay = document.getElementById('control-hints');
     const gameTitleElement = document.getElementById('game-title');
+    const favoriteGameBtn = document.getElementById('favorite-game-btn');
     const gameBoxartElement = document.getElementById('game-boxart');
     const emuOverlay = document.getElementById('emu-overlay');
     const exitGameBtn = document.getElementById('exit-game-btn');
@@ -93,7 +69,13 @@
     const settingsBtn = document.getElementById('settings-menu-btn');
     const settingsOverlay = document.getElementById('settings-overlay');
     const settingsCloseBtn = document.getElementById('settings-close');
+    const settingsSaveBtn = document.getElementById('settings-save');
+    const settingsSystemList = document.getElementById('settings-system-list');
     const threadedCoresSwitch = document.getElementById('settings-threaded-cores');
+    const searchBtn = document.getElementById('search-btn');
+    const searchPanel = document.getElementById('gamelist-search-panel');
+    const searchInput = document.getElementById('gamelist-search-input');
+    const searchScopeSelect = document.getElementById('gamelist-search-scope');
     const flashBindingsOverlay = document.getElementById('flash-bindings-overlay');
     const flashBindingsCloseBtn = document.getElementById('flash-bindings-close');
     const flashBindingsAddBtn = document.getElementById('flash-bindings-add');
@@ -112,6 +94,8 @@
     let gameRowItems = [];
     let gamelistFolderStack = []; // stack of folder path segments for drill-down
     let displayedGamelistItems = []; // current visible items (folders + games)
+    let gamelistSearchQuery = '';
+    let gamelistSearchScope = 'current';
     let appActivated = false;
     let lastControllerActionTime = 0;
     const controllerActionCooldownMs = 220;
@@ -128,17 +112,93 @@
     let flashBindingCaptureIndex = null;
     let secretSystemUnlocked = false;
     const SETTINGS_KEY = 'arcadeSettings';
+    const FAVORITES_STORAGE_KEY = 'arcadeFavoriteGameIds';
     let arcadeSettings = { threadedCores: false, crtEnabled: false };
+    let settingsDefaults = { threadedCores: false, crtEnabled: false, systems: {} };
+    let favoriteGameIds = new Set();
 
-    function loadArcadeSettings() {
+    function loadFavoriteGameIds() {
+        try {
+            const saved = JSON.parse(localStorage.getItem(FAVORITES_STORAGE_KEY) || '[]');
+            favoriteGameIds = new Set(Array.isArray(saved) ? saved.map(String) : []);
+        } catch {
+            favoriteGameIds = new Set();
+        }
+    }
+
+    function persistFavoriteGameIds() {
+        localStorage.setItem(FAVORITES_STORAGE_KEY, JSON.stringify([...favoriteGameIds]));
+    }
+
+    function isFavoriteGame(game) {
+        return game?.game_id !== undefined && favoriteGameIds.has(String(game.game_id));
+    }
+
+    function updateFavoriteButton(game) {
+        if (!favoriteGameBtn) return;
+        const isFavorite = isFavoriteGame(game);
+        favoriteGameBtn.classList.toggle('is-favorite', isFavorite);
+        favoriteGameBtn.textContent = isFavorite ? '★' : '☆';
+        favoriteGameBtn.setAttribute('aria-pressed', String(isFavorite));
+        favoriteGameBtn.setAttribute('aria-label', isFavorite ? 'Remove game from favorites' : 'Add game to favorites');
+        favoriteGameBtn.disabled = !game;
+    }
+
+    function rebuildFavoritesSystem() {
+        const selectedSystemSlug = gameLibrary[currentSystemIdx]?.system;
+        gameLibrary = gameLibrary.filter((system) => system.system !== 'favorites');
+
+        const favoriteGames = [];
+        gameLibrary.forEach((system) => {
+            system.games.forEach((game) => {
+                game.isFavorite = isFavoriteGame(game);
+                if (game.isFavorite) {
+                    favoriteGames.push({
+                        ...game,
+                        favoriteSystem: system.system,
+                        favoriteSystemTitle: system.title
+                    });
+                }
+            });
+        });
+
+        if (favoriteGames.length > 0) {
+            gameLibrary.push({
+                system: 'favorites',
+                title: 'Favorites',
+                core: 'favorites',
+                games: favoriteGames
+            });
+        }
+
+        const selectedIndex = gameLibrary.findIndex((system) => system.system === selectedSystemSlug);
+        currentSystemIdx = selectedIndex >= 0 ? selectedIndex : getFirstVisibleSystemIndex();
+    }
+
+    async function loadArcadeSettings() {
+        try {
+            const response = await fetch('settings.json');
+            settingsDefaults = await response.json();
+        } catch {
+            settingsDefaults = { threadedCores: false, crtEnabled: false, systems: {} };
+        }
+
         try {
             const saved = JSON.parse(localStorage.getItem(SETTINGS_KEY) || '{}');
             arcadeSettings = {
-                threadedCores: saved.threadedCores === true,
-                crtEnabled: saved.crtEnabled === true
+                threadedCores: saved.threadedCores ?? settingsDefaults.threadedCores === true,
+                crtEnabled: saved.crtEnabled ?? settingsDefaults.crtEnabled === true,
+                systems: {
+                    ...(settingsDefaults.systems || {}),
+                    ...(saved.systems || {})
+                }
             };
         } catch {
-            arcadeSettings = { threadedCores: false, crtEnabled: false };
+            arcadeSettings = {
+                threadedCores: settingsDefaults.threadedCores === true,
+                crtEnabled: settingsDefaults.crtEnabled === true,
+                systems: { ...(settingsDefaults.systems || {}) }
+            };
         }
         window.__arcadeEmulatorSettings = { ...arcadeSettings };
     }
@@ -233,6 +293,60 @@
         if (crtEnabledSwitch) {
             crtEnabledSwitch.checked = !!arcadeSettings.crtEnabled;
         }
+        renderSystemSettingsUI();
+    }
+
+    function renderSystemSettingsUI() {
+        if (!settingsSystemList) return;
+        const systems = gameLibrary.filter((system) => system.system !== 'favorites');
+        settingsSystemList.innerHTML = systems.map((system) => {
+            const settings = arcadeSettings.systems?.[system.system] || {};
+            const background = settings.background || system.background || '#1b1e24';
+            const core = settings.core || system.core || '';
+            return `
+                <div class="settings-system-row" data-system="${system.system}">
+                    <strong>${system.title}</strong>
+                    <label>Background <input class="settings-background-input" type="text" value="${background}" maxlength="7" pattern="#[0-9a-fA-F]{6}" /></label>
+                    <label>Core <input class="settings-core-input" type="text" value="${core}" /></label>
+                </div>
+            `;
+        }).join('');
+    }
+
+    function applySettingsToLibrary() {
+        gameLibrary.forEach((system) => {
+            const settings = arcadeSettings.systems?.[system.system];
+            if (!settings) return;
+            if (settings.background) system.background = settings.background;
+            if (settings.core) {
+                system.core = settings.core;
+                system.games.forEach((game) => {
+                    game.core = settings.core;
+                });
+            }
+        });
+    }
+
+    function saveSettingsFromUI() {
+        const systems = {};
+        settingsSystemList?.querySelectorAll('.settings-system-row').forEach((row) => {
+            const system = row.dataset.system;
+            const background = row.querySelector('.settings-background-input')?.value.trim();
+            const core = row.querySelector('.settings-core-input')?.value.trim();
+            if (/^#[0-9a-fA-F]{6}$/.test(background) && core) {
+                systems[system] = { background, core };
+            }
+        });
+        arcadeSettings = {
+            threadedCores: !!threadedCoresSwitch?.checked,
+            crtEnabled: !!crtEnabledSwitch?.checked,
+            systems
+        };
+        persistArcadeSettings();
+        applySettingsToLibrary();
+        renderWheel();
+        updateWheelSelection(currentSystemIdx, false);
+        closeSettingsPanel();
     }
 
     function openSettingsPanel() {
@@ -281,6 +395,7 @@
         }
     }
 
+    //looks like YOU found the secret to my secret core! (its W-E-S) (I will add more secret stuff later, but for now, this is the only secret core you can unlock)
     function handleSecretUnlockKey(rawKey) {
         if (secretSystemUnlocked || currentViewMode !== 'WHEEL') return;
         const keyLower = (rawKey || '').toLowerCase();
@@ -293,7 +408,7 @@
             secretUnlockProgress = keyLower === secretUnlockSequence[0] ? 1 : 0;
         }
     }
-
+    // Flash runtime keybinding management
     let flashKeyBindings = [
         { key: 'ArrowLeft', action: 'previous', label: 'D-pad Left' },
         { key: 'ArrowRight', action: 'next', label: 'D-pad Right' },
@@ -303,7 +418,7 @@
         { key: 'Backspace', action: 'back', label: 'B / Back' },
         { key: 'x', action: 'random', label: 'X / Random' }
     ];
-
+// more bindings and stuff
     const defaultControllerBindings = {
         left: { action: 'previous', button: 14, label: 'D-pad Left' },
         right: { action: 'next', button: 15, label: 'D-pad Right' },
@@ -362,7 +477,7 @@
         a: 'previous',
         r: 'random'
     };
-
+//co`ntroller profile detection and binding defaults
     function getControllerProfile(pad) {
         const id = (pad?.id || '').toLowerCase();
         if (!id) return 'generic';
@@ -371,7 +486,7 @@
         if (id.includes('switch') || id.includes('pro controller')) return 'switch';
         return 'generic';
     }
-
+//get controller binding defaults based on profile
     function getBindingDefaultsForProfile(profile) {
         if (profile === 'xbox') {
             return {
@@ -386,7 +501,7 @@
                 pageNext: { action: 'next', button: 5, label: 'RB' }
             };
         }
-
+//get controller binding defaults based on profile
         if (profile === 'playstation' || profile === 'switch') {
             return {
                 left: { action: 'previous', button: 14, label: 'D-pad Left' },
@@ -400,7 +515,7 @@
                 pageNext: { action: 'next', button: 5, label: 'R1' }
             };
         }
-
+//get controller binding defaults based on profile
         return {
             left: { action: 'previous', button: 14, label: 'D-pad Left' },
             right: { action: 'next', button: 15, label: 'D-pad Right' },
@@ -412,7 +527,7 @@
             pagePrev: { action: 'previous', button: 4, label: 'L1 / LB' },
             pageNext: { action: 'next', button: 5, label: 'R1 / RB' }
         };
-    }
+    } // THIS CODE TOOK SO LONG TO WRITE WITH CHROMEBOOK NOTEPAD OR WHATEVER YOU CALL IT (i was on a school chromebook)
 
     function applyBindingsFromProfile(profile) {
         const defaults = getBindingDefaultsForProfile(profile);
@@ -426,7 +541,7 @@
             controllerStatusEl.textContent = `${profile === 'auto' ? 'Connected' : profile.toUpperCase()} controller ready`; 
         }
     }
-
+//get controller binding defaults based on profile
     function getButtonLabel(buttonIndex, profile) {
         const labelLookup = {
             xbox: {
@@ -444,7 +559,7 @@
         };
         return labelLookup[profile]?.[buttonIndex] || labelLookup.generic[buttonIndex] || `Button ${buttonIndex}`;
     }
-
+//flash key stuff
     function normalizeFlashKeyLabel(value) {
         if (!value) return 'Unassigned';
         if (value === ' ') return 'Space';
@@ -607,7 +722,7 @@
             window.__arcadeActiveRuntimeGame.core === 'ruffle' ||
             (window.__arcadeActiveRuntimeGame.rom_path || '').toLowerCase().endsWith('.swf')
         ));
-    }
+    } // i think this is the end to my flash keybind code (pain in the butt to write, but it works now, so im happy)
 
     function syncRuntimeButtonVisibility() {
         if (!runtimeControllerSettingsBtn) return;
@@ -634,7 +749,7 @@
         dispatchInputAction(match.action);
         return true;
     }
-
+// Tame compared to the flash keybind code, this controller binding code is a lot easier to write and understand (i think)
     function updateBindingsUI() {
         if (!controllerBindingsList) return;
 
@@ -676,7 +791,7 @@
         controllerBindingCapture = null;
         updateBindingsUI();
     }
-
+// i was wrong, usb controllers only work on chrome and edge, not firefox (i tested it on my chromebook and it works fine, but on my desktop with firefox, it does not work at all, atleast i think) AND ALSO WIRELESS CONTROLLERS DONT EVEN DO ANYTHING
     function resetControllerBindings() {
         controllerBindings = {
             left: { ...defaultControllerBindings.left },
@@ -692,7 +807,7 @@
         controllerBindingCapture = null;
         updateBindingsUI();
     }
-
+    // i give up writing figure it out yourself
     function triggerControllerAction() {
         const now = performance.now();
         if (now - lastControllerActionTime < controllerActionCooldownMs) {
@@ -915,8 +1030,16 @@
 
     async function loadLibrary() {
         try {
-            const response = await fetch('library.json');
-            gameLibrary = await response.json();
+            const [settingsResult, libraryResponse] = await Promise.all([
+                loadArcadeSettings(),
+                fetch('library.json')
+            ]);
+            void settingsResult;
+            gameLibrary = await libraryResponse.json();
+            applySettingsToLibrary();
+            loadFavoriteGameIds();
+            rebuildFavoritesSystem();
+            applySettingsToUI();
             
             if (gameLibrary.length > 0) {
                 currentSystemIdx = getFirstVisibleSystemIndex();
@@ -939,10 +1062,11 @@
             const sys = gameLibrary[actualIndex];
             const card = document.createElement('div');
             card.className = `carousel-card`;
+            const iconMarkup = sys.system === 'favorites'
+                ? '<div class="favorites-wheel-icon" aria-hidden="true">★</div>'
+                : `<img src="assets/icons/${sys.system}.webp" alt="Icon" onerror="this.src='assets/icons/secret.webp'">`;
             card.innerHTML = `
-                <div class="icon-wrapper">
-                    <img src="assets/icons/${sys.system}.webp" alt="Icon" onerror="this.src='assets/icons/secret.webp'">
-                </div>
+                <div class="icon-wrapper">${iconMarkup}</div>
                 <div class="card-title">${sys.title}</div>
             `;
             card.dataset.systemIndex = actualIndex;
@@ -1003,6 +1127,7 @@
             counterDisplay.textContent = `${visiblePosition} / ${visibleCount}`;
         }
         if (hintsDisplay) hintsDisplay.textContent = " -- MADE BY WESLEY ◄ ► Select System • [R] Random System • Enter to Open Menu • Gamepad Ready";
+        document.body.style.setProperty('--system-bg-color', data.background || '#1b1e24');
         document.body.style.setProperty('--system-bg', `url('assets/backgrounds/${data.system}.jpg')`);
     }
     // ==============================================================================
@@ -1023,52 +1148,111 @@
         const currentSystem = gameLibrary[currentSystemIdx];
         if (!currentSystem || !Array.isArray(currentSystem.games)) return items;
 
-        currentSystem.games.forEach((game, origIndex) => {
-            // Special-case: treat HTML5 games packaged as folder/index.html as single games
-            try {
-                if (currentSystem.system === 'html5') {
-                    const rp = String(game.rom_path || '');
-                    const m = rp.match(/assets\/roms\/html5\/([^\/]+)\/index\.html$/i);
-                    if (m) {
-                        const folderName = m[1];
-                        items.push({ type: 'game', title: game.title || folderName, origIndex, game });
-                        return;
+        let result = [];
+        const query = gamelistSearchQuery.trim().toLowerCase();
+
+        if (gamelistSearchScope === 'all') {
+            const allSystemMatches = [];
+            gameLibrary.forEach((system, systemIndex) => {
+                if (!system || !Array.isArray(system.games)) return;
+                system.games.forEach((game, origIndex) => {
+                    const title = game.title || 'Untitled';
+                    const matchesQuery = !query || title.toLowerCase().includes(query);
+                    if (matchesQuery) {
+                        allSystemMatches.push({
+                            type: 'game',
+                            title,
+                            origIndex,
+                            game,
+                            systemIndex,
+                            systemTitle: system.title || system.system || 'System'
+                        });
                     }
-                }
-            } catch (e) { /* ignore */ }
-            const parts = String(game.rom_path || '').split('/').filter(Boolean);
-            const sysIndex = parts.indexOf(currentSystem.system);
-            const relative = sysIndex >= 0 ? parts.slice(sysIndex + 1, -1) : [];
+                });
+            });
+            result = allSystemMatches.sort((a, b) => a.title.localeCompare(b.title, undefined, { sensitivity: 'base' }));
+            try { console.debug('buildGamelistItems all-systems', result); } catch(e) {}
+            return result;
+        }
 
-            // Only include games that live under the current stack path
-            if (gamelistFolderStack.length > 0) {
-                const relPath = relative.join('/');
-                if (!relPath.startsWith(gamelistFolderStack.join('/'))) return;
-            }
-
-            if (relative.length === 0) {
-                // game at root of system
-                if (gamelistFolderStack.length === 0) items.push({ type: 'game', title: game.title || 'Untitled', origIndex, game });
+        if (currentSystem.system === 'favorites') {
+            if (gamelistFolderStack.length === 0) {
+                const folders = new Map();
+                currentSystem.games.forEach((game, origIndex) => {
+                    if (!folders.has(game.favoriteSystem)) {
+                        folders.set(game.favoriteSystem, {
+                            type: 'folder',
+                            name: game.favoriteSystem,
+                            title: game.favoriteSystemTitle,
+                            childrenCount: 0
+                        });
+                    }
+                    folders.get(game.favoriteSystem).childrenCount += 1;
+                });
+                result = [...folders.values()].sort((a, b) => a.title.localeCompare(b.title, undefined, { sensitivity: 'base' }));
             } else {
-                const segIndex = gamelistFolderStack.length;
-                if (segIndex >= relative.length) {
-                    // this game is directly inside the current folder
-                    items.push({ type: 'game', title: game.title || 'Untitled', origIndex, game });
-                } else {
-                    const nextSeg = relative[segIndex];
-                    let folder = items.find(it => it.type === 'folder' && it.name === nextSeg);
-                    if (!folder) {
-                        folder = { type: 'folder', name: nextSeg, title: nextSeg, childrenCount: 0 };
-                        items.push(folder);
-                    }
-                    folder.childrenCount += 1;
-                }
+                const favoriteSystem = gamelistFolderStack[0];
+                result = currentSystem.games
+                    .map((game, origIndex) => ({ type: 'game', title: game.title || 'Untitled', origIndex, game }))
+                    .filter((item) => item.game.favoriteSystem === favoriteSystem)
+                    .sort((a, b) => a.title.localeCompare(b.title, undefined, { sensitivity: 'base' }));
             }
-        });
+        } else {
+            currentSystem.games.forEach((game, origIndex) => {
+                // Special-case: treat HTML5 games packaged as folder/index.html as single games
+                try {
+                    if (currentSystem.system === 'html5') {
+                        const rp = String(game.rom_path || '');
+                        const m = rp.match(/assets\/roms\/html5\/([^\/]+)\/index\.html$/i);
+                        if (m) {
+                            const folderName = m[1];
+                            items.push({ type: 'game', title: game.title || folderName, origIndex, game });
+                            return;
+                        }
+                    }
+                } catch (e) { /* ignore */ }
+                const parts = String(game.rom_path || '').split('/').filter(Boolean);
+                const sysIndex = parts.indexOf(currentSystem.system);
+                const relative = sysIndex >= 0 ? parts.slice(sysIndex + 1, -1) : [];
 
-        const folders = items.filter(i => i.type === 'folder').sort((a,b) => a.title.localeCompare(b.title, undefined, {sensitivity:'base'}));
-        const games = items.filter(i => i.type === 'game').sort((a,b) => (a.title||'').localeCompare(b.title||'', undefined, {sensitivity:'base'}));
-        const result = [...folders, ...games];
+                // Only include games that live under the current stack path
+                if (gamelistFolderStack.length > 0) {
+                    const relPath = relative.join('/');
+                    if (!relPath.startsWith(gamelistFolderStack.join('/'))) return;
+                }
+
+                if (relative.length === 0) {
+                    // game at root of system
+                    if (gamelistFolderStack.length === 0) items.push({ type: 'game', title: game.title || 'Untitled', origIndex, game });
+                } else {
+                    const segIndex = gamelistFolderStack.length;
+                    if (segIndex >= relative.length) {
+                        // this game is directly inside the current folder
+                        items.push({ type: 'game', title: game.title || 'Untitled', origIndex, game });
+                    } else {
+                        const nextSeg = relative[segIndex];
+                        let folder = items.find(it => it.type === 'folder' && it.name === nextSeg);
+                        if (!folder) {
+                            folder = { type: 'folder', name: nextSeg, title: nextSeg, childrenCount: 0 };
+                            items.push(folder);
+                        }
+                        folder.childrenCount += 1;
+                    }
+                }
+            });
+
+            const folders = items.filter(i => i.type === 'folder').sort((a,b) => a.title.localeCompare(b.title, undefined, {sensitivity:'base'}));
+            const games = items.filter(i => i.type === 'game').sort((a,b) => (a.title||'').localeCompare(b.title||'', undefined, {sensitivity:'base'}));
+            result = [...folders, ...games];
+        }
+
+        if (query) {
+            result = result.filter((item) => {
+                const label = String(item.type === 'folder' ? (item.title || item.name || '') : (item.title || '')).toLowerCase();
+                return label.includes(query);
+            });
+        }
+
         try { console.debug('buildGamelistItems', currentSystem.system, result); } catch(e) {}
         return result;
     }
@@ -1085,7 +1269,10 @@
         }
 
         if (!displayedGamelistItems || displayedGamelistItems.length === 0) {
-            titlesColumn.innerHTML = '<div style="text-align:center; padding:20px; color:#555;">No games found in this folder.</div>';
+            const emptyMessage = gamelistSearchQuery.trim()
+                ? `No results for "${gamelistSearchQuery.trim()}".`
+                : 'No games found in this folder.';
+            titlesColumn.innerHTML = `<div style="text-align:center; padding:20px; color:#555;">${emptyMessage}</div>`;
             return;
         }
 
@@ -1099,9 +1286,13 @@
                 row.dataset.folderName = item.name;
                 row.classList.add('folder-item');
             } else {
-                row.textContent = item.title || 'Untitled';
+                const displayTitle = gamelistSearchScope === 'all' && item.systemTitle ? `${item.systemTitle}: ${item.title || 'Untitled'}` : (item.title || 'Untitled');
+                row.textContent = displayTitle;
                 row.dataset.type = 'game';
                 row.dataset.gameIndex = item.origIndex;
+                if (typeof item.systemIndex === 'number') {
+                    row.dataset.systemIndex = String(item.systemIndex);
+                }
             }
             row.dataset.index = idx;
             fragment.appendChild(row);
@@ -1130,7 +1321,6 @@
 
     function updateGameSelection(index, triggerSound = true, allowFolderEnter = true) {
         if (!gameLibrary || !gameLibrary[currentSystemIdx]) return;
-        const currentSystem = gameLibrary[currentSystemIdx];
         if (!displayedGamelistItems || displayedGamelistItems.length === 0) return;
 
         if (gameRowItems.length === 0) return;
@@ -1149,9 +1339,20 @@
         if (triggerSound) playArcadeSound(soundScroll);
 
         const item = displayedGamelistItems[currentGameIdx];
-        if (!item) return;
+        if (!item) {
+            updateFavoriteButton(null);
+            return;
+        }
+
+        if (typeof item.systemIndex === 'number' && item.systemIndex !== currentSystemIdx) {
+            currentSystemIdx = item.systemIndex;
+        }
+
+        const currentSystem = gameLibrary[currentSystemIdx];
+        if (!currentSystem) return;
 
         if (item.type === 'folder') {
+            updateFavoriteButton(null);
             if (!allowFolderEnter) {
                 // folder is focused but we won't drill in automatically
                 return;
@@ -1178,6 +1379,7 @@
             };
             gameBoxartElement.src = targetGame.boxart || 'assets/icons/default_boxart.svg';
         }
+        updateFavoriteButton(targetGame);
 
         if (fanartBox) {
             if (targetGame.fanart) {
@@ -1190,6 +1392,61 @@
         if (systemDisplay) systemDisplay.textContent = currentSystem.title.toUpperCase() + ' / GAMES';
         if (counterDisplay) counterDisplay.textContent = `${currentGameIdx + 1} / ${displayedGamelistItems.length}`;
         if (hintsDisplay) hintsDisplay.textContent = '▲ ▼ Scroll • ◄ ► Page Jump (+/- 10) • [R] Random Game • Enter to Start • Backspace to Go Back • Gamepad Ready';
+    }
+
+    function toggleSearchPanel() {
+        if (!searchPanel || !searchInput) return;
+        if (currentViewMode !== 'GAMELIST') {
+            setViewMode('GAMELIST');
+        }
+        const isHidden = searchPanel.hidden;
+        searchPanel.hidden = !isHidden;
+        if (isHidden) {
+            setTimeout(() => {
+                searchInput.focus();
+                searchInput.select();
+            }, 0);
+        } else {
+            searchInput.value = '';
+            gamelistSearchQuery = '';
+            refreshGamelistUI();
+            updateGameSelection(Math.min(currentGameIdx, Math.max(0, displayedGamelistItems.length - 1)), false, false);
+        }
+    }
+
+    function toggleFavoriteSelectedGame() {
+        if (currentViewMode !== 'GAMELIST') return;
+        const item = displayedGamelistItems[currentGameIdx];
+        const game = item?.type === 'game' ? item.game : null;
+        if (!game || game.game_id === undefined) return;
+
+        const gameId = String(game.game_id);
+        if (favoriteGameIds.has(gameId)) {
+            favoriteGameIds.delete(gameId);
+        } else {
+            favoriteGameIds.add(gameId);
+        }
+        persistFavoriteGameIds();
+
+        const wasFavoritesSystem = gameLibrary[currentSystemIdx]?.system === 'favorites';
+        rebuildFavoritesSystem();
+
+        if (wasFavoritesSystem && gameLibrary[currentSystemIdx]?.system !== 'favorites') {
+            setViewMode('WHEEL');
+            renderWheel();
+            updateWheelSelection(currentSystemIdx, false);
+            return;
+        }
+
+        if (wasFavoritesSystem && gamelistFolderStack.length > 0) {
+            const folderStillHasGames = gameLibrary[currentSystemIdx].games.some((favoriteGame) => favoriteGame.favoriteSystem === gamelistFolderStack[0]);
+            if (!folderStillHasGames) gamelistFolderStack = [];
+        }
+
+        refreshGamelistUI();
+        updateGameSelection(Math.min(currentGameIdx, Math.max(0, displayedGamelistItems.length - 1)), false, false);
+        renderWheel();
+        updateWheelSelection(currentSystemIdx, false);
     }
 
     function setViewMode(mode) {
@@ -1234,6 +1491,18 @@
 
     window.addEventListener('keydown', (e) => {
         handleUserInteraction();
+        const isSearchFieldFocused = !!searchInput && (document.activeElement === searchInput || searchInput.contains(document.activeElement));
+        if (isSearchFieldFocused) {
+            if (e.key === 'Escape') {
+                searchPanel.hidden = true;
+                searchInput.value = '';
+                gamelistSearchQuery = '';
+                refreshGamelistUI();
+                updateGameSelection(Math.min(currentGameIdx, Math.max(0, displayedGamelistItems.length - 1)), false, false);
+            }
+            return;
+        }
+
         if (controllerBindingCapture) {
             e.preventDefault();
             return;
@@ -1311,11 +1580,12 @@
         handleUserInteraction();
     }
 
-    function handleUserInteraction() {
-        if (appActivated) return;
-        appActivated = true;
-        forceHardwareAudioWake();
-        startControllerPolling();
+    function handleUserInteraction({ unlockAudio = true } = {}) {
+        if (!appActivated) {
+            appActivated = true;
+            startControllerPolling();
+        }
+        if (unlockAudio && !audioUnlocked) forceHardwareAudioWake();
     }
 
     function openControllerBindingsPanel() {
@@ -1343,6 +1613,40 @@
         });
     }
 
+    if (searchBtn) {
+        searchBtn.addEventListener('click', () => {
+            toggleSearchPanel();
+        });
+    }
+
+    if (searchInput) {
+        searchInput.addEventListener('input', (event) => {
+            gamelistSearchQuery = event.target.value || '';
+            refreshGamelistUI();
+            if (displayedGamelistItems.length > 0) {
+                updateGameSelection(0, false, false);
+            } else {
+                updateFavoriteButton(null);
+                if (gameTitleElement) gameTitleElement.textContent = 'No matching game';
+                if (counterDisplay) counterDisplay.textContent = '0 / 0';
+            }
+        });
+    }
+
+    if (searchScopeSelect) {
+        searchScopeSelect.addEventListener('change', (event) => {
+            gamelistSearchScope = event.target.value === 'all' ? 'all' : 'current';
+            refreshGamelistUI();
+            if (displayedGamelistItems.length > 0) {
+                updateGameSelection(0, false, false);
+            } else {
+                updateFavoriteButton(null);
+                if (gameTitleElement) gameTitleElement.textContent = 'No matching game';
+                if (counterDisplay) counterDisplay.textContent = '0 / 0';
+            }
+        });
+    }
+
     if (runtimeControllerSettingsBtn) {
         runtimeControllerSettingsBtn.addEventListener('click', (event) => {
             event.stopPropagation();
@@ -1354,6 +1658,10 @@
         settingsCloseBtn.addEventListener('click', () => {
             closeSettingsPanel();
         });
+    }
+
+    if (settingsSaveBtn) {
+        settingsSaveBtn.addEventListener('click', saveSettingsFromUI);
     }
 
     if (threadedCoresSwitch) {
@@ -1422,6 +1730,10 @@
 
     if (titlesColumn) {
         titlesColumn.addEventListener('click', handleGamelistClick);
+    }
+
+    if (favoriteGameBtn) {
+        favoriteGameBtn.addEventListener('click', toggleFavoriteSelectedGame);
     }
 
     // Backup / Restore UI hooks
@@ -1616,7 +1928,7 @@
     }
 
     window.addEventListener('gamepadconnected', () => {
-        handleUserInteraction();
+        handleUserInteraction({ unlockAudio: false });
         if (controllerBindingsOverlay && !controllerBindingsOverlay.hidden) {
             updateBindingsUI();
         }
@@ -1624,7 +1936,6 @@
 
     loadEntryUpdates();
     loadFlashKeyBindings();
-    loadArcadeSettings();
     applySettingsToUI();
     updateCrtOverlayState();
     loadLibrary();
@@ -1632,3 +1943,5 @@
     renderFlashBindingsUI();
     syncRuntimeButtonVisibility();
 })();
+
+//thanks for looking at my code. if you want to make changes, please do not submit a pull request with bad changes. i will reject it. thanks. -Wesley (yes two reminders)

@@ -1,0 +1,22 @@
+{
+	"threadedCores": false,
+	"crtEnabled": false,
+	"systems": {
+		"doom": { "background": "#5A0F14", "core": "doom" },
+		"flash": { "background": "#8A5A00", "core": "ruffle" },
+		"gamegear": { "background": "#174A7E", "core": "segaGG" },
+		"gb": { "background": "#4F6F52", "core": "gambatte" },
+		"gba": { "background": "#4B3F72", "core": "mgba" },
+		"gbc": { "background": "#266B63", "core": "gambatte" },
+		"html5": { "background": "#1D4E89", "core": "native_html" },
+		"megadrive": { "background": "#7B2D26", "core": "genesis_plus_gx_wide_wide" },
+		"n64": { "background": "#315C3A", "core": "mupen64plus_next" },
+		"nes": { "background": "#FF474C", "core": "fceumm" },
+        "a26": { "background": "#370890", "core": "stella2014" },
+        "a52": { "background": "#0C12C4", "core": "a5200" },
+        "a78": { "background": "#00EAFF", "core": "prosystem" },
+		"sms": { "background": "#9A3412", "core": "segaMD" },
+		"snes": { "background": "#6B4C9A", "core": "snes9x" },
+		"tg16": { "background": "#4F6472", "core": "pce" }
+	}
+}

@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>3D Wheel & Gamelist ES-DE Arcade</title>
-    <!-- Link to the compiled CSS generated from your style.scss file -->
     <link rel="stylesheet" href="style.css">
         <link rel="icon" href="assets/icons/secret.webp">
 </head>
@@ -50,7 +49,10 @@
                 </div>
             </div>
             <div class="game-meta">
-                <h2 id="game-title">Game Title</h2>
+                <div class="game-title-row">
+                    <h2 id="game-title">Game Title</h2>
+                    <button id="favorite-game-btn" class="favorite-game-btn" type="button" aria-label="Add game to favorites" aria-pressed="false">☆</button>
+                </div>
             </div>
         </div>
     </div>
@@ -65,9 +67,21 @@
                 <input id="backup-file-input" type="file" accept="application/json" hidden />
             </div>
         </div>
+        <button class="control-settings-btn" id="search-btn" type="button">Search</button>
         <button class="control-settings-btn" id="controller-settings-btn" type="button">Bindings</button>
         <button class="control-settings-btn" id="settings-menu-btn" type="button">Settings</button>
     </footer>
+
+    <div class="gamelist-search-panel" id="gamelist-search-panel" hidden>
+        <div class="gamelist-search-row">
+            <label class="gamelist-search-label" for="gamelist-search-scope">Scope</label>
+            <select id="gamelist-search-scope" aria-label="Search scope">
+                <option value="current">Current system</option>
+                <option value="all">All systems</option>
+            </select>
+        </div>
+        <input id="gamelist-search-input" type="search" placeholder="Search games..." aria-label="Search games" />
+    </div>
 
     <div class="controller-bindings-overlay" id="controller-bindings-overlay" hidden>
         <div class="controller-bindings-panel">
@@ -103,6 +117,10 @@
                     <span>Enable CRT overlay</span>
                     <input id="settings-crt-enabled" type="checkbox" />
                 </label>
+                <div id="settings-system-list" class="settings-system-list"></div>
+            </div>
+            <div class="controller-bindings-actions">
+                <button id="settings-save" type="button">Save Settings</button>
             </div>
         </div>
     </div>
@@ -124,19 +142,13 @@
         </div>
     </div>
 
-    <!-- FIND AND OVERWRITE THIS SEGMENT IN YOUR INDEX.HTML -->
     <div id="emu-overlay" class="emu-overlay">
         <button class="exit-btn" id="exit-game-btn">✕</button>
         <button class="runtime-control-settings-btn" id="runtime-controller-settings-btn" type="button" hidden>Flash Keys</button>
         
-        <!-- ============================================================================== -->
-        <!--          UNIFIED HIGH-PERFORMANCE STATIC RUNTIME VIEWPORT DECK                -->
-        <!-- ============================================================================== -->
-        <!-- Stripping out the sandbox attribute string clears the browser error logs while -->
-        <!-- giving your WASM-GC single-file game direct native hardware access!           -->
         <iframe id="emu-sandbox-frame" 
             style="width: 100%; height: 100%; border: none; background: #000; display: block;" 
-            allow="autoplay; gamepad *; clipboard-read; clipboard-write" 
+            allow="gamepad *" 
             crossorigin="anonymous"
             src="about:blank">
         </iframe>
@@ -150,9 +162,9 @@
 
 
     <!-- Script Layer Stack -->
-    <script src="coi-serviceworker.js"></script>
-    <script src="emulator-launcher.js"></script>
-    <script src="html-launcher.js"></script>
-    <script src="app.js"></script>
+    <script src="coi-serviceworker.js" defer></script>
+    <script src="emulator-launcher.js" defer></script>
+    <script src="html-launcher.js" defer></script>
+    <script src="app.js" defer></script>
 </body>
 </html>

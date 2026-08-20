@@ -1,14 +1,14 @@
+#EVERYTHINGS IN ASSETS FOLDER, SO IF YOU WANT TO CHANGE ANYTHING, GO THERE. (I will add more stuff to the assets folder later, but for now, this is all you need to know)
 import os
 import json
 import re
+import hashlib
 
-# ==============================================================================
-#                  GLOBAL ARCADE CONFIGURATION & SYSTEM OPTIONS
-# ==============================================================================
+#configure dir names, i wouldnt change these if i were you. (have to fix a lotta code)
 ASSETS_DIR_NAME  = "assets"
 ROMS_DIR_NAME    = "roms"
 BOXART_DIR_NAME  = "boxart"
-FANART_SUFFIX    = "f"  
+FANART_SUFFIX    = "f"  #unused for now, but I will add it later. (it is for fanart, so if you want to add fanart, just add a f to the end of the boxart name and it will work)
 SUPPORTED_EXTS   = [".jpg", ".png", ".jpeg", ".webp"]
 
 # Fallback asset if an image is completely missing from your pack
@@ -27,6 +27,9 @@ for candidate in preferred_defaults:
 
 CORE_MAP = {
     "nes": "fceumm",
+    "a26": "stella2014",
+    "a52": "a5200",
+    "a78": "prosystem",
     "snes": "snes9x",         
     "gba": "mgba",           
     "gbc": "gambatte",
@@ -46,17 +49,20 @@ CORE_MAP = {
     "sega32x": "sega32x",
     "segacd": "segaCD",
     "mame": "mame2003",       # Standard EmulatorJS MAME engine
-    "arcade": "arcade",       # EmulatorJS FBNeo arcade player wrapper
     "nds": "desmume",
     "psp": "ppsspp",          # Requires SharedArrayBuffer/HTTPS environment
     "saturn": "yabause",
     "virtualboy": "virtualboy",
     "atari2600": "stella",
-    "c64": "vice_c64"
+    "c64": "vice_c64",
+    "tg16": "pce"
 }
 
-# Auto-detect engine selection for files inside your custom Secret Favorites folder
+#stuff for Favorites folder, ROM hacks folder and secret folder.
 EXTENSION_CORE_MAP = {
+    ".a26": "stella2014",  # Atari 2600
+    ".a52": "a5200",  # Atari 5200
+    ".a78": "prosystem",  # Atari 7800
     ".nes": "fceumm",
     ".sfc": "snes9x",
     ".smc": "snes9x",
@@ -70,7 +76,7 @@ EXTENSION_CORE_MAP = {
     ".sms": "segaMD",
     ".gg": "segaGG",
     ".32x": "sega32x",
-    ".zip": "mupen64plus_next",  # N64, Arcade, MAME, and SegaCD all use .zip, so this is a catch-all
+    ".7z": "mupen64plus_next", #my code dosent support multiple extensions for the same core, so I had to convert all the n64 roms to 7z. I will go on a rant about this below.
     ".z64": "mupen64plus_next",
     ".n64": "mupen64plus_next",
     ".exe": "dosbox",        # Automatically routes loose .exe entries inside Secret to DosBox
@@ -81,17 +87,19 @@ EXTENSION_CORE_MAP = {
     ".nds": "desmume",
     ".pbp": "ppsspp",        # PSP EBOOT executables
     ".iso": "pcsx_rearmed",  # Disc image fallback (handled dynamically per core if needed)
-    ".a26": "stella",
     ".d64": "vice_c64",
-    
+    ".pce": "pce",
     # Zip Rule Priority handling
     # Since .zip applies to N64, Arcade, MAME, and SegaCD, your router must inspect the
-    # system key first. If checking by extension alone, arcade is set as the catch-all:
-    ".zip": "arcade"         
+    # system key first. If checking by extension alone, MAME is set as the catch-all: (had to freaking convert all the zip n64 files to 7z because of this, and it was a pain in the ass.)
+    ".zip": "mame2003"         
 }
 
 TITLE_MAP = {
     "nes": "Nintendo Entertainment System", 
+    "a26": "Atari 2600",
+    "a52": "Atari 5200",
+    "a78": "Atari 7800",
     "snes": "Super Nintendo", 
     "gba": "Game Boy Advance",
     "gbc": "Game Boy Color",
@@ -107,18 +115,37 @@ TITLE_MAP = {
     "doom": "Doom",
     "secret": "Wesley's Favorites",
     
-    # Title Additions
+    #Additions I ADDED!!
     "gamegear": "Sega Game Gear",
     "sega32x": "Sega 32X",
     "segacd": "Sega CD",
-    "mame": "MAME 2003 Arcade",
-    "arcade": "FinalBurn Neo Arcade",
+    "mame": "MAME Arcade",
     "nds": "Nintendo DS",
     "psp": "Sony PlayStation Portable",
     "saturn": "Sega Saturn",
     "virtualboy": "Nintendo Virtual Boy",
-    "atari2600": "Atari 2600",
+    "tg16": "TurboGrafx-16",
     "c64": "Commodore 64"
+}
+
+BACKGROUND_MAP = {
+    "doom": "#5a0f14",
+    "flash": "#8a5a00",
+    "gamegear": "#174a7e",
+    "gb": "#4f6f52",
+    "gba": "#4b3f72",
+    "gbc": "#266b63",
+    "html5": "#1d4e89",
+    "megadrive": "#7b2d26",
+    "n64": "#315c3a",
+    "nes": "#FF474C",
+    "a26": "#370890",
+    "a52": "#0C12C4",
+    "a78": "#00EAFF",
+    "secret": "#6b3f8c",
+    "sms": "#9a3412",
+    "snes": "#6b4c9a",
+    "tg16": "#4f6472"
 }
 
 def clean_display_title(filename):
@@ -132,6 +159,19 @@ def tokenize(text):
     cleaned = re.sub(r'\[.*?\]|\(.*?\)', '', text).lower()
     cleaned = re.sub(r'[^a-z0-9\s]', ' ', cleaned)
     return [word for word in cleaned.split() if word]
+
+
+def allocate_game_id(rom_path, used_game_ids):
+    """Returns a stable positive numeric ID and resolves the rare hash collision."""
+    digest = hashlib.sha256(rom_path.casefold().encode('utf-8')).digest()
+    game_id = int.from_bytes(digest[:4], 'big') & 0x7fffffff
+    game_id = max(1, game_id)
+
+    while game_id in used_game_ids:
+        game_id = 1 if game_id == 0x7fffffff else game_id + 1
+
+    used_game_ids.add(game_id)
+    return game_id
 
 
 def is_boxart_directory_name(name):
@@ -177,6 +217,7 @@ def generate_arcade_json():
     root_dir = os.path.dirname(os.path.abspath(__file__))
     roms_base = os.path.join(root_dir, ASSETS_DIR_NAME, ROMS_DIR_NAME)
     library = []
+    used_game_ids = set()
     
     if not os.path.exists(roms_base):
         print(f"❌ Error: Missing main folder layout path at: {roms_base}")
@@ -194,6 +235,7 @@ def generate_arcade_json():
                 "system": system_slug,
                 "title": system_title,
                 "core": system_core,
+                "background": BACKGROUND_MAP.get(system_slug, "#1b1e24"),
                 "games": []
             }
             
@@ -256,6 +298,7 @@ def generate_arcade_json():
                             "boxart": boxart_path,
                             "rom_path": f"{ASSETS_DIR_NAME}/{ROMS_DIR_NAME}/{system_slug}/{game_folder}/{launch_target}"
                         }
+                        game_entry["game_id"] = allocate_game_id(game_entry["rom_path"], used_game_ids)
                         console_node["games"].append(game_entry)
             
             # --- TARGET B: CONSOLE ROMS, FLASH, & MIXED SECRET FAVORITES SCANS ---
@@ -348,6 +391,7 @@ def generate_arcade_json():
                             "boxart": local_boxart_path,
                             "rom_path": rom_rel_path
                         }
+                        game_entry["game_id"] = allocate_game_id(rom_rel_path, used_game_ids)
 
                         # Fanart check: prefer fanart in same folder as the game
                         for ext_img in SUPPORTED_EXTS:

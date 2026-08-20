@@ -151,6 +151,25 @@ The custom favorites tab accepts any console ROM types mixed together. The scrap
 \## 🚀 Engine Architecture \& Feature Expansion Roadmap
 
 
+### 3D Wheel Cylinder Layout Reference
+
+Our system selection wheel uses a pure 3D cylinder layout effect powered strictly by CSS 3D Transforms and JavaScript. Understand this exact structure for any future layout modifications or code generations:
+
+#### 1. The SCSS 3D Cylinder Environment
+The styling setup establishes the camera depth and explicitly commands the browser engine to preserve 3D layers without flattening them:
+- The parent wrapper `.wheel-stage` enforces `perspective: 1200px;`.
+- The inner viewport container `.carousel-viewport` enforces `transform-style: preserve-3d;`.
+- Individual `.carousel-card` items use `backface-visibility: hidden;` and `transform-style: preserve-3d;` to keep them pinned within the true 3D spatial field.
+- Highlighted nodes use `.carousel-card.active` (`opacity: 1`), while background unselected cards rest at `opacity: 0.15`.
+
+#### 2. The JavaScript 3D Positioning Math
+The application script handles positioning strictly across 3D coordinates based on a separation angle (`theta = 35`) and a cylinder pushing depth parameter (`radius = 380`).
+
+When updating the wheel view indexes, it loops through the card nodes and applies inline transformations solely across 3D translation and rotation axes:
+- `translateX(${indexOffset * flatCardSpacing}px)` handles the horizontal spacing distribution across the screen layout width.
+- `rotateY(${indexOffset * theta}deg)` angles the side console cards inward toward the center perspective line.
+- `translateZ(${radius}px)` forces the items forward/backward inside the viewport scene to complete the physical curving track of the cylinder.
+
 
 To build advanced arcade functions onto this baseline platform, follow these technical implementation blueprints:
 

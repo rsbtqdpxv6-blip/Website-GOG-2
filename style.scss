@@ -1,25 +1,18 @@
-// ==============================================================================
-//           1. FULLY CONFIGURABLE COMPONENT SIZE & SCALE PARAMETERS
-// ==============================================================================
+// i made it sassy css so you guys could read better. enjoy. CHANGE THE COLORS DO WHATEVER YOU WANT JUST DONT SUCK AND DONT DO A PULL REQUEST WITH BAD CHANGES. I WILL REJECT IT. THANKS. -Wesley
 $bg-gradient: radial-gradient(circle at center, #1b1e24 0%, #050608 100%);
 $accent-glow: #00e5ff;
 $text-main: #ffffff;
 $text-sub: #6c7685;
 
-// --- A. FLEXIBLE 3D CONSOLE CAROUSEL WHEEL CONFIGS ---
-$card-height: 110px;        // Uniform height keeping the 3D wheel straight and even
-$card-min-width: 240px;     // Minimum card width so small logos do not collapse
-$card-max-width: 500px;     // Maximum card limit to completely clear your wide logos
-$card-padding-x: 30px;      // Horizontal card internal edge breathing space
+$card-height: 110px;
+$card-min-width: 240px;
+$card-max-width: 500px;
+$card-padding-x: 30px;
 
-// --- B. FLUID GAME PREVIEW PANELS CONFIGS ---
 $gamelist-sidebar-width: 380px; 
-$boxart-container-max-width: 500px; // Increased ceiling limit so ultra-wide boxes can stretch
-$boxart-container-height: 400px;    // Locked baseline vertical window boundary constraint
+$boxart-container-max-width: 500px;
+$boxart-container-height: 400px;
 
-// ==============================================================================
-//                       2. CENTRALIZED DESIGN MIXINS
-// ==============================================================================
 @mixin flex-center {
   display: flex;
   align-items: center;
@@ -34,9 +27,6 @@ $boxart-container-height: 400px;    // Locked baseline vertical window boundary 
   text-overflow: clip !important;
 }
 
-// ==============================================================================
-//                       3. BASE APPARATUS OVERRIDES
-// ==============================================================================
 * {
   box-sizing: border-box;
   margin: 0;
@@ -44,7 +34,11 @@ $boxart-container-height: 400px;    // Locked baseline vertical window boundary 
 }
 
 body {
-  background: $bg-gradient;
+  background: radial-gradient(
+    circle at center,
+    color-mix(in srgb, var(--system-bg-color, #1b1e24) 72%, white),
+    var(--system-bg-color, #050608)
+  );
   color: $text-main;
   font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
   height: 100vh;
@@ -149,9 +143,6 @@ body.app-ready {
   font-size: 0.9rem;
 }
 
-// ==============================================================================
-//                       4. GLOBAL CONTAINER ELEMENTS
-// ==============================================================================
 .es-header {
   display: flex;
   justify-content: space-between;
@@ -204,9 +195,6 @@ body.app-ready {
   pointer-events: auto !important;
 }
 
-// ==============================================================================
-//          LAYER A: FLEXIBLE 3D WHEEL CAROUSEL LOGO SCENE
-// ==============================================================================
 .wheel-stage {
   @include flex-center;
   width: 100%;
@@ -269,6 +257,14 @@ body.app-ready {
       transform: translateZ(8px);
     }
 
+    .favorites-wheel-icon {
+      color: #ffd43b;
+      font-size: 4.5rem;
+      line-height: 1;
+      text-shadow: 0 0 22px rgba(255, 212, 59, 0.55);
+      transform: translateZ(8px);
+    }
+
     .card-title {
       display: none;
     }
@@ -282,9 +278,6 @@ body.app-ready {
   }
 }
 
-// ==============================================================================
-//          LAYER B: FIXED TWO-COLUMN GAMELIST DISPLAY
-// ==============================================================================
 .gamelist-view {
   width: 100%;
   height: 100%;
@@ -408,13 +401,53 @@ body.app-ready {
       }
     }
 
-    .game-meta h2 {
-      font-size: 1.8rem;
-      font-weight: 800;
-      color: $text-main;
-      text-align: center;
-      line-height: 1.3;
-      @include text-wrap-safe; 
+    .game-meta {
+      width: 100%;
+
+      .game-title-row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 14px;
+      }
+
+      h2 {
+        font-size: 1.8rem;
+        font-weight: 800;
+        color: $text-main;
+        text-align: center;
+        line-height: 1.3;
+        @include text-wrap-safe;
+      }
+
+      .favorite-game-btn {
+        flex: 0 0 auto;
+        width: 42px;
+        height: 42px;
+        border: 1px solid rgba(255, 255, 255, 0.22);
+        border-radius: 50%;
+        background: rgba(0, 0, 0, 0.55);
+        color: rgba(255, 255, 255, 0.72);
+        font-size: 1.8rem;
+        line-height: 1;
+        cursor: pointer;
+        transition: color 0.2s ease, border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+
+        &:hover,
+        &:focus-visible {
+          color: #ffd43b;
+          border-color: #ffd43b;
+          box-shadow: 0 0 16px rgba(255, 212, 59, 0.24);
+          transform: scale(1.06);
+          outline: none;
+        }
+
+        &.is-favorite {
+          color: #ffd43b;
+          border-color: #ffd43b;
+          text-shadow: 0 0 12px rgba(255, 212, 59, 0.6);
+        }
+      }
     }
   }
 }
@@ -424,9 +457,6 @@ body.app-ready {
   to   { opacity: 1; transform: translateX(0) scale(1); }
 }
 
-// ==============================================================================
-//                       5. CONTROLLER BINDING OVERLAY
-// ==============================================================================
 .es-footer {
   position: relative;
 
@@ -447,6 +477,65 @@ body.app-ready {
       border-color: $accent-glow;
       box-shadow: 0 0 18px rgba(0, 229, 255, 0.25);
       transform: translateY(-1px);
+    }
+  }
+}
+
+.gamelist-search-panel {
+  position: fixed;
+  top: 110px;
+  right: 40px;
+  z-index: 1500;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: rgba(4, 9, 20, 0.95);
+  border: 1px solid rgba(0, 229, 255, 0.35);
+  border-radius: 14px;
+  padding: 10px 12px;
+  box-shadow: 0 0 0 1px rgba(0, 229, 255, 0.12), 0 0 24px rgba(0, 229, 255, 0.2);
+
+  &[hidden] {
+    display: none;
+  }
+
+  .gamelist-search-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .gamelist-search-label {
+    color: rgba(255, 255, 255, 0.75);
+  }
+
+  select,
+  input {
+    width: min(320px, 68vw);
+    background: rgba(0, 0, 0, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 10px;
+    color: $text-main;
+    padding: 10px 12px;
+    font-size: 0.95rem;
+    outline: none;
+  }
+
+  select {
+    width: auto;
+    min-width: 140px;
+    cursor: pointer;
+  }
+
+  input {
+    &:focus {
+      border-color: rgba(0, 229, 255, 0.8);
+      box-shadow: 0 0 0 3px rgba(0, 229, 255, 0.16);
     }
   }
 }
@@ -527,6 +616,47 @@ body.app-ready {
   .controller-bindings-list {
     display: grid;
     gap: 10px;
+  }
+
+  .settings-system-list {
+    display: grid;
+    gap: 10px;
+    margin-top: 6px;
+    max-height: 280px;
+    overflow-y: auto;
+  }
+
+  .settings-system-row {
+    display: grid;
+    grid-template-columns: minmax(130px, 1fr) minmax(130px, 1fr) minmax(130px, 1fr);
+    align-items: center;
+    gap: 8px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+  }
+
+  .settings-system-row strong {
+    color: $text-main;
+    font-size: 0.82rem;
+  }
+
+  .settings-system-row label {
+    display: grid;
+    gap: 4px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.68rem;
+    text-transform: uppercase;
+  }
+
+  .settings-system-row input {
+    min-width: 0;
+    padding: 6px 8px;
+    border: 1px solid rgba(0, 229, 255, 0.24);
+    border-radius: 6px;
+    background: rgba(0, 0, 0, 0.55);
+    color: $text-main;
   }
 
   .binding-row {
@@ -656,9 +786,6 @@ body.app-ready {
   color: $text-main;
 }
 
-// ============================================================================== 
-//                       6. FLASH RUNTIME KEYBIND OVERLAY
-// ============================================================================== 
 .flash-bindings-overlay {
   position: fixed;
   inset: 0;
@@ -768,9 +895,6 @@ body.app-ready {
     gap: 8px;
   }
 
-// ============================================================================== 
-//                       7. FULLSCREEN EMULATORJS OVERLAY DECK
-// ============================================================================== 
 .emu-overlay {
   display: none;
   position: fixed;
