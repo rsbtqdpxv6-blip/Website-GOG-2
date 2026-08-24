@@ -1,0 +1,2 @@
+Drag and drop the py file into the roms folder, you need a Skraper .DAT file (skraper is amazing tho) Version i used is 1.4.9726.
+To get the dat file with only descriptions just remove all the media (with the minus button)

@@ -2,7 +2,6 @@
 import os
 import json
 import re
-import hashlib
 
 #configure dir names, i wouldnt change these if i were you. (have to fix a lotta code)
 ASSETS_DIR_NAME  = "assets"
@@ -53,7 +52,6 @@ CORE_MAP = {
     "psp": "ppsspp",          # Requires SharedArrayBuffer/HTTPS environment
     "saturn": "yabause",
     "virtualboy": "virtualboy",
-    "atari2600": "stella",
     "c64": "vice_c64",
     "tg16": "pce"
 }
@@ -161,22 +159,80 @@ def tokenize(text):
     return [word for word in cleaned.split() if word]
 
 
-def allocate_game_id(rom_path, used_game_ids):
-    """Returns a stable positive numeric ID and resolves the rare hash collision."""
-    digest = hashlib.sha256(rom_path.casefold().encode('utf-8')).digest()
-    game_id = int.from_bytes(digest[:4], 'big') & 0x7fffffff
-    game_id = max(1, game_id)
+def normalize_name(value):
+    """Normalize titles for safe matching against desc filenames."""
+    text = (value or '').strip()
+    text = re.sub(r'\[.*?\]|\(.*?\)', ' ', text)
+    text = text.replace('_', ' ')
+    text = re.sub(r'[^a-zA-Z0-9\s]', ' ', text)
+    text = re.sub(r'\s+', ' ', text)
+    return text.strip().lower()
 
-    while game_id in used_game_ids:
-        game_id = 1 if game_id == 0x7fffffff else game_id + 1
 
-    used_game_ids.add(game_id)
+def load_description_for_game(system_slug, game_title):
+    """Load any matching description from a <system>/desc/<game>.txt file."""
+    if not system_slug:
+        return None
+
+    desc_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), ASSETS_DIR_NAME, ROMS_DIR_NAME, system_slug, 'desc')
+    if not os.path.isdir(desc_dir):
+        return None
+
+    target = normalize_name(game_title)
+    if not target:
+        return None
+
+    candidates = []
+    for entry in sorted(os.listdir(desc_dir)):
+        if not entry.lower().endswith('.txt'):
+            continue
+        file_base = os.path.splitext(entry)[0]
+        normalized = normalize_name(file_base)
+        if not normalized:
+            continue
+        candidates.append((entry, normalized))
+
+    for entry, normalized in candidates:
+        if normalized == target:
+            text_file = os.path.join(desc_dir, entry)
+            try:
+                with open(text_file, 'r', encoding='utf-8') as handle:
+                    text = handle.read().strip()
+                if text:
+                    return text
+            except Exception:
+                return None
+
+    # fuzzy fallback: allow the file name to be a close token match
+    for entry, normalized in candidates:
+        if target in normalized or normalized in target:
+            text_file = os.path.join(desc_dir, entry)
+            try:
+                with open(text_file, 'r', encoding='utf-8') as handle:
+                    text = handle.read().strip()
+                if text:
+                    return text
+            except Exception:
+                continue
+
+    return None
+
+
+def allocate_game_id(next_game_id):
+    """Return the next sequential ID and advance the shared generator counter."""
+    game_id = next_game_id[0]
+    next_game_id[0] += 1
     return game_id
 
 
 def is_boxart_directory_name(name):
     """Returns True for any directory named boxart, regardless of casing."""
     return (name or '').lower() == BOXART_DIR_NAME
+
+
+def is_desc_directory_name(name):
+    """Returns True for the helper description directory, regardless of casing."""
+    return (name or '').lower() == 'desc'
 
 
 def find_progressive_boxart_match(rom_filename, boxart_files):
@@ -217,7 +273,7 @@ def generate_arcade_json():
     root_dir = os.path.dirname(os.path.abspath(__file__))
     roms_base = os.path.join(root_dir, ASSETS_DIR_NAME, ROMS_DIR_NAME)
     library = []
-    used_game_ids = set()
+    next_game_id = [1]
     
     if not os.path.exists(roms_base):
         print(f"❌ Error: Missing main folder layout path at: {roms_base}")
@@ -249,9 +305,9 @@ def generate_arcade_json():
 
             # --- TARGET A: LOOSE FOLDER WEB SYSTEMS SCANS (HTML5 & DOS ENGINE FOLDERS) ---
             if system_slug in ["html5", "dos"]:
-                for game_folder in sorted(os.listdir(system_path)):
+                for game_folder in sorted(os.listdir(system_path), key=str.casefold):
                     game_folder_path = os.path.join(system_path, game_folder)
-                    if os.path.isdir(game_folder_path) and not is_boxart_directory_name(game_folder):
+                    if os.path.isdir(game_folder_path) and not is_boxart_directory_name(game_folder) and not is_desc_directory_name(game_folder):
                         # prefer any supported boxart extension for folder-level art
                         boxart_path = DEFAULT_BOXART
                         found_local_art = False
@@ -298,23 +354,26 @@ def generate_arcade_json():
                             "boxart": boxart_path,
                             "rom_path": f"{ASSETS_DIR_NAME}/{ROMS_DIR_NAME}/{system_slug}/{game_folder}/{launch_target}"
                         }
-                        game_entry["game_id"] = allocate_game_id(game_entry["rom_path"], used_game_ids)
+                        desc_text = load_description_for_game(system_slug, game_folder)
+                        if desc_text:
+                            game_entry["description"] = desc_text
+                        game_entry["game_id"] = allocate_game_id(next_game_id)
                         console_node["games"].append(game_entry)
             
             # --- TARGET B: CONSOLE ROMS, FLASH, & MIXED SECRET FAVORITES SCANS ---
             else:
                 # Walk the system folder recursively so nested directories and files are indexed.
                 for root, dirs, files in os.walk(system_path):
-                    dirs[:] = [d for d in dirs if not is_boxart_directory_name(d)]
+                    dirs[:] = [d for d in dirs if not is_boxart_directory_name(d) and not is_desc_directory_name(d)]
 
                     # skip the system-level boxart directory (and any casing variant)
-                    if os.path.abspath(root) == os.path.abspath(boxart_dir) or is_boxart_directory_name(os.path.basename(root)):
+                    if os.path.abspath(root) == os.path.abspath(boxart_dir) or is_boxart_directory_name(os.path.basename(root)) or is_desc_directory_name(os.path.basename(root)):
                         continue
 
                     rel_root = os.path.relpath(root, system_path)
                     rel_prefix = '' if rel_root == '.' else rel_root.replace(os.sep, '/')
 
-                    for file in sorted(files):
+                    for file in sorted(files, key=lambda value: (clean_display_title(value).casefold(), value.casefold())):
                         if file.startswith('.'): 
                             continue
 
@@ -391,7 +450,10 @@ def generate_arcade_json():
                             "boxart": local_boxart_path,
                             "rom_path": rom_rel_path
                         }
-                        game_entry["game_id"] = allocate_game_id(rom_rel_path, used_game_ids)
+                        desc_text = load_description_for_game(system_slug, clean_title)
+                        if desc_text:
+                            game_entry["description"] = desc_text
+                        game_entry["game_id"] = allocate_game_id(next_game_id)
 
                         # Fanart check: prefer fanart in same folder as the game
                         for ext_img in SUPPORTED_EXTS:

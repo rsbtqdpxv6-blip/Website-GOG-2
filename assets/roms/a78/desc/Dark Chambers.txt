@@ -1,0 +1,7 @@
+Dark Chambers is an arcade game similar to Gauntlet. You are an explorer in an underground maze. Your goal is to collect as many of the hidden treasures as you can and survive the 26 different levels.
+
+Trying to stop you from completing your quest are a wide variety of creatures including zombies, wraiths, skeletons, wizards and the grim reaper himself. Each of the creatures in the game has a several strength levels so various shots must be shoot to completely terminate a creature.
+
+In addition to the creatures and treasures, other items that can be found in the maze are keys (to open doors), potions (to restore health), poison (drains health), guns (increases your firing rate), traps, shields and bombs.
+
+The game is played from an overhead point of view, and is for 1 or 2 players simultaneously.

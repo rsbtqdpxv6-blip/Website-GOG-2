@@ -1,6 +1,4 @@
-// ==============================================================================
-//               STANDALONE LOCAL EMULATORJS & RUFFLE LAUNCHER ENGINE (PART 1)
-// ==============================================================================
+
 
 let emulatorReady = false;
 
@@ -87,12 +85,14 @@ async function launchGame(game, hintsDisplay) {
         // Extract the binary array slice out of your local hard drive IndexedDB tables first
         let localBinaryState = null;
         try {
-            const dbInstance = await openArcadeIndexedDB();
-            localBinaryState = await new Promise((res) => {
-                const getReq = dbInstance.transaction("game_save_states", "readonly").objectStore("game_save_states").get(gameToken);
-                getReq.onsuccess = () => res(getReq.result);
-                getReq.onerror = () => res(null);
-            });
+            {
+                const dbInstance = await openArcadeIndexedDB();
+                localBinaryState = await new Promise((res) => {
+                    const getReq = dbInstance.transaction("game_save_states", "readonly").objectStore("game_save_states").get(gameToken);
+                    getReq.onsuccess = () => res(getReq.result);
+                    getReq.onerror = () => res(null);
+                });
+            }
         } catch (dbErr) { console.error("Database tracking fault:", dbErr); }
 
         // Encode the binary state data to a safe base64 packet string for instant injection
@@ -108,7 +108,7 @@ async function launchGame(game, hintsDisplay) {
         // Detect if running a DOS program inside EmulatorJS to adjust command parameters
         let isDosGame = (game.core === "dosbox" || game.rom_path.toLowerCase().endsWith('.exe'));
         let dosExecutableMapping = isDosGame ? `window.EJS_dosboxExtension = "${game.rom_path.split('.').pop().toLowerCase()}";` : "";
-        const threadedCoresEnabled = window.__arcadeEmulatorSettings?.threadedCores === true;
+        const threadedCoresEnabled = window.crossOriginIsolated === true && window.__arcadeEmulatorSettings?.threadedCores === true;
         const gameId = Number.isInteger(game.game_id) && game.game_id > 0 ? game.game_id : 1;
 
         sandboxedHTML = `

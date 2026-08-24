@@ -1,6 +1,7 @@
 {
 	"threadedCores": false,
 	"crtEnabled": false,
+	"lowPerformance": false,
 	"systems": {
 		"doom": { "background": "#5A0F14", "core": "doom" },
 		"flash": { "background": "#8A5A00", "core": "ruffle" },

@@ -6,6 +6,8 @@ function launchHtmlGame(game, hintsDisplay) {
     if (!emuOverlay || !iframe) return;
 
     emuOverlay.style.display = "block";
+    window.__arcadeActiveRuntimeGame = game;
+    window.dispatchEvent(new CustomEvent('arcade-session-state-changed', { detail: { game } }));
     if (hintsDisplay) {
         hintsDisplay.textContent = `Launching Native Application... Playing ${game.title || "Classic App"}`;
     }
@@ -25,6 +27,8 @@ function closeHtmlGame(hintsDisplay) {
     // Forcing the document frame window to about:blank completely kills running JavaScript loops and sound
     iframe.src = "about:blank";
     emuOverlay.style.display = "none";
+    window.__arcadeActiveRuntimeGame = null;
+    window.dispatchEvent(new CustomEvent('arcade-session-state-changed', { detail: { game: null } }));
 
     if (hintsDisplay) {
         hintsDisplay.textContent = "Session terminated safely.";

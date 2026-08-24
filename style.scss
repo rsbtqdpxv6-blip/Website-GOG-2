@@ -157,7 +157,6 @@ body.app-ready {
     letter-spacing: 3px;
     text-transform: uppercase;
     color: $accent-glow;
-    text-shadow: 0 0 20px rgba(0, 229, 255, 0.3);
   }
   .counter-label {
     color: $text-sub;
@@ -165,13 +164,42 @@ body.app-ready {
     font-size: 1.2rem;
     font-weight: bold;
   }
+
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+  }
+
+  .account-header-btn {
+    margin-left: 0;
+    color: $accent-glow;
+  }
 }
 
 .es-footer {
   background: rgba(0, 0, 0, 0.4);
   border-top: 1px solid rgba(255, 255, 255, 0.02);
-  @include flex-center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
   padding: 0 50px;
+
+  > div:first-of-type {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  > .control-settings-btn {
+    margin-left: 0;
+    flex-shrink: 0;
+  }
 
   .control-hints {
     font-size: 0.8rem;
@@ -273,7 +301,7 @@ body.app-ready {
       opacity: 1;
       border-color: $accent-glow;
       background: linear-gradient(145deg, rgba(24, 29, 42, 0.95), rgba(9, 13, 20, 0.9));
-      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12), 0 20px 50px rgba(0, 0, 0, 0.45), 0 0 28px rgba(0, 229, 255, 0.24);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12), 0 20px 50px rgba(0, 0, 0, 0.45);
     }
   }
 }
@@ -411,6 +439,17 @@ body.app-ready {
         gap: 14px;
       }
 
+      .game-description {
+        margin: 10px 0 0;
+        color: rgba(255, 255, 255, 0.72);
+        font-size: 0.95rem;
+        line-height: 1.5;
+        text-align: center;
+        max-height: 120px;
+        overflow: auto;
+        padding-right: 6px;
+      }
+
       h2 {
         font-size: 1.8rem;
         font-weight: 800;
@@ -514,6 +553,12 @@ body.app-ready {
     color: rgba(255, 255, 255, 0.75);
   }
 
+  .gamelist-search-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
   select,
   input {
     width: min(320px, 68vw);
@@ -530,6 +575,16 @@ body.app-ready {
     width: auto;
     min-width: 140px;
     cursor: pointer;
+  }
+
+  .search-close-btn {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
   }
 
   input {
@@ -694,6 +749,79 @@ body.app-ready {
   }
 }
 
+.account-panel {
+  width: min(640px, 100%);
+  padding: 18px 24px;
+  max-height: calc(100vh - 32px);
+  overflow-y: auto;
+}
+
+.account-form,
+.account-signed-in {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-top: 12px;
+}
+
+.account-form[hidden],
+.account-signed-in[hidden],
+.account-method-btn[hidden],
+.account-mode-btn[hidden] {
+  display: none;
+}
+
+.account-form label,
+.account-user-email {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.account-form input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.45);
+  color: $text-main;
+  font: inherit;
+  outline: none;
+}
+
+.account-form input:focus {
+  border-color: $accent-glow;
+  box-shadow: 0 0 0 3px rgba(0, 229, 255, 0.14);
+}
+
+.account-primary-btn,
+.account-secondary-btn,
+.account-mode-btn,
+.account-method-btn {
+  padding: 11px 14px;
+  border: 1px solid rgba(0, 229, 255, 0.38);
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.7);
+  color: $text-main;
+  cursor: pointer;
+  font: inherit;
+}
+
+.account-primary-btn { margin-top: 5px; background: rgba(0, 229, 255, 0.12); }
+.account-secondary-btn,
+.account-mode-btn { border-color: rgba(255, 255, 255, 0.18); }
+.account-primary-btn:hover,
+.account-secondary-btn:hover,
+.account-mode-btn:hover,
+.account-method-btn:hover { border-color: $accent-glow; }
+.account-mode-btn { width: 100%; margin-top: 12px; }
+.account-method-btn { width: 100%; margin-top: 2px; border-color: rgba(0, 229, 255, 0.28); color: $accent-glow; }
+.account-status { min-height: 20px; margin-top: 10px; color: rgba(255, 255, 255, 0.7); line-height: 1.35; }
+.account-status[data-type="success"] { color: #7cf2b0; }
+.account-status[data-type="error"] { color: #ff9b9b; }
+.account-signed-in strong { font-size: 1.15rem; }
+
 .crt-overlay {
   position: fixed;
   inset: 0;
@@ -785,6 +913,376 @@ body.app-ready {
   box-shadow: 0 0 18px rgba(0, 229, 255, 0.22);
   color: $text-main;
 }
+
+.achievements-panel {
+  max-height: min(760px, 88vh);
+  overflow: hidden;
+}
+
+.shop-panel {
+  max-height: min(760px, 88vh);
+  overflow: hidden;
+}
+
+.achievements-list {
+  display: grid;
+  gap: 8px;
+  max-height: 66vh;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.achievement-row {
+  display: grid;
+  grid-template-columns: 42px 1fr auto;
+  align-items: center;
+  gap: 12px;
+  min-height: 62px;
+  padding: 10px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.035);
+  opacity: 0.68;
+}
+
+.achievement-row.is-unlocked {
+  opacity: 1;
+  border-color: rgba(0, 229, 255, 0.4);
+  background: rgba(0, 229, 255, 0.08);
+}
+
+.achievement-icon {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border: 1px solid rgba(255, 212, 59, 0.4);
+  border-radius: 50%;
+  color: #ffd43b;
+  font-size: 0.76rem;
+  font-weight: 800;
+}
+
+.achievement-row strong,
+.achievement-row span {
+  display: block;
+}
+
+.achievement-row strong {
+  color: $text-main;
+  font-size: 0.9rem;
+}
+
+.achievement-row div span {
+  margin-top: 3px;
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 0.78rem;
+  line-height: 1.35;
+}
+
+.achievement-row b {
+  color: $accent-glow;
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  text-align: right;
+}
+
+.achievement-points {
+  margin-top: 5px;
+  color: #ffd43b;
+  font-weight: 800;
+}
+
+.achievement-shop-title {
+  margin: 18px 0 8px;
+  color: $accent-glow;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.82rem;
+}
+
+.achievement-shop-list {
+  display: grid;
+  gap: 8px;
+  max-height: 32vh;
+  overflow-y: auto;
+}
+
+.shop-item {
+  display: grid;
+  grid-template-columns: 42px 1fr auto;
+  align-items: center;
+  gap: 12px;
+  padding: 9px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.shop-item.is-owned {
+  border-color: rgba(255, 212, 59, 0.4);
+}
+
+.shop-item strong,
+.shop-item span {
+  display: block;
+}
+
+.shop-item div span {
+  margin-top: 3px;
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 0.76rem;
+  line-height: 1.3;
+}
+
+.shop-item button {
+  min-width: 92px;
+  padding: 8px 10px;
+  border: 1px solid rgba(0, 229, 255, 0.35);
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.8);
+  color: $text-main;
+  cursor: pointer;
+  font-size: 0.65rem;
+  font-weight: 800;
+}
+
+.shop-item button:not(:disabled):hover {
+  border-color: $accent-glow;
+  box-shadow: 0 0 14px rgba(0, 229, 255, 0.22);
+}
+
+.shop-item button:disabled {
+  cursor: default;
+  opacity: 0.5;
+}
+
+.shop-toggle {
+  position: relative;
+  display: inline-flex;
+  width: 46px;
+  height: 26px;
+  cursor: pointer;
+}
+
+.shop-toggle input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.shop-toggle-track {
+  width: 46px;
+  height: 26px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.7);
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.shop-toggle-track::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.65);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.shop-toggle input:checked + .shop-toggle-track {
+  border-color: $accent-glow;
+  background: rgba(0, 229, 255, 0.24);
+  box-shadow: 0 0 12px rgba(0, 229, 255, 0.2);
+}
+
+.shop-toggle input:checked + .shop-toggle-track::after {
+  background: $accent-glow;
+  transform: translateX(20px);
+}
+
+.shop-toggle input:focus-visible + .shop-toggle-track {
+  outline: 2px solid $accent-glow;
+  outline-offset: 2px;
+}
+
+body.shop-golden-wheel .carousel-card.active {
+  border-color: #ffd43b;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12), 0 20px 50px rgba(0, 0, 0, 0.45), 0 0 28px rgba(255, 212, 59, 0.42);
+}
+
+body.shop-scanlines::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1000;
+  background: repeating-linear-gradient(180deg, rgba(255, 255, 255, 0.04) 0 1px, transparent 1px 4px);
+}
+
+body.shop-tiny-mode.app-ready {
+  grid-template-rows: 58px 1fr 58px;
+}
+
+body.shop-tiny-mode .es-header {
+  padding: 0 28px;
+}
+
+body.shop-tiny-mode .es-header .system-title {
+  font-size: 1.15rem;
+  letter-spacing: 2px;
+}
+
+body.shop-tiny-mode .es-header .counter-label {
+  font-size: 0.95rem;
+}
+
+body.shop-tiny-mode .es-footer {
+  gap: 6px;
+  padding: 0 28px;
+}
+
+body.shop-tiny-mode .es-footer .control-hints {
+  font-size: 0.65rem;
+  letter-spacing: 1px;
+}
+
+body.shop-tiny-mode .es-footer .control-settings-btn {
+  margin-left: 8px;
+  padding: 6px 10px;
+  font-size: 0.64rem;
+}
+
+body.shop-tiny-mode .gamelist-view {
+  gap: 24px;
+  padding: 20px 32px;
+}
+
+body.shop-tiny-mode .gamelist-view .list-sidebar {
+  flex-basis: 300px;
+  padding: 10px;
+  max-height: calc(100vh - 170px);
+}
+
+body.shop-tiny-mode .gamelist-view .game-row-item {
+  padding: 10px 12px;
+  font-size: 0.9rem;
+}
+
+body.shop-tiny-mode .gamelist-view .preview-pane {
+  gap: 12px;
+  padding: 14px;
+}
+
+body.shop-tiny-mode .gamelist-view .boxart-frame {
+  height: 300px;
+}
+
+body.shop-tiny-mode .gamelist-view .game-meta h2 {
+  font-size: 1.4rem;
+}
+
+body.shop-rainbow-accent .carousel-card.active {
+  animation: rainbow-accent 4s linear infinite;
+}
+
+#shop-confetti-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2147483647;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  overflow: hidden;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+#shop-confetti-overlay.active {
+  visibility: visible;
+}
+
+#shop-confetti-gif {
+  display: block;
+  width: min(100vw, 900px);
+  height: min(100vw, 900px);
+  object-fit: contain;
+  pointer-events: none;
+  filter: none;
+  box-shadow: none;
+}
+
+body.shop-secret-message .es-footer::after {
+  content: " wesley is big brain";
+  color: #ffd43b;
+  font-size: 0.68rem;
+}
+
+body.low-performance-mode *,
+body.low-performance-mode *::before,
+body.low-performance-mode *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  scroll-behavior: auto !important;
+}
+
+body.low-performance-mode .carousel-card {
+  filter: none;
+  box-shadow: none;
+  transition: transform 0.12s linear, opacity 0.12s linear, border-color 0.12s linear;
+}
+
+body.low-performance-mode .carousel-card .icon-wrapper img {
+  filter: none;
+}
+
+body.low-performance-mode .preview-pane,
+body.low-performance-mode .list-sidebar,
+body.low-performance-mode .media-stack-box,
+body.low-performance-mode .controller-bindings-panel,
+body.low-performance-mode .flash-bindings-panel {
+  backdrop-filter: none;
+  box-shadow: none;
+}
+
+body.low-performance-mode .crt-overlay {
+  display: none;
+}
+
+body.low-performance-mode .wheel-stage,
+body.low-performance-mode .gamelist-view {
+  transition: none;
+}
+
+body.low-performance-mode .carousel-viewport {
+  transition: none;
+}
+
+body.low-performance-mode .game-row-item {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 50px;
+}
+
+body.low-performance-mode .media-stack-box::before,
+body.low-performance-mode .crt-overlay::before,
+body.low-performance-mode .crt-overlay::after {
+  display: none;
+}
+
+body.low-performance-mode.shop-rainbow-accent .carousel-card.active {
+  animation: none !important;
+}
+
+@keyframes rainbow-accent {
+  0% { border-color: #ff595e; box-shadow: 0 0 28px rgba(255, 89, 94, 0.35); }
+  33% { border-color: #ffca3a; box-shadow: 0 0 28px rgba(255, 202, 58, 0.35); }
+  66% { border-color: #8ac926; box-shadow: 0 0 28px rgba(138, 201, 38, 0.35); }
+  100% { border-color: #1982c4; box-shadow: 0 0 28px rgba(25, 130, 196, 0.35); }
+}
+
 
 .flash-bindings-overlay {
   position: fixed;

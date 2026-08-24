@@ -52,6 +52,7 @@
     const counterDisplay = document.getElementById('counter-display');
     const hintsDisplay = document.getElementById('control-hints');
     const gameTitleElement = document.getElementById('game-title');
+    const gameDescriptionElement = document.getElementById('game-description');
     const favoriteGameBtn = document.getElementById('favorite-game-btn');
     const gameBoxartElement = document.getElementById('game-boxart');
     const emuOverlay = document.getElementById('emu-overlay');
@@ -76,6 +77,7 @@
     const searchPanel = document.getElementById('gamelist-search-panel');
     const searchInput = document.getElementById('gamelist-search-input');
     const searchScopeSelect = document.getElementById('gamelist-search-scope');
+    const searchCloseBtn = document.getElementById('search-close-btn');
     const flashBindingsOverlay = document.getElementById('flash-bindings-overlay');
     const flashBindingsCloseBtn = document.getElementById('flash-bindings-close');
     const flashBindingsAddBtn = document.getElementById('flash-bindings-add');
@@ -85,7 +87,46 @@
     const fanartBox = document.getElementById('game-fanart-box');
     const crtOverlay = document.getElementById('crt-overlay');
     const crtEnabledSwitch = document.getElementById('settings-crt-enabled');
+    const confettiOverlay = document.getElementById('shop-confetti-overlay');
+    const confettiGif = document.getElementById('shop-confetti-gif');
+    const confettiGifConfig = {
+        source: 'assets/confetti.gif',
+        durationMs: 1800,
+        size: 'min(100vw, 900px)',
+        opacity: 1,
+        fit: 'contain'
+    };
+    const lowPerformanceSwitch = document.getElementById('settings-low-performance');
     const crtCanvas = document.getElementById('crt-distortion-canvas');
+    const achievementsBtn = document.getElementById('achievements-btn');
+    const achievementsOverlay = document.getElementById('achievements-overlay');
+    const achievementsCloseBtn = document.getElementById('achievements-close');
+    const shopBtn = document.getElementById('shop-btn');
+    const accountBtn = document.getElementById('account-btn');
+    const accountOverlay = document.getElementById('account-overlay');
+    const accountCloseBtn = document.getElementById('account-close');
+    const accountPanelTitle = document.getElementById('account-panel-title');
+    const accountPanelSubtitle = document.getElementById('account-panel-subtitle');
+    const accountStatus = document.getElementById('account-status');
+    const accountMethodToggle = document.getElementById('account-method-toggle');
+    const accountUsernameInput = document.getElementById('account-username');
+    const accountPasswordForm = document.getElementById('account-password-form');
+    const accountPasswordNameLabel = document.getElementById('account-password-name-label');
+    const accountPasswordNameInput = document.getElementById('account-password-name');
+    const accountPasswordInput = document.getElementById('account-password');
+    const accountChangeEmailBtn = document.getElementById('account-change-email');
+    const accountSignedIn = document.getElementById('account-signed-in');
+    const accountUserLabel = document.getElementById('account-user-label');
+    const accountUserEmail = document.getElementById('account-user-email');
+    const accountSignOutBtn = document.getElementById('account-sign-out');
+    const accountModeToggle = document.getElementById('account-mode-toggle');
+    const shopOverlay = document.getElementById('shop-overlay');
+    const shopCloseBtn = document.getElementById('shop-close');
+    const shopPointsLabel = document.getElementById('shop-points-label');
+    const achievementsList = document.getElementById('achievements-list');
+    const achievementsSummary = document.getElementById('achievements-summary');
+    const achievementShopList = document.getElementById('achievement-shop-list');
+    const achievementPoints = document.getElementById('achievement-points');
     let crtCanvasCtx = crtCanvas ? crtCanvas.getContext('2d') : null;
     let crtAnimationFrame = null;
 
@@ -113,13 +154,572 @@
     let secretSystemUnlocked = false;
     const SETTINGS_KEY = 'arcadeSettings';
     const FAVORITES_STORAGE_KEY = 'arcadeFavoriteGameIds';
-    let arcadeSettings = { threadedCores: false, crtEnabled: false };
-    let settingsDefaults = { threadedCores: false, crtEnabled: false, systems: {} };
+    let arcadeSettings = { threadedCores: false, crtEnabled: false, lowPerformance: false };
+    let settingsDefaults = { threadedCores: false, crtEnabled: false, lowPerformance: false, systems: {} };
     let favoriteGameIds = new Set();
+    let achievementDefinitions = [];
+    let achievementShopItems = [];
+    const ACHIEVEMENT_STORAGE_KEY = 'arcadeAchievements';
+    let achievementState = {
+        unlocked: {},
+        stats: {
+            gamesStarted: 0,
+            playTimeSeconds: 0,
+            siteTimeSeconds: 0,
+            favoritesAdded: 0,
+            searchesUsed: 0,
+            randomPicks: 0,
+            controllersConnected: 0,
+            longestSessionSeconds: 0
+        },
+        systemStats: {},
+        coreStats: {},
+        gameStats: {},
+        playedSystems: [],
+        purchasedShopItems: [],
+        enabledShopItems: [],
+        bonusPoints: 0,
+        pointsCheatClaimed: false
+    };
+    let activeAchievementSession = null;
+    let siteStartedAt = Date.now();
+    let achievementSiteTimer = null;
+    let achievementSaveTimer = null;
+    const AUTH_STORAGE_KEY = 'arcadeAuthUser';
+    const authApiBaseUrl = window.ARCADE_AUTH_CONFIG?.apiBaseUrl?.replace(/\/$/, '');
+    let accountMode = 'signin';
+    let accountSyncTimer = null;
+    let accountSyncInFlight = false;
+    let accountSyncDirty = false;
+    let accountData = { data: {} };
+
+    const accountStorageKeys = [
+        ACHIEVEMENT_STORAGE_KEY,
+        FAVORITES_STORAGE_KEY,
+        SETTINGS_KEY,
+        'flash-runtime-keybindings'
+    ];
+
+    function resetAccountRuntimeState() {
+        achievementState = {
+            unlocked: {},
+            stats: {
+                gamesStarted: 0,
+                playTimeSeconds: 0,
+                siteTimeSeconds: 0,
+                favoritesAdded: 0,
+                searchesUsed: 0,
+                randomPicks: 0,
+                controllersConnected: 0,
+                longestSessionSeconds: 0
+            },
+            systemStats: {},
+            coreStats: {},
+            gameStats: {},
+            playedSystems: [],
+            purchasedShopItems: [],
+            enabledShopItems: [],
+            bonusPoints: 0,
+            pointsCheatClaimed: false
+        };
+        favoriteGameIds = new Set();
+        activeAchievementSession = null;
+        applyPurchasedShopEffects();
+    }
+
+    function prepareAccountSwitch() {
+        accountData = { data: {} };
+        accountSyncDirty = false;
+        if (accountSyncTimer !== null) window.clearTimeout(accountSyncTimer);
+        accountSyncTimer = null;
+        resetAccountRuntimeState();
+    }
+
+    function isAccountSignedIn() {
+        return window.__arcadeAuthSignedIn === true;
+    }
+
+    window.__arcadeAuthSignedIn = false;
+
+    function getStoredAccountUser() {
+        try {
+            const user = JSON.parse(localStorage.getItem(AUTH_STORAGE_KEY) || 'null');
+            return user && typeof user === 'object' ? user : null;
+        } catch {
+            localStorage.removeItem(AUTH_STORAGE_KEY);
+            return null;
+        }
+    }
+    function getAccountStorageKey(key) {
+        const username = getStoredAccountUser()?.username;
+        return username ? `arcadeAccount:${username}:${key}` : key;
+    }
+
+    function getAccountStorageValue(key) {
+        return localStorage.getItem(getAccountStorageKey(key));
+    }
+
+    function setAccountStorageValue(key, value) {
+        localStorage.setItem(getAccountStorageKey(key), value);
+    }
+
+    function removeAccountStorageValue(key) {
+        localStorage.removeItem(getAccountStorageKey(key));
+    }
+
+    async function readAuthResponse(response) {
+        const text = await response.text();
+        if (!text.trim()) return {};
+        try { return JSON.parse(text); }
+        catch { throw new Error(`Authentication server returned invalid data (${response.status}).`); }
+    }
+
+    function getAccountPayload() {
+        const data = {};
+        accountStorageKeys.forEach((key) => {
+            const value = getAccountStorageValue(key);
+            if (value !== null) data[key] = value;
+        });
+        return { data, saves: accountData.saves || {} };
+    }
+
+    async function syncAccountData() {
+        if (!isAccountSignedIn() || !authApiBaseUrl || accountSyncInFlight) return;
+        accountSyncInFlight = true;
+        const payload = getAccountPayload();
+        accountData.data = payload.data;
+        try {
+            const response = await fetch(`${authApiBaseUrl}/auth/data`, {
+                method: 'PUT',
+                headers: { 'Content-Type': 'application/json' },
+                credentials: 'include',
+                body: JSON.stringify(payload)
+            });
+            if (!response.ok) throw new Error(`Account sync failed (${response.status}).`);
+            accountSyncDirty = false;
+        } catch (error) {
+            console.warn('Unable to sync account data:', error);
+        } finally {
+            accountSyncInFlight = false;
+            if (accountSyncDirty) queueAccountSync();
+        }
+    }
+
+    function queueAccountSync() {
+        if (!isAccountSignedIn()) return;
+        accountSyncDirty = true;
+        if (window.__arcadeActiveRuntimeGame || accountSyncTimer !== null || accountSyncInFlight) return;
+        accountSyncTimer = window.setTimeout(() => {
+            accountSyncTimer = null;
+            syncAccountData();
+        }, 300);
+    }
+
+    async function loadAccountData() {
+        if (!isAccountSignedIn() || !authApiBaseUrl) return;
+        try {
+            const response = await fetch(`${authApiBaseUrl}/auth/data`, { credentials: 'include' });
+            if (!response.ok) throw new Error('Unable to load account data.');
+            accountData = await readAuthResponse(response);
+            accountSyncDirty = false;
+            resetAccountRuntimeState();
+            accountStorageKeys.forEach((key) => {
+                if (Object.prototype.hasOwnProperty.call(accountData.data || {}, key)) setAccountStorageValue(key, accountData.data[key]);
+                else removeAccountStorageValue(key);
+            });
+            loadAchievementState();
+            loadFavoriteGameIds();
+            loadFlashKeyBindings();
+            loadArcadeSettings();
+        } catch (error) {
+            console.warn('Unable to load account data:', error);
+        }
+    }
+
+    function encodeSave(bytes) {
+        let binary = '';
+        bytes.forEach((byte) => { binary += String.fromCharCode(byte); });
+        return btoa(binary);
+    }
+
+    function decodeSave(value) {
+        const binary = atob(value);
+        return Uint8Array.from(binary, (character) => character.charCodeAt(0));
+    }
+
+    window.__arcadeAccountStorage = {
+        isSignedIn: isAccountSignedIn,
+        loadSave: (token) => accountData.saves?.[token] ? decodeSave(accountData.saves[token]) : null,
+        saveSave: (token, bytes) => {
+            if (!isAccountSignedIn()) return false;
+            accountData.saves[token] = encodeSave(bytes);
+            queueAccountSync();
+            return true;
+        }
+    };
+
+    function setAccountStatus(message, type = '') {
+        if (!accountStatus) return;
+        accountStatus.textContent = message;
+        accountStatus.dataset.type = type;
+    }
+
+    function renderAccountUI() {
+        const user = getStoredAccountUser();
+        const signedIn = Boolean(user?.username);
+        window.__arcadeAuthSignedIn = signedIn;
+        accountPasswordForm.hidden = signedIn;
+        accountSignedIn.hidden = !signedIn;
+        accountModeToggle.hidden = signedIn;
+        accountMethodToggle.hidden = true;
+        if (signedIn) {
+            accountUserLabel.textContent = user.name || 'Arcade player';
+            accountUserEmail.textContent = `@${user.username}`;
+            accountBtn.textContent = user.name || 'Account';
+        } else {
+            accountBtn.textContent = 'Sign in';
+            accountPanelTitle.textContent = accountMode === 'signup' ? 'Create your arcade account' : 'Arcade account';
+            accountPanelSubtitle.textContent = 'Sign in with your username and password.';
+            accountPasswordNameLabel.hidden = accountMode !== 'signup';
+            accountPasswordNameInput.hidden = accountMode !== 'signup';
+            accountModeToggle.textContent = accountMode === 'signup' ? 'I already have an account' : 'Create an account';
+            const passwordSubmit = accountPasswordForm.querySelector('button[type="submit"]');
+            if (passwordSubmit) passwordSubmit.textContent = accountMode === 'signup' ? 'Create account' : 'Sign in';
+        }
+    }
+
+    function openAccountPanel() {
+        if (!accountOverlay) return;
+        renderAccountUI();
+        setAccountStatus('');
+        accountOverlay.hidden = false;
+        if (!accountSignedIn.hidden) return;
+        accountUsernameInput.focus();
+    }
+
+    function closeAccountPanel() {
+        if (accountOverlay) accountOverlay.hidden = true;
+    }
+
+    function handleAuthRedirectError() {
+        return;
+    }
+
+    async function submitPasswordAuth(event) {
+        event.preventDefault();
+        if (!authApiBaseUrl) {
+            setAccountStatus('The username authentication server is not configured.', 'error');
+            return;
+        }
+        const username = accountUsernameInput.value.trim();
+        const password = accountPasswordInput.value;
+        const name = accountPasswordNameInput.value.trim();
+        setAccountStatus(accountMode === 'signup' ? 'Creating your account...' : 'Signing you in...');
+        try {
+            const response = await fetch(`${authApiBaseUrl}/auth/${accountMode === 'signup' ? 'signup' : 'signin'}`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                credentials: 'include',
+                body: JSON.stringify({ username, password, name })
+            });
+            const result = await readAuthResponse(response);
+            if (!response.ok) throw new Error(result.error || 'Unable to authenticate.');
+            prepareAccountSwitch();
+            localStorage.setItem(AUTH_STORAGE_KEY, JSON.stringify(result));
+            window.__arcadeAuthSignedIn = true;
+            await loadAccountData();
+            loadAchievementState();
+            setAccountStatus(accountMode === 'signup' ? 'Account created. You are signed in.' : 'You are signed in.', 'success');
+            renderAccountUI();
+        } catch (error) {
+            setAccountStatus(error.message || 'Unable to authenticate.', 'error');
+        }
+    }
+
+    async function signOutAccount() {
+        if (authApiBaseUrl) await fetch(`${authApiBaseUrl}/auth/signout`, { method: 'POST', credentials: 'include' }).catch(() => {});
+        window.__arcadeAuthSignedIn = false;
+        accountSyncDirty = false;
+        if (accountSyncTimer !== null) window.clearTimeout(accountSyncTimer);
+        accountSyncTimer = null;
+        accountData = { data: {}, saves: {} };
+        resetAccountRuntimeState();
+        localStorage.removeItem(AUTH_STORAGE_KEY);
+        renderAccountUI();
+        setAccountStatus('You are signed out.', 'success');
+    }
+
+    async function initializeAuth() {
+        if (!authApiBaseUrl) return;
+        try {
+            const response = await fetch(`${authApiBaseUrl}/auth/me`, { credentials: 'include' });
+            if (!response.ok) throw new Error('Not signed in');
+            prepareAccountSwitch();
+            localStorage.setItem(AUTH_STORAGE_KEY, JSON.stringify(await readAuthResponse(response)));
+            window.__arcadeAuthSignedIn = true;
+            await loadAccountData();
+        } catch {
+            window.__arcadeAuthSignedIn = false;
+            localStorage.removeItem(AUTH_STORAGE_KEY);
+        }
+        renderAccountUI();
+    }
+
+    function loadAchievementState() {
+        if (!isAccountSignedIn()) return;
+        try {
+            const saved = JSON.parse(getAccountStorageValue(ACHIEVEMENT_STORAGE_KEY) || '{}');
+            achievementState = {
+                ...achievementState,
+                ...saved,
+                stats: { ...achievementState.stats, ...(saved.stats || {}) },
+                systemStats: saved.systemStats || {},
+                coreStats: saved.coreStats || {},
+                gameStats: saved.gameStats || {},
+                playedSystems: Array.isArray(saved.playedSystems) ? saved.playedSystems : [],
+                unlocked: saved.unlocked || {},
+                purchasedShopItems: Array.isArray(saved.purchasedShopItems) ? saved.purchasedShopItems : [],
+                enabledShopItems: Array.isArray(saved.enabledShopItems)
+                    ? saved.enabledShopItems
+                    : (Array.isArray(saved.purchasedShopItems) ? saved.purchasedShopItems : []),
+                bonusPoints: Number.isFinite(saved.bonusPoints) ? saved.bonusPoints : 0,
+                pointsCheatClaimed: saved.pointsCheatClaimed === true
+            };
+        } catch {
+            removeAccountStorageValue(ACHIEVEMENT_STORAGE_KEY);
+        }
+    }
+
+    function saveAchievementState() {
+        if (!isAccountSignedIn()) return;
+        setAccountStorageValue(ACHIEVEMENT_STORAGE_KEY, JSON.stringify(achievementState));
+        queueAccountSync();
+    }
+
+    function scheduleAchievementSave() {
+        if (!isAccountSignedIn()) return;
+        if (achievementSaveTimer !== null) return;
+        achievementSaveTimer = window.setTimeout(() => {
+            achievementSaveTimer = null;
+            saveAchievementState();
+        }, 500);
+    }
+
+    window.addEventListener('pagehide', () => {
+        if (!isAccountSignedIn() || !authApiBaseUrl || !accountSyncDirty) return;
+        const payload = getAccountPayload();
+        fetch(`${authApiBaseUrl}/auth/data`, {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            credentials: 'include',
+            keepalive: true,
+            body: JSON.stringify(payload)
+        }).catch(() => {});
+    });
+
+    function isAchievementPanelVisible() {
+        return (achievementsOverlay && !achievementsOverlay.hidden) || (shopOverlay && !shopOverlay.hidden);
+    }
+
+    function getAchievementPoints() {
+        if (!isAccountSignedIn()) return 0;
+        const achievementPoints = achievementDefinitions.reduce((total, achievement) => {
+            return total + (achievementState.unlocked[achievement.id] ? (achievement.points || 0) : 0);
+        }, 0);
+        return achievementPoints + achievementState.bonusPoints;
+    }
+
+    function getSpentAchievementPoints() {
+        if (!isAccountSignedIn()) return 0;
+        return achievementShopItems.reduce((total, item) => {
+            return total + (achievementState.purchasedShopItems.includes(item.id) ? (item.cost || 0) : 0);
+        }, 0);
+    }
+
+    function getAvailableAchievementPoints() {
+        return Math.max(0, getAchievementPoints() - getSpentAchievementPoints());
+    }
+
+    function applyPurchasedShopEffects() {
+        const enabled = achievementState.enabledShopItems;
+        document.body.classList.toggle('shop-golden-wheel', enabled.includes('golden-wheel'));
+        document.body.classList.toggle('shop-scanlines', enabled.includes('arcade-scanlines'));
+        document.body.classList.toggle('shop-rainbow-accent', enabled.includes('rainbow-accent'));
+        document.body.classList.toggle('shop-tiny-mode', enabled.includes('tiny-mode'));
+        document.body.classList.toggle('shop-secret-message', enabled.includes('secret-message'));
+    }
+
+    function setShopItemEnabled(itemId, enabled) {
+        if (!isAccountSignedIn()) return;
+        if (!achievementState.purchasedShopItems.includes(itemId)) return;
+        achievementState.enabledShopItems = achievementState.enabledShopItems.filter((id) => id !== itemId);
+        if (enabled) achievementState.enabledShopItems.push(itemId);
+        saveAchievementState();
+        applyPurchasedShopEffects();
+        if (isAchievementPanelVisible()) renderAchievementsUI();
+    }
+
+    function purchaseShopItem(itemId) {
+        if (!isAccountSignedIn()) return;
+        const item = achievementShopItems.find((candidate) => candidate.id === itemId);
+        if (!item || achievementState.purchasedShopItems.includes(itemId)) return;
+        if (getAvailableAchievementPoints() < item.cost) {
+            if (hintsDisplay) hintsDisplay.textContent = `You need ${item.cost - getAvailableAchievementPoints()} more points.`;
+            return;
+        }
+        achievementState.purchasedShopItems.push(itemId);
+        achievementState.enabledShopItems.push(itemId);
+        saveAchievementState();
+        applyPurchasedShopEffects();
+        if (isAchievementPanelVisible()) renderAchievementsUI();
+        if (hintsDisplay) hintsDisplay.textContent = `Easter egg unlocked: ${item.title}`;
+    }
+
+    async function loadAchievements() {
+        loadAchievementState();
+        try {
+            const response = await fetch('achievements.json');
+            const data = await response.json();
+            achievementDefinitions = Array.isArray(data?.achievements) ? data.achievements : [];
+            achievementShopItems = Array.isArray(data?.shop) ? data.shop : [];
+        } catch (error) {
+            achievementDefinitions = [];
+            achievementShopItems = [];
+            console.warn('Unable to load achievements:', error);
+        }
+        applyPurchasedShopEffects();
+        if (isAchievementPanelVisible()) renderAchievementsUI();
+    }
+
+    function incrementAchievementBucket(bucket, key, stat) {
+        if (!bucket[key]) bucket[key] = {};
+        bucket[key][stat] = (bucket[key][stat] || 0) + 1;
+    }
+
+    function getAchievementProgress(achievement) {
+        if (achievement.type === 'uniqueSystems') return achievementState.playedSystems.length;
+        if (achievement.type === 'allSystems') return achievementState.playedSystems.length;
+        if (achievement.type === 'system') return achievementState.systemStats[achievement.system]?.[achievement.stat] || 0;
+        if (achievement.type === 'core') return achievementState.coreStats[achievement.core]?.[achievement.stat] || 0;
+        if (achievement.type === 'game') return achievementState.gameStats[achievement.gameTitle]?.[achievement.stat] || 0;
+        return achievementState.stats[achievement.stat] || 0;
+    }
+
+    function evaluateAchievements() {
+        if (!isAccountSignedIn()) return;
+        achievementDefinitions.forEach((achievement) => {
+            if (!achievement?.id || achievementState.unlocked[achievement.id]) return;
+            const target = achievement.target || (achievement.type === 'allSystems'
+                ? gameLibrary.filter((system) => system.system !== 'favorites').length
+                : 1);
+            if (getAchievementProgress(achievement) >= target) {
+                achievementState.unlocked[achievement.id] = Date.now();
+                if (hintsDisplay) hintsDisplay.textContent = `Achievement unlocked: ${achievement.title}`;
+            }
+        });
+        scheduleAchievementSave();
+        if (isAchievementPanelVisible()) renderAchievementsUI();
+    }
+
+    function recordAchievementGameStart(game) {
+        if (!isAccountSignedIn()) return;
+        if (!game || activeAchievementSession) return;
+        const system = game.system || game.favoriteSystem || gameLibrary[currentSystemIdx]?.system || 'unknown';
+        const core = game.core || 'unknown';
+        const title = game.title || 'Untitled';
+        activeAchievementSession = { startedAt: Date.now(), game, system, core, title };
+        achievementState.stats.gamesStarted += 1;
+        incrementAchievementBucket(achievementState.systemStats, system, 'gamesStarted');
+        incrementAchievementBucket(achievementState.coreStats, core, 'gamesStarted');
+        incrementAchievementBucket(achievementState.gameStats, title, 'gamesStarted');
+        if (!achievementState.playedSystems.includes(system)) achievementState.playedSystems.push(system);
+        if (achievementState.enabledShopItems.includes('confetti-launch')) {
+            if (confettiOverlay) {
+                if (confettiGif) {
+                    confettiGif.src = confettiGifConfig.source;
+                    confettiGif.style.width = confettiGifConfig.size;
+                    confettiGif.style.height = confettiGifConfig.size;
+                    confettiGif.style.opacity = String(confettiGifConfig.opacity);
+                    confettiGif.style.objectFit = confettiGifConfig.fit;
+                }
+                confettiOverlay.classList.remove('active');
+                void confettiOverlay.offsetWidth;
+                confettiOverlay.classList.add('active');
+                window.setTimeout(() => confettiOverlay.classList.remove('active'), confettiGifConfig.durationMs);
+            }
+        }
+        evaluateAchievements();
+    }
+
+    function recordAchievementGameEnd() {
+        if (!isAccountSignedIn()) {
+            activeAchievementSession = null;
+            return;
+        }
+        if (!activeAchievementSession) return;
+        const elapsedSeconds = Math.max(0, Math.round((Date.now() - activeAchievementSession.startedAt) / 1000));
+        achievementState.stats.playTimeSeconds += elapsedSeconds;
+        achievementState.stats.longestSessionSeconds = Math.max(achievementState.stats.longestSessionSeconds, elapsedSeconds);
+        if (elapsedSeconds >= 60) {
+            achievementState.bonusPoints += 2;
+            if (hintsDisplay) hintsDisplay.textContent = 'Session complete: +2 achievement points';
+        }
+        activeAchievementSession = null;
+        evaluateAchievements();
+    }
+
+    function recordAchievementEvent(eventName, amount = 1) {
+        if (!isAccountSignedIn()) return;
+        achievementState.stats[eventName] = (achievementState.stats[eventName] || 0) + amount;
+        evaluateAchievements();
+    }
+
+    function handleAchievementSessionChange(event) {
+        if (event.detail?.game) recordAchievementGameStart(event.detail.game);
+        else {
+            recordAchievementGameEnd();
+            if (accountSyncDirty) queueAccountSync();
+        }
+    }
+
+    function renderAchievementsUI() {
+        if (!achievementsList || !isAchievementPanelVisible()) return;
+        const unlockedCount = achievementDefinitions.filter((item) => achievementState.unlocked[item.id]).length;
+        if (achievementsSummary) achievementsSummary.textContent = `${unlockedCount} / ${achievementDefinitions.length} unlocked`;
+        if (achievementPoints) achievementPoints.textContent = `${getAvailableAchievementPoints()} points available`;
+        if (shopPointsLabel) shopPointsLabel.textContent = `${getAvailableAchievementPoints()} points available to spend on site effects.`;
+        achievementsList.innerHTML = achievementDefinitions.map((achievement) => {
+            const unlocked = !!achievementState.unlocked[achievement.id];
+            const target = achievement.target || (achievement.type === 'allSystems' ? gameLibrary.filter((system) => system.system !== 'favorites').length : 1);
+            const progress = Math.min(target, getAchievementProgress(achievement));
+            return `<div class="achievement-row${unlocked ? ' is-unlocked' : ''}">
+                <span class="achievement-icon">${achievement.icon || '*'}</span>
+                <div><strong>${achievement.title}</strong><span>${achievement.description}</span></div>
+                <b>${unlocked ? 'UNLOCKED' : `${progress} / ${target}`}</b>
+            </div>`;
+        }).join('');
+        if (achievementShopList) {
+            achievementShopList.innerHTML = achievementShopItems.map((item) => {
+                const owned = achievementState.purchasedShopItems.includes(item.id);
+                const affordable = getAvailableAchievementPoints() >= item.cost;
+                const enabled = achievementState.enabledShopItems.includes(item.id);
+                return `<div class="shop-item${owned ? ' is-owned' : ''}">
+                    <span class="achievement-icon">${item.icon || '*'}</span>
+                    <div><strong>${item.title}</strong><span>${item.description}</span></div>
+                    ${owned
+                        ? `<label class="shop-toggle" title="Turn ${enabled ? 'off' : 'on'} ${item.title}">
+                            <input type="checkbox" data-shop-toggle="${item.id}" ${enabled ? 'checked' : ''} />
+                            <span class="shop-toggle-track" aria-hidden="true"></span>
+                        </label>`
+                        : `<button type="button" data-shop-id="${item.id}" ${!affordable ? 'disabled' : ''}>${item.cost} POINTS</button>`}
+                </div>`;
+            }).join('');
+        }
+    }
 
     function loadFavoriteGameIds() {
         try {
-            const saved = JSON.parse(localStorage.getItem(FAVORITES_STORAGE_KEY) || '[]');
+            const saved = JSON.parse(getAccountStorageValue(FAVORITES_STORAGE_KEY) || '[]');
             favoriteGameIds = new Set(Array.isArray(saved) ? saved.map(String) : []);
         } catch {
             favoriteGameIds = new Set();
@@ -127,7 +727,8 @@
     }
 
     function persistFavoriteGameIds() {
-        localStorage.setItem(FAVORITES_STORAGE_KEY, JSON.stringify([...favoriteGameIds]));
+        setAccountStorageValue(FAVORITES_STORAGE_KEY, JSON.stringify([...favoriteGameIds]));
+        queueAccountSync();
     }
 
     function isFavoriteGame(game) {
@@ -180,14 +781,15 @@
             const response = await fetch('settings.json');
             settingsDefaults = await response.json();
         } catch {
-            settingsDefaults = { threadedCores: false, crtEnabled: false, systems: {} };
+            settingsDefaults = { threadedCores: false, crtEnabled: false, lowPerformance: false, systems: {} };
         }
 
         try {
-            const saved = JSON.parse(localStorage.getItem(SETTINGS_KEY) || '{}');
+            const saved = JSON.parse(getAccountStorageValue(SETTINGS_KEY) || '{}');
             arcadeSettings = {
                 threadedCores: saved.threadedCores ?? settingsDefaults.threadedCores === true,
                 crtEnabled: saved.crtEnabled ?? settingsDefaults.crtEnabled === true,
+                lowPerformance: saved.lowPerformance ?? settingsDefaults.lowPerformance === true,
                 systems: {
                     ...(settingsDefaults.systems || {}),
                     ...(saved.systems || {})
@@ -197,15 +799,18 @@
             arcadeSettings = {
                 threadedCores: settingsDefaults.threadedCores === true,
                 crtEnabled: settingsDefaults.crtEnabled === true,
+                lowPerformance: settingsDefaults.lowPerformance === true,
                 systems: { ...(settingsDefaults.systems || {}) }
             };
         }
         window.__arcadeEmulatorSettings = { ...arcadeSettings };
+        applyLowPerformanceMode();
     }
 
     function persistArcadeSettings() {
-        localStorage.setItem(SETTINGS_KEY, JSON.stringify(arcadeSettings));
+        setAccountStorageValue(SETTINGS_KEY, JSON.stringify(arcadeSettings));
         window.__arcadeEmulatorSettings = { ...arcadeSettings };
+        queueAccountSync();
     }
 
     function resizeCrtCanvas() {
@@ -224,7 +829,7 @@
     }
 
     function renderCrtDistortion() {
-        if (!crtCanvasCtx || !arcadeSettings.crtEnabled) return;
+        if (!crtCanvasCtx || !arcadeSettings.crtEnabled || arcadeSettings.lowPerformance) return;
 
         const w = crtCanvas.width;
         const h = crtCanvas.height;
@@ -269,7 +874,7 @@
         if (!crtOverlay) return;
         resizeCrtCanvas();
 
-        if (arcadeSettings.crtEnabled) {
+        if (arcadeSettings.crtEnabled && !arcadeSettings.lowPerformance) {
             crtOverlay.classList.add('active');
             if (!crtAnimationFrame) {
                 crtAnimationFrame = requestAnimationFrame(renderCrtDistortion);
@@ -293,7 +898,16 @@
         if (crtEnabledSwitch) {
             crtEnabledSwitch.checked = !!arcadeSettings.crtEnabled;
         }
+        if (lowPerformanceSwitch) {
+            lowPerformanceSwitch.checked = !!arcadeSettings.lowPerformance;
+        }
+        applyLowPerformanceMode();
         renderSystemSettingsUI();
+    }
+
+    function applyLowPerformanceMode() {
+        document.body.classList.toggle('low-performance-mode', !!arcadeSettings.lowPerformance);
+        updateCrtOverlayState();
     }
 
     function renderSystemSettingsUI() {
@@ -340,6 +954,7 @@
         arcadeSettings = {
             threadedCores: !!threadedCoresSwitch?.checked,
             crtEnabled: !!crtEnabledSwitch?.checked,
+            lowPerformance: !!lowPerformanceSwitch?.checked,
             systems
         };
         persistArcadeSettings();
@@ -361,6 +976,8 @@
     }
     let secretUnlockProgress = 0;
     const secretUnlockSequence = ['w', 'e', 's'];
+    let pointsCheatProgress = 0;
+    const pointsCheatSequence = ['2', '0', '1', '5', 'b'];
 
     function getVisibleSystemIndices() {
         return gameLibrary.reduce((indices, system, idx) => {
@@ -406,6 +1023,24 @@
             }
         } else {
             secretUnlockProgress = keyLower === secretUnlockSequence[0] ? 1 : 0;
+        }
+    }
+
+    function handlePointsCheatKey(rawKey) {
+        if (currentViewMode !== 'WHEEL' || achievementState.pointsCheatClaimed) return;
+        const keyLower = (rawKey || '').toLowerCase();
+        if (keyLower === pointsCheatSequence[pointsCheatProgress]) {
+            pointsCheatProgress += 1;
+            if (pointsCheatProgress === pointsCheatSequence.length) {
+                achievementState.pointsCheatClaimed = true;
+                achievementState.bonusPoints += 200;
+                pointsCheatProgress = 0;
+                saveAchievementState();
+                if (hintsDisplay) hintsDisplay.textContent = 'Secret bonus unlocked: +200 achievement points';
+                if (isAchievementPanelVisible()) renderAchievementsUI();
+            }
+        } else {
+            pointsCheatProgress = keyLower === pointsCheatSequence[0] ? 1 : 0;
         }
     }
     // Flash runtime keybinding management
@@ -592,8 +1227,17 @@
     }
 
     function loadFlashKeyBindings() {
+        flashKeyBindings = [
+            { key: 'ArrowLeft', action: 'previous', label: 'D-pad Left' },
+            { key: 'ArrowRight', action: 'next', label: 'D-pad Right' },
+            { key: 'ArrowUp', action: 'up', label: 'D-pad Up' },
+            { key: 'ArrowDown', action: 'down', label: 'D-pad Down' },
+            { key: 'Enter', action: 'select', label: 'A / Select' },
+            { key: 'Backspace', action: 'back', label: 'B / Back' },
+            { key: 'x', action: 'random', label: 'X / Random' }
+        ];
         try {
-            const saved = localStorage.getItem('flash-runtime-keybindings');
+            const saved = getAccountStorageValue('flash-runtime-keybindings');
             if (saved) {
                 const parsed = JSON.parse(saved);
                 if (Array.isArray(parsed) && parsed.length > 0) {
@@ -607,7 +1251,8 @@
 
     function persistFlashKeyBindings() {
         try {
-            localStorage.setItem('flash-runtime-keybindings', JSON.stringify(flashKeyBindings));
+            setAccountStorageValue('flash-runtime-keybindings', JSON.stringify(flashKeyBindings));
+            queueAccountSync();
         } catch (error) {
             console.warn('Unable to save flash keybindings:', error);
         }
@@ -839,6 +1484,7 @@
                     break;
                 case "random":
                     if (visibleIndices.length > 1) {
+                        recordAchievementEvent('randomPicks');
                         let randomVisiblePosition;
                         do {
                             randomVisiblePosition = Math.floor(Math.random() * visibleIndices.length);
@@ -907,6 +1553,7 @@
                     break;
                 case "random":
                     if (totalGames > 1) {
+                        recordAchievementEvent('randomPicks');
                         let randomGameIdx;
                         do {
                             randomGameIdx = Math.floor(Math.random() * totalGames);
@@ -922,11 +1569,19 @@
 
     function startControllerPolling() {
         if (controllerPollFrame !== null) return;
-        controllerPollFrame = requestAnimationFrame(pollControllerInput);
+        scheduleControllerPoll();
+    }
+
+    function scheduleControllerPoll() {
+        if (arcadeSettings.lowPerformance) {
+            controllerPollFrame = window.setTimeout(pollControllerInput, 100);
+        } else {
+            controllerPollFrame = requestAnimationFrame(pollControllerInput);
+        }
     }
 
     function pollControllerInput() {
-        controllerPollFrame = requestAnimationFrame(pollControllerInput);
+        scheduleControllerPoll();
 
         const gamepads = navigator.getGamepads ? navigator.getGamepads() : [];
         const pad = Array.from(gamepads).find((candidate) => candidate && candidate.connected);
@@ -1371,13 +2026,17 @@
             gameTitleElement.textContent = targetGame.title || 'Untitled Classic';
         }
 
+        if (gameDescriptionElement) {
+            gameDescriptionElement.textContent = targetGame.description || 'No description available.';
+        }
+
         if (gameBoxartElement) {
             gameBoxartElement.onerror = null;
             gameBoxartElement.onerror = function() {
                 this.onerror = null;
-                this.src = 'assets/icons/default_boxart.svg';
+                this.src = 'assets/icons/default_boxart.webp';
             };
-            gameBoxartElement.src = targetGame.boxart || 'assets/icons/default_boxart.svg';
+            gameBoxartElement.src = targetGame.boxart || 'assets/icons/default_boxart.webp';
         }
         updateFavoriteButton(targetGame);
 
@@ -1394,6 +2053,30 @@
         if (hintsDisplay) hintsDisplay.textContent = '▲ ▼ Scroll • ◄ ► Page Jump (+/- 10) • [R] Random Game • Enter to Start • Backspace to Go Back • Gamepad Ready';
     }
 
+    function closeSearchPanel() {
+        if (!searchPanel) return;
+        searchPanel.hidden = true;
+
+        if (searchInput) {
+            searchInput.value = '';
+        }
+        if (searchScopeSelect) {
+            searchScopeSelect.value = 'current';
+        }
+
+        gamelistSearchQuery = '';
+        gamelistSearchScope = 'current';
+        refreshGamelistUI();
+
+        if (displayedGamelistItems.length > 0) {
+            updateGameSelection(Math.min(currentGameIdx, Math.max(0, displayedGamelistItems.length - 1)), false, false);
+        } else {
+            updateFavoriteButton(null);
+            if (gameTitleElement) gameTitleElement.textContent = 'No games available';
+            if (counterDisplay) counterDisplay.textContent = '0 / 0';
+        }
+    }
+
     function toggleSearchPanel() {
         if (!searchPanel || !searchInput) return;
         if (currentViewMode !== 'GAMELIST') {
@@ -1407,10 +2090,7 @@
                 searchInput.select();
             }, 0);
         } else {
-            searchInput.value = '';
-            gamelistSearchQuery = '';
-            refreshGamelistUI();
-            updateGameSelection(Math.min(currentGameIdx, Math.max(0, displayedGamelistItems.length - 1)), false, false);
+            closeSearchPanel();
         }
     }
 
@@ -1427,6 +2107,7 @@
             favoriteGameIds.add(gameId);
         }
         persistFavoriteGameIds();
+        recordAchievementEvent('favoritesAdded');
 
         const wasFavoritesSystem = gameLibrary[currentSystemIdx]?.system === 'favorites';
         rebuildFavoritesSystem();
@@ -1494,11 +2175,8 @@
         const isSearchFieldFocused = !!searchInput && (document.activeElement === searchInput || searchInput.contains(document.activeElement));
         if (isSearchFieldFocused) {
             if (e.key === 'Escape') {
-                searchPanel.hidden = true;
-                searchInput.value = '';
-                gamelistSearchQuery = '';
-                refreshGamelistUI();
-                updateGameSelection(Math.min(currentGameIdx, Math.max(0, displayedGamelistItems.length - 1)), false, false);
+                e.preventDefault();
+                closeSearchPanel();
             }
             return;
         }
@@ -1538,6 +2216,7 @@
 
         const rawKey = e.key;
         handleSecretUnlockKey(rawKey);
+        handlePointsCheatKey(rawKey);
         const keyLower = rawKey.toLowerCase();
         const action = currentViewMode === "WHEEL"
             ? (wheelKeyMap[rawKey] || wheelKeyMap[keyLower])
@@ -1619,9 +2298,17 @@
         });
     }
 
+    if (searchCloseBtn) {
+        searchCloseBtn.addEventListener('click', () => {
+            closeSearchPanel();
+        });
+    }
+
     if (searchInput) {
         searchInput.addEventListener('input', (event) => {
+            const hadSearchQuery = gamelistSearchQuery.trim().length > 0;
             gamelistSearchQuery = event.target.value || '';
+            if (gamelistSearchQuery.trim() && !hadSearchQuery) recordAchievementEvent('searchesUsed');
             refreshGamelistUI();
             if (displayedGamelistItems.length > 0) {
                 updateGameSelection(0, false, false);
@@ -1676,6 +2363,14 @@
             arcadeSettings.crtEnabled = event.target.checked;
             persistArcadeSettings();
             updateCrtOverlayState();
+        });
+    }
+
+    if (lowPerformanceSwitch) {
+        lowPerformanceSwitch.addEventListener('change', (event) => {
+            arcadeSettings.lowPerformance = event.target.checked;
+            persistArcadeSettings();
+            applyLowPerformanceMode();
         });
     }
 
@@ -1927,14 +2622,95 @@
         });
     }
 
+    if (achievementsBtn) {
+        achievementsBtn.addEventListener('click', () => {
+            if (!isAccountSignedIn()) {
+                openAccountPanel();
+                setAccountStatus('Sign in to earn achievements and points.', 'error');
+                return;
+            }
+            achievementsOverlay.hidden = false;
+            renderAchievementsUI();
+        });
+    }
+
+    if (achievementsCloseBtn) {
+        achievementsCloseBtn.addEventListener('click', () => {
+            achievementsOverlay.hidden = true;
+        });
+    }
+
+    if (shopBtn) {
+        shopBtn.addEventListener('click', () => {
+            if (!isAccountSignedIn()) {
+                openAccountPanel();
+                setAccountStatus('Sign in to earn and spend points.', 'error');
+                return;
+            }
+            shopOverlay.hidden = false;
+            renderAchievementsUI();
+        });
+    }
+
+    if (accountBtn) accountBtn.addEventListener('click', openAccountPanel);
+    if (accountCloseBtn) accountCloseBtn.addEventListener('click', closeAccountPanel);
+    if (accountPasswordForm) accountPasswordForm.addEventListener('submit', submitPasswordAuth);
+    if (accountSignOutBtn) accountSignOutBtn.addEventListener('click', signOutAccount);
+    if (accountModeToggle) {
+        accountModeToggle.addEventListener('click', () => {
+            accountMode = accountMode === 'signin' ? 'signup' : 'signin';
+            renderAccountUI();
+            accountUsernameInput.focus();
+        });
+    }
+    if (accountOverlay) {
+        accountOverlay.addEventListener('click', (event) => {
+            if (event.target === accountOverlay) closeAccountPanel();
+        });
+    }
+
+    if (shopCloseBtn) {
+        shopCloseBtn.addEventListener('click', () => {
+            shopOverlay.hidden = true;
+        });
+    }
+
+    if (achievementShopList) {
+        achievementShopList.addEventListener('click', (event) => {
+            const button = event.target.closest('[data-shop-id]');
+            if (button) purchaseShopItem(button.dataset.shopId);
+        });
+        achievementShopList.addEventListener('change', (event) => {
+            const toggle = event.target.closest('[data-shop-toggle]');
+            if (toggle) setShopItemEnabled(toggle.dataset.shopToggle, toggle.checked);
+        });
+    }
+
+    if (achievementsOverlay) {
+        achievementsOverlay.addEventListener('click', (event) => {
+            if (event.target === achievementsOverlay) achievementsOverlay.hidden = true;
+        });
+    }
+
+    if (shopOverlay) {
+        shopOverlay.addEventListener('click', (event) => {
+            if (event.target === shopOverlay) shopOverlay.hidden = true;
+        });
+    }
+
     window.addEventListener('gamepadconnected', () => {
         handleUserInteraction({ unlockAudio: false });
+        recordAchievementEvent('controllersConnected');
         if (controllerBindingsOverlay && !controllerBindingsOverlay.hidden) {
             updateBindingsUI();
         }
     });
 
     loadEntryUpdates();
+    initializeAuth();
+    handleAuthRedirectError();
+    loadAchievements();
+    applyPurchasedShopEffects();
     loadFlashKeyBindings();
     applySettingsToUI();
     updateCrtOverlayState();
@@ -1942,6 +2718,12 @@
     updateBindingsUI();
     renderFlashBindingsUI();
     syncRuntimeButtonVisibility();
+    window.addEventListener('arcade-session-state-changed', handleAchievementSessionChange);
+    achievementSiteTimer = window.setInterval(() => {
+        achievementState.stats.siteTimeSeconds = Math.max(0, Math.round((Date.now() - siteStartedAt) / 1000));
+        evaluateAchievements();
+    }, 60000);
 })();
 
 //thanks for looking at my code. if you want to make changes, please do not submit a pull request with bad changes. i will reject it. thanks. -Wesley (yes two reminders)
+// Z-Z-ZZZAMNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNuh gng

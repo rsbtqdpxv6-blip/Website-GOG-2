@@ -1,0 +1,33 @@
+{
+	"version": 1,
+	"achievements": [
+		{ "id": "first-launch", "title": "Power On", "description": "Launch your first game.", "icon": ">", "type": "stat", "stat": "gamesStarted", "target": 1, "points": 10 },
+		{ "id": "five-games", "title": "Warm Up", "description": "Play 5 games.", "icon": "5", "type": "stat", "stat": "gamesStarted", "target": 5, "points": 15 },
+		{ "id": "twenty-five-games", "title": "Regular", "description": "Play 25 games.", "icon": "25", "type": "stat", "stat": "gamesStarted", "target": 25, "points": 25 },
+		{ "id": "hundred-games", "title": "Arcade Legend", "description": "Play 100 games.", "icon": "100", "type": "stat", "stat": "gamesStarted", "target": 100, "points": 50 },
+		{ "id": "five-minutes", "title": "Just One More", "description": "Spend 5 minutes playing.", "icon": "5m", "type": "stat", "stat": "playTimeSeconds", "target": 300, "points": 10 },
+		{ "id": "one-hour", "title": "Quarter Eater", "description": "Spend one hour playing.", "icon": "1h", "type": "stat", "stat": "playTimeSeconds", "target": 3600, "points": 30 },
+		{ "id": "site-hour", "title": "Cabinet Regular", "description": "Spend one hour on the arcade site.", "icon": "1h", "type": "stat", "stat": "siteTimeSeconds", "target": 3600, "points": 25 },
+		{ "id": "snes-five", "title": "16-Bit Ritual", "description": "Play 5 SNES games.", "icon": "S", "type": "system", "system": "snes", "stat": "gamesStarted", "target": 5, "points": 20 },
+		{ "id": "nes-five", "title": "8-Bit Memory", "description": "Play 5 NES games.", "icon": "N", "type": "system", "system": "nes", "stat": "gamesStarted", "target": 5, "points": 20 },
+		{ "id": "gba-five", "title": "Pocket Power", "description": "Play 5 Game Boy Advance games.", "icon": "G", "type": "system", "system": "gba", "stat": "gamesStarted", "target": 5, "points": 20 },
+		{ "id": "flash-first", "title": "Flashback", "description": "Play a Flash game.", "icon": "F", "type": "core", "core": "ruffle", "stat": "gamesStarted", "target": 1, "points": 20 },
+		{ "id": "flash-five", "title": "Plugin Era", "description": "Play 5 Flash games.", "icon": "5F", "type": "core", "core": "ruffle", "stat": "gamesStarted", "target": 5, "points": 35 },
+		{ "id": "html5-first", "title": "Browser Native", "description": "Play a native HTML game.", "icon": "H", "type": "core", "core": "native_html", "stat": "gamesStarted", "target": 1, "points": 15 },
+		{ "id": "three-systems", "title": "Well Rounded", "description": "Play games from 3 different systems.", "icon": "3", "type": "uniqueSystems", "target": 3, "points": 25 },
+		{ "id": "all-systems", "title": "Collector", "description": "Play a game from every system in the library.", "icon": "*", "type": "allSystems", "points": 100 },
+		{ "id": "favorite-one", "title": "Keep This One", "description": "Add a game to favorites.", "icon": "*", "type": "stat", "stat": "favoritesAdded", "target": 1, "points": 10 },
+		{ "id": "favorite-five", "title": "Curated Shelf", "description": "Add 5 games to favorites.", "icon": "5*", "type": "stat", "stat": "favoritesAdded", "target": 5, "points": 25 },
+		{ "id": "search-one", "title": "Know What You Want", "description": "Use the game search.", "icon": "?", "type": "stat", "stat": "searchesUsed", "target": 1, "points": 5 },
+		{ "id": "random-ten", "title": "Dealer's Choice", "description": "Use random pick 10 times.", "icon": "R", "type": "stat", "stat": "randomPicks", "target": 10, "points": 20 },
+		{ "id": "controller-ready", "title": "Plugged In", "description": "Connect a game controller.", "icon": "C", "type": "stat", "stat": "controllersConnected", "target": 1, "points": 15 }
+	],
+	"shop": [
+		{ "id": "golden-wheel", "title": "Golden Wheel", "description": "Give the active system wheel a warm gold glow.", "icon": "G", "cost": 25, "effect": "goldenWheel" },
+		{ "id": "arcade-scanlines", "title": "Secret Scanlines", "description": "Keep scanlines on even when the CRT setting is off.", "icon": "S", "cost": 35, "effect": "scanlines" },
+		{ "id": "rainbow-accent", "title": "Rainbow Cabinet", "description": "Cycle the arcade accent color while you browse.", "icon": "R", "cost": 50, "effect": "rainbowAccent" },
+		{ "id": "tiny-mode", "title": "Tiny Cabinet Mode", "description": "Shrink the interface into a compact arcade monitor view.", "icon": "T", "cost": 60, "effect": "tinyMode" },
+		{ "id": "secret-message", "title": "Secret", "description": "Reveal a hidden message in the arcade footer.", "icon": "?", "cost": 75, "effect": "secretMessage" },
+		{ "id": "confetti-launch", "title": "Celebration Mode", "description": "Show a burst of color whenever a game launches.", "icon": "*", "cost": 100, "effect": "confettiLaunch" }
+	]
+}

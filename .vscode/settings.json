@@ -1,0 +1,7 @@
+{
+    "liveServer.settings.ignoreFiles": [
+        "**/auth-server/**",
+        "**/auth.json",
+        "**/node_modules/**"
+    ]
+}

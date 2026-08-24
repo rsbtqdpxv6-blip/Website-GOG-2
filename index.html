@@ -23,7 +23,10 @@
     <!-- Global Application Header -->
     <header class="es-header">
         <div class="system-title" id="system-display">Loading Wheel...</div>
-        <div class="counter-label" id="counter-display">0 / 0</div>
+        <div class="header-actions">
+            <button class="control-settings-btn account-header-btn" id="account-btn" type="button">Sign in</button>
+            <div class="counter-label" id="counter-display">0 / 0</div>
+        </div>
     </header>
 
     <!-- UI LAYER A: 3D Console Wheel Stage -->
@@ -45,7 +48,7 @@
         <div class="preview-pane">
             <div class="media-stack-box" id="game-fanart-box">
                 <div class="boxart-frame">
-                    <img id="game-boxart" src="assets/icons/default_boxart.svg" alt="Game Cover">
+                    <img id="game-boxart" src="assets/icons/default_boxart.webp" alt="Game Cover">
                 </div>
             </div>
             <div class="game-meta">
@@ -53,6 +56,7 @@
                     <h2 id="game-title">Game Title</h2>
                     <button id="favorite-game-btn" class="favorite-game-btn" type="button" aria-label="Add game to favorites" aria-pressed="false">☆</button>
                 </div>
+                <p id="game-description" class="game-description">No description available.</p>
             </div>
         </div>
     </div>
@@ -68,6 +72,8 @@
             </div>
         </div>
         <button class="control-settings-btn" id="search-btn" type="button">Search</button>
+        <button class="control-settings-btn" id="achievements-btn" type="button">Achievements</button>
+        <button class="control-settings-btn" id="shop-btn" type="button">Shop</button>
         <button class="control-settings-btn" id="controller-settings-btn" type="button">Bindings</button>
         <button class="control-settings-btn" id="settings-menu-btn" type="button">Settings</button>
     </footer>
@@ -75,12 +81,44 @@
     <div class="gamelist-search-panel" id="gamelist-search-panel" hidden>
         <div class="gamelist-search-row">
             <label class="gamelist-search-label" for="gamelist-search-scope">Scope</label>
-            <select id="gamelist-search-scope" aria-label="Search scope">
-                <option value="current">Current system</option>
-                <option value="all">All systems</option>
-            </select>
+            <div class="gamelist-search-controls">
+                <select id="gamelist-search-scope" aria-label="Search scope">
+                    <option value="current">Current system</option>
+                    <option value="all">All systems</option>
+                </select>
+                <button class="panel-close-btn search-close-btn" id="search-close-btn" type="button" aria-label="Close search">✕</button>
+            </div>
         </div>
         <input id="gamelist-search-input" type="search" placeholder="Search games..." aria-label="Search games" />
+    </div>
+
+    <div class="controller-bindings-overlay account-overlay" id="account-overlay" hidden>
+        <div class="controller-bindings-panel account-panel">
+            <div class="controller-bindings-header">
+                <div>
+                    <h3 id="account-panel-title">Wesley Games account</h3>
+                    <p id="account-panel-subtitle"> </p>
+                </div>
+                <button class="panel-close-btn" id="account-close" type="button" aria-label="Close account">X</button>
+            </div>
+            <div id="account-status" class="account-status" role="status" aria-live="polite"></div>
+            <button class="account-method-btn" id="account-method-toggle" type="button" hidden>Use email sign-in instead</button>
+            <form id="account-password-form" class="account-form">
+                <label for="account-username">Username</label>
+                <input id="account-username" name="username" type="text" autocomplete="username" minlength="3" maxlength="24" pattern="[A-Za-z0-9_]{3,24}" required placeholder="arcade_player" />
+                <label id="account-password-name-label" for="account-password-name" hidden>Display name</label>
+                <input id="account-password-name" name="name" type="text" autocomplete="name" maxlength="40" placeholder="Display name" hidden />
+                <label for="account-password">Password</label>
+                <input id="account-password" name="password" type="password" autocomplete="current-password" minlength="8" required placeholder="At least 8 characters" />
+                <button class="account-primary-btn" type="submit">Sign in</button>
+            </form>
+            <div id="account-signed-in" class="account-signed-in" hidden>
+                <strong id="account-user-label"></strong>
+                <span id="account-user-email"></span>
+                <button class="account-secondary-btn" id="account-sign-out" type="button">Sign out</button>
+            </div>
+            <button class="account-mode-btn" id="account-mode-toggle" type="button">Create an account</button>
+        </div>
     </div>
 
     <div class="controller-bindings-overlay" id="controller-bindings-overlay" hidden>
@@ -96,6 +134,33 @@
             <div class="controller-bindings-actions">
                 <button id="controller-bindings-reset" type="button">Reset Defaults</button>
             </div>
+        </div>
+    </div>
+
+    <div class="controller-bindings-overlay achievements-overlay" id="achievements-overlay" hidden>
+        <div class="controller-bindings-panel achievements-panel">
+            <div class="controller-bindings-header">
+                <div>
+                    <h3>Achievements</h3>
+                    <p id="achievements-summary">0 / 0 unlocked</p>
+                    <p id="achievement-points" class="achievement-points">0 points available</p>
+                </div>
+                <button class="panel-close-btn" id="achievements-close" type="button" aria-label="Close achievements">X</button>
+            </div>
+            <div id="achievements-list" class="achievements-list"></div>
+        </div>
+    </div>
+
+    <div class="controller-bindings-overlay shop-overlay" id="shop-overlay" hidden>
+        <div class="controller-bindings-panel shop-panel">
+            <div class="controller-bindings-header">
+                <div>
+                    <h3>Easter Egg Shop</h3>
+                    <p id="shop-points-label">Spend your achievement points on site effects.</p>
+                </div>
+                <button class="panel-close-btn" id="shop-close" type="button" aria-label="Close shop">X</button>
+            </div>
+            <div id="achievement-shop-list" class="achievement-shop-list"></div>
         </div>
     </div>
 
@@ -116,6 +181,10 @@
                 <label class="binding-row" for="settings-crt-enabled">
                     <span>Enable CRT overlay</span>
                     <input id="settings-crt-enabled" type="checkbox" />
+                </label>
+                <label class="binding-row" for="settings-low-performance">
+                    <span>Low Performance Mode</span>
+                    <input id="settings-low-performance" type="checkbox" />
                 </label>
                 <div id="settings-system-list" class="settings-system-list"></div>
             </div>
@@ -160,9 +229,20 @@
         <canvas id="crt-distortion-canvas"></canvas>
     </div>
 
+    <div id="shop-confetti-overlay" aria-hidden="true">
+        <img id="shop-confetti-gif" src="assets/confetti.gif" alt="" />
+    </div>
+
 
     <!-- Script Layer Stack -->
-    <script src="coi-serviceworker.js" defer></script>
+    <script>
+        if ((location.hostname === 'localhost' || location.hostname === '127.0.0.1') && navigator.serviceWorker) {
+            navigator.serviceWorker.getRegistrations().then((registrations) => {
+                registrations.forEach((registration) => registration.unregister());
+            });
+        }
+    </script>
+    <script src="auth-config.js" defer></script>
     <script src="emulator-launcher.js" defer></script>
     <script src="html-launcher.js" defer></script>
     <script src="app.js" defer></script>
