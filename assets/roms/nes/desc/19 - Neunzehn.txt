@@ -1,0 +1,5 @@
+The game roughly consists of a strategy screen where you move your subordinate troops across the island that is the stage, and a combat mode where you handle battles when troops come into contact with each other on the strategy screen.
+
+The element of searching for the "almighty stone" in the story does not actually exist in the game. It is a game consisting only of pure tactical and strategic elements, with the goal of ultimately defeating all three factions other than one's own.
+
+This work has a very unique operation system, and the movement method is radio-controlled, similar to ``Bangering Bay'' (1984).

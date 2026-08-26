@@ -1,28 +1,70 @@
-my-retro-arcade/
-├── index.html          <-- Clean structural markup
-├── app.js              <-- Application state & geometry runtime
-├── library.json        <-- Generated game list configuration
-├── style.scss          <-- Sassy stylesheet source
-├── style.css           <-- Compiled stylesheet linked in HTML
-├── generate_library.py <-- Run this tool to update library.json
+Website-GOG-2/
+├── index.html                 <-- Main arcade interface
+├── app.js                     <-- Application state, input, and wheel runtime
+├── library.json               <-- Generated game library consumed by app.js
+├── achievements.json          <-- Achievement definitions and shop items
+├── settings.json              <-- Default site and per-system settings
+├── update-log.json            <-- Entries shown on the entry screen
+├── style.scss                 <-- Stylesheet source
+├── style.css                  <-- Compiled stylesheet linked by index.html
+├── generate_library.py        <-- Scan ROM folders and regenerate library.json
+├── run_scraper.bat            <-- Windows shortcut for generate_library.py
+├── cleanup_boxart.py          <-- Remove artwork with no matching library item
+├── run_cleanup.bat            <-- Windows shortcut for cleanup_boxart.py
+├── emulator-launcher.js       <-- EmulatorJS launch integration
+├── html-launcher.js           <-- HTML5 game launch integration
+├── ebook-reader.js            <-- Book/EPUB launch integration
+├── auth-config.js             <-- Optional account server configuration
+├── coi-serviceworker.js       <-- Cross-origin isolation support for threaded cores
+├── emulatorjs/                <-- EmulatorJS runtime, cores, and data files
+├── ruffle/                    <-- Ruffle Flash runtime
+├── auth-server/               <-- Optional account API server
+├── supabase/                  <-- Optional Supabase schema and functions
+├── used_dats/                 <-- DAT/source files used for descriptions
 └── assets/
-    ├── icons/
-    │   ├── snes.png            <-- Transparent PNG logo (350x200)
-    │   ├── gba.png             <-- Transparent PNG logo (350x200)
-    │   ├── default_system.png  <-- Fallback transparent template
-    │   └── default_boxart.png  <-- Fallback box art template
-    ├── backgrounds/
-    │   ├── snes.jpg            <-- Fullscreen backdrop for Super Nintendo
-    │   └── gba.jpg             <-- Fullscreen backdrop for Game Boy Advance
+    ├── icons/                 <-- System icons and fallback artwork
+    ├── backgrounds/           <-- Optional system backgrounds
+    ├── sound/                 <-- UI sound effects
     └── roms/
-        ├── snes/
-        │   ├── Super Mario World.sfc
-        │   ├── Chrono Trigger.sfc
-        │   └── boxart/
-        │       ├── Super Mario World.png   <-- Game Box Art (300x400)
-        │       ├── Super Mario Worldf.jpg  <-- Optional Game Fanart (16:9)
-        │       └── Chrono Trigger.png      <-- Game Box Art (300x400)
-        └── gba/
-            ├── Sonic Advance.gba
-            └── boxart/
-                └── Sonic Advance.png       <-- Game Box Art (300x400)
+        ├── a26/               <-- Atari 2600 ROMs and boxart
+        ├── a52/               <-- Atari 5200 ROMs and boxart
+        ├── a78/               <-- Atari 7800 ROMs and boxart
+        ├── books/              <-- EPUB/PDF book files and boxart
+        ├── doom/               <-- Doom game folders and boxart
+        ├── dos/                <-- DOS game folders and boxart
+        ├── flash/              <-- Flash game files and boxart
+        ├── gamegear/           <-- Game Gear ROMs and boxart
+        ├── gb/                 <-- Game Boy ROMs and boxart
+        ├── gba/                <-- Game Boy Advance ROMs and boxart
+        ├── gbc/                <-- Game Boy Color ROMs and boxart
+        ├── html5/              <-- Browser games and boxart
+        ├── megadrive/          <-- Mega Drive ROMs and boxart
+        ├── n64/                <-- Nintendo 64 ROMs and boxart
+        ├── nes/                <-- Nintendo Entertainment System ROMs and boxart
+        ├── secret/             <-- Mixed-format favorites ROMs and boxart
+        ├── sms/                <-- Master System ROMs and boxart
+        ├── snes/               <-- Super Nintendo ROMs and boxart
+        └── tg16/               <-- TurboGrafx-16 ROMs and boxart
+
+ROM examples
+============
+
+Standard console game:
+assets/roms/snes/Super Mario World (USA).sfc
+assets/roms/snes/boxart/Super Mario World.png
+
+DOS game (keep the executable inside its game folder):
+assets/roms/dos/blood/BLOOD.EXE
+assets/roms/dos/boxart/blood.png
+
+HTML5 game (the folder must contain index.html):
+assets/roms/html5/Eaglercraft/index.html
+assets/roms/html5/boxart/Eaglercraft.png
+
+Mixed-format favorite:
+assets/roms/secret/Super Mario World.sfc
+assets/roms/secret/boxart/Super Mario World.png
+
+Run run_scraper.bat after adding or removing games. The generated library.json
+is the file loaded by the website; artwork is matched by the scraper and does
+not need to be listed manually in index.html.

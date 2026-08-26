@@ -1,0 +1,301 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE datafile PUBLIC "-//Logiqx//DTD ROM Management Datafile//EN" "http://www.logiqx.com/Dats/datafile.dtd">
+<datafile>
+  <header>
+    <name>Nintendo 64</name>
+    <description>Information from ScreenScraper.fr database</description>
+    <version>1.0</version>
+    <date>2026-08-25 3:59 PM</date>
+    <author>Skraper</author>
+    <url>https://www.screenscraper.fr</url>
+  </header>
+  <game name="Mega Man 64">
+    <description>Mega Man blasts his way onto the Nintendo® 64 System for the first time ever! This epic adventure combines the best of classic Mega Man action with enormous bosses, a riveting storyline and all the depth of the hottest RPG. Explore vast 3-D worlds in your quest to find the treasure of all treasures, the Mother Lode. You'll love the stunning 3-D graphics, powerful weapons and non-stop action ...unless of course, you're a boos.</description>
+    <year>2001</year>
+    <manufacturer>Capcom</manufacturer>
+    <rom name="Mega Man 64 (USA).z64" size="33554432" />
+  </game>
+  <game name="Mario Party 2">
+    <description>Mario and a range of well known Nintendo characters, including Yoshi, Bowser, Luigi, and Wario return for some more party action. 
+
+The second edition includes 5 new boards, each with a specific theme, such as Space Land, Western Land, Horror Land, and Mystery Land. Each board includes unique attributes in relation to the theme, but the main goal is the same: complete the board game over a certain amount of moves and be the player to have the most coins and/or stars at the end. 
+
+The single player story mode allows one person and 3 CPU controlled players to play each board. Once you play a specific mini-game (64 in all), they become available to purchase using the coins you collected in your games to play anytime. Multiplayer allows 2 to 4 people to play the game.</description>
+    <year>2000</year>
+    <manufacturer>Nintendo</manufacturer>
+    <rom name="Mario Party 2 (USA).z64" size="33554432" />
+  </game>
+  <game name="The Legend of Zelda : Majora's Mask">
+    <description>After having fulfilled Princess Zelda's request and saved the land of Hyrule from grave danger, Link departs on his horse Epona. In the Lost Woods, he is ambushed by Skull Kid, an imp who dons a mysterious mask, accompanied by the fairies Tael and Tatl. Skull Kid turns Link into a small plant-like creature known as a Deku Scrub and takes away his horse and his magical ocarina. Shortly afterward, Tatl joins Link and agrees to help him revert to his native form. A meeting with a wandering mask salesman reveals that the Skull Kid is wearing Majora's Mask, an ancient item used in hexing rituals, which calls forth a menacing moon hovering over the land of Termina. Link has exactly three days to find a way to prevent this from happening.</description>
+    <year>2000</year>
+    <manufacturer>Nintendo</manufacturer>
+    <rom name="The Legend of Zelda, Majora's Mask (USA).z64" size="33554432" />
+  </game>
+  <game name="Mario Golf">
+    <description>Forget buying expensive golf gear--Mario brings the game to you. Mario Golf features four complete 18-hole courses, 11 golfers, and precise play control. Create your own golfer and build up his or her experience and skill levels by competing in various tournaments and head-to-head matches. The more you play, the stronger and more accurate your golfer becomes. There are many different modes of play in Mario Golf, including a wide variety of minigames designed to challenge even the most level-headed swingers.</description>
+    <year>1999</year>
+    <manufacturer>Nintendo</manufacturer>
+    <rom name="Mario Golf (USA).z64" size="33554432" />
+  </game>
+  <game name="Mystical Ninja Starring Goemon">
+    <description>Mystical Ninja Starring Goemon is an action-based RPG similar in style to The Legend of Zelda: The Ocarina of Time.  It is also the first localized Goemon game since The Legend of the Mystical Ninja for the SNES.  Players control Goemon and his friends as they make their way through Ancient Japan to stop the Peach Mountain Shoguns.  You can talk to characters, whack enemies with your pipe (or hurl coins at them), visit a deranged fortune teller who shrieks out "PLASMA!" at random intervals for no reason, and more.
+
+Each member of the Goemon team can also learn a special ability to access new areas as players progress through the game.  Goemon earns the "Sudden Impact" power, which lets him move blocks he normally couldn't, Ebisumaru can shrink to small sizes so he can pass through tiny cracks, Sasuke earns an extra high jump, and Yae gets the ability to transform into a Mermaid so that she can swim underwater.
+</description>
+    <year>1998</year>
+    <manufacturer>Konami</manufacturer>
+    <rom name="Mystical Ninja Starring Goemon (USA).z64" size="16777216" />
+  </game>
+  <game name="Donkey Kong 64">
+    <description>K. Rool has kidnapped the Kongs! Can Donkey Kong rescue his friends, reclaim the Golden Bananas and save his homeland from certain doom? Take out some Kremlings with Chunky's Pineapple Launcher or Lanky's Trombone. Float through the air using Tiny's Ponytail Twirl. Even rocket to the sky with Diddy's Jetbarrel!</description>
+    <year>1999</year>
+    <manufacturer>Nintendo</manufacturer>
+    <rom name="Donkey Kong 64 (USA).z64" size="33554432" />
+  </game>
+  <game name="007 : The World is Not Enough">
+    <description>The World Is Not Enough is a first-person shooter video game developed by Eurocom and based on the 1999 James Bond film of the same name. It was published by Electronic Arts and released for the Nintendo 64 on October 17, 2000, shortly before the release of its PlayStation counterpart. The game features a single-player campaign in which players assume the role of MI6 agent James Bond as he fights to stop a terrorist from triggering a nuclear meltdown in the waters of Istanbul. It includes a split-screen multiplayer mode where up to four players can compete in different types of deathmatch and objective-based games.</description>
+    <year>2000</year>
+    <manufacturer>EA Games</manufacturer>
+    <rom name="007 - The World Is Not Enough (USA).z64" size="33554432" />
+  </game>
+  <game name="Kirby 64 : The Crystal Shards">
+    <description>The story begins with Dark Matter assaulting a faraway land for their special crystal. A young fairy called Ribbon takes the crystal and escapes to save it. She lands in Dream Land, but pieces of the crystal have shattered and landed all across the world. Kirby volunteers to help and together they go to find all the missing pieces.
+
+Kirby will encounter his friends, who have been controlled by Dark Matter. He'll have to battle them to rescue them. From there, they travel together to other different worlds, including Rock Star, Water Star, and Ripple Star, Ribbon's home world, where Dark Matter is lurking. To properly finish the game, players must find all the hidden crystal shards tucked away in the various levels. Only then will Kirby and his friends truly save Ripple Star.</description>
+    <year>2000</year>
+    <manufacturer>Nintendo</manufacturer>
+    <rom name="Kirby 64 - The Crystal Shards (USA).z64" size="33554432" />
+  </game>
+  <game name="Pokémon Stadium 2">
+    <description>Hundreds of Pokémon in Three-mendous 3-D! What's sweeter than victory in a Pokémon battle! Victory in a 3-D arena on the N64?! Set your strategy and stand back while your Pokémon battle it out. You can even set the Pokémon you've trained--fully rendered in 3-D and ready for battle!</description>
+    <year>2001</year>
+    <manufacturer>Nintendo</manufacturer>
+    <rom name="Pokemon Stadium 2 (USA).z64" size="67108864" />
+  </game>
+  <game name="Snowboard Kids">
+    <description>A racing game where you control one of five cutesy snowboarders competing against each other. Being a snowboarding game, each track is a downhill slalom with a ski lift at the bottom which takes you back to the start for however many laps a track has.
+
+The tracks are varied, the first few taking place on snowy mountainsides, while the latter taking you to wackier locales such as grassy countryside, a desert and a theme park. The money collected on the course or won at the end of the race can be spent to buy better boards, which differ in stats, or to collect items/weapons while racing. There are also stunts that can be performed while racing which earn money as well, and certain parts of each course encourage the player to do so.
+
+Other modes include stunt mode, shoot mode and speed mode, all focusing on a particular part of the gameplay from the main game, and a multiplayer mode where up to 4 players can race each other. There are also unlockables for dedicated players.</description>
+    <year>1998</year>
+    <manufacturer>Atlus</manufacturer>
+    <rom name="Snowboard Kids (USA).z64" size="8388608" />
+  </game>
+  <game name="Rayman 2 : The Great Escape">
+    <description>Enter a massive 3-D action adventure of amazing beauty and challenge. The pirate terror has enslaved the world and only Rayman's speed, agility, and magical powers can save all. Race and battle across 45 intricately designed areas - rainforests, jungles, narrow canyon passes, even into the mighty pirate ship itself.</description>
+    <year>1999</year>
+    <manufacturer>Ubi Soft Entertainment</manufacturer>
+    <rom name="Rayman 2 - The Great Escape (USA) (En,Fr,De,Es,It).z64" size="33554432" />
+  </game>
+  <game name="Indiana Jones and the Infernal Machine">
+    <description>The year is 1947. Dr. Jones Jr is on a retirement from adventuring, living the life of a scholar and an archaeologist. But soon he meets his old flame ...and new enemies. Soviets are tracking parts of a mysterious, powerful machine from ancient Babylon, hoping to use it as a weapon. They must be stopped from unleashing unspeakable danger from another world.
+
+Are you ready to lead Indy into adventures in lost temples, under mountains and through unexplored mines, for tales of missing artifacts, snake encounters and other things?
+
+Indiana Jones and the Infernal Machine combined action and adventure in a way the older Indy games did not do. The gameplay is inspired by Tomb Raider, as Indy moves through 3D representations of 17 locations around the world. The game engine is modified from Jedi Knight.
+
+Puzzles based around switches &amp; items; precise jumping must be negotiated on regular basis. You must use ladders, ropes and dinghies as well as moving on foot. You will also find yourself aboard a jeep and a mine cart. Replacements for your standard whip can be collected en route (from Soviet army arsenal), including grenades, sub-machine guns and bazookas. The valuable treasures you find can be used to buy extra ammo (between the levels). After each level you get your score (Indy Quotient) - you must reach all the treasure items cleverly hidden in secret places to get all the points.</description>
+    <year>2000</year>
+    <manufacturer>LucasArts</manufacturer>
+    <rom name="Indiana Jones and the Infernal Machine (USA).z64" size="33554432" />
+  </game>
+  <game name="The Legend of Zelda : Ocarina of Time">
+    <description>The story follows Link, a boy raised among the Kokiri in the forest village of Hyrule. Summoned by the guardian spirit, the Great Deku Tree, Link learns of an impending danger: Ganondorf, leader of the Gerudo, seeks the Triforce, a sacred relic that grants godlike power. With the aid of Princess Zelda and his fairy companion Navi, Link embarks on a quest to secure the three Spiritual Stones and open the path to the Sacred Realm before Ganondorf can seize control of Hyrule. The adventure spans both Link's childhood and adulthood, with time itself becoming central to his mission.</description>
+    <year>1998</year>
+    <manufacturer>Nintendo</manufacturer>
+    <rom name="The Legend of Zelda Ocarina of Time (USA) (Rev 2).z64" size="33554432" />
+  </game>
+  <game name="Star Fox 64">
+    <description>The Lylat system has been invaded! Join Fox McCloud and his Star Fox team as they fight to save the galaxy from the clutches of the evil Andross. Travel to many different 3-D worlds. Battle the enemy in the air and on the ground and listen in as Fox McCloud interacts with a cast of characters.</description>
+    <year>1997</year>
+    <manufacturer>Nintendo</manufacturer>
+    <rom name="Star Fox 64 (USA) (Rev 1).z64" size="12582912" />
+  </game>
+  <game name="Bomberman 64">
+    <description>The evil Altair is using the Omni Cube to drain the energy from Planet Bomber. With the aid of a mysterious helper, you must defeat Altair, and restore peace to Planet Bomber. In the Adventure mode, guide Bomberman through twenty-four areas of perilous conflict. Battle Altair's sinister allies, destroy their bases, and put an end to the insane attack. The multi-player Battle mode offers endless explosive action!</description>
+    <year>1997</year>
+    <manufacturer>Nintendo</manufacturer>
+    <rom name="Bomberman 64 (USA).z64" size="8388608" />
+  </game>
+  <game name="F-Zero X">
+    <description>In this futuristic racer, the key to winning is speed!Choose from 30 different hover-car racers, including updated versions of the Blue Falcon and other vehicles from the original F-Zero, and get ready to play one of the fastest racers ever! Race to the finish line on tracks that twist and turn through the air. However, you will have to avoid the other 29 cars on the track or else face the consequences! If you're in a competitive mood, try to win a Grand Prix Cup, get the fastest lap time in a Time Trial, or destroy the competition in a Death Race. You can also challenge three friends in the Versus mode. With five separate play modes, hidden vehicles and courses, and an excellent sound track, F-Zero X still represents one of the best racing titles to date!</description>
+    <year>1998</year>
+    <manufacturer>Nintendo</manufacturer>
+    <rom name="F-Zero X (USA).z64" size="16777216" />
+  </game>
+  <game name="Blast Corps">
+    <description>Blast Corps is a mix of an action and a puzzle game where destruction is key. At the start of each level the player is given a certain vehicle (ranging from robotic suits, trucks, or bulldozers), and are told to clear the path for the Carrier. Players need to use their heavy-duty equipment to destroy any buildings, structures, or monuments that stand in the path of the Carrier. The difficulty increases as progress is made, though. Smaller vehicles don't affect certain buildings, and sometimes its not even a building that's in the way. The player must use the resources around them to clear the path. Players may need a train flatbed to fill a gap, or a crane to move boxes out of the way. The Carrier is always moving, so once the player is done destroying one obstruction, they must get to the next one quickly. While players pursue their mission they must also find six scientists scattered throughout the globe to form a think-tank to solve the problem. The Carrier has to leave Earth, and it's your job to ensure that it does!</description>
+    <year>1997</year>
+    <manufacturer>Nintendo</manufacturer>
+    <rom name="Blast Corps (USA) (Rev 1).z64" size="8388608" />
+  </game>
+  <game name="GoldenEye 007">
+    <description>In this 3D action game, you control James Bond from a first-person perspective, using a variety of weapons (from knuckles to grenade launcher) to eliminate your foes. However, many parts require you to be careful, to stay unnoticed or to snipe guards from distance, since they will react to your presence and alarm their comrades. The game is divided into missions, and in some of them you'll have to perform other tasks besides killing your enemies: disarm bombs, take pictures of important evidence, or avoid killing scientists. The game features a multiplayer mode with a variety of options, and three difficulty levels.</description>
+    <year>1997</year>
+    <manufacturer>Nintendo</manufacturer>
+    <rom name="GoldenEye 007 (USA).z64" size="12582912" />
+  </game>
+  <game name="Mario Kart 64">
+    <description>Mario Kart 64 races eight familiar faces, including Mario, Bowser and Yoshi, on four progressively tougher four-track circuits. Wide curves and gentle banks mark the Mushroom Cup tracks. Your commute gets notably tougher on the Flower Cup, though. The player will have to dodge semis rumbling on Toad's Turnpike and bounding boulders on fogbound Choco Mountain! Star Cup tracks range from the icy surfaces of Sherbet Land to the lava lakes of Bowser's Castle. The true test of karting competence, though, comes on the four tracks in Special Cup. Zip through the dark caves and green hillsides of Donkey Kong's Jungle Parkway, cling to the sheer cliffs of Yoshi Valley and hustle over haunted Banshee Boardwalk before tackling the longest track in the game: neon-lit Rainbow Road. </description>
+    <year>1997</year>
+    <manufacturer>Nintendo</manufacturer>
+    <rom name="Mario Kart 64 (USA).z64" size="12582912" />
+  </game>
+  <game name="Star Wars : Shadows of the Empire">
+    <description>A long time ago in a galaxy far, far away... As Luke Skywalker and the Rebel Alliance struggle to defeat Darth Vader and the Empire, a new threat arises. Dark Prince Xizor, head of the Black Sun crime syndicate, aspires to take Darth Vader's place at the Emperor's side. To do that, he must eliminate young Skywalker. As Dash Rendar, it's up to you to protect Luke and help the Alliance defeat the evil Xizor. Watch out for infamous bounty hunters and deadly stormtroopers! May the Force be with you!</description>
+    <year>1996</year>
+    <manufacturer>Nintendo</manufacturer>
+    <rom name="Star Wars - Shadows of the Empire (USA) (Rev 2).z64" size="12582912" />
+  </game>
+  <game name="Super Smash Bros.">
+    <description>Super Smash Brothers takes familiar Nintendo characters such as Mario, Kirby and Donkey Kong, and puts them into battle! There are 8 fully-interactive landscapes, with one for each character and noticeable links to their games. Controls are analogue-based, with different moves executed depending on the direction and how firmly the stick is pressed. Items like baseball bats, Bob-ombs, and healing items drop into the arenas at random, aiding any nearby characters than can make use of them. The game uses a fixed viewpoint which scrolls, although characters are rendered in 3D.
+
+The one-player mode has 14 stages to work through. Up to 4 human players can do battle at once, with team play as well as all-against-all action. Hidden characters are thrown in for good measure, as are bonus rounds, and a battle to the end with a giant hand (yeah, you read right!).
+
+Playable characters include: Captain Falcon* (F-Zero), Donkey Kong, Fox (Star Fox), Kirby, Jigglypuff* (Pokémon), Link (Legend of Zelda), Luigi* (Mario), Mario, Ness* (Mother/EarthBound), Pikachu (Pokémon), Samus (Metroid) and Yoshi (Mario)
+
+*character must be unlocked first</description>
+    <year>1999</year>
+    <manufacturer>Nintendo</manufacturer>
+    <rom name="Super Smash Bros. (USA).z64" size="16777216" />
+  </game>
+  <game name="Star Wars : Episode I - Battle for Naboo">
+    <description>Attention defenders of Naboo! The Trade Federation must be stopped! Storm through more than 15 missions over land, sea and space as your freedom fighters rally against the droid armies. Take control of 7 vehicles: the Naboo starfighter, Gian speeder, and new craft like the heavy STAP, Trade Federation gunboat and more. More than 15 missions: escape from Theed, search &amp; destroy, sabotage, reconnaissance, convoy. Battle against Trade Federation droid starfighters, AATs, destroyer droids, battle droids. 
+Change vehicles mid-mission through specially designated hangars.</description>
+    <year>2000</year>
+    <manufacturer>THQ</manufacturer>
+    <rom name="Star Wars Episode I - Battle for Naboo (USA).z64" size="33554432" />
+  </game>
+  <game name="Snowboard Kids 2">
+    <description>The Sequel to the famous snowboard simulation Snowboard Kids is a fun family sports game. It combines a trick-oriented snowboard simulator with shooting/arcade elements. 
+
+Player can choose from various characters with different look and skills. There are different gaming modes, including a story mode with very light and entertaining plot. The storyline is actually quite basic, sometimes similar to the Kirby series concepts. Hence, there is no rush for saving the world, just some funny little fellas entertaining themselves. 
+
+Winning a race or performing tricks provides the player with some credit which can be spent on improved equipment. Shooting elements are based on but not limited to throwing strange objects (like parachutes or snow-men) against other snowboard kids in order to slow them down. There are great power-ups during the gameplay. Courses are rarely covered with snow - most of the races are held in freakish regions like jungles, space stations, castles etc.</description>
+    <year>1999</year>
+    <manufacturer>Atlus</manufacturer>
+    <rom name="Snowboard Kids 2 (USA).z64" size="16777216" />
+  </game>
+  <game name="Mario Tennis">
+    <description>Choose your favourite Nintendo character and take to the world of tennis. Game types include ring shot (where you must shoot the ball through golden hoops that are suspended above the play area, gaining bonus points as you play), bomb tennis (simply put Tennis with Bombs) and Piranha Challenge (much like the tennis machines which chuck balls at you, but in this case they are replaced with Piranha plants). Of course, there is your normal tournament mode, with up to 4 players in on the action, and some crazy arenas, especially Bowser's Castle, which is suspended above a lava pit!</description>
+    <year>2000</year>
+    <manufacturer>Nintendo</manufacturer>
+    <rom name="Mario Tennis (USA).z64" size="16777216" />
+  </game>
+  <game name="Star Wars Episode I : Racer">
+    <description>Join Jedi-to-be Anakin Skywalker in the Star Wars race of your life! Relive all the thrills and excitement of the Podracer sequence from Star Wars: Episode I. Hang on tight - with afterburners on, Podracers max out at a simulated 600 mph! Race in furious competition against more than 21 opponents! Take on over 21 tracks in 8 unique worlds. Avoid hazards such as methane lakes, meteor showers and Tusken Raiders! Featuring spectacular 3D environments!</description>
+    <year>1999</year>
+    <manufacturer>LucasArts</manufacturer>
+    <rom name="Star Wars Episode I - Racer (USA).z64" size="33554432" />
+  </game>
+  <game name="Body Harvest">
+    <description>In 2050 AD, the earth has been taken over by horrible aliens, who long ago planted the humans there to later devour, and the last remains of humanity are working on a desperate plan - to send a genetically engineered soldier back into the past, and help hold back the invasion. But, as the final preparations for this Alpha Command operation are underway, alarms light up in the orbital control-station where the last humans hide - the aliens are back for dinner...
+
+You have to explore the world, through ancient ruins and deserted lands, find hidden secrets, drive all kinds of vehicles and stand against the alien invasion to save the earth.</description>
+    <year>1998</year>
+    <manufacturer>Gremlin Interactive</manufacturer>
+    <rom name="Body Harvest (USA).z64" size="12582912" />
+  </game>
+  <game name="Diddy Kong Racing">
+    <description>It's an island takeover when the evil space wizard, Wizpig, discovers Tiger Island!  After the islands prized racetracks become sealed up, Timber Tiger contacts his friend Diddy Kong to help him reclaim the racetracks and save the island before his parents return.  Along for the ride are the Kremling spy Krunch, Bumper Badger, Banjo (prior to meeting Kazooie in Banjo-Kazooie), pre-sweary Conker, Tiptup Turtle, and Pipsy Mouse.
+
+Diddy Kong Racing is a racing game with similarities to Mario Kart 64, in that you race with a variety of cheery racers while using weapons.  However, the similarities end there.  DKR includes an adventure mode, which features bosses, an overworld to explore, many hidden secrets, the addition of hovercrafts and planes, and a unique way of racing called the "Silver Coin Challenge".  In this mode, in addition to coming first, you must also find the eight Silver Coins deviously hidden throughout the courses (some in alternate paths).
+
+The game also features a strategic method of using weapons.  Each colored balloon on the track matches a specific weapon, and collecting the same type of balloon multiple times in a row powers it up (to a maximum of three times).  This gives the player the choice of snatching every balloon available and using it immediately, or storing the existing weapon, and using a more powerful version of it later.
+
+Up to four players can compete in the races, but in order to play new tracks, they must first be unlocked in the single player game.  There are also four battle modes of play - two standard deathmatch maps, a capture-the-flag style battle where you must nab eggs and hatch three of them in your home nest, and another where you must be the first to return ten bananas to your treasure chest (with the limitation of only being able to hold two at any one time).</description>
+    <year>1997</year>
+    <manufacturer>Rareware</manufacturer>
+    <rom name="Diddy Kong Racing (USA) (En,Fr) (Rev 1).z64" size="12582912" />
+  </game>
+  <game name="Banjo-Tooie">
+    <description>After two years under the rock, Gruntilda is finally set free from her death bed by her two sisters. As nothing but a skeleton, Grunty and her sisters plan a way of curing her looks by sucking the life out of the land so as to restore her body to its old self. On hearing this news, our two champs Banjo and Kazooie with the aid of Mumbo set out to stop the evil plan and seek revenge for the passing away of Bottles the mole.
+
+In this sequel to Banjo-Kazooie, you can play as the two main characters (as well as Mumbo) just like before, although they can now separate, helping them get to even harder areas of the land. You must collect jiggies to open new areas (much like the original) as well as learn 40 new moves to help you get along.
+
+And much like another Rareware title, Donkey Kong 64, you can play four-player minigames that range from first-person shooters, bumper cars, battle for points, etc..</description>
+    <year>2000</year>
+    <manufacturer>Nintendo</manufacturer>
+    <rom name="Banjo-Tooie (USA).z64" size="33554432" />
+  </game>
+  <game name="Shaurya 64">
+    <description />
+    <manufacturer />
+    <rom name="Shaurya 64.z64" size="7331400" />
+  </game>
+  <game name="Pokémon Snap">
+    <description>The Professor has asked you to capture the Wild Pokemon of Pokémon island...on film! Tour the island in your ZERO-ONE vehicle and snap pictures of Pokémon in their natural habitat. Wild Pokémon are often camera-shy, so you'll have to use special items to bring them out in the open. Only the best shots will do for the Professor's Pokémon Report, so sharpen your photography skills and get ready to SNAP!</description>
+    <year>1999</year>
+    <manufacturer>Nintendo</manufacturer>
+    <rom name="Pokemon Snap (USA).z64" size="16777216" />
+  </game>
+  <game name="Mario Party 3">
+    <description>The series continues with a set of 70 new mini-games.  Play in the new single-player Story mode, or bring in some friends for Party mode.  Four player games and a new two player mode are also available for play.
+
+In Battle Royale mode (four player), you race around different boards to earn the most stars and coins.  At the end of each round, you face it off in one of the mini-games, which can be chicken chases, snowball fights, or various other competitions.
+
+Duel mode allows play between just two people.  You still race around the board, but mini-games are only played when you land on a specific square.  Another play change is the addition of another character for your team, allowing tag team-style action in the game.
+
+Story mode is essentially the same as a Battle Royale, except your opponents are played by the computer.</description>
+    <year>2001</year>
+    <manufacturer>Nintendo</manufacturer>
+    <rom name="Mario Party 3 (USA).z64" size="33554432" />
+  </game>
+  <game name="Paper Mario">
+    <description>Paper Mario is the follow-up to Super Mario RPG: Legend Of The Seven Stars. Basically, this is an RPG set in the Mario universe. Mario has the ability to gain experience and grow levels by defeating enemies and bosses. Mario also has the ability to recruit teammates to help him out in turn-based battles. As well, Mario can collect badges that will help his combat abilities, star pieces that he can trade for badges, and more items that he can use throughout the game. The Star Spirits will also aid him in his quest.</description>
+    <year>2001</year>
+    <manufacturer>Nintendo</manufacturer>
+    <rom name="Paper Mario (USA).z64" size="41943040" />
+  </game>
+  <game name="Perfect Dark">
+    <description>Joanna Dark is an agent for the Carrington Institute, a secret organization funded by anonymous sources and dedicated to protecting the world.  Through their highly trained operatives and special devices (gadgets), Carrington keeps an eye on terrorists, world powers, and strange happenings. The speed in which the dataDyne corporation has established itself through the development of new technologies is starting to worry the institute. So when Carrington receives a message from Dr. Caroll, a scientist wishing to escape dataDyne, they send their best agent, Joanna, to infiltrate the company headquarters...
+
+Perfect Dark is a first person game similar to Rare's earlier Goldeneye: 007 though with more of an emphasis on stealth. Joanna can pick up and use a variety of firearms.  In addition she carries quite a few spy gadgets such as IR scanners, night vision, probes, and a deadly laptop.
+
+The Xbox 360 port has redone graphics to support a 1080p full HD resolution at 60 frames per second. It also incorporates full multiplayer support over Xbox LIVE.</description>
+    <year>2000</year>
+    <manufacturer>Rareware</manufacturer>
+    <rom name="Perfect Dark (USA) (Rev 1).z64" size="33554432" />
+  </game>
+  <game name="Banjo-Kazooie">
+    <description>Banjo-Kazooie's fairy tale back story is reminiscent of Snow White's. A gnarled, ugly witch named Gruntilda asks her magical cauldron who is the fairest of them all. Of course, the pot's answer doesn't please the hag-- he singles out Banjo's sister, Tooty. When Tooty turns up missing, Banjo and his birdie buddy Kazooie set out to find her. 
+
+The worlds in Banjo-Kazooie are gigantic, and chock full of crazy items to collect. Musical Notes, Puzzle Pieces ("Jiggies"), Mumbo Tokens, and Jinjoes are just some of the swag that Banjo must stuff in his backpack to complete his adventure. While some of the necessary items are simply stashed off the beaten path, others will require puzzle solving skills to turn up.</description>
+    <year>1998</year>
+    <manufacturer>Nintendo</manufacturer>
+    <rom name="Banjo-Kazooie (USA) (Rev 1).z64" size="16777216" />
+  </game>
+  <game name="Super Mario 64">
+    <description>Mario is super in a whole new way! Combining the finest 3-D graphics ever developed for a video game and an explosive sound track, Super Mario 64 becomes a new standard for video games. It's packed with bruising battles, daunting obstacle courses and underwater adventures. Retrieve the Power Stars from their hidden locations and confront your arch nemesis - Bowser, King of the Koopas!</description>
+    <year>1996</year>
+    <manufacturer>Nintendo</manufacturer>
+    <rom name="Super Mario 64 (USA).z64" size="8388608" />
+  </game>
+  <game name="Yoshi's Story">
+    <description>Reclaim the Super Happy Tree to restore happiness! Baby Bowser has taken the Super Happy Tree and put a spell on Yoshi Island. It's up to a few remaining Yoshis to restore everything to its rightful place as they run, ground-pound, flutter-jump, throw eggs, and traverse a colorful and crafted storybook-looking world. Complete a course in Story Mode, and then best your high score in Trial Mode!</description>
+    <year>1998</year>
+    <manufacturer>Nintendo</manufacturer>
+    <rom name="Yoshi's Story (USA) (En,Ja).z64" size="16777216" />
+  </game>
+  <game name="Pokémon Stadium">
+    <description>At long last, all of your favorite Pokémon are ready to go head-to-head on the N64®! Whether you're battle a friend, a Gym Leader or a tournament contestant, you're about to witness some of the most spectacular battle scenes in Pokémon history! Select a team from a huge stable of "rental" battlers, or use the included N64 Transfer Pak? to upload your own team from Pokémon Red, Blue or Yellow! This Stadium is packed and ready to rock!</description>
+    <year>2000</year>
+    <manufacturer>Nintendo</manufacturer>
+    <rom name="Pokemon Stadium (USA) (Rev 2).z64" size="33554432" />
+  </game>
+  <game name="Mario Party">
+    <description>Mario has battled Bowser, saved the Mushroom Kingdom, and raced through countless adventures, but now it's time to party! In Mario Party, Nintendo brings the most exciting bash to the N64, where Mario and friends compete in a board game-style showdown packed with mini-games.
+Players roll dice to move across themed boards, each filled with surprises and over fifty mini-games. Competitions range from free-for-all challenges to two-on-two and three-against-one battles, testing skills in racing, puzzles, and quick reflexes. Winning games earns coins and stars, determining the ultimate party champion.
+Game boards feature animated elements, hazards, and special challenges. Mario, Luigi, Peach, Yoshi, Wario, Donkey Kong, and Bowser all join the fun, each with their own board. While Mario Party offers solo play, the real fun comes with friends, ensuring an unforgettable multiplayer experience full of laughter, strategy, and late-night excitement.</description>
+    <year>1999</year>
+    <manufacturer>Nintendo</manufacturer>
+    <rom name="Mario Party (USA).z64" size="33554432" />
+  </game>
+  <game name="Star Wars : Rogue Squadron">
+    <description>Fly against the evil Empire! As Luke Skywalker, co-founder of the Rebel Alliance's elite Rogue Squadron, you must combat the evil Galactic Empire! Engage in intense, fast-paced planetary air-to-ground and air-to-air missions - dogfights, search and destroy, reconnaissance, bombing runs, rescue assignments and more! Pilot X-wings, Y-wings, A-wings, V-wings and Snowspeeders with powerful weapons in over 15 missions battling TIE fighters, TIE bombers, Imperial shuttles, AT-AT walkers, AT-STs and other challenging foes.</description>
+    <year>1998</year>
+    <manufacturer>Nintendo</manufacturer>
+    <rom name="Star Wars - Rogue Squadron (USA) (Rev 1).z64" size="16777216" />
+  </game>
+</datafile>

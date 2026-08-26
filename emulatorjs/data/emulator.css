@@ -1806,6 +1806,22 @@
     cursor: pointer;
 }
 
+.ejs_netplay_join_code_button {
+    display: block;
+    margin: 10px auto;
+}
+
+.ejs_netplay_room_code {
+    margin: 10px 0;
+    padding: 8px 12px;
+    color: #fff;
+    background: rgba(0, 229, 255, 0.2);
+    border: 1px solid rgba(0, 229, 255, 0.6);
+    border-radius: 4px;
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+
 .ejs_netplay_table_row:hover {
     background-color: #2d2d2d;
 }

@@ -257,6 +257,57 @@ export class Netplay {
         body.appendChild(rooms);
         body.appendChild(joined);
 
+        const joinCodeButton = this.emu.createElement("button");
+        joinCodeButton.type = "button";
+        joinCodeButton.classList.add("ejs_button_button", "ejs_netplay_join_code_button", "arcade-join-code-button");
+        joinCodeButton.innerText = "Join by Code";
+        body.insertBefore(joinCodeButton, rooms);
+        this.emu.addEventListener(joinCodeButton, "click", () => {
+            const popups = this.emu.createSubPopup();
+            this._menuElement.appendChild(popups[0]);
+            const popup = popups[1];
+            popup.classList.add("ejs_cheat_parent");
+            const title = this.emu.createElement("h2");
+            title.classList.add("ejs_netplay_name_heading");
+            title.innerText = "Join by Code";
+            popup.appendChild(title);
+            const form = this.emu.createElement("div");
+            form.classList.add("ejs_netplay_header");
+            const code = this.emu.createElement("input");
+            code.type = "text";
+            code.maxLength = 100;
+            code.placeholder = "Paste the host code";
+            const passwordCode = this.emu.createElement("input");
+            passwordCode.type = "password";
+            passwordCode.maxLength = 100;
+            passwordCode.placeholder = "Password (optional)";
+            form.append("Join Code", this.emu.createElement("br"), code, "Password (optional)", this.emu.createElement("br"), passwordCode);
+            popup.appendChild(form);
+            const actions = this.emu.createElement("div");
+            actions.classList.add("ejs_netplay_dialog_buttons");
+            const join = this.emu.createElement("button");
+            join.classList.add("ejs_button_button", "ejs_popup_submit");
+            join.innerText = "Join";
+            const cancel = this.emu.createElement("button");
+            cancel.classList.add("ejs_button_button", "ejs_popup_submit");
+            cancel.innerText = "Cancel";
+            actions.append(join, cancel);
+            popup.appendChild(actions);
+            const close = () => popups[0].remove();
+            this.emu.addEventListener(cancel, "click", close);
+            this.emu.addEventListener(join, "click", () => {
+                const roomId = code.value.trim();
+                if (!roomId) return;
+                close();
+                this.joinRoom(roomId, "Netplay Room", 4, passwordCode.value.trim() || null);
+            });
+            this.emu.addEventListener(code, "keydown", (event) => {
+                if (event.key === "Enter") join.click();
+                if (event.key === "Escape") close();
+            });
+            setTimeout(() => code.focus(), 0);
+        });
+
         // Store references
         this._roomsDiv = rooms;
         this._joinedDiv = joined;
@@ -882,6 +933,7 @@ export class Netplay {
 
     /** Handle successful room join for both host and guest */
     roomJoined(isOwner, roomName, password, roomId) {
+        window.parent?.postMessage({ type: "NETPLAY_ROOM_READY", roomCode: roomId, roomName }, "*");
         this._log(isOwner ? "HOST" : "GUEST", "Room joined: " + roomName);
 
         // Once in a room the room list is no longer relevant.
@@ -894,6 +946,12 @@ export class Netplay {
 
         // Update UI
         if (this.roomNameElem) this.roomNameElem.innerText = roomName;
+        if (this._joinedDiv && !this._joinedDiv.querySelector(".ejs_netplay_room_code")) {
+            const code = this.emu.createElement("div");
+            code.classList.add("ejs_netplay_room_code");
+            code.innerText = "Join code: " + roomId;
+            this._joinedDiv.insertBefore(code, this._joinedDiv.firstChild);
+        }
         if (this.tabs && this.tabs[0]) {
             this.tabs[0].style.display = "none";
             this.tabs[1].style.display = "";

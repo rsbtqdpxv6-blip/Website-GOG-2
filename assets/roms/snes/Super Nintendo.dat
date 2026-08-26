@@ -1,0 +1,743 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE datafile PUBLIC "-//Logiqx//DTD ROM Management Datafile//EN" "http://www.logiqx.com/Dats/datafile.dtd">
+<datafile>
+  <header>
+    <name>Super Nintendo Entertainment System</name>
+    <description>Information from ScreenScraper.fr database</description>
+    <version>1.0</version>
+    <date>2026-08-25 4:14 PM</date>
+    <author>Skraper</author>
+    <url>https://www.screenscraper.fr</url>
+  </header>
+  <game name="Desert Strike : Return to the Gulf">
+    <description>The first game in the Strike series. A year after the Gulf War, a self styled General named Kilbaba (Muababa in the GBA version) takes over an Arab Emirate and threatens to start WWIII against its enemy in the West, the U.S. The whole world holds their breath as the President chooses you to destroy Kilbaba and his terrorist army before he launches a nuclear attack on the world!
+
+You must fly an specially designed AH-64A Apache on a series of missions from rescuing MIAs, destroying power plants, to blowing apart SCUD missles! Take out his defenses while trying to find out Kilbaba's plans. Take on the Madman and forever rid this threat....in the desert!
+</description>
+    <year>1992</year>
+    <manufacturer>Electronic Arts</manufacturer>
+    <rom name="Desert Strike - Return to the Gulf (USA).sfc" size="1048576" />
+  </game>
+  <game name="Star Fox">
+    <description>This is the first SNES title using the Super FX chip; you are flying ace Fox McCloud, who with his trusted wingmen and his powerful Arwing starfighter, must rid the Lylat System of the evil that surrounds it. Wave after wave of enemies will fly towards you, and with the advice of your wingmen, you must guide your way through each level and take down as many as you can.
+</description>
+    <year>1993</year>
+    <manufacturer>Nintendo</manufacturer>
+    <rom name="Star Fox (USA) (Rev 2).sfc" size="1048576" />
+  </game>
+  <game name="Donkey Kong Country">
+    <description>Help Donkey Kong and Diddy Kong get back those stolen bananas!After a dark and stormy night, Donkey Kong finds all of his bananas stolen by K. Rool and his reptilian crew of Kremlings! Armed with chest-pounding muscle, mighty barrel rolls, and awesome vine-swinging skills, Donkey Kong and Diddy Kong set out to face their adversaries! Play solo, compete with a friend, or play cooperatively with a friend in over 100 levels filled with collectibles and hidden bonus levels. With the help of Donkey Kong's quirky family, animal friends, and your fast reflexes, our dynamic duo will prove to be an unstoppable force. Time to save those bananas!</description>
+    <year>1994</year>
+    <manufacturer>Nintendo</manufacturer>
+    <rom name="Donkey Kong Country (USA).sfc" size="4194304" />
+  </game>
+  <game name="Wild Guns">
+    <description>Annie &amp; Clint, two gunslingers, arrive at Carson City and get caught up in a gunfight. It's raining bullets and there are explosions everywhere. After an intense battle they enter the saloon where they dispose of every cowboy in sight while redecorating the interior. Our heroes flee the scene by climbing on the roof, but what's that sound? ... it's a HUGE robot!
+Wild Guns is a shooter with a western &amp; Sci Fi theme. Gameplay is somewhat similar to the Time Crisis &amp; House of the Dead games, with the exception that the game isn't played from a first-person perspective but from a third-person perspective. You control your on-screen character as well as the aiming crosshair. Select either Clint or Annie and shoot down tons of enemies while dodging bullets and jumping over incoming rockets.
+After the Carson City level, the action continues in Desolation Canyon, an ammunition depot, a gold mine and a armored train . Finally there's a showdown with the big bad guy.</description>
+    <year>1995</year>
+    <manufacturer>Titus</manufacturer>
+    <rom name="Wild Guns (USA).sfc" size="1048576" />
+  </game>
+  <game name="Super Bomberman">
+    <description>Super Bomberman is the first Bomberman game on the Super NES.  Like most games in the Bomberman series, Super Bomberman features a normal game as well as the famous battle mode.
+
+In the normal game, Mr. Karat and Dr. Mukk have been terrorizing Diamond City.  You must go from board to board, defeating the bad guys and solving puzzles to move to the next board.
+
+In battle mode, up to four players go head to head in a battle to the death.  Players can be computer controlled or human controlled via the Super MultiTap.</description>
+    <year>1993</year>
+    <manufacturer>Hudson Soft</manufacturer>
+    <rom name="Super Bomberman (USA).sfc" size="524288" />
+  </game>
+  <game name="Spider-Man &amp; Venom : Maximum Carnage">
+    <description>Loosely based on the comic book series, the story opens as Carnage breaks out of the insane asylum and wreaks mayhem. Spiderman immediately acknowledges the new job at hand and sets out to stop him.
+
+You start off with Spidey but in certain parts you get to choose between him and Venom, which takes you through an alternate routes. The gameplay is your standard beat-em-up, the regular punching and jump-kicking, with the addition of the all important webbing - ie web swinging, web shield etc.
+</description>
+    <year>1994</year>
+    <manufacturer>LJN</manufacturer>
+    <rom name="Spider-Man - Venom - Maximum Carnage (USA).sfc" size="2097152" />
+  </game>
+  <game name="Final Fight">
+    <description>There's trouble in Metro City. The members of the Mad Gear Gang have kidnapped the mayor's daughter Jessica and the clock is ticking. 
+
+Final Fight is a 2D side-scrolling fighting game. 
+Taking on the role of either Cody, Guy, or Mike Haggar, you must advance through six areas of the city clearing out the gang infestation. 
+You will have to cope with a variety of thugs, ranging from firebomb-throwing maniacs to behemoth wrestlers. To defeat these thugs, you have an arsenal of punches, kicks, throws, and jump kicks at your disposal.</description>
+    <year>1991</year>
+    <manufacturer>Capcom</manufacturer>
+    <rom name="Final Fight (USA).sfc" size="1048576" />
+  </game>
+  <game name="Mega Man X3">
+    <description>A Reploid scientist named Dr. Doppler begins creation of a new city for Reploids, which will bring a new era of peace to the Reploids and humans. But something goes terribly wrong, and now Mavericks have begun to appear everywhere! It's up to X and Zero to find out who is behind this Maverick revolt and bring them down for good!</description>
+    <year>1996</year>
+    <manufacturer>Capcom</manufacturer>
+    <rom name="Mega Man X3 (USA).sfc" size="2097152" />
+  </game>
+  <game name="Kirby's Dream Land 3">
+    <description>That mean old King Dedede is at it again! He's causing his mischief and Dreamland's in trouble! Kirby, the resident hero of Dreamland, sets out to teach Dedede a lesson, this time with the help of many of his good friends!
+
+But wait! Something's wrong! Dedede doesn't seem to be himself...
+
+Looks like Kirby has to stop Dedede and find out what is wrong with him! It almost seems like something's controlling him...
+</description>
+    <year>1997</year>
+    <manufacturer>Nintendo</manufacturer>
+    <rom name="Kirby's Dream Land 3 (USA).sfc" size="4194304" />
+  </game>
+  <game name="The Death and Return of Superman">
+    <description>"Doomsday" is here and only Superman can stop him. Unfortunately in doing so he gets killed himself. Now four other characters emerge, each claiming to be the real hero. The story starts you off with Superman, then Steel, the Eradicator, the Cyborg, and Superboy. Each character has slightly varied moves so different strategies apply when playing as them.
+
+The gameplay is basically that of a standard beat-em-up, with the punches, throws and specials moves.</description>
+    <year>1994</year>
+    <manufacturer>Sunsoft</manufacturer>
+    <rom name="The Death and Return of Superman (USA) (Rev 1).sfc" size="2097152" />
+  </game>
+  <game name="Earthworm Jim">
+    <description>A crow is chasing a worm named Jim while in outer space Psy-Crow is chasing a renegade ship. The ship's captain has stolen an ultra-high-tech-indestructible-super-space-cyber-suit and Queen Slug-for-a-Butt has ordered Psy-Crow to get it, since it can make her more beautiful than Princess-What's-Her-Name. Psy-Crow blasts the captain and the suit falls to Planet Earth.
+
+Back on earth Jim wonders if he is finally safe when an ultra-high-tech-indestructible-super-space-cyber-suit lands on him. Luckily Jim rests in the neck ring of the suit. Then the space particles begin interacting with Jim, causing a light-speed evolution. Jim soon realizes he is in control of the suit.
+
+Jim overhears the Queen's plans for the suit and decides to meet this Princess...</description>
+    <year>1994</year>
+    <manufacturer>Virgin Interactive</manufacturer>
+    <rom name="Earthworm Jim (USA).sfc" size="3145728" />
+  </game>
+  <game name="Super Mario RPG : Legend of the Seven Stars">
+    <description>Super Mario RPG is a console RPG starring none other than Nintendo's popular character Mario. This game starts off like almost every other Mario game, with Bowser kidnapping Princess Toadstool. However, when Mario goes to Bowser's Keep to save her, a giant sword made by the evil Smithy crashes into the castle and sends Mario, the Princess, and Bowser flying to separate parts of the world.
+
+The game plays much like a traditional RPG: Mario and the members of his party gain experience points by defeating enemies. These experience points can increase the team's maximum number of hit points and flower points (magic points). The battles are also turn-based, but this time there are timed attacks and defenses. Timed attacks allow you to inflict more harm than normal to an enemy. Timed defenses, on the other hand, allow an enemy to inflict less harm than normal. You are only allowed to have three out of five team members on your party at a time. Mario is always in your party, regardless. Your team members can also purchase more weapons and abilities, along with better armor.
+</description>
+    <year>1996</year>
+    <manufacturer>Nintendo</manufacturer>
+    <rom name="Super Mario RPG - Legend of the Seven Stars (USA).sfc" size="4194304" />
+  </game>
+  <game name="Super Bomberman 2">
+    <description>This is the second game in the Bomberman series for the Super Nintendo.  This game is much like the first in gameplay but has new levels and a new story to play though.
+
+The graphics are slightly different from the first game but in general the game holds most of the same style as the first.  There are a few new features such as colour coded bomb blasts and a few different powerups but other than that the second game is the same as the first.</description>
+    <year>1994</year>
+    <manufacturer>Hudson Soft</manufacturer>
+    <rom name="Super Bomberman 2 (USA).sfc" size="1048576" />
+  </game>
+  <game name="Demon's Crest">
+    <description>The Demon's Crest consists of six magical stones that when combined will give the holder power to rule all. The inhabitants of the Demon Realm had long fought for possession of this infinite power until one gargoyle emerged victorious: the red demon known as Firebrand. At the end of his final battle, Firebrand was ambushed by his nemesis, Phalanx, and the stones are stolen.
+
+Now, Firebrand must recover the stones before humans and demons fall under Phalanx's sinister rule. Breathe fire, claw walls, and hover across seven intense levels of the Demon Realm. Gain new transformations and abilities as you fight your way through Phalanx's forces. With three different endings to experience, twenty-five hidden items to discover, and six magical stones of cosmic power to control, can you save the realms from total anarchy?</description>
+    <year>1994</year>
+    <manufacturer>Capcom</manufacturer>
+    <rom name="Demon's Crest (USA).sfc" size="2097152" />
+  </game>
+  <game name="Stunt Race FX">
+    <description>Thanks to an improved version of the SuperFX Chip, Stunt Race FX was the first racing game for the SNES to feature fully polygonal cars and levels, which made it possible for the game to include gradients and obstacles that could not be realized in earlier, "flat" racing games.
+
+The game features four modes of play: 
+Speed Trax is basically an arcade mode where the player has to qualify for each upcoming race by reaching checkpoints while collecting items to restore his damage- and boost-bar. It is divided into a Novice-, Expert-, and Master class, with each class featuring four unique tracks.
+In Stunt Trax the player has to complete courses filled with obstacles within a certain time limit while trying to collect as many stars as possible.
+Battle Trax is a two player mode taking place on special tracks without any CPU-controlled opponents.
+Finally, Test Run let's the player practice all tracks that have been unlocked.</description>
+    <year>1994</year>
+    <manufacturer>Nintendo</manufacturer>
+    <rom name="Stunt Race FX (USA) (Rev 1).sfc" size="1048576" />
+  </game>
+  <game name="X-Men : Mutant Apocalypse">
+    <description>Because of a rise of anti-mutant activity in Genosha, Professor Xavier uses Cerebro to scan the island nation and discovers Apocalypse's presence there. Genosha's government is apparently using Apocalypse to bring their mutant population under control. However, Xavier suspects Apocalypse to follow his own plans and sends five X-Men, Cyclops, Wolverine, Psylocke, Beast and Gambit, to investigate.
+
+X-Men: Mutant Apocalypse combines the gameplay of a side-scrolling brawler like Final Fight with elements of a platformer, that is, players have to fight various enemies and survive the occasional jumping-puzzle. Most levels also feature mid- and end-bosses in form of robots, monsters or known Super-Villains.
+
+Each character has unique abilities and special moves: Cyclops uses his Optic Blast to attack enemies from a distance, Wolverine can climb walls, Psylocke is very agile and the best jumper of the team, Beast can cling to the ceiling while Gambit throws explosive cards at his enemies. Special moves are quite similar to those found in Street Fighter II (Wolverine has a Dragon-Punch-style attack and Gambit's Double Kick is virtually identical to M. Bison's Scissors Kick), and require similar button combinations.
+
+While most stages are unique for each character, some can be played with any of the X-Men. Progress is saved via password.
+</description>
+    <year>1994</year>
+    <manufacturer>Capcom</manufacturer>
+    <rom name="X-Men - Mutant Apocalypse (USA).sfc" size="2097152" />
+  </game>
+  <game name="The Legend of Zelda : A Link to the Past">
+    <description>Venture back to Hyrule and an age of magic and heroes. The predecessors of Link and Zelda face monsters on the march when a menacing magician takes over the kingdom. Only you can prevent his evil plot from shattering the land of Hyrule. In your quest, you'll venture into twisting mazes, dungeons, palaces and shadowy forests. Test your mettle with mighty swords and magical weapons. Or heft a boulder and hurl it at your enemies. If the going gets tough, dive into a river - you can swim to escape! Learn the powerful spells, locate magical artifacts and solve the mysteries of the evil magician and the hidden realm of Hyrule.</description>
+    <year>1992</year>
+    <manufacturer>Nintendo</manufacturer>
+    <rom name="The Legend of Zelda - A Link to the Past (USA).sfc" size="1048576" />
+  </game>
+  <game name="Super R-Type">
+    <description>A Galactic Battle Begins! The BYDO Empire of mutant extra-terrestrials is back with evil intent and awesome power. You'll feel the heat of their attack as never before with the extra powerful graphics and unbelievable realism of the Super NES. Now the evil Empire is poised to launch a new attack on Earth. Only the revolutionary R-9 stands between these monsters and doom.
+
+Are they invincible? You'll need lightning reflexes, intuitive moves and a big dose of cosmic luck to hold your own! "R" you ready? The mutants "R" ready for you!</description>
+    <year>1991</year>
+    <manufacturer>Nintendo</manufacturer>
+    <rom name="Super R-Type (USA).sfc" size="1048576" />
+  </game>
+  <game name="Super Double Dragon">
+    <description>Billy and Jimmy Lee return for another adventure. This time, fellow martial arts instructor and narcotics investigator, Marian, has disappeared while attempting to infiltrate the ruthless criminal mob known as the Black Shadow Warriors.
+
+Once again it is up to you (and a friend) to battle your way through a selection of side-scrolling beat 'em up levels to defeat the Shadow Warriors and their leader Duke, and save Marian.</description>
+    <year>1992</year>
+    <manufacturer>Tradewest</manufacturer>
+    <rom name="Super Double Dragon (USA).sfc" size="1048576" />
+  </game>
+  <game name="Earthworm Jim 2">
+    <description>An ordinary average earthworm named Jim goes about his normal daily life, cruising around avoiding crows and doing other general worm-like things. Jim is suddenly struck by a very large ultra- high- tech- indestructible- super- space- cyber- suit. Through sheer luck, Jim rests safely in the neck ring of the suit. 
+
+Suddenly, the ultra-high-tech space particles of the suit begin interacting with Jim's soft wormy flesh. A radical light-speed evolution takes place.
+
+Jim soon realizes he is in control of the suit.
+
+Gameplay is similar to the first game, with Jim jumping and running through the levels. There are 5 weapons more than the original game to collect. Characters like Princess Whats-Her-Name and Psy-Crow appear.</description>
+    <year>1995</year>
+    <manufacturer>Virgin Interactive</manufacturer>
+    <rom name="Earthworm Jim 2 (USA).sfc" size="3145728" />
+  </game>
+  <game name="Super Ghouls'n Ghosts">
+    <description>4 years after Arthur saved Princess PrinPrin from the evil demon Loki, a wonderful celebration is about to take place! Arthur and the Princess are engaged, and the wedding is to take place at last! Thousands from around the kingdom have come to witness this joyous event!
+
+But somewhere in the darkness of the forest lurks a horrible evil...
+
+Arthur and PrinPrin are spending a quiet moment locked in embrace, when she is suddenly snatched away by a huge demon! As her screams echo through the night, Arthur rushes from the castle, and pursues the demon to the graveyard, where he is greeted by hundreds of horrible ghouls and monsters!
+
+Now, this time, they've gone too far...Arthur is ready for them...
+</description>
+    <year>1991</year>
+    <manufacturer>Capcom</manufacturer>
+    <rom name="Super Ghouls'n Ghosts (USA).sfc" size="1048576" />
+  </game>
+  <game name="The Adventures of Batman &amp; Robin">
+    <description>Konami's game based on the 90s animated series starring the Caped Crusader sends him against his most famous enemies in a platforming/beat'em'up title. Each level sends Batman against one particular villain. Most levels present Batman with a large number of henchmen to take out and environmental dangers to avoid on his way to one or more boss battles. Besides kicks, throws and punches, Batman can use a variety of equipment against the enemies. Always available are Batarangs and the grappling hook. Before each mission, Batman can also select additional equipment, like knockout gas spray, throwing stars, smoke bombs and plastic explosives, all with limited ammunition. Special equipment required for certain levels include a flashlight, gas mask and X-ray goggles. If some necessary equipment is missing, it is always possible to return to the Batcave to change the gear and then restart the current level. Many of the situations and environments of the levels are based on episodes from the series and the game's graphics emulate the animation and drawing style of the show.</description>
+    <year>1994</year>
+    <manufacturer>Konami</manufacturer>
+    <rom name="The Adventures of Batman &amp; Robin (USA).sfc" size="2097152" />
+  </game>
+  <game name="The Simpsons : Bart's Nightmare">
+    <description>Bart has to stay up late and write a paper for class tomorrow. For once, he is determined to get a good mark. However, very quickly, he falls asleep. Nightmare after nightmare haunt his subconscious, and it is up to you to get over each one, so that Bart will eventually wake up. From such dreams as being in an episode of Itchy &amp; Scratchy to swimming through his own bloodstream, this platformer offers a nice challenge through its many diverse levels.
+</description>
+    <year>1992</year>
+    <manufacturer>Acclaim Entertainment</manufacturer>
+    <rom name="Simpsons - Bart's Nightmare (USA).sfc" size="1048576" />
+  </game>
+  <game name="R-Type III">
+    <description>UNDER A NEW BYDO THREAT, EARTH RETALIATES It was believed on Earth that the deadly BYDO Empire had been destroyed--but now they've returned, as nasty as ever. Their ships and armies are more powerful than before, and Earth will surely be conquered unless the new R-90 ship can destroy them. Powered with engines that launch it into different dimensions, and armed with the Round, Shadow, and Cyclone Forces, R-90 has what it takes to wipe out the BYDO threat. Then, the BYDO mother ship must be found and destroyed to entirely erase the species from our galaxy.</description>
+    <year>1994</year>
+    <manufacturer>Irem</manufacturer>
+    <rom name="R-Type III (USA).sfc" size="2097152" />
+  </game>
+  <game name="Wario's Woods">
+    <description>Wario's Woods is a puzzle game similar to Tetris or Columns, but with a twist. Instead of directly controlling the monsters and bombs that are falling down, the player controls Toad who has to carry around stacks of monsters and bombs and to combine them in the right way. One bomb plus at least two monsters of the same color have to be combined to make them disappear. If five or more objects are cleared at the same time, a diamond will appear. Destroying the diamond will clear all monsters of the diamond's color.
+There are four different ways to pick up objects. The A button lets Toad pick up the whole stack that is in front of him, the B button lets him only pick up one object, even if it's in the middle of a stack, the Y button lets him kick a monster or bomb that's in front of him and the X button places him on top of the stack that he is carrying. He can also run up walls and stacks to catch falling objects out of the air or to pick up certain parts of a stack.</description>
+    <year>1994</year>
+    <manufacturer>Nintendo</manufacturer>
+    <rom name="Wario's Woods (USA).sfc" size="1048576" />
+  </game>
+  <game name="Pilotwings">
+    <description>Fly a selection of aircraft (including training vehicles, fighter planes and helicopters) through a range of training programs and missions. The more training you complete, the better the chance that you will complete the even bigger missions. Try your hand at landing, taking off, party tricks, fly through bad weather and shoot down targets.</description>
+    <year>1991</year>
+    <manufacturer>Nintendo</manufacturer>
+    <rom name="Pilotwings (USA).sfc" size="524288" />
+  </game>
+  <game name="Teenage Mutant Ninja Turtles IV : Turtles in Time">
+    <description>Doesn't this Shredder dude ever take a break? Now he's gone and kidnapped Channel 6's own reporter babe April O' Neill again, and just as the Ninja Turtles were about to kick his butt, he tore open some kinda time portal thingy and flung them back into the past!
+
+Now Leonardo, Raphael, Donatello, and Michaelangelo have to fight their way through time and tons of Foot Soldiers, mutant wackos, and more in order to save April and slam Shredder's butt all the way to Dimension X! Go, Turtles! Kick some shell and save April!
+</description>
+    <year>1992</year>
+    <manufacturer>Konami</manufacturer>
+    <rom name="Teenage Mutant Ninja Turtles IV - Turtles in Time (USA).sfc" size="1048576" />
+  </game>
+  <game name="Out of This World">
+    <description>You play Lester, a young physics professor, who suddenly finds himself in a strange alien world after a lightning struck during his particle experiment. Now he must fight for his life, first with his bare hands, then with a gun he finds. But what gives him courage is that he is not alone. One of the aliens, who together with him escapes from the prison, helps him on his dangerous quest. Friendship can overcome all the obstacles.
+
+Out of This World is an action adventure game, where the adventuring element is concealed behind what looks like a typical platform shooter. The gameplay is based mainly on physical and environmental puzzles. There is no on-screen interface, and no in-game dialogue. Each enemy requires a different strategy, and often there is only one way to solve the problem. Typically, enemies will be defeated through the use of a gun you find near the beginning of the game; the gun can be used to create a shield from behind which you can safely fire. </description>
+    <year>1992</year>
+    <manufacturer>Interplay</manufacturer>
+    <rom name="Out of this World (USA).sfc" size="1048576" />
+  </game>
+  <game name="Illusion of Gaia">
+    <description>Will is a young boy whose father disappeared long time ago. Now Will lives in a small town with his grandparents. He possesses unusual abilities of pushing and pulling things without touching them. One day, he finds in his house a girl, who soon turns out to be the princess Kara. Kara's father, king Edward, wants her to marry a mysterious person called the Jackal. Kara asks Will to help her to escape the palace, and soon they both get involved in a string of mystery and conspiracies...
+
+The game is somewhat similar to the famous Legend of Zelda games, also having a "save the princess" story, and employing real-time combat. Will can also use his special abilities to solve simple environmental puzzles.
+</description>
+    <year>1994</year>
+    <manufacturer>Nintendo</manufacturer>
+    <rom name="Illusion of Gaia (USA).sfc" size="2097152" />
+  </game>
+  <game name="Harvest Moon">
+    <description>Ever wanted to live life on a farm, with nothing but the sun, the fresh scent of your crops, the muddy fields underneath, and cows and chickens to keep you company? Well, you're in luck, because you have just inherited your grandfather's ranch, but it's in a terrible state of disrepair! What ever can you do?
+
+You're going to do like the farmers do; roll up your sleeves, get down in that dirt, fix that farm up and make it the best farm anyone has ever seen! It sure gets lonely on that farm...but not to worry! There are plenty of girls in the village, and if you treat them right and manage to win their love, you've got yourself a wife!
+
+So let's go, farmer! You've got 2 years to make a name for yourself on that farm! Work hard, and the rewards will be great!</description>
+    <year>1997</year>
+    <manufacturer>Nintendo</manufacturer>
+    <rom name="Harvest Moon (USA).sfc" size="2097152" />
+  </game>
+  <game name="Doom Troopers : Mutant Chronicles">
+    <description>Based on the popular role-playing and card game, DOOM TROOPERS casts you as a fearless commando who's been commissioned to save the world from an invading force of mutants. Play as either Mitch Hunter or Max Steiner as you embark on the most important mission of your life--the complete annihilation of the Dark Legion. Work your way through eight detailed levels filled with all kinds of evil and dangerous mutants, as you unload with a barrage of high-powered weapons that are readily available. If the pressure is a little too much for you to handle alone, recruit a friend and try to eliminate the Dark Legion together. The world is in grave danger, and only the Doom Troopers can make things right.
+</description>
+    <year>1995</year>
+    <manufacturer>Playmates Interactive</manufacturer>
+    <rom name="Doom Troopers - Mutant Chronicles (USA).sfc" size="2097152" />
+  </game>
+  <game name="Kirby's Avalanche">
+    <description>The First Annual Dream Land's Avalanche Competition is about to get under way, and as Kirby and a host of characters from the Kirby series, you can join the tournament and become Avalanche king.
+
+Avalanche is similar to Puyo Puyo, and has you stacking colored blobs similar in a way to Tetris. When a certain amount of one color is stacked, an explosion occurs and the screen clears of those blobs, which then appear in the other players screen (either the CPU or a second player). When your screen is cleared before the other player, you move onto the next round, and so on until the final boss. The winner of that match is then crowned the Avalanche king.
+</description>
+    <year>1995</year>
+    <manufacturer>Banpresto</manufacturer>
+    <rom name="Kirby's Avalanche (USA).sfc" size="1048576" />
+  </game>
+  <game name="Kirby's Dream Course">
+    <description>Kirby's Dream Course is an innovative SNES game featuring everyone's favourite pink blob, Kirby. After his adventures in Dream Land we find him in this mini golf game where Kirby himself is the ball, and you must guide him around each hole using the sort of bar system that you see in most golf games. Where this game differs, however, is in the fact that you need to eliminate all on-screen enemies before you can guide Kirby into the hole and complete it. As per usual in golf games, the more strokes it takes you to complete the whole, the lower your score - so make sure you aim Kirby just right!
+
+You'll find eight courses and a total of sixty-four holes in the game, not including the final showdown with King Dedede, as well as an action-packed two-player mode.</description>
+    <year>1995</year>
+    <manufacturer>Nintendo</manufacturer>
+    <rom name="Kirby's Dream Course (USA).sfc" size="1048576" />
+  </game>
+  <game name="Donkey Kong Country 2 : Diddy's Kong Quest">
+    <description>Donkey Kong has been kong-napped by the nasty K.Rool and the Kremlings, and it is up to Diddy Kong and his girl-friend Dixie Kong to save him.
+
+All the familiar enemies and helpful friends return, along with some new characters, including the wise Wrinkly Kong who will teach you some important lessons in gameplay. Again the emphasis is on banana collecting, where as every 100 bananas makes one extra life. Apart from beating K. Rool and rescuing Donkey Kong, there are extra missions that can be completed. Collect enough K. Rool Krem Coins to open up the routes to the Lost World, while every level has a hidden Hero Coin to collect.
+</description>
+    <year>1995</year>
+    <manufacturer>Nintendo</manufacturer>
+    <rom name="Donkey Kong Country 2 - Diddy's Kong Quest (USA) (En,Fr) (Rev 1).sfc" size="4194304" />
+  </game>
+  <game name="Mega Man X">
+    <description>Mega Man X is a robot designed by Dr. Light to choose his own path in life. Years after he is created, Dr. Cain finds X and mimics his design to create a race of such robots called reploids. When the sigma virus infects these reploids, causing them to commit acts of evil, it is up to Mega Man X and his partner Zero (who is quite powerful, contrary to what his name implies) to stop it.</description>
+    <year>1994</year>
+    <manufacturer>Capcom</manufacturer>
+    <rom name="Mega Man X (USA) (Rev 1).sfc" size="1572864" />
+  </game>
+  <game name="Super Mario World 2 : Yoshi's Island">
+    <description>The events of Yoshi's Island take place in the past. Mario was one of two twin brothers whom the evil Magikoopa Kamek tried to kidnap. Kamek kidnapped one of the brothers, but the second, Mario, fell down on Yoshi's island, where Yoshis live. The Yoshis decided to carry baby Mario and to bring him to his parents. But Kamek has sent troops and hordes of monsters to stop the Yoshis and to kidnap Mario.
+
+In the game, players control the differently colored Yoshis most of the time. Mario is a helpless baby unless a star that makes him invincible is collected. As a Yoshi, players can swallow enemies to make eggs; these eggs are used for attacking other enemies and activating switches. Yoshi can do a flutter jump to clear large gaps that a regular jump can't. Players can also pound the ground for attacks and also flipping certain switches. Additionally, Yoshis can transform into vehicles, such as a helicopter, submarine, or a train. If Mario is dismounted from a Yoshi, a countdown will start, and Yoshi must catch the baby before Kamek's servants kidnap it. When Mario is invincible, he doesn't ride on Yoshi and is immune to attack. While invincible, Mario can run up certain walls.
+</description>
+    <year>1995</year>
+    <manufacturer>Nintendo</manufacturer>
+    <rom name="Super Mario World 2 - Yoshi's Island (USA) (Rev 1).sfc" size="2097152" />
+  </game>
+  <game name="Chrono Trigger">
+    <description>The millennium. A portal is opened. The chain of time is broken. A young man is transported into the past, altering the course of history and the outcome of the future. He has to find his way home, but first he must travel to the outer edges of time to repair the world's chronology. On the way he encounters strange friends and foes, utilizes incredible devices and vehicles, and penetrates and neutralizes the fortresses of the past, present, and future. A paradox has been created. If he does not restore the order of time, nothing will ever be the same. He is the one who will become a hero. He is Crono.</description>
+    <year>1995</year>
+    <manufacturer>Squaresoft</manufacturer>
+    <rom name="Chrono Trigger (USA).sfc" size="4194304" />
+  </game>
+  <game name="Super Mario World">
+    <description>Once again, the evil Bowser has captured Princess Peach (while on a holiday on Yoshi's Island), and it's up to Mario to save her. To aid him in his quest, Mario must use the flying ability of the feather to get him to places hard to reach. But what's even more important is his new friend, the dinosaur Yoshi, who Mario can ride through each level and eat the enemies.
+
+Over 90 levels are on offer, with plenty of Bowser's evil koopas and new characters around each level. Apart from saving Peach, you can also save some of Yoshi's friends, other dinosaurs that each have a special attack. Each level also contains a set of extra items to collect, including dinosaur coins, and break the tape at the end of each level to collect stars, that allow you to open up the bonus games.</description>
+    <year>1991</year>
+    <manufacturer>Nintendo</manufacturer>
+    <rom name="Super Mario World (USA).sfc" size="524288" />
+  </game>
+  <game name="Jungle Strike">
+    <description>Some time after Operation Desert Strike, Ibn Kilbaba, son of Kilbaba S.R, threatens to annihilate America. After his father was killed, the people who were under his control, sent his son running off, along with his father's money and nuclear weapons program. Kilbaba, more ruthless than his father, longs for revenge of his father's death and decides to shed the blood of those who killed him, the Americans. Already armed, Kilbaba hires Carlos Ortega to help him set up his Nuclear Weapons program, deep in South America. Carlos Ortega, the world's most notorious druglord, also yearns to seek revenge. With his own private army, armed with the most hi-tech weapons, he's ready to fight America at all costs. </description>
+    <year>1993</year>
+    <manufacturer>Electronic Arts</manufacturer>
+    <rom name="Jungle Strike (USA).sfc" size="2097152" />
+  </game>
+  <game name="Super Valis IV">
+    <description>Once upon a time, there was a prince named Gallagher. He was entrusted with a magical ring that granted him great powers. But he was too weak to control the power of the ring, and became possessed by it. The mad prince was sealed into a crystal, but many years later managed to break out, planning to wreak havoc on the Dream World and to conquer it! Yuko, the heroine of the three previous Valis games, is no longer a sacred Valis warrior - she has become a goddess. Lena, a young girl who wants to become a Valis warrior, is the new main character, who must prove to Yuko she is worthy to wield the sword of Valis, that will eventually stop the evil plans of Gallagher.
+
+Like the previous games in the series, this is an action platform game. You can fight enemies with melee weapons or use magic. In order to cast magic spells, you must gather special items while fighting off regular enemies. At the end of a level, a boss enemy battle awaits you. The game features cut scenes with animé-style graphics to advance the story.
+</description>
+    <year>1993</year>
+    <manufacturer>Atlus</manufacturer>
+    <rom name="Super Valis IV (USA).sfc" size="1048576" />
+  </game>
+  <game name="Soul Blazer">
+    <description>"Soul Blazer" is a fantasy adventure in which a celestial hero works to liberate a world depopulated by Deathtoll. The hero rescues the souls of humans, animals, and plants, who then return to the world and unlock new paths and items. The game is presented in a top-down perspective, with real-time combat. Freed souls grant the hero special abilities, enhancing their powers as the journey unfolds.</description>
+    <year>1992</year>
+    <manufacturer>Enix</manufacturer>
+    <rom name="Soul Blazer (USA).sfc" size="1048576" />
+  </game>
+  <game name="Super Metroid">
+    <description>Join forces with the power of Samus for a Super Metroid clash!
+Take on the legion of space pirates and take on a new Metroid force as you progress through the underworld of the planet Zebes! It's up to you and Samus to find the larval Metroid before evil forces misuse its energy.
+Every vicious corner, every hidden passageway on the planet Zebes holds menacing creatures ready for battle... including the horrible Ridley and the giant lizard, Kraid. Use your lethal somersault to make enemies bite the dust. Use an electric beam through the gaps. No one will stop you or Samus. But beware! It seems that Mother Brain is back...</description>
+    <year>1994</year>
+    <manufacturer>Nintendo</manufacturer>
+    <rom name="Super Metroid (Japan, USA) (En,Ja).sfc" size="3145728" />
+  </game>
+  <game name="Mega Man X2">
+    <description>Sigma, the leader of the Maverick army, was destroyed when he underestimated his opponent: a lone warrior, awakened into a time he never knew...X.
+
+6 months had passed, and X rose to the rank of leader of the Maverick Hunters. His first task was to eliminate the last of the Mavericks. But as he began his assignment, a mysterious group of Reploids calling themselves the X-Hunters appeared with a message to X: the remains of his fallen comrade, Zero, were in the hands of the X-Hunters, and they planned on resurrecting Zero to fight alongside them and for their fallen leader, Sigma.
+
+X must now stop the X-Hunters and rescue Zero, and once again prevent Sigma from rising back into ultimate power.</description>
+    <year>1995</year>
+    <manufacturer>Capcom</manufacturer>
+    <rom name="Mega Man X2 (USA).sfc" size="1572864" />
+  </game>
+  <game name="Secret of Mana">
+    <description>In Secret of Mana, a young boy unknowingly unleashes ancient evil by pulling a legendary sword from its resting place and is cast out of his village. His only hope lies in reforging the Mana Sword and restoring balance by protecting the Mana seeds in eight sacred palaces. With loyal allies at his side, he must confront the growing threat and reseal the forces of darkness before peace is lost forever.</description>
+    <year>1993</year>
+    <manufacturer>Square</manufacturer>
+    <rom name="Secret of Mana (USA).sfc" size="2097152" />
+  </game>
+  <game name="Blackthorne">
+    <description>Blackthorne is an action-adventure game that takes place on the planet Tuul. Tuul was a peaceful place, until the evil warrior Sarlac used the power of the Darkstone to take control.  Blackthorne's father, the good King Vlaros, sent him to Earth just as his kingdom crumbled around him.  Now, 20 years later, Blackthorne is grown and must return to Tuul to free it from the clutches of Sarlac.
+
+This game is played from a side-view with non-scrolling backgrounds. It has strong similarities to Prince of Persia, except you battle your foes using guns and bombs instead of a sword.</description>
+    <year>1994</year>
+    <manufacturer>Interplay</manufacturer>
+    <rom name="Blackthorne (USA).sfc" size="1048576" />
+  </game>
+  <game name="Alien 3">
+    <description>The ALIENS are fast, spit acid and are right behind you! The motion tracker is your only warning. No time to think, no time to catch your breath... RUN! Can't see very far ahead in these air ducts. Hard to breathe. Face-huggers can be anywhere. You have the firepower... blast the ALIENS with your machine gun, flame thrower and grenade launcher. You know what you have to do... rescue the trapped prisoners and end this nightmare! Just keep telling yourself, "This isn't really happening. It's only a game!!!"</description>
+    <year>1993</year>
+    <manufacturer>LJN</manufacturer>
+    <rom name="Alien 3 (USA).sfc" size="1048576" />
+  </game>
+  <game name="Shadowrun">
+    <description>The SNES version of Shadowrun appeared earlier than the Genesis one, and it is an entirely different game, with different story and gameplay, although it is also based on a pen-and-paper RPG of the same name. Your hero, Jake, is attacked by assassins, and appears to be dead. However, a mysterious dog approaches his lifeless body, transforms into a woman, and casts a spell on him... After that Jake wakes up in the morgue. He doesn't know what happened to him, he doesn't even remember his own name. Wandering through the futuristic city, where monorails, computers, and street gangs armed with automatic weapons co-exist with orcs, dwarves, and vampires, you begin to discover the mystery and to learn about the dangers awaiting you around every corner.</description>
+    <year>1993</year>
+    <manufacturer>Beam Software</manufacturer>
+    <rom name="Shadowrun (USA).sfc" size="1048576" />
+  </game>
+  <game name="Metal Warriors">
+    <description>Get deployed in your own giant mech and battle through nine linear levels against the evil Dark Axis forces. Eject and switch robots, piloting one of the six "Battledroid" suits; but watch out because there are no save games and no continue codes.
+
+For the best of Metal Warriors, grab a friend for some head-to-head combat in the PvP mode. The variety of robots and levels means the matchups stay surprising and interesting.</description>
+    <year>1995</year>
+    <manufacturer>Konami</manufacturer>
+    <rom name="Metal Warriors (USA).sfc" size="2097152" />
+  </game>
+  <game name="Breath of Fire II">
+    <description>Ryu was a young boy who has memories of a strange village far away and a magical doorway which sucked him through. However those are only distant memories. Ryu and his best friend Bow are apprentices in the Ranger's Guild. As adventurers they take on posted jobs needed by the townspeople. However it isn't long before one job goes awry and Bow is accused of stealing a valuable item. In order to clear his friend's name and find the meaning of his dreams, Ryu will explore the world, eventually discovering the meaning of his dreams and hidden abilities inside himself.
+
+Breath of Fire II is a role playing game. The majority of game is played from a top-down map, however battles are seen from an isometric view. Ryu will form parties from among 8 other characters, each with their own set of skills and powers that will help him discover the truth behind the mystery.</description>
+    <year>1995</year>
+    <manufacturer>Capcom</manufacturer>
+    <rom name="Breath of Fire II (USA).sfc" size="3145728" />
+  </game>
+  <game name="Kirby Super Star">
+    <description>The game is actually a set of seven main games: Spring Breeze, Dynablade, Gourmet Race, The Great Cave Offensive are unlocked at first, and later Metaknight's Revenge, Milky Way Wishes and The Arena become available, as well as a couple of minor minigames.
+These are all typical Kirby platformers, each one with its own set of levels and different gameplay. In most of them you can consume monsters and learn their special abilities, but in Milky Way Wishes abilities are instead collected in a manner similar to Metroid. Offensive Cave features levels with various obstacles, hidden treasures and some elementary lever-pulling kind of puzzle solving. Metaknight's Revenge is the only game on the cartridge with a (fairly strict) timer. The Arena is a "boss rush" mode, asking players to defeat every boss in the game with limited health refills and on one life.
+Kirby Super Star is best known for its two-player cooperative play option, which has given it a reputation as a party game.</description>
+    <year>1996</year>
+    <manufacturer>Nintendo</manufacturer>
+    <rom name="Kirby Super Star (USA).sfc" size="4194304" />
+  </game>
+  <game name="Super Punch-Out!!">
+    <description>Your dreams are finally going to come true! All the years of training...all for that day where you'd finally step into the ring, amidst the roar of the excited crowd, to square off against the best of the best...you tighten your fist and hear your gloves tighten with them...you take a step foward...the door opens before you...and the boxing ring beckons your name!
+
+16 world champs are here, with the same dream as you: to win the WVBA Championship! Welcome to the world of boxing, kid! Give 'em an uppercut or two for your fans!</description>
+    <year>1994</year>
+    <manufacturer>Nintendo</manufacturer>
+    <rom name="Super Punch-Out!! (USA).sfc" size="2097152" />
+  </game>
+  <game name="Zombies Ate My Neighbors">
+    <description>In the game you are a male or female protagonist (Zeke or Julia), fighting the vampires, mummies, zombies, etc. on over 50 levels (not including secrets) and saving all of the people you find. There are defined number of neighbors you save on every level. When they are free then "Exit" door opens and you jump on next level.The levels differ from mall and grocery store to beaches and football fields. Using different weapons such as bazooka or water gun you have to kill the bosses such as huge babies, dragons or ants at the end of levels. You can play the game with two players cooperatively.
+</description>
+    <year>1993</year>
+    <manufacturer>Konami</manufacturer>
+    <rom name="Zombies Ate My Neighbors (USA).sfc" size="1048576" />
+  </game>
+  <game name="Prince of Persia">
+    <description>The Grand Vizier Jaffar has thrown you into a dark dungeon and plans to marry the girl of your dreams in an hour. You're not going to let that happen are you? Try to escape from the dungeon, take out Jaffar's guards, find your way through the Sultan's palace and defeat Jaffar himself. Now go, you've got 60 minutes!
+
+Prince of Persia is a 2D platformer with run and jump gameplay. Your hero must avoid deadly traps, solve some simple puzzles and engage in sword fights with the guards. The player has an infinite amount of lives, but has to restart at the beginning of a level each time he dies, and must complete the game within an hour. An especially noteworthy aspect of the game is the very fluent animation of your character.
+
+The Game Boy Color and SNES versions of the game feature additional levels and new enemies. The Genesis version has a new intro and an altered set of graphics but the level layout remains almost identical to that of the original.</description>
+    <year>1992</year>
+    <manufacturer>Konami</manufacturer>
+    <rom name="Prince of Persia (USA).sfc" size="1048576" />
+  </game>
+  <game name="Lufia II : Rise of the Sinistrals">
+    <description>Lufia II is an RPG with many puzzle elements thrown in. In this game, the prequel to Lufia I, you are Maxim, a monster hunter. During your journey, you will find new party members, explore and conquer various dungeons, and solve many puzzles. 
+Lufia II was an innovative game in many regards. It made extensive use of puzzles in its dungeon layouts. It also featured "Capsule Monsters" which would fight alongside your party in battle. They would evolve when fed weapons, armor, or special fruits. You could also gamble away your money in minigames at the casinos found in various towns.
+</description>
+    <year>1996</year>
+    <manufacturer>Nintendo</manufacturer>
+    <rom name="Lufia II - Rise of the Sinistrals (USA).sfc" size="2621440" />
+  </game>
+  <game name="Rock n' Roll Racing">
+    <description>Rock 'n Roll Racing is an arcade combat racing game. Combat plays a heavy role in the game, as each car has a frontal weapon, such as a laser or missile, and a drop weapon, such as spikes or mines. As you complete races, you get more money to upgrade your car.
+
+The soundtrack features "Born to Be Wild," "Bad to the Bone," "The Peter Gunn Theme," "Highway Star" and "Paranoid."
+</description>
+    <year>1993</year>
+    <manufacturer>Interplay</manufacturer>
+    <rom name="Rock n' Roll Racing (USA).sfc" size="1048576" />
+  </game>
+  <game name="Bust-A-Move">
+    <description>Bust-A-Move (also known as Puzzle Bobble) is a real-time puzzle game in which the player controls a device called "pointer" at the bottom of the screen, aiming and releasing randomly colored bubbles upwards. Depending on the aiming, the bubbles may float up directly or bounce off the walls, changing their trajectory. The goal is to aim the bubbles in such a way that they will touch identically colored ones. When such bubbles form a group of three or more, they pop and disappear from the screen.
+
+If the ceiling of the area is covered by too many bubbles, it will gradually descend; the game is over when it nearly reaches the player-controlled pointer. Should the player fail to release the bubbles within a specific time limit, they will be released automatically, unaffected by the pointer's aiming.
+
+A two-player mode is included as well. Each player competes on an area occupying half of the screen, dealing with identically generated bubbles. Whenever a player successfully disposes of a bubble group, a part of it is transferred onto the opponent's part of the screen.
+
+The game features the two dinosaur protagonists (Bob and Bub) as well as other characters from Bubble Bobble, even though the two games have distinctly different gameplay.</description>
+    <year>1995</year>
+    <manufacturer>Taito</manufacturer>
+    <rom name="Bust-A-Move (USA).sfc" size="524288" />
+  </game>
+  <game name="Super Star Wars : The Empire Strikes Back">
+    <description>Super Star Wars: The Empire Strikes Back takes you on an action-packed journey through iconic moments – from the icy battles on Hoth to the mysterious training with Yoda and the dramatic confrontation with Darth Vader. Many scenes are expanded or reimagined, adding new locations and enemies while introducing surprising twists. You switch between Luke, Han and Chewbacca, each playing differently with unique special abilities – from destructive spins to Luke's lightsaber defense and unlockable Force powers. Alongside classic platforming sections, vehicle stages in the snowspeeder, Millennium Falcon and X-Wing deliver cinematic variety, while hidden collectibles, upgrades and new powers constantly encourage you to explore every stage thoroughly.</description>
+    <year>1993</year>
+    <manufacturer>JVC</manufacturer>
+    <rom name="Super Star Wars II - The Empire Strikes Back (USA) (Rev 1).sfc" size="1572864" />
+  </game>
+  <game name="EarthBound">
+    <description>EarthBound begins in the quiet town of Onett, where a meteor crash shatters young Ness's ordinary life. A strange being named Buzz Buzz warns him of Giygas, a monstrous alien set to destroy the world, and reveals that only four children can stop him. Ness must find Paula, Jeff, and Poo to battle bizarre enemies in this turn-based RPG. Travel through quirky locations, gain experience, use psychic powers, and survive heavy hits thanks to the rolling HP meter. Weaker enemies flee from strong heroes, and saving is done by phoning Ness's dad. A heartfelt, humorous, and deeply imaginative adventure awaits.</description>
+    <year>1995</year>
+    <manufacturer>Nintendo</manufacturer>
+    <rom name="EarthBound (USA).sfc" size="3145728" />
+  </game>
+  <game name="Mortal Kombat II">
+    <description>The Mortal Kombat fighters, plus several new ones, return for a tournament held by the evil Shang Tsung of the Outworld. The action is one-on-one as before, and famed for its high level of violence and blood (other than the sanitised Nintendo version). There are 5 difficulty levels and optional credits, as well as the usual two player mode including same character duels.
+
+To win the main tournament, the player must beat each of the other human players, before taking on Shang Tsung, Kintaro and finally Shao Kahn. Players have a range of punches and kicks available, as well as flying kicks, uppercuts, roundhouses, and the special moves, which vary for each player. These include throws, uppercuts, long-distance bullets, bicycle kicks and a teleport feature.</description>
+    <year>1994</year>
+    <manufacturer>Acclaim Entertainment</manufacturer>
+    <rom name="Mortal Kombat II (USA) (Rev 1).sfc" size="3145728" />
+  </game>
+  <game name="Super Mario Kart">
+    <description>A collection of Super Mario characters, including Mario, Luigi, Yoshi, Peach, Bowser and Donkey Kong Jr., are out to win the Super Mario Kart championship. Using Mode 7 scaling, the first true kart game on the SNES has you collecting coins to boost your speed while using shells and bananas to stop others on the track. 
+
+There are 4 cups in all to race for, Mushroom Cup, Flower Cup, Star Cup and Special Cup, each with a selection of tracks to race on (based in Bowser's Castle, Super Mario World and more). Plus, a 2 player battle mode is on offer, where the first to pop the three balloons wins.</description>
+    <year>1992</year>
+    <manufacturer>Nintendo</manufacturer>
+    <rom name="Super Mario Kart (USA).sfc" size="524288" />
+  </game>
+  <game name="Ultimate Mortal Kombat 3">
+    <description>Ultimate Mortal Kombat 3 combines the best of all the Mortal Kombats into a single cartridge. 23 playable characters are immediately available, such as Reptile, Cyrax, Scorpion, Sub-Zero, Jax, Katana, Sonya, and more. There are two bosses that are unlockable, as well as additional characters.
+
+There is a variety of new levels, some of which are interactive. Characters can uppercut someone, causing them to hit the ground hard and crash through to the bottom floor, or they can knocked someone off a bridge, landing in a pit of spikes.
+
+Players can go against the computer one-on-one, two-on-two, or take part in the 8-fighter tournament.
+
+The DS version has a wireless one-one-one multiplayer mode and includes the Puzzle Kombat mini-game from Mortal Kombat: Deception.</description>
+    <year>1996</year>
+    <manufacturer>Midway</manufacturer>
+    <rom name="Ultimate Mortal Kombat 3 (USA).sfc" size="4194304" />
+  </game>
+  <game name="Tetris &amp; Dr. Mario">
+    <description>Two of the most popular puzzle games return, but now together in an exclusive compilation for SNES. The games have a slight graphical update when compared with the original Game Boy and NES games, but the gameplay remains totally faithful to the games released for both platforms.
+
+In Tetris, the main objective is to pile blocks that will fall down continuously, in order to create a row or "line" without spaces. For this collection, the game comes with two bonus options: 2 PLAYER GAME (absent in the NES version) and VS. COM (absent in both versions), with 3 CPU opponents available, each one representing a difficulty level (EASY, MEDIUM, and HARD, respectively).
+
+In Dr. Mario, the objective is to eliminate all the viruses contained in a big bottle. Dr. Mario (situated in the upper-right side of the screen) will throw capsules with 6 different color combinations (Red-Red, Red-Blue, Yellow-Yellow, Red-Yellow, Blue-Blue and Blue-Yellow) in order to line up at least four viruses or capsules of the same color horizontally or vertically and to make them disappear. In this compilation, the game comes with a bonus option: VS. COM, where you'll face the CPU players: Blue Virus (EASY), Yellow Virus (MEDIUM), and Red Virus (HARD).
+
+For competitive players in both games, there is Mixed Match, where you and a friend can play Tetris and Dr. Mario like a tournament! Adjust the handicap levels, play time, music, and other settings to balance your different skills. The game order is: TETRIS B-TYPE (clear a certain amount of lines), DR. MARIO (disinfect a predetermined number of viruses) and TETRIS A-TYPE (clear lines until the time expires). At the end of the time limit, the player with the highest score is the winner.</description>
+    <year>1994</year>
+    <manufacturer>Nintendo</manufacturer>
+    <rom name="Tetris &amp; Dr. Mario (USA).sfc" size="1048576" />
+  </game>
+  <game name="Final Fantasy III">
+    <description>Ages ago, evil beings created powerful creatures called Espers, and unleashed them against each other. The resulting battles left their world a smoldering rubble. Legend has it, the Espers destroyed themselves and most of humanity. Magic disappeared forever. Centuries have passed and a rational world now exists with Espers living only in myths, until one frozen solid since the ancient wars is unearthed. Suddenly, there are reports of magical attacks on civilians. Imperial Commandos launch raids using magic-powered MagiTek weapons. Magic is obviously alive and the world is in danger again. Who or what is behind the rediscovery and redeployment of this legendary power? What chaotic plans exists that will wreak havoc on this orderly world?</description>
+    <year>1994</year>
+    <manufacturer>Squaresoft</manufacturer>
+    <rom name="Final Fantasy III (USA) (Rev 1).sfc" size="3145728" />
+  </game>
+  <game name="Ogre Battle : The March of the Black Queen">
+    <description>Lead the rebellion and lead your army to reclaim your land from the evil Zenobian Empire in this real-time strategy game. Free towns and collect items and tarot cards to increase your strength, as well as recruit allies to join you in your crusade. But when you finally win the day, will you be a benevolent leader, or an become an evil despot yourself? You must decide.
+</description>
+    <year>1995</year>
+    <manufacturer>Enix</manufacturer>
+    <rom name="Ogre Battle - The March of the Black Queen (USA).sfc" size="1572864" />
+  </game>
+  <game name="ActRaiser 2">
+    <description>Players control "The Master," a god-like spirit sent down from the heavens, and fight to eradicate evil from the land. This sequel to ActRaiser focuses entirely on the side-scrolling action of the original, and has 14 levels with new monsters, new abilities, and new super powers.
+
+You still control a "Cloud Palace" across a zoomable map of the world, choosing your next area of battle. In addition, many of the sound effects from the original game make their reappearance, as well as some hidden RPG elements. 
+
+Changes from the original ActRaiser include the elimination of the village-building mode, a move from a battery-save to password-save system, and a new musical score.</description>
+    <year>1993</year>
+    <manufacturer>Ubi Soft Entertainment Software</manufacturer>
+    <rom name="ActRaiser 2 (USA).sfc" size="1572864" />
+  </game>
+  <game name="F-Zero">
+    <description>F-Zero is a futuristic racing game, set in the year 2560. The player chooses one of the four available hovercars and then can race with other hovercars in one of the gameplay modes - "Practice" or "Grand Prix".
+
+In "Practice" mode, the player chooses one track where he competes with one other hovercar to win the race (or there can be no rival at all, if you so wish). In "Grand Prix", the player must complete a series of races with several competitors. Each race consists of five laps.</description>
+    <year>1991</year>
+    <manufacturer>Nintendo</manufacturer>
+    <rom name="F-Zero (USA).sfc" size="524288" />
+  </game>
+  <game name="NBA Jam">
+    <description>NBA Jam is a two-on-two basketball game You can play any NBA team, and you can play as players like Barkley, Starks, Pippen, and Grant. Each human player controls a single player, so choose your squad wisely to take team-mate skill into account. The game is action-oriented, and players can perform unrealistic slam-dunks. Full performance statistics are automatically recorded. The play clock and 3-point line apply, but other rules are largely overlooked.</description>
+    <year>1994</year>
+    <manufacturer>Acclaim Entertainment</manufacturer>
+    <rom name="NBA Jam (USA).sfc" size="2097152" />
+  </game>
+  <game name="Axelay">
+    <description>This planet was once a quiet, peaceful place to live, until...they came...
+
+An unknown alien race came to this planet and promptly laid waste to it. The remaining defense force has been sent out to try and defeat them. One lucky person gets to fly the latest line of defense ships made: the AX-77 Axelay. However, these ships are still in the prototype stage, and as such, only one exists.
+
+So get out there and head to the alien's homeworld. With some luck, you may just be able to take them out at the source...</description>
+    <year>1992</year>
+    <manufacturer>Konami</manufacturer>
+    <rom name="Axelay (USA).sfc" size="1048576" />
+  </game>
+  <game name="Gradius III">
+    <description>Gradius III is the third game in Konami's long-running space shooter series, which also includes Life Force and Nemesis. As with most Gradius titles, you control the highly advanced Vic Viper space fighter against hordes of foes. Weapons can be selected from pre-arranged loadouts or you can create your own custom loadout. The game can be played by a single player, or by two players in alternating turns. The game offers three levels of difficulty.</description>
+    <year>1991</year>
+    <manufacturer>Konami</manufacturer>
+    <rom name="Gradius III (USA).sfc" size="524288" />
+  </game>
+  <game name="Killer Instinct">
+    <description>In the distant future, a monopolistic and technological corporation called Ultratech organizes a fighting tournament known as "Killer Instinct". Many fighters answer the challenge to participate, including several of Ultratech's experimental warriors.  To increase the tournament's challenge, Ultratech utilizes a technology that can create bridges between alternate dimensions, releasing a creature known as Eyedol.  Eyedol is a two-headed ancient warrior that was imprisoned along with his bitter rival, Gargos. Some warriors enter the tournament to seek glory or escape.  Other fighters are attempting to bring an end to Ultratech's corruption. </description>
+    <year>1995</year>
+    <manufacturer>Nintendo</manufacturer>
+    <rom name="Killer Instinct (USA) (Rev 1).sfc" size="4194304" />
+  </game>
+  <game name="Sunset Riders">
+    <description>The Wild West...full of the criminal element. Sir Richard Rose, the most despicable face in the criminal lot, has enough power to control the mining facilities, cattle ranches, and trading communities and turn everything to his favor. With that much power, he could literally buy himself the Wild West and control everything!
+
+The people need help, desperately. And just as things were looking grim, who should ride into town but 4 men who have made a pact: to put down Sir Richard Rose and make the Wild West a free and peaceful place to live.
+
+Steve, Bob, Billy, and Cormano are the Sunset Riders, and they're about to live out the wildest shootout the Wild West has ever seen...</description>
+    <year>1993</year>
+    <manufacturer>Konami</manufacturer>
+    <rom name="Sunset Riders (USA).sfc" size="1048576" />
+  </game>
+  <game name="Contra III : The Alien Wars">
+    <description>It's time for revenge...
+
+The hideous Red Falcon, thought to have been destroyed long ago by the Earth's greatest commandos, Mad Dog and Scorpian, has risen again, this time pissed off and thirsty for revenge. His armies are marching through the cities, across the lands, and with the intention of exterminating the human race like a bad case of fleas. Two new commandos, Jimbo and Sully, have come forth now to kick Red Falcon's ass and save what remains of the world from his hideous plans!
+
+The Alien Wars begin!!!</description>
+    <year>1992</year>
+    <manufacturer>Konami</manufacturer>
+    <rom name="Contra III - The Alien Wars (USA).sfc" size="1048576" />
+  </game>
+  <game name="Donkey Kong Country 3 : Dixie Kong's Double Trouble!">
+    <description>This time both Donkey Kong and Diddy Kong have been kong-napped by a mysterious new leader of the Kremlings, and it's up to Dixie and new team mate Kiddy Kong to save the day.
+
+New elements to the series includes the Brother Bears, thirteen Bears who, if you pay them with Bear Coins found in each level, will aid you in your quest by building certain items. Also, new bonus mission have you playing a 1st/3rd person shooter style party game. Plus a host of new enemies, the usual huge end of world bosses and a collection of the Kong family who will help you out as best they can.
+</description>
+    <year>1996</year>
+    <manufacturer>Nintendo</manufacturer>
+    <rom name="Donkey Kong Country 3 - Dixie Kong's Double Trouble! (USA) (En,Fr).sfc" size="4194304" />
+  </game>
+  <game name="Star Fox 2">
+    <description>After his defeat in the original Star Fox, the game's antagonist, Andross, returns to the Lylat system and launches an all-out attack against Corneria, using his new fleet of battleships and giant missiles launched from hidden bases to destroy the planet. General Pepper again calls upon the Star Fox team for help. Armed with new custom Arwings, a Mothership, and two new recruits (Miyu, a lynx, and Fay, a dog), the Star Fox team sets out to defend Corneria by destroying Andross's forces before they can inflict critical damage on the planet. Along the way, Star Fox must also combat giant boss enemies, bases on planets throughout the Lylat system, members of the Star Wolf team and finally Andross himself.</description>
+    <year>2017</year>
+    <manufacturer>Nintendo</manufacturer>
+    <rom name="Star Fox 2 (USA, Europe).sfc" size="1048576" />
+  </game>
+  <game name="Super Mario All-Stars">
+    <description>Super Mario All-Stars is a compilation on Super Nintendo of all the platform games featuring Mario released for Nintendo. It includes : Super Mario Bros. 1, 2 and 3 as well as Super Mario Bros.: The Lost Levels, which was never released in Europe before. More than a simple compilation, the game brings improved graphics and the possibility to save your progress. Nostalgic fans of the first Nintendo console will be pleased.</description>
+    <year>1993</year>
+    <manufacturer>Nintendo</manufacturer>
+    <rom name="Super Mario All-Stars (USA).sfc" size="2097152" />
+  </game>
+  <game name="ActRaiser">
+    <description>ActRaiser was one of the early SNES games, drawing upon the success of side-scrolling platform action titles and the building model of Sim City. You play "The Master", and must save the world from evil. First you purge the land by sending your spirit into a warrior with a big sword and magic powers. This side scrolling portion puts you in many different locales, from swamps and forests, to pyramids and snowy mountaintops. As you eliminate evil from different parts of the land, you allow villagers to return and build their towns. You then control an angel who helps guide the villagers in their town building, and can send down miracles to aid them in their needs.</description>
+    <year>1991</year>
+    <manufacturer>Enix</manufacturer>
+    <rom name="ActRaiser (USA).sfc" size="1048576" />
+  </game>
+  <game name="The Lion King">
+    <description>Young Simba just can't wait to be king. His father is the current King of the Savannah and the young prince is able to frolic the lands at will; jumping on and around other subjects of this animal kingdom. When Simba's father, King Mufasa, is killed and his evil brother Scar takes over the kingdom, Simba is banished from the lands of his birthright and has to grow up fast, honing his skills, for the day of his return.
+
+The Lion King, based on the famous Disney movie, is a platform game where you control Simba - initially as a young cub, and later as an adult lion. The plot of the game follows the plot of the movie. Each of the levels represents a part of the movie. </description>
+    <year>1994</year>
+    <manufacturer>Virgin</manufacturer>
+    <rom name="The Lion King (USA).sfc" size="3145728" />
+  </game>
+  <game name="Breath of Fire">
+    <description>In a distant land, peace was maintained for thousands of years by a fearful dragon clan who could transform into powerful monsters. One day they discovered a goddess who could fulfill their every wish. Greed split the clan into Dark and Light Dragons, each battling the other to win her magic.
+
+One member of the Light Dragons, along with seven of his companions, emerged to keep the opposing forces from destroying their world. Using six magical keys, they sealed the goddess into another realm.
+
+Centuries have passed. The Dark Dragons are destroying the land in search of the keys. When they find the keys, they will once again release the magic goddess. Light Dragon... the time has come to draw your sword and fight for the future of your people.</description>
+    <year>1994</year>
+    <manufacturer>Squaresoft</manufacturer>
+    <rom name="Breath of Fire (USA).sfc" size="1572864" />
+  </game>
+  <game name="Flashback : The Quest for Identity">
+    <description>The year is 2142. You play as Conrad B. Hart, a man who has lost his memory. After barely escaping from hostile aliens, Conrad's bike crashes on an unknown planet. Conrad finds himself in the jungle, and from now on his quest for survival and his lost identity begins.
+
+"Flashback" is a platform action adventure. You navigate Conrad over the platforms, performing various moves. You can simply jump or do a longer run-and-jump, run, climb, hang off ledges, and pick up objects lying on the ground. To defend yourself, you shoot enemies with your gun and also use various objects (such as stones) to harm or to distract them.
+</description>
+    <year>1994</year>
+    <manufacturer>U.S. Gold</manufacturer>
+    <rom name="Flashback - The Quest for Identity (USA) (En,Fr,De).sfc" size="2097152" />
+  </game>
+  <game name="Super Castlevania IV">
+    <description>Simon Belmont returns in the first Castlevania title to grace the SNES.  The console may be different, but the setup is very familiar: The place is Transylvania.  The villain is Count Dracula.
+
+Belmont has the classic Castlevania assortment of weapons (the famous whip, daggers, axes, fire bombs, boomerangs) at his disposal, and he gains strength and points by collecting various-sized hearts, coin purses, and pork chops. 
+
+Like most Castlevania games, Super Castlevania IV is a 2D side-scrolling action game. However, it is 2D with more depth than ever before. Parallax scrolling and rotating chambers are some of the "Mode 7" effects made possible by the SNES hardware.</description>
+    <year>1991</year>
+    <manufacturer>Konami</manufacturer>
+    <rom name="Super Castlevania IV (USA).sfc" size="1048576" />
+  </game>
+  <game name="International Superstar Soccer">
+    <description>International Superstar Soccer lets you choose from 26 national teams and dive into fast-paced football with realistic gameplay. Whether it's exhibition, international cup, penalty kicks, or training – the game offers multiple challenges. The scenario mode stands out, placing you in famous match situations where you're tasked with turning the game around. With mature player designs, back numbers, and smart AI, it's considered a landmark among 16-bit football games.</description>
+    <year>1995</year>
+    <manufacturer>Konami</manufacturer>
+    <rom name="International Superstar Soccer (USA).sfc" size="1048576" />
+  </game>
+  <game name="Super Turrican 2">
+    <description>Super Turrican is back, and once again the USS Freedom Forces have to prevent the evil Machine from harming innocent civilizations.
+This requires the player to jump and shoot his way through large levels filled with lots of enemies. To get rid of all the enemies, several different weapons can be used, most of which are already familiar to players from previous episodes: a Laser, a Spread-shot, and a(improved) Rebound. There is also the option to go into "wheel-mode" for a limited time to become invincible, lay mines and shoot rockets. The Flamethrower is new to the series as well as the Rope, which can be used to climb walls, cling to platforms or pick up out-of-reach items. Much like in side-scrolling shooters, you can now pick up homing missiles as secondary weapons. The biggest difference to previous Turrican-games however, is the fact that in Super Turrican 2 almost half of the levels are strictly linear and don't feature any large secret areas.</description>
+    <year>1995</year>
+    <manufacturer>Ocean</manufacturer>
+    <rom name="Super Turrican 2 (USA).sfc" size="2097152" />
+  </game>
+  <game name="Sparkster">
+    <description>Sparkster is a 2D side-scrolling platformer starring the eponymous hero who previously appeared in Rocket Knight Adventures. It is very different from the contemporary Genesis title Sparkster, as it does not continue the story from the first game and has completely different levels, enemies and gameplay mechanics. In that way it can be considered a spin-off in the series. The introduction merely shows how an elderly man captures a girl and takes her into his airship. At that point Sparkster appears and he decides to chase them.
+
+Sparkster is a rodent carrying a rocket pack on his back. He can move around, duck, jump and hang from branches or rails. His regular attack is a sword slash that sends out a circular projectile. Through the L and R buttons he can dash left and right in a circle of fire. Keeping the attack button pressed powers up a rocket meter. When full, different types or actions can be performed: dashing left, right or up to cover a large distance, ricocheting off walls in a diagonal motion, or a stationary attack.
+
+The game consists of nine levels of which the last two can only be accessed on higher difficulty levels. Sparkster collects diamonds for points, defeats all types of robot enemies and collects apples to restore his heart meter near the top of the screen. Most of the game consists of regular platforming gameplay, with a few diversions where Sparkster rides a robot bird, or is shown from a top-down view flying in the air like a vertically-scrolling shooter. All levels have a level boss along with a large number of mid-level bosses. The game supports a password system.</description>
+    <year>1994</year>
+    <manufacturer>Konami</manufacturer>
+    <rom name="Sparkster (USA).sfc" size="1048576" />
+  </game>
+  <game name="The Legend of the Mystical Ninja">
+    <description>Players control either Goemon or his partner Ebisu-Maru (or both, in 2 player mode). They sequentially travel through adventure-type villages and side-scrolling jump and run action stages. In the overhead-view villages, enemies must be defeated in order to earn money and other items (which include a weapon-enhancing lucky cat and mystical scrolls). The player is able to attack with their primary weapon and jump. Throwing weapons can also be used, which consume money for each one thrown. Attacking innocent villagers will cause the player to lose money. Money can also be gained (or lost) by visiting one of the numerous mini games, often in houses: which include mazes, whack-a-mole, the lottery, dice, a 3D labyrinth and a game trivia quiz show. Other businesses such as shops, resturants, inns and judo training can also be visited.screen.</description>
+    <year>1992</year>
+    <manufacturer>Konami</manufacturer>
+    <rom name="The Legend of the Mystical Ninja (USA).sfc" size="1048576" />
+  </game>
+  <game name="Side Pocket">
+    <description>The main objective is to cross different USA cities and reach the predetermined scores to go ahead. But remember: you'll have only 16 balls and every error can be lethal!
+
+The game also comes with modes for 2 players with two variants: 2P Pocket Game (the traditional mode) and 2P 9-Ball Game, where the premise is to sink 9 balls before the other player makes them first. If you prefer, test your target in Trick Game or even hear your favorite song in Jukebox.
+
+After each stage completed (and some luck), a bonus stage will appear, as well as the chance to earn extra balls. You will only need a good target in the parquet block!</description>
+    <year>1993</year>
+    <manufacturer>Data East</manufacturer>
+    <rom name="Side Pocket (USA).sfc" size="1048576" />
+  </game>
+  <game name="Top Gear">
+    <description>In the first of three Super NES games, choose from four cars with distinct top speed, fuel consumption, boost power, and tire grip. Race across 32 challenging tracks set in countries including Brazil, the USA, France, and Japan, either solo or in two-player split-screen mode.
+
+Longer courses feature pit stops for refueling, while iron plates and rocks create extra hazards. In single-player mode, the computer opponent has a slight speed advantage. A password system lets you continue later, but you must finish at least 5th to advance.</description>
+    <year>1992</year>
+    <manufacturer>Gremlin Graphics Software</manufacturer>
+    <rom name="Top Gear (USA).sfc" size="524288" />
+  </game>
+  <game name="Disney's Aladdin">
+    <description>For years, Jafar, the Sultan's evil advisor has sought a magic treasure - a single lamp that holds the key to the greatest power in the world. With this goal in sight, Jafar learns that only one person in the world can claim the magic lamp from the dreaded Cave of Wonders - one whose rags hide a heart that is pure - a diamond in the rough!
+Join Aladdin and his pet monkey Abu, as they race through the marketplace toward their date with destiny. Watch as Jafar tricks our hero and his friend into retrieving the lamp from the dangerous Cave of Wonders. But Aladdin and Abu outwit Jafar, releading the power of a wacky blue Genie! Aladdin will have the chance to spoil Jafar's devious plans and win the hand of the beautiful princess Jasmine. But it will take more than magic to make his wishes come true...</description>
+    <year>1993</year>
+    <manufacturer>Capcom</manufacturer>
+    <rom name="Aladdin (USA).sfc" size="1310720" />
+  </game>
+  <game name="The Magical Quest Starring Mickey Mouse">
+    <description>This was the first Mickey Mouse game for Super NES, featuring a traditional platform gameplay and colorful Disney-like graphics.
+
+Mickey's mission is to save his dog Pluto, who's been kidnapped and kept inside emperor Pete's castle, in a magical land, guarded by mysterious creatures. 
+
+The originality of the game lies on the possibility of wearing different costumes to incorporate different characters, all taken from old Disney cartoons. Each one has a special ability. As a wizard, Mickey has magical powers; as a fireman, the mouse can deal with fire; and, as a climber, he can reach the top of high platforms.</description>
+    <year>1992</year>
+    <manufacturer>Capcom</manufacturer>
+    <rom name="The Magical Quest Starring Mickey Mouse (USA).sfc" size="1048576" />
+  </game>
+  <game name="E.V.O. : Search for Eden">
+    <description>The storyline of E.V.O.: Search for Eden follows the same patterns as modern Evolution theories. The players first controls a prehistoric sea organism, and fights to gain evolution points with which he can improve his fish's body parts and upgrade his attack/defense abilities. The gameplay is not completely linear, which means that certain choices of paths and stages will affect the player's success.
+The game is composed of a series of stages, in which the sea organism slowly evolves into an amphibian, and later a land-only creature. The physical changes are fairly scientifically accurate which gives the game a semi-educational purpose as well.
+</description>
+    <year>1993</year>
+    <manufacturer>Enix</manufacturer>
+    <rom name="E.V.O. - Search for Eden (USA).sfc" size="1572864" />
+  </game>
+</datafile>

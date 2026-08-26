@@ -193,6 +193,12 @@
     let accountSyncDirty = false;
     let accountData = { data: {} };
 
+    function shouldPreferLowPerformanceMode() {
+        const memoryLimit = navigator.deviceMemory && navigator.deviceMemory <= 4;
+        const processorLimit = navigator.hardwareConcurrency && navigator.hardwareConcurrency <= 4;
+        return memoryLimit || processorLimit;
+    }
+
     const accountStorageKeys = [
         ACHIEVEMENT_STORAGE_KEY,
         FAVORITES_STORAGE_KEY,
@@ -305,6 +311,19 @@
         }
     }
 
+    async function flushAccountData() {
+        if (achievementSaveTimer !== null) {
+            window.clearTimeout(achievementSaveTimer);
+            achievementSaveTimer = null;
+            saveAchievementState();
+        }
+        if (accountSyncTimer !== null) {
+            window.clearTimeout(accountSyncTimer);
+            accountSyncTimer = null;
+        }
+        if (accountSyncDirty && !accountSyncInFlight) await syncAccountData();
+    }
+
     function queueAccountSync() {
         if (!isAccountSignedIn()) return;
         accountSyncDirty = true;
@@ -368,6 +387,7 @@
         const user = getStoredAccountUser();
         const signedIn = Boolean(user?.username);
         window.__arcadeAuthSignedIn = signedIn;
+        if (favoriteGameBtn) favoriteGameBtn.hidden = !signedIn;
         accountPasswordForm.hidden = signedIn;
         accountSignedIn.hidden = !signedIn;
         accountModeToggle.hidden = signedIn;
@@ -437,6 +457,7 @@
     }
 
     async function signOutAccount() {
+        await flushAccountData();
         if (authApiBaseUrl) await fetch(`${authApiBaseUrl}/auth/signout`, { method: 'POST', credentials: 'include' }).catch(() => {});
         window.__arcadeAuthSignedIn = false;
         accountSyncDirty = false;
@@ -789,7 +810,7 @@
             arcadeSettings = {
                 threadedCores: saved.threadedCores ?? settingsDefaults.threadedCores === true,
                 crtEnabled: saved.crtEnabled ?? settingsDefaults.crtEnabled === true,
-                lowPerformance: saved.lowPerformance ?? settingsDefaults.lowPerformance === true,
+                lowPerformance: saved.lowPerformance ?? (settingsDefaults.lowPerformance === true || shouldPreferLowPerformanceMode()),
                 systems: {
                     ...(settingsDefaults.systems || {}),
                     ...(saved.systems || {})
@@ -799,7 +820,7 @@
             arcadeSettings = {
                 threadedCores: settingsDefaults.threadedCores === true,
                 crtEnabled: settingsDefaults.crtEnabled === true,
-                lowPerformance: settingsDefaults.lowPerformance === true,
+                lowPerformance: settingsDefaults.lowPerformance === true || shouldPreferLowPerformanceMode(),
                 systems: { ...(settingsDefaults.systems || {}) }
             };
         }
@@ -815,7 +836,7 @@
 
     function resizeCrtCanvas() {
         if (!crtCanvas) return;
-        const ratio = window.devicePixelRatio || 1;
+        const ratio = Math.min(window.devicePixelRatio || 1, 1.5);
         const width = Math.max(1, Math.floor(window.innerWidth * ratio));
         const height = Math.max(1, Math.floor(window.innerHeight * ratio));
 
@@ -1532,7 +1553,9 @@
                     if (!selectedGame) return;
 
                     playArcadeSound(soundLaunch);
-                    if (selectedGame.core === "native_html") {
+                    if (selectedGame.core === "ebooks") {
+                        launchEbook(selectedGame, hintsDisplay);
+                    } else if (selectedGame.core === "native_html") {
                         launchHtmlGame(selectedGame, hintsDisplay);
                     } else {
                         launchGame(selectedGame, hintsDisplay);
@@ -1724,6 +1747,11 @@
                 <div class="icon-wrapper">${iconMarkup}</div>
                 <div class="card-title">${sys.title}</div>
             `;
+            const icon = card.querySelector('img');
+            if (icon) {
+                icon.loading = 'lazy';
+                icon.decoding = 'async';
+            }
             card.dataset.systemIndex = actualIndex;
             card.addEventListener('click', () => {
                 if (currentViewMode !== "WHEEL") return;
@@ -1752,7 +1780,7 @@
             currentSystemIdx = visibleIndices[0] ?? currentSystemIdx;
             selectedVisiblePosition = 0;
         }
-        const activeCardObj = carouselCards.find((entry) => entry.actualIndex === currentSystemIdx);
+        const activeCardObj = carouselCards[selectedVisiblePosition];
         if (activeCardObj) activeCardObj.card.classList.add('active');
 
         if (triggerSound) playArcadeSound(soundScroll);
@@ -1798,6 +1826,7 @@
         updateGameSelection(0, false, false);
     }
 
+
     function buildGamelistItems() {
         const items = [];
         const currentSystem = gameLibrary[currentSystemIdx];
@@ -1826,7 +1855,6 @@
                 });
             });
             result = allSystemMatches.sort((a, b) => a.title.localeCompare(b.title, undefined, { sensitivity: 'base' }));
-            try { console.debug('buildGamelistItems all-systems', result); } catch(e) {}
             return result;
         }
 
@@ -1908,7 +1936,6 @@
             });
         }
 
-        try { console.debug('buildGamelistItems', currentSystem.system, result); } catch(e) {}
         return result;
     }
 
@@ -2148,7 +2175,7 @@
             playArcadeSound(soundBack);
 
             if (activeGame) {
-                if (activeGame.core === "native_html") {
+                if (activeGame.core === "native_html" || activeGame.core === "ebooks") {
                     closeHtmlGame(hintsDisplay);
                 } else {
                     closeGameWithSave(activeGame, hintsDisplay);
@@ -2158,7 +2185,7 @@
                 const currentSystem = gameLibrary[currentSystemIdx];
                 const selectedItem = displayedGamelistItems[currentGameIdx];
                 const targetGame = selectedItem?.type === 'game' ? (selectedItem.game || currentSystem.games[selectedItem.origIndex]) : null;
-                if (targetGame && targetGame.core === "native_html") {
+                if (targetGame && (targetGame.core === "native_html" || targetGame.core === "ebooks")) {
                     closeHtmlGame(hintsDisplay);
                 } else if (targetGame) {
                     closeGameWithSave(targetGame, hintsDisplay);

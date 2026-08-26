@@ -1,0 +1,11 @@
+name = "wesleys-games-netplay"
+main = "src/index.js"
+compatibility_date = "2026-08-25"
+
+[[durable_objects.bindings]]
+name = "NETPLAY_ROOMS"
+class_name = "NetplayRooms"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["NetplayRooms"]

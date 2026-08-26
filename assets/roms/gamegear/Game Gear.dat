@@ -1,0 +1,318 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE datafile PUBLIC "-//Logiqx//DTD ROM Management Datafile//EN" "http://www.logiqx.com/Dats/datafile.dtd">
+<datafile>
+  <header>
+    <name>Sega Game Gear</name>
+    <description>Information from ScreenScraper.fr database</description>
+    <version>1.0</version>
+    <date>2026-08-25 3:30 PM</date>
+    <author>Skraper</author>
+    <url>https://www.screenscraper.fr</url>
+  </header>
+  <game name="Baku Baku">
+    <description>The Minister approaches the King to tell him that his only daughter, the Princess, wants a new pet. But the King says she already has too many, and she can't take care of so many animals. Thus the Minister purposes a contest of skill and daring to select the Royal Zookeeper. Master Piggy then sends his pupil, Polly, to participate in the contest.
+
+Baku Baku Animal is a variation on the very often copied Tetris type of game. The game has three different play modes: practice, normal and hard. It also can be played by two players against each other (except for the Master System version).
+
+The objective is to pair animal heads with their respective food. If a rabbit head comes falling, you must make it fall on a pile of carrot tiles, dog heads with bones, panda heads with bamboos and monkey heads with bananas. There is a bonus item, the "BB coin", which will appear from times to times, and remove piled tiles from the playfield. Removed tiles will be sent to the opponent's playfield all at once, increasing the difficulty of the task. Polly will face several contestants, and she'll win when her opponents get their playfield piled to the top.</description>
+    <year>1996</year>
+    <manufacturer>SEGA</manufacturer>
+    <rom name="Baku Baku (USA).gg" size="262144" />
+  </game>
+  <game name="Mega Man">
+    <description>The insane scientist, Dr. Wily, has created an army of evil robots, and is using them to take over the world!  A robot called Rock volunteers to be converted into a fighting robot, Mega Man.  As Mega Man, he takes on Dr. Wily and his powerful robots.
+
+The Game Gear version of Mega Man is an original game created by developer Freestyle, using Mega Man 4 and Mega Man 5 for the NES as its basis.  Mega Man is able to perform his slide that was introduced in Mega Man 3, as well as call his dog, Rush, for assistance.  He can also charge up his buster for a more powerful shot.
+
+Players can initially select any stage from a choice of four: Stone Man, Napalm Man, Bright Man and Star Man.  After defeating these four bosses, players progress to Dr. Cossack's fortress, which contains Wave Man and Toad Man as its bosses.  After they are defeated, it's off to the final confrontation with Dr. Wily himself.</description>
+    <year>1995</year>
+    <manufacturer>U.S. Gold</manufacturer>
+    <rom name="Mega Man (USA).gg" size="524288" />
+  </game>
+  <game name="Factory Panic">
+    <description>Mister Greede, a corrupt tycoon and factory owner, deprives the local citizens of the goods they need and deserve. That’s why you have infiltrated his factory. Now you must manipulate the conveyor belts skillfully to deliver the correct product to the right person waiting outside, but you have only a limited amount of time. Unfortunately, thugs with bats or even guns patrol the factory. Your only weapon against these security guards is a battle cry that temporarily stuns them, but not for too long.
+
+Factory Panic consists of four rounds, and each round consists of eight stages. Before a stage starts, the game tells you how many people are waiting in line and what product they are waiting for. Rounds one and three are played in “Switch Mode”: step on different switches to rotate associated sections of the conveyor belt. If you get off the switch, the section rotates back to its initial position. One switch may affect more than one section. Since you can only step on one switch at a time, you have to bustle quite a bit in later stages. Rounds two and four are played in “Bridge Mode”: remove and install small bridges between the belts to control the flow of products.
+
+If a person gets an unwanted product, the time remaining on the timer will decrease. Sometimes, the belt carries special items, e.g. a megaphone that makes your scream attack more powerful, or a weight that can be placed on a switch.</description>
+    <year>1991</year>
+    <manufacturer>SEGA</manufacturer>
+    <rom name="Factory Panic (Europe, Brazil) (En).gg" size="131072" />
+  </game>
+  <game name="Ax Battler : A Legend of Golden Axe">
+    <description>Use your wits and your razor sharp sword to recapture the Golden Axe from the diabolical Death Adder. Defeat skeletons and giant bats in dark, deep chasms and caves. And summon Earth, Thunder and Fire Magic to fight gargoyles that come to life before your eyes!</description>
+    <year>1992</year>
+    <manufacturer>SEGA</manufacturer>
+    <rom name="Ax Battler - A Legend of Golden Axe (USA, Europe, Brazil) (En).gg" size="262144" />
+  </game>
+  <game name="Shinobi II : The Silent Fury">
+    <description>The second Shinobi game for the Game Gear, it’s a 2D side-scrolling platform game with basic strategy elements. You have to rescue the four elemental ninjas and their corresponding crystal. When you rescue a ninja they join up with you and you can switch to them. Each ninja has a different power and ability which must be used in order to progress through the game. The first four levels can be played in whichever order you want, when both the ninja and crystal have been recovered from all the levels the final level is unlocked.
+</description>
+    <year>1992</year>
+    <manufacturer>SEGA</manufacturer>
+    <rom name="Shinobi II - The Silent Fury (World).gg" size="262144" />
+  </game>
+  <game name="Phantasy Star Adventure">
+    <description>You are an agent of Paseo on Motavia. One day, in December 1268 A.W, you received a letter at base. The sender was Ken Miller. He was a scientist as well as an old friend of yours. He had immigrated to Dezolis to conduct his research years ago.  These were the contents of the letter: "How are you?  I have succeeded in the discovery of the century. You must come and see it."
+
+You travel to the planet Dezolis and visit a town called Carsonville. There, you find out that Dr. Miller has invented a machine that can make human beings immensely powerful. The problem is, Dr. Miller is kidnapped, along with his invention. With the help of his sister Laila you have to solve this mystery.
+
+This game is a Japanese-style adventure game set in the Phantasy Star universe. You interact with the game world by choosing available options such as "See", "Talk", "Move", etc. There are a few puzzles to solve, but the largest part of the game is dedicated to exploration and dialogue with the characters.</description>
+    <year>1992</year>
+    <manufacturer>SEGA</manufacturer>
+    <rom name="Phantasy Star Adventure (Japan) [T-En by Aeon Genesis v1.00].gg" size="131072" />
+  </game>
+  <game name="Sonic Drift 2">
+    <description>Sonic Drift 2 is the sequel to Sonic Drift, also on the Game Gear and the first in the series to be released outside Japan. One of the new things in the sequel is a lag boost system, which means that anyone who is behind gets a boost to catch up again. This keeps the action in the game. Another new thing is that the gadgets touched while racing do not come into effect immediately. They need to be triggered manually by pressing up on the D-pad.
+
+There are 3 GPs to compete in and each GP has 6 tracks. The names of the GPs are:
+
+1. Purple Chaos GP
+2. White Chaos GP
+3. Blue Chaos GP
+
+Racing skills can be improved in the Free Run mode on any of the tracks, or, with a Gear-to-Gear cable and a spare copy of the game, direct competition against another human player in the versus mode.</description>
+    <year>1995</year>
+    <manufacturer>SEGA</manufacturer>
+    <rom name="Sonic Drift 2 (World).gg" size="524288" />
+  </game>
+  <game name="GG Aleste II">
+    <description>Power Strike II is an Action game, developed by Compile and published by Sega, which was released in Europe in 1994.</description>
+    <year>1993</year>
+    <manufacturer>SEGA</manufacturer>
+    <rom name="Power Strike II (Japan, Europe) (En).gg" size="262144" />
+  </game>
+  <game name="Crystal Warriors">
+    <description>The continent of Tyramus has lived in peace for almost a century, thanks to the four elemental crystals of the kingdom of Arliel. However, peace is threatened by the invading armies of the Jyn Empire, led by Emperor Grym, who wants to use the four crystals to rule over Tyramus. Fortunately, Princess Iris can escape with one of the crystals and now the player has to protect her and the crystal and somehow find a way to drive back the hordes of Jyn.
+
+Gameplay in Crystal Warriors is quite similar to Shining Force. The player fights in turn-based battles controlling different characters like fighters, healers, rangers and mages, all with different strengths and skills. Whenever two units engage in battle, they enter a duel mode lasting for up to two turns. In this mode the player can choose between four commands: "battle" (attack), "retreat", "spell" and "monster". While the first three commands are quite self-explanatory, the "monster" command is interesting. Whenever a non-human enemy is defeated, it can be tamed and be used in battles. While most monsters do not have many HP they can serve as good attackers for physically weak characters or take some hits in order to protect his master.
+In-between battles the player can visit towns to rest, buy weapons and spells or recruit new party members.</description>
+    <year>1992</year>
+    <manufacturer>SEGA</manufacturer>
+    <rom name="Crystal Warriors (USA, Europe).gg" size="262144" />
+  </game>
+  <game name="Legend of Illusion Starring Mickey Mouse">
+    <description>Once upon a mouse, there was a kingdom that was ruled by the selfish king Pete. One day, a terrible shadow crept over the kingdom, threatening the lives of its inhabitants. The king's adviser said the only way to stop the shadow would be for the king himself to travel out and to seek the cure. But the cowardly king Pete preferred to stay in the castle, and sent a simple laundry boy named Mickey instead! 
+
+As Mickey Mouse, you will travel through various levels in this platform game. Mickey shoots an unlimited amount of little balls on the enemies, can jump, climb on stairs, hang on ropes, and perform other tricks. Mickey can also pick up items and put them in another place, for example to access a higher level or to break a treasure chest open.</description>
+    <year>1995</year>
+    <manufacturer>SEGA</manufacturer>
+    <rom name="Legend of Illusion Starring Mickey Mouse (USA, Europe).gg" size="524288" />
+  </game>
+  <game name="Shining Force II : The Sword of Hajya">
+    <description>This is not a sequel to the game  Shining Force: The Legacy of Great Intention for Genesis, but a sequel to a  Shining Force Gaiden, which was released only in Japan.
+
+After a prolonged war, the kingdoms of Cypress and Gardiana decided to join forces fighting the evil empire of Iom. Nick, the Prince of Cypress, that was conquered by Iom, had his hand turned into stone during the last battle, and therefore cannot wield his legendary Sword of Hajya. Nevertheless, he tries to recruit people who would help him to gain his kingdom back.
+
+The game is a strategy RPG. You command a large party composed of several units, and most of the game is spent in battles. The turn-based battles occupy the entire location; during your turn, you command your troops to move around and to attack. Your main heroes gain levels in a RPG fashion.
+</description>
+    <year>1994</year>
+    <manufacturer>SEGA</manufacturer>
+    <rom name="Shining Force - The Sword of Hajya (USA).gg" size="524288" />
+  </game>
+  <game name="Sonic the Hedgehog">
+    <description>SEGA's mascot Sonic the Hedgehog made his debut in a famous Genesis title, but Sega's 8-bit systems got their own version of the platformer, featuring the same story and gameplay style, but different levels. To stop the evil Dr. Robotnik, Sonic must traverse six zones consisting of three levels each. Most of the zones are based on those in the original game, but some are entirely new. Enemies and power-ups are mostly the same as well. Sonic can pick up golden rings for protection (when hit, he simply loses all of his rings instead of a life) and bonuses: 100 rings gain Sonic an extra life, and 50 remaining rings at the end of a level allow access to pinball-themed special stages full of bumpers and springs. The final level of a zone is always a boss fight against Robotnik. Sonic should also collect the six Chaos Emeralds to keep them from falling into Robotnik's hands. In a departure from the original game, these are not hidden in the special stages but somewhere in the regular levels.</description>
+    <year>1991</year>
+    <manufacturer>SEGA</manufacturer>
+    <rom name="Sonic The Hedgehog (Japan, Europe, Brazil) (En) (Rev 1).gg" size="262144" />
+  </game>
+  <game name="Defenders of Oasis">
+    <description>A long, long time ago, the legendary king Jamseed defeated the evil Ahriman, the spirit of darkness. But just before, Ahriman managed to send into the world his most horrifying servant: the dragon Zahhark. Years have passed, Zahhark was defeated by the descendants of Jamseed, but its own descendants continued menacing the kingdom of Shanadar. Many generations later, you, the young Prince of Shanadar, has to confront the evil. Zahhark's offsprings plan to destroy the kingdom, and the Prince must first seek aid in a neighboring country, accompanied by a beautiful Princess, by the Genie from a lamp, and other friends.
+
+This is a traditional Japanese-style RPG. You control the Prince and his party members, visiting various locations, buying and finding items, and fighting random enemies and bosses in a turn-based combat viewed from first-person perspective.</description>
+    <year>1992</year>
+    <manufacturer>SEGA</manufacturer>
+    <rom name="Defenders of Oasis (USA, Europe).gg" size="524288" />
+  </game>
+  <game name="Royal Stone : Hirakareshi Toki no Tobira">
+    <description>Royal Stone: Hirakareshi Toki no Tobira is a strategy RPG for the Sega Game Gear and a sequel to Crystal Warriors. The game follows the story of Eva, a former knight from Martalia, exiled from her kingdom for betraying the trust of the people and turning against her own team.</description>
+    <year>1995</year>
+    <manufacturer>SEGA</manufacturer>
+    <rom name="Royal Stone (Japan) [T-En by Aeon Genesis v1.00] [n].gg" size="524288" />
+  </game>
+  <game name="Sylvan Tale">
+    <description>In "Sylvan Tale," you play as a young warrior who is mysteriously teleported to the land of Verda by a glowing object. A voice tasks you with collecting six magical droplets from fortresses to save the inhabitants of Verda. You explore towns, traverse dungeons, engage in real-time combat against enemies, and collect items that allow you to transform into various creatures with unique abilities. As a mole, you can dig through rocks; as a merman, you can swim; as a turtle, you use your shell for defense; as a mouse, you squeeze through small holes; and as a bird, you can fly and evade attacks.</description>
+    <year>1995</year>
+    <manufacturer>SEGA</manufacturer>
+    <rom name="Sylvan Tale (Japan) [T-En by Aeon Genesis v1.01].gg" size="524288" />
+  </game>
+  <game name="Shinobi">
+    <description>As with the original games, Shinobi for the GG (the first portable member of the franchise) is a action side-scroller in which you take the role of an elemental ninja seeking revenge, your task to clear several stages filled with evil ninja and other assorted enemies.
+
+New to this release is the MegaMan-like ability to select which stage (all also unique for this release) to play in any sequence.  Each stage contains a fellow elemental ninja held prisoner, who gets released once you complete the level.  You can then switch between available ninja mid-stage to take advantage of their unique abilities (green ninja double jumps, blue ninja has a grappling hook, yellow ninja walks on water, etc.) which become a necessity to successfully complete all the levels.</description>
+    <year>1991</year>
+    <manufacturer>SEGA</manufacturer>
+    <rom name="Shinobi (World) (Rev A).gg" size="262144" />
+  </game>
+  <game name="Arena : Maze of Death">
+    <description>In the year 2026, a corrupt government has used a television broadcasting company called Astralnet Broadcasting Company to secretly control the population and keep them brainwashed.  During these times a group of pro-democratic rebels, led by Guy Freelander, has obtained a secret taped meeting between top government officials and ABC directors discussing their diabolical plans.  Convinced that if they play the tape through ABC's broadcasting, they can convince the repressed population to rise up against the current regime.  The only problem that stands in their way is the way to the broadcasting center, a death trap nicknamed the maze.
+
+The player takes control of Guy Freelander and must transverse this maze, with 20 levels and 100 different rooms in total, using a standard gun and a knife to take out security guards, androids, mutants and must avoid various pitfalls and traps scattered in these rooms.  The view of the game is isometric and has a password feature to allow players to pick up and return to the previous room they were in without having to replay the previous levels.  There are no life bars, instead the player can take four hits before their character dies with five lives.  After losing these five lives, the game will be over.</description>
+    <year>1995</year>
+    <manufacturer>SEGA</manufacturer>
+    <rom name="Arena (USA, Europe).gg" size="524288" />
+  </game>
+  <game name="Gunstar Heroes">
+    <description>Chaos has broken out on the planet Gunstar-9!!
+
+The mad Colonel Red has discovered four crystals that imprison a deadly being known as GoldenSilver, and plans on unleashing it onto the population of the planet! He must be stopped! Enter...the Gunstar Heroes, Red and Blue!
+
+Unleash some mad blasting action onto the Colonel's army and don't let him bring GoldenSilver to life!! The fate of Gunstar-9 is in your hands!</description>
+    <year>1995</year>
+    <manufacturer>SEGA</manufacturer>
+    <rom name="Gunstar Heroes (Japan).gg" size="524288" />
+  </game>
+  <game name="Sonic Chaos">
+    <description>Here he comes, straight from his high-speed Sonic 2 adventure! Headstrong Sonic The Hedgehog and his feisty friend Tails blast into hyperspeed to save the Chaos Emeralds. If evil Dr. Robotnik snatches the emeralds first, he'll make a Super Bomb! Could this be the end?
+Be Sonic or Tails in an all-new quest. Roar through the zones with super attitude as Sonic! As Tails, spin your twin tails and fly high!
+Blast-astic action! Sonic soars with his new Rocket Shoes and Pogo Spring. Tails goes airborne for a dizzying sky ride to snag bonus items!
+6 zones, 18 levels of rollercoaster landscapes, corkscrewing speedways and wild, whirling thrills!</description>
+    <year>1993</year>
+    <manufacturer>SEGA</manufacturer>
+    <rom name="Sonic Chaos (USA, Europe, Brazil) (En).gg" size="524288" />
+  </game>
+  <game name="Magical Puzzle Popils">
+    <description>Magical Puzzle Popils is a single screen platform puzzle game. The object in each round is to go through the labyrinth until the player reaches the princess (or the princess reaches the player). The player can break blocks, climb ladders, go through portals. There are also hazards to avoid, like red spikes and enemies.
+
+Breaking blocks is the most important gameplay element. Breaking a block causes the column of blocks above it to fall one place down. The player must use this block breaking ability to change the labyrinth and create a way to the princess. 
+
+The short introduction sequence shows the back story: A beautiful princess fell in love with you! And you fell in love with her too... The wizard of forest "Popil" shut her in his labyrinth. Please save her!
+</description>
+    <year>1991</year>
+    <manufacturer>Tengen</manufacturer>
+    <rom name="Magical Puzzle Popils (World) (En,Ja).gg" size="131072" />
+  </game>
+  <game name="Streets of Rage 2">
+    <description>After Axel Stone, Blaze Fielding and Adam Hunter destroyed the evil Syndicate leader, Mr. X, the city became a peaceful place to live, and each one of them followed their own paths. One year later, after their reunion, Adam's brother Sammy returned from school to find their apartment in a mess, and Adam nowhere to be seen, and after calling his two friends, one of them notices a photo of Adam chained to a wall, next to someone they knew very well - Mr. X, who returned to turn the peaceful city once again into a war zone. Now, Axel, Blaze, Sammy, and Axel's good friend Max, a pro wrestler, must head out to stop Mr. X once again...hopefully for good...
+
+Streets of Rage 2 differs from the previous title in several ways. There are changes in both graphics (characters now are bigger, more detailed and with more animation frames, and scenarios are less grainy) and gameplay (the rocket move was replaced by a special move that doubles in offense and defense along several new moves), along other new features such as life bars (and names) for all enemies and the radically different new characters.</description>
+    <year>1993</year>
+    <manufacturer>SEGA</manufacturer>
+    <rom name="Streets of Rage 2 (World).gg" size="524288" />
+  </game>
+  <game name="Sonic the Hedgehog 2">
+    <description>Coming back from the vacation Sonic took after foiling the plans of Dr Robotnik, he finds that Tails and all his other animal friends are missing. Sonic finds a letter waiting for him, that reads:
+
+"Dear Sonic,
+
+Robotnik is back, and he's captured all the animals on the island! He is holding me in a place called the Crystal Egg. In order to free me, you have to find and bring the six Chaos Emeralds.
+
+Robotnik made me write this. He says he's waiting for you, and he's created six really nasty robots in order to 'get rid of you once and for all.' I don't know what he has planned, but Sonic, please be careful!
+
+Sincerely, Tails."
+
+That being more that enough motivation for him, Sonic races out to defeat Robotnik again.
+
+The master system version is totally different than the Sonic 2 for Genesis. Tails obviously doesn't accompany you, like he can in the Genesis release. Sonic can also not do his infamous buzzsaw roll by simply ducking and pressing jump.</description>
+    <year>1992</year>
+    <manufacturer>SEGA</manufacturer>
+    <rom name="Sonic The Hedgehog 2 (World).gg" size="524288" />
+  </game>
+  <game name="Ristar">
+    <description>An evil tyrant with a silly name (Greedy) has arisen to control a solar system full of sentient beings. He Corrupts the leaders of each world and thereby enslaves the populace. He has sent his minions in the disguise of planet natives into the worlds to enforce his rule...
+
+A lush forest planet, the last planet in the tyrants agenda manages to send a call of help to the solar systems ancient hero before being over run. However Greedy even has managed to remove the great hero. Yet he did not count on the interference of the hero's sun... Ristar!
+
+You control Ristar in his attempt to liberate the solar system. You will stretch his arms to grab enemies and summarily head-but them. Your long limbs will be used to climb various surfaces. Being a star adds even more to the unique gameplay, already chock-full of action and puzzles.</description>
+    <year>1995</year>
+    <manufacturer>SEGA</manufacturer>
+    <rom name="Ristar (World).gg" size="524288" />
+  </game>
+  <game name="Shining Force Gaiden : Final Conflict">
+    <description>One of the three gaiden (side-story) Shining Force games for GameGear. The events of the game take place in a time period between the first and the second mainstream Shining Force games. After Max, the leader of the first Shining Force, defeated the Dark Dragon, peace was restored to the world. However, the sorceress Mishaela took control over the forces of evil. Pursuing her, Max' comrades got injured and were forced to quit. Upon returning back to their hometown, they found out Mishaela has already taken the Elder hostage. Lead by the young warrior Ian, the Force has to find Max and to defeat Mishaela.
+
+The game is a strategy RPG with gameplay similar to other Shining Force games. You control a large party of warriors (you can choose the characters yourself from many available). The game consists mainly of large strategic turn-based battles, in which you navigate your characters around and attack the enemies physically, or cast area-based spells.</description>
+    <year>1995</year>
+    <manufacturer>SEGA</manufacturer>
+    <rom name="Shining Force Gaiden - Final Conflict (Japan) [T-En by Shining Force Central v070606 Final].gg" size="524288" />
+  </game>
+  <game name="Panzer Dragoon Mini">
+    <description>Panzer Dragoon Mini is the Japan-only 8-bit version of Sega's popular 32-bit rail shooter, but due to (massive) hardware limitations, the game has more in common with other classic Sega game, Space Harrier. Taking further away from the original games, there is no rider and the game lacks any plotline.
+The player starts by choosing one of three dragons, and from there must shoot at incoming enemies (although for most time, just avoiding incoming fire is an easier way to progress in the game). At the end of the level (each with two bosses), a password appears and allows the game to be resumed later.</description>
+    <year>1996</year>
+    <manufacturer>SEGA</manufacturer>
+    <rom name="Panzer Dragoon Mini (Japan).gg" size="524288" />
+  </game>
+  <game name="Tails Adventure">
+    <description>Before Tails met Sonic the Hedgehog he lived on Cocoa Island, a place that isn't on the map. It's an island pulled up by the Chaos Emeralds. Suddenly, while relaxing, Tails hears an explosion that seems like it's coming from inside the island. A Flicky tells Tails that Battle Kukku has invaded the island. He also tells Tails that Battle Kukku is mining here for the Chaos Emeralds, to obtain it's power. Tails gears up and heads for his quest to find the machine parts to build his weapon to defeat the evil Battle Kukku. There are however major plot differences between the Japanese and the western release. In the US and European version of the game it tells the story how Sonic and Tails decide to go separate ways for a while. Tails finds an unknown island and decides to dub it Tails Island. While resting there, a large explosion occurs and a Flicky tells him birds are invading the island.
+
+Unlike the other games in the series, this spin-off is less of a traditional platformer, but has a much slower pace with rpg elements and a focus on puzzle-solving. Tails can walk, jump, fly (momentarily), hang on ledges and throw bombs. He starts with ten health points that can be replenished with rings, but the amount can be extended to 99 by collecting chaos emeralds. In the twelve stages Tails can collect up to 26 items. Per level however, he is only allowed to bring along four and this adds a tactical dimension. One of the most vital tools is the Remote Robot that can squeeze through small areas that Tails cannot reach. Underwater he changes into the small submarine Sea Fox.</description>
+    <year>1995</year>
+    <manufacturer>SEGA</manufacturer>
+    <rom name="Tails Adventure (World) (En,Ja).gg" size="524288" />
+  </game>
+  <game name="Super Columns">
+    <description>Super Columns is an updated version of Columns with more options of play, but with the same setup, maneuvering falling blocks into groups of three or more to eliminate them from the screen.  Along with a Versus mode there is also a Story mode as well.
+
+An evil sorcerer by the name of Surhand has stolen a mystical amulet which brings peace and serenity to the land of Phoenicia and hopes to use it to bring death and destruction to the land.  The player must battle their way through his four guards in a series of best two-out-of-three games of Columns in order to face off against Surhand and bring peace back to the land.
+
+The Flash Mode also returns to this version as well as the new Endless Mode where the main objective is to score as many points as possible before the timer runs out.  There are also special columns throughout these modes such as Glitter Columns which eliminates all blocks of the same color on the screen at once as well as Stone Block Columns which can only be eliminated through magic power-ups that can be obtained by eliminating the base blocks.</description>
+    <year>1995</year>
+    <manufacturer>SEGA</manufacturer>
+    <rom name="Super Columns (USA, Europe).gg" size="131072" />
+  </game>
+  <game name="Sonic the Hedgehog : Triple Trouble">
+    <description>Dr. Robotnik has stolen all the Chaos Emeralds, yet again, but when the experiment for his new weapon goes wrong, the Emeralds get scattered across the island. While Sonic &amp; Tails are out searching for them, Robotnik finds the yellow emerald and convinces Knuckles the Echidna that Sonic wants to steal all the other Emeralds. While all this is happening, Nack the Weasel seizes his chance to take the emeralds for himself while everyone else is pre-occupied. Now it's a 4-way race to retrieve the emeralds.
+
+The gameplay is like the other Sonic titles, but this is only available on the Game Gear. The player can choose to play as Sonic or Tails (who can fly), and you're trying to reach the Chaos Emeralds before anyone else. A change from other Sonic games is that when hit, all rings are not lost, only a set amount (30–50 depending on the level) is lost.
+</description>
+    <year>1994</year>
+    <manufacturer>SEGA</manufacturer>
+    <rom name="Sonic The Hedgehog - Triple Trouble (USA, Europe, Brazil) (En).gg" size="524288" />
+  </game>
+  <game name="Coca-Cola Kid">
+    <description>Coca Cola Kid is platformer starring the eponymous mascot of the Coca Cola company in the 90s. On his way through the levels, the kid can make use of a skateboard, but has to continue by foot if knocked off. Enemies can be defeated by kicks and flying kicks, energy is -not surprisingly- restored by collecting cans of a certain soft drink.
+
+The game was released in Japan only.</description>
+    <year>1994</year>
+    <manufacturer>SEGA</manufacturer>
+    <rom name="Coca-Cola Kid (Japan) [T-En by Filler v1.1].gg" size="524288" />
+  </game>
+  <game name="Mighty Morphin Power Rangers">
+    <description>This is a one-on-one fighting game for one or two players. 
+
+Single players pick a Ranger (Red, Pink, Blue, Yellow, Black, or the unlockable Green) and take him or her through a series of battles against Rita's monsters. After one normal battle, the monster grows very large, and then it is time to take out the MegaZord.</description>
+    <year>1994</year>
+    <manufacturer>SEGA</manufacturer>
+    <rom name="Mighty Morphin Power Rangers (USA, Europe).gg" size="524288" />
+  </game>
+  <game name="GG Aleste">
+    <description>In the first installment of the Aleste series for the GG, you play as Ellinor Waisen, the daughter of the original Aleste pilot Ray Waisen.
+As usual, your task is to exterminate level upon level of nasties with your space ship. The usual Aleste powerup systems remains fairly intact. You still have powerup pods which release P capsules for upgrading your main weapon. On the other hand, secondary weapon upgrades are no longer released from ground bases, but from another type of flying pods. When you start out, your secondary weapon is a laser, which can later be replaced with powerups ranging from split fire to napalm rockets and target seeking power balls. Both primary and secondary weapons are in constant use, since only button 2 is used for firing both weapons at once. Due to the smaller screen estate of the Game Gear, the sprites are larger and the playfield more constrained, for which the game compensates somewhat by introducing multidirectionally scrolling sections.</description>
+    <year>1991</year>
+    <manufacturer>Compile</manufacturer>
+    <rom name="GG Aleste (Japan) (En).gg" size="262144" />
+  </game>
+  <game name="Lunar - Sanpo-suru Gakuen">
+    <description>This is a side-story, set in the same world as the famous Lunar RPGs:  Silver Star and  Eternal Blue. The town of Burg is populated by harvesters, and you take control of two girls, Ellie and Lena. One day, they are sent to the island of Ien where they should study magic, and there begins their adventure.
+
+The game is a traditional Japanese-style RPG. You navigate your party through a top-down world, visiting towns and hostile areas. Enemy encounters are random, the battles are turn-based and are viewed from first-person perspective.</description>
+    <year>1996</year>
+    <manufacturer>Game Arts</manufacturer>
+    <rom name="Lunar - Sanposuru Gakuen (Japan) [T-En by Aeon Genesis &amp; Some Good Shit Translations v1.00].gg" size="1048576" />
+  </game>
+  <game name="Phantasy Star Gaiden">
+    <description>Long ago, the evil Cablon ravaged the Copto planet, a light year away of the Algol system. When he was defeated, he was sealed on a planet discovered by Alis, the heroine of the first "Phantasy Star", a planet that was also known as Alisland. In this gaiden (side-story) set in Phantasy Star universe, you play the role of two young people from the village Tedo - Alec and Mina. One day, Mina finds an old artifact. While wondering what that could be, the young people learn that Alec' father was attacked and kidnapped by bandits. Determined to find him, the two heroes embark on a dangerous journey that will eventually lead them much further than they suspect. 
+
+Phantasy Star Gaiden plays pretty much like any other Phantasy Star starting with the second game: both towns and dungeons are in top-down view, the turn-based battles are viewed from first-person perspective. The gameplay is standard console-style RPG: you should fight random enemies, gain experience and gold, buy better equipment, visit many towns and dungeons, etc.</description>
+    <year>1992</year>
+    <manufacturer>SEGA</manufacturer>
+    <rom name="Phantasy Star Gaiden (Japan) [T-En by Magic Translations v1.00] [Original Sega Font].gg" size="262144" />
+  </game>
+  <game name="Sonic Drift">
+    <description>Sonic Drift is a Sonic the Hedgehog racing game. The evil Dr. Robotnik has stolen the chaos emeralds and you have to win them back in a racing tournament. In Sonic Drift, you can play as Sonic, Tails, Amy, or Robotnik. Sonic Drift can also be found on Sonic Adventure DX and Sega Mega Collection Plus. There are six levels in each game and three different  tournaments, totaling 18 levels.</description>
+    <year>1994</year>
+    <manufacturer>SEGA</manufacturer>
+    <rom name="Sonic Drift (Japan) (En).gg" size="524288" />
+  </game>
+  <game name="Ninja Gaiden">
+    <description>Ninja Gaiden begins with a cinematic animation in which 2 ninjas duel to the death; one goes down. It is revealed that the doomed ninja is the father of Ryu Hayabusa. When Ryu learns of this, he embarks on a quest to find out who killed his father and why. This quest takes him to America to find an archaeologist with whom Ryu's father was working. From there, Ryu becomes embroiled in an evil, supernatural conspiracy involving a villain named Jaquio who has plans to use an ancient castle and some relics to unleash a terrifying evil upon the world.
+
+Ninja Gaiden is a side scrolling game where Ryu the ninja can run, jump, and slash with his ninja sword. He can also attach to any vertical surface. Powerups are littered throughout the landscape that allow Ryu to toss fireballs and ninja stars, and perform other feats.
+
+Ryu will battle through urban city settings, forests, jungles, snow covered castles, underground railroads, and ancient castles. A major feature in Ninja Gaiden are the cinematic scenes -- sometimes fullscreen -- through which the storyline unfolds.</description>
+    <year>1992</year>
+    <manufacturer>SEGA</manufacturer>
+    <rom name="Ninja Gaiden (USA, Europe, Brazil) (En).gg" size="131072" />
+  </game>
+</datafile>

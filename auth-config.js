@@ -1,3 +1,3 @@
 window.ARCADE_AUTH_CONFIG = {
-    apiBaseUrl: 'http://localhost:8787'
+    apiBaseUrl: 'https://avmvkvekfwmrvmbjvwzf.supabase.co/functions/v1/auth'
 };

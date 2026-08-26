@@ -1,0 +1,793 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE datafile PUBLIC "-//Logiqx//DTD ROM Management Datafile//EN" "http://www.logiqx.com/Dats/datafile.dtd">
+<datafile>
+  <header>
+    <name>Nintendo Entertainment System</name>
+    <description>Information from ScreenScraper.fr database</description>
+    <version>1.0</version>
+    <date>2026-08-25 4:03 PM</date>
+    <author>Skraper</author>
+    <url>https://www.screenscraper.fr</url>
+  </header>
+  <game name="ZZZ(notgame):#NONGAME">
+    <manufacturer>Subor</manufacturer>
+    <rom name="Dragon Warrior (USA).nes" size="81936" />
+  </game>
+  <game name="Astyanax">
+    <description>You are Astyanax, a sixteen year old boy that has the same dream night after night: A princess, calling for help. One afternoon, you are summoned to the world of Remlia by Cutie, a pixie, to save the realm's princess. You are the chosen one mentioned by their prophecies!
+
+Astyanax is the English localization of The Lord of King. It's an ambitiously cinematic dark fantasy adventure. Along the way you'll find powerups that will make you stronger, and upgrade your weapon; and you can also unleash magical attacks that hit all enemies on the screen. As Astyanax, together with Cutie, you must save Princess Rosebud and the realm from Blackhorn's evil horde!</description>
+    <year>1990</year>
+    <manufacturer>Jaleco</manufacturer>
+    <rom name="Astyanax (USA).nes" size="262160" />
+  </game>
+  <game name="Kirby's Adventure">
+    <description>The Dream Spring, the source of all dreams, has dried up, causing all the dreams of Dream Land to disappear. Now it's up to Kirby to rescue Dream Land! 
+
+Kirby's Adventure is an action/adventure side scrolling platform game. As the pink puffball Kirby you will explore numerous, colorful lands with a variety of enemies to defeat. To help out on his journey, Kirby has the ability to eat enemies and spit them out as projectiles. With certain enemies Kirby can capture their abilities and e.g. gain a sword, shoot lasers, or even fly around the level. There are seven different stages, each broken up into multiple levels, and sometimes also containing a couple of bonus mini-games. The game cartridge features a battery backup allowing games to be saved without the need for passwords.</description>
+    <year>1993</year>
+    <manufacturer>Nintendo</manufacturer>
+    <rom name="Kirby's Adventure (USA).nes" size="786448" />
+  </game>
+  <game name="Mother">
+    <description>Mother is a first person role playing game on Nes. You play as a young boy whose house is possessed by a tortured spirit. You soon discover that a tragedy has taken place there. With three other companions, you go on an adventure to understand the ins and outs of this mystery. Encounters with enemies are random and you can use special psychic powers to destroy them.</description>
+    <year>1989</year>
+    <manufacturer>Nintendo</manufacturer>
+    <rom name="EarthBound Beginnings (USA, Europe).nes" size="524304" />
+  </game>
+  <game name="Elevator Action">
+    <description>In this multidirectional scrolling action game, you control a spy and sneak alone into a building to steal the secret papers hidden there. Use a pistol, kicks, an elevator, and even the lights to take out the building's guards. The gun-fighting action is full of thrills! You will need speed and timing to get on the elevators, move between floors, steal the secret papers, and escape from the basement parking lot.</description>
+    <year>1987</year>
+    <manufacturer>Taito</manufacturer>
+    <rom name="Elevator Action (USA).nes" size="40976" />
+  </game>
+  <game name="Cobra Triangle">
+    <description>Cobra Triangle is a single-player boat racing game that lets you do more than just race. It borrows the power-up system from the shoot 'em up genre, but focuses more on manoeuvring than shooting. Since you have a health meter with a dozen bars, it's not that important to dodge bullets unless your health is really low. But you should try not to hit too many walls. To get very far, you have to use your power-ups: TURBO for better acceleration, FIRE for more firepower, SPEED for faster speed, MISSILE to fire both missiles and bullets, and FORCE which lets you fire tons of missiles and also makes you invincible for a limited time. You have about one minute to complete each level. Speaking of which, there are 7 types of levels, each with different objectives. The entire game consists of repeating these types of levels, 25 in total. The later levels are much more difficult than the first ones. They are peppered with extra obstacles like icebergs, more mines, ...</description>
+    <year>1989</year>
+    <manufacturer>Nintendo</manufacturer>
+    <rom name="Cobra Triangle (USA).nes" size="131088" />
+  </game>
+  <game name="Ninja Gaiden III : The Ancient Ship of Doom">
+    <description>This is the third entry in the series of fast-paced ninja action games, and is the last game in the series to be released on the Nintendo Entertainment System.
+
+Some time has passed since the defeat of Ashtar and the resurrected Jaquio, and Irene Lew has received a new mission to complete. She is to observe a strange factory that has been constructed recently for an unknown purpose, and investigate it. She proceeds to reconnoiter it, but is intercepted and apparently assassinated by her friend Ryu Hayabusa...except it isn't Ryu. It is an imposter. The real Ryu, angered over her death, and the subsequent false accusation that he murdered her, continues her mission and proceeds to investigate the factory.
+
+As stated, this was the last game in the regular series produced for the NES. It had many features the previous games in the series did not, such as a power up to extend the length of your sword, a new vertical "wave" attack and vertically-scrolling levels. The US version of the game is reputed to be the hardest in the series, due to the extra damage incurred when hit, slightly shorter regular sword length, limited continues and more enemies.
+
+The Lynx port is the second Ninja Gaiden game on the platform, the first being a port from the Arcade Version. This port is identical to the NES game, but the in-game picture is compressed for the smaller screen of the Lynx.
+</description>
+    <year>1991</year>
+    <manufacturer>Tecmo</manufacturer>
+    <rom name="Ninja Gaiden III - The Ancient Ship of Doom (USA).nes" size="262160" />
+  </game>
+  <game name="8 Eye's">
+    <description>8 Eyes chronicles the adventures of Orin, the falconer, who must visit 8 different houses in 8 different lands and defeat 8 different guardians in order to collect 8 different jewels called eyes. It is a side-scrolling action/adventure game where the lead character can attack with a sword of somewhat limited reach. However, that is not the most powerful tool at his disposal - Orin also has his trusty falcon that he can send around the room to attack enemies or trigger remote switches. In single-player mode, the player controls both the falconer and the falcon. However, the game also offers a cooperative mode where the first player controls Orin and the second player controls his falcon in a mode which offers greater flight capability.</description>
+    <year>1990</year>
+    <manufacturer>Taxan</manufacturer>
+    <rom name="8 Eyes (USA).nes" size="262160" />
+  </game>
+  <game name="The Simpsons : Bart vs. the Space Mutants">
+    <description>Bart vs. The Space Mutants is a platform game where the player goes into the role of Bart Simpson (from the TV show The Simpsons) and must stop the Space Mutants from invading Springfield.
+
+On each of the five levels, Bart must collect (or get rid of) the ingredients that the Space Mutants are planning to use to build their machine, such as purple objects or balloons. He also has to collect enough "proof" of the aliens existence (brown coins left behind when they are jumped on), so his family members will help him when he meets a boss (characters such as Nelson and Sideshow Bob). This won't be easy since the Space Mutants are "using" human bodies as disguise. In order to discover who are the real Space Mutants, Bart must use his X-ray Specs.
+
+The ways Bart can get rid of those objects sought by the Space Mutants are numerous. For instance, in the first stage, Bart must get rid of purple objects. He can dye them red, cover them, wash them, etc. Some even involve a little puzzle solving, like playing a trick on Moe to make him get out of the bar.
+
+Bart also has some coins that can be used in many ways throughout the game, like buying things, getting devices operating, etc. Those coins are essential to solve some puzzles in the game.
+</description>
+    <year>1991</year>
+    <manufacturer>Acclaim Entertainment</manufacturer>
+    <rom name="Simpsons, The - Bart vs. the Space Mutants (USA) (Rev 1).nes" size="262160" />
+  </game>
+  <game name="Teenage Mutant Ninja Turtles III : The Manhattan Project">
+    <description>This was the last side-scrolling Teenage Mutant Ninja Turtles game for NES. It followed the highly acclaimed Turtles II over a year later and, unlike its predecessor, doesn't have an Arcade counterpart.
+
+The third game in the series is basically the same as the second. The story and the stages are different, of course, but it doesn't really matter. Choose your favourite turtle and kill as many Foot Clan soldiers as you can, fight the bosses and reach Shredder in a Double Dragon-styled game.
+
+The graphics and gameplay were improved. And, if the choice of the turtle depended only on personal taste in the second game (as they were all the same, in different colors), in this third episode they gained individual special moves.
+</description>
+    <year>1992</year>
+    <manufacturer>Konami</manufacturer>
+    <rom name="Teenage Mutant Ninja Turtles III - The Manhattan Project (USA).nes" size="524304" />
+  </game>
+  <game name="Gradius">
+    <description>The people of Gradius are in trouble. The ameoboid Bacterions have launched an all out attack against the planet, and it's up to you to fly into battle and save them. Along the way you'll be able to power up your ship with hyper speed, force fields, lasers, missiles, double beam cannons and more to help you battle. Based on the arcade game, Gradius is a side scrolling shooter. Shooting certain enemies will leave a power up pod behind which can be collected to add more power to your ship. Each level features a wide variety of enemies trying to stop you, with a large boss at the end. Gameplay is for one player or two players alternating.</description>
+    <year>1986</year>
+    <manufacturer>Konami</manufacturer>
+    <rom name="Gradius (USA).nes" size="65552" />
+  </game>
+  <game name="Ikari Warriors">
+    <description>A conversion of the arcade game, Ikari Warriors is a vertically scrolling action game. One or two players fight their way through a variety of terrain, such as jungles, rivers, and ruins. Along the way different weapons can be found, including machine guns, grenades, and rocket launchers.</description>
+    <year>1987</year>
+    <manufacturer>SNK</manufacturer>
+    <rom name="Ikari Warriors (USA).nes" size="131088" />
+  </game>
+  <game name="19 - Neunzehn">
+    <description>The game roughly consists of a strategy screen where you move your subordinate troops across the island that is the stage, and a combat mode where you handle battles when troops come into contact with each other on the strategy screen.
+
+The element of searching for the "almighty stone" in the story does not actually exist in the game. It is a game consisting only of pure tactical and strategic elements, with the goal of ultimately defeating all three factions other than one's own.
+
+This work has a very unique operation system, and the movement method is radio-controlled, similar to ``Bangering Bay'' (1984).</description>
+    <year>1988</year>
+    <manufacturer>Soft Pro International</manufacturer>
+    <rom name="Castlevania (USA).nes" size="131088" />
+  </game>
+  <game name="Double Dragon III : The Sacred Stones">
+    <description>The final game in the trilogy.
+
+Billy and Jimmy Lee are returning from martial arts training when their paths cross a fortune teller. She tells them of a great evil in Egypt, their strongest adversary yet, and how the Rosetta Stones can aid them.
+
+This game features weapon shops where Billy and Jimmy can buy power-ups, tricks, energy and extra lives to aid them in 
+their quest.
+
+Power-ups make Billy and Jimmy twice their size, increasing their damage done and range of attack.
+
+The character graphics have changed, moving away from cartoon style graphics to more realistic looking characters.
+</description>
+    <year>1991</year>
+    <manufacturer>Acclaim Entertainment</manufacturer>
+    <rom name="Double Dragon III - The Sacred Stones (USA).nes" size="262160" />
+  </game>
+  <game name="Teenage Mutant Ninja Turtles II : The Arcade Game">
+    <description>April O'Neil, the reporter friend of the Teenage Mutant Ninja Turtles, is kidnapped by the villainous Shredder and his two goons, Bebop and Rocksteady. The four ninja turtles: Raphael, Michelangelo, Donatello and Leonardo fight their way through hordes of Foot Soldiers in order to rescue April. They battle familiar foes such as the mad scientist Baxter Stockman, General Traag from Dimension X and the evil alien brain Krang, up to the final showdown with Shredder himself.
+
+Teenage Mutant Ninja Turtles: The Arcade Game is a port of the popular arcade game made by Konami during the height of the cartoon series' popularity. Depending on the version of the game, up to two, three or four players can take part in the action. The game plays like a simplified Double Dragon. While most of the standard Foot Soldier enemies are easily dispatched, some attack with knives or ray guns and are thus more dangerous. At the end of each level, players encounter a boss (or in certain cases two bosses working in tandem, such as Bebop and Rocksteady).
+
+The NES version of the game features additional content not present in other versions of the game: two new levels (Snowy Central Park and The Dojo), new bosses (including Tora, Shogun and Baxter Stockman as a fly), additional music tracks as well as more variations of Foot Soldiers.
+</description>
+    <year>1990</year>
+    <manufacturer>Konami</manufacturer>
+    <rom name="Teenage Mutant Ninja Turtles II - The Arcade Game (USA).nes" size="524304" />
+  </game>
+  <game name="Maniac Mansion">
+    <description>The Edison mansion has always been a creepy old house on the edge of town. There have been rumors of strange experiments going on and of odd creatures living amongst the Edison family. There is even a story that a meteorite once crashed near the home nearly 20 years ago. More immediately, a girl named Sandy has gone missing from the local highschool and her boyfriend Dave swears that he saw Dr. Fred abducting her. Dave knows that he cannot do it alone and will need help from two other students if he has any hope of infiltrating the mansion and rescuing Sandy.
+nnPlayers start by choosing 2 students to accompany Dave to the Edison mansion, and can then switch between these three characters at will. Most actions are carried out by selecting verbs on the screen and applying them to an object (such as "OPEN Door"). Each character maintains a separate personality and may have a different way to solve a problem from his classmates.</description>
+    <year>1990</year>
+    <manufacturer>Jaleco</manufacturer>
+    <rom name="Maniac Mansion (USA).nes" size="262160" />
+  </game>
+  <game name="Mike Tyson's Punch-Out!!">
+    <description>Step into the ring as Little Mac, a 17-year-old fighter from the Bronx, ranked number three in the minor circuit. Your goal is to work your way up through the rankings so that you can challenge Mike Tyson, in a dream fight.
+
+The rules of the World Video Boxing Association govern your bouts. Each match is three three-minute rounds long. Any boxer knocked down for a 10 count is Knocked Out (KO). If a boxer goes down three times, he'll find himself a Technical Knock Out (TKO). If both boxers make it to the end of the third round, the ref determines the winner.
+
+Once you're in the ring you'll have to beat your opponent with smart fighting. Use left and right punches, as well as uppercuts to knock your opponent to the mat. Dodge your opponent's blows with some fancy footwork. Dazzle them with your brilliance and you'll be the World Video Boxing Association Champion. On the other hand, you might find yourself down for the count.</description>
+    <year>1987</year>
+    <manufacturer>Nintendo</manufacturer>
+    <rom name="Mike Tyson's Punch-Out!! (Japan, USA).nes" size="262160" />
+  </game>
+  <game name="The Guardian Legend">
+    <description>In the far future, Earth is a peaceful place with very few worries.  To ensure it stays that way, a top secret project was authorized: the creation of the guardian suit.  It's a suit of flight armor that allows the guardian to survive any environment.  It's a good thing too, because a giant space station is spotted on a collision course with Earth.
+
+You take the role of the guardian.  Your mission is to activate the station's self-destruct and destroy it before it collides with Earth.  As you travel through the station NAJU, you'll find increased armor and better weapons to help you defeat waves of enemies.  You'll battle through the station in a human form and also as a jet in certain areas.</description>
+    <year>1989</year>
+    <manufacturer>Nintendo</manufacturer>
+    <rom name="The Guardian Legend (USA).nes" size="131088" />
+  </game>
+  <game name="Mega Man 6">
+    <description>In Mega Man 6, the world celebrates the first global Robot Design Contest, where hundreds of inventors present their most powerful creations. But when the mysterious sponsor, Mr. X, kidnaps the eight winning robots and declares his plan to take over the world, chaos erupts. When confronted, Mr. X shocks Mega Man by revealing that Dr. Wily was merely his puppet all along. Determined to end this threat once and for all, Mega Man sets out to battle the eight new Robot Masters — and finally face Mr. X himself.</description>
+    <year>1994</year>
+    <manufacturer>Capcom</manufacturer>
+    <rom name="Mega Man 6 (USA).nes" size="524304" />
+  </game>
+  <game name="The Simpsons : Bart vs. the World ">
+    <description>This game is actually a compilation of smaller games belonging to different genres. Krusty the clown appears in the beginning of the game and presents a menu with five games to play (one of which is not available from the start): A jump-and-run game, where Bart must find an exit on a ship, while enemies fire at him and try to prevent him from reaching the exit; a card game, where you have five tries to find hidden cards on a board; a simple jigsaw puzzle; a series of trivia questions concerning the Simpsons; and finally, a platform-skateboard game (available only after you have completed the ship level). Needless to say all games are connected to the famous TV series "The Simpsons".
+</description>
+    <year>1991</year>
+    <manufacturer>Acclaim Entertainment</manufacturer>
+    <rom name="Simpsons, The - Bart vs. the World (USA).nes" size="393232" />
+  </game>
+  <game name="Excitebike">
+    <description>Race by yourself against the clock or compete with other motocross riders on 5 tracks full of long straights, large jumps and obstacles to win the Excitebike championship.
+
+Create your own tracks by placing jumps and obstacles of all different sizes and shapes on the track and choosing how many laps each race will have, then race against the clock or other riders to see how your track fares in competition.</description>
+    <year>1985</year>
+    <manufacturer>Nintendo</manufacturer>
+    <rom name="Excitebike (USA).nes" size="24592" />
+  </game>
+  <game name="Double Dribble">
+    <description>Based on the arcade game, Double Dribble is a basketball action game for one or two players. You can select different time limits for games, select teams, and begin playing! Gameplay is entirely action, so no time needs to be spent customizing the teams or with statistics. You control each player on the team one at a time (the player with or about to receive the ball will be human controlled, with the computer taking over the other players temporarily.) Some versions feature a small amount of digitized sound effects, and close ups of slam dunks.</description>
+    <year>1987</year>
+    <manufacturer>Konami</manufacturer>
+    <rom name="Double Dribble (USA) (Rev 1).nes" size="131088" />
+  </game>
+  <game name="Blaster Master">
+    <description>The classic story of a boy and his frog who runs away, becomes radioactive and jumps into a hole. More importantly however, it's the story about a boy who finds a fully functional battletank, SOFIA the 3rd, and goes adventuring around the underground. His mission... to find new weapons and add-on parts to the battletank which will in turn allow him to explore more areas until eventually he finds that freedom-loving mutant frog. And while he's down there he might as well defeat the Evil Plutonium Boss who wishes to threaten the Earth.</description>
+    <year>1988</year>
+    <manufacturer>Sunsoft</manufacturer>
+    <rom name="Blaster Master (USA).nes" size="262160" />
+  </game>
+  <game name="Teenage Mutant Ninja Turtles">
+    <description>Teenage Mutant Ninja Turtles on NES is an action game in which you control the famous ninja turtles Donatello, Michelangelo, Leonardo, and Raphael. You can switch between them whenever you want to take advantage of each one's weapons and characteristics and thus defeat the evil Shredder.
+
+Gameplay takes place in two perspectives: a top-down view, which lets you run around and explore buildings, sewers and other places. When entering places from the top-down view, the perspective shifts to a side-scrolling view, where most of the battling takes place. In addition to each turtle's main weapon, sub-weapons (such as shuriken) can be acquired, to use at foes - these have a limited use. </description>
+    <year>1989</year>
+    <manufacturer>Palcom</manufacturer>
+    <rom name="Teenage Mutant Ninja Turtles (USA).nes" size="262160" />
+  </game>
+  <game name="Mega Man">
+    <description>In the future city of Monsteropolis, the use of robot labour has helped civilization grow more than ever before. At the forefront of this technology is Dr. Light and his assistant Dr. Wily, who are commissioned to build six robots to handle a variety of specific tasks. They are named Bombman, Gutsman, Iceman, Cutman, Elecman, and Fireman in reference to their individual prime functions. Dr. Wily, however, has bigger plans and chooses to take control of the robots and let loose destruction in a bid for world control. Dr. Light fights back with the best tool he has, an experimental human-like robot, Rock aka Mega Man, who had been tested to perform cleaning duties. Now properly armed, it's up to Mega Man to take on the maverick robots, fight his way into Dr. Wily's castle, and end this madness.</description>
+    <year>1987</year>
+    <manufacturer>Capcom</manufacturer>
+    <rom name="Mega Man (USA).nes" size="131088" />
+  </game>
+  <game name="Super Mario Bros. 2">
+    <description>One night Mario has a strange dream, where he opens a door to another world filled with even stranger creatures and lands then those in his last adventure against Bowser. Amazingly, the next day, Mario, Luigi, Toad, and the Princess stumble upon a cave, which leads to the world that was in Mario's dream.
+
+Subcon, the land of dreams, is under an evil spell thanks to Wart, so Mario and the gang must save the day. New creatures to defeat and plenty of nasty surprises await.
+
+Choose from the four characters, each differing in speed and jumping ability, and head on through 7 levels each filled with puzzles, bosses, bonus money, the always helpful mushroom, and invincible star, plus bombs and magic potions. 
+After each level, depending on the coins you collect, you can use them in the bonus game to collect extra lives.</description>
+    <year>1988</year>
+    <manufacturer>Nintendo</manufacturer>
+    <rom name="Super Mario Bros. 2 (USA).nes" size="262160" />
+  </game>
+  <game name="Mega Man 3">
+    <description>It's the robot revolt, and no one is safe! Mega Man is even less safe than anyone else. This time, our super-powered cybernetic friend is up against a horde of metal crazies who are sick and tired of obeying!
+
+Mega Man 3 is a traditional action-platformer: you jump from brick to brick while avoiding pits and shooting robots.
+It's the first time in a Mega Man that you can slide instead of merely walking and that you get a sidekick. Rush is your dog who helps out by offering other modes of transportation when you need it.
+Enemies will often supply you with both energy and ammo refills. You can also collect Energy Tanks which can only be used once but will entirely restore your health. And, of course, you do get infinite continues and a password feature to resume play at the beginning of any level.</description>
+    <year>1990</year>
+    <manufacturer>Capcom</manufacturer>
+    <rom name="Mega Man 3 (USA).nes" size="393232" />
+  </game>
+  <game name="Double Dragon">
+    <description>Set in a post-apocalyptic New York, Double Dragon is the story of Billy and Jimmy Lee, twin brothers trained in the fighting style of Sou-Setsu-Ken. Together, they manage a small martial arts training school, teaching their students in self-defense. One day, Billy's girlfriend, Marian, is kidnapped off the street by the "Black Warriors", a savage street gang led by a man named Willy. The Black Warriors demand the Lee brothers disclose their martial arts secrets in exchange for Marian's freedom. The Lee brothers set out on a rescue mission to crush the Black Warriors and save Marian.
+
+Using whatever techniques they have at their disposal, from the basic punches and kicks to the invulnerable elbow strike, as well any weapon that comes into their hands, the Lee brothers must pursue the gang through the city slum, industrial area and the forest before reaching their hideout to confront the big boss, Willy.</description>
+    <year>1988</year>
+    <manufacturer>Tradewest</manufacturer>
+    <rom name="Double Dragon (USA).nes" size="262160" />
+  </game>
+  <game name="Metal Storm">
+    <description>Metal Storm is an action game in which the player takes control of the giant mecha M-308 Gunner in order to put a stop to a malfunctioning computer menace. 
+
+To save it from becoming another generic action game, innovation is shown through fast paced gameplay and the "gravity flip" ability, which enables the character to freely switch between moving along the floor or ceiling. While the game is only seven levels long, the difficulty ramps up quickly, so mastery of the gravity technique and memorization of the levels become absolute necessities for survival.</description>
+    <year>1991</year>
+    <manufacturer>Irem Corporation</manufacturer>
+    <rom name="Metal Storm (USA).nes" size="393232" />
+  </game>
+  <game name="Ninja Gaiden">
+    <description>Ninja Gaiden begins with a cinematic animation in which 2 ninjas duel to the death; one goes down. It is revealed that the doomed ninja is the father of Ryu Hayabusa. When Ryu learns of this, he embarks on a quest to find out who killed his father and why. This quest takes him to America to find an archaeologist with whom Ryu's father was working. From there, Ryu becomes embroiled in an evil, supernatural conspiracy involving a villain named Jaquio who has plans to use an ancient castle and some relics to unleash a terrifying evil upon the world.
+
+Ninja Gaiden is a side scrolling game where Ryu the ninja can run, jump, and slash with his ninja sword. He can also attach to any vertical surface. Powerups are littered throughout the landscape that allow Ryu to toss fireballs and ninja stars, and perform other feats.</description>
+    <year>1989</year>
+    <manufacturer>Tecmo</manufacturer>
+    <rom name="Ninja Gaiden (USA).nes" size="262160" />
+  </game>
+  <game name="Battletoads">
+    <description>The Dark Queen has attacked and kidnapped (toadnapped?) your best buddy.. To make matters worse, she nabbed the best looking girl around! So, what will you do? Cry? Whimper? Hide? Call the Starcops? NO! Cause you're a Battletoad! Battletoads don't cry, hide or call for help! And they certainly don't whimper! They get MAD then they get EVEN! So grab your blaster, hop on the Toadster and go get 'em!
+
+You will control a battletoad through various levels. Some are side-scrolling beat-em-ups, other are vertical drops down a shaft, fighting as you go, others have you riding a rocket or surfboard, shooting or avoiding enemies. At the end of each area, there is a boss. In some areas, about half-way through, you may have a mini-boss.</description>
+    <year>1991</year>
+    <manufacturer>Tradewest</manufacturer>
+    <rom name="Battletoads (USA).nes" size="262160" />
+  </game>
+  <game name="Crystalis">
+    <description>October 1st, 1997 is known as END DAY. A great war encircles the globe and brings about an end to civilization. The surviving humans concluded that they could never repeat their mistakes and build a great tower in the sky to watch over the world and act accordingly to combat "evil". One hundred years have passed since then and a hidden cryogenic chamber in the mountains springs to life...
+
+Crystalis is a top-down action RPG. Starting from the cryogenic chamber, the player takes the role of a mysterious hero who must uncover the mystery of the tower. He will meet up with the four wise people and learn their magic, while also obtaining the four elemental swords which will help him progress.</description>
+    <year>1990</year>
+    <manufacturer>SNK</manufacturer>
+    <rom name="Crystalis (USA).nes" size="393232" />
+  </game>
+  <game name="Mega Man 4">
+    <description>In Mega Man 4, Dr. Wily is declared as having been killed by the explosion of Gamma. A year passes and Rock, Roll, and Dr. Light are living in peace. But soon, the peace is broken by a new threat.
+
+A supposed colleague of Dr. Light's, the mysterious Dr. Cossack, has sent out eight of his own Robot Masters to find Mega Man, whom Cossack blames for the kidnapping of his daughter. Mega Man, hoping to clear his name, sets out to find Dr. Cossack, this time armed with a powerful new weapon: the Rock Buster!!
+
+Rockman must now battle with Cossack's fiendish Robot Masters and find Cossack's daughter before it's too late!
+
+Originally for the NES, Mega Man 4 was also released for the PSX in Japan as the fourth installment in the Rockman Complete Works series.</description>
+    <year>1992</year>
+    <manufacturer>Capcom</manufacturer>
+    <rom name="Mega Man 4 (USA).nes" size="524304" />
+  </game>
+  <game name="Gargoyle's Quest II">
+    <description>The Ghoul realm is under attack by a mysterious force and aspiring warrior Firebrand sets out to save it.
+
+As in its predecessor, gameplay in Gargoyle's Quest II is divided into an adventure and an action part. During the adventure parts, Firebrand explores a world map and several villages from a top-down perspective, talking to his fellow ghouls and zombies to advance the story or receive important items. Action parts are seen from a side-scrolling perspective. In these parts of the game, Firebrand has the ability to jump, cling to walls, fly for a limited amount of time and shoot fireballs at his enemies. As the game progresses, Firebrand becomes more and more powerful, receiving items that improve his agility, armor or attack power.</description>
+    <year>1992</year>
+    <manufacturer>Capcom</manufacturer>
+    <rom name="Gargoyle's Quest II (USA).nes" size="262160" />
+  </game>
+  <game name="Rygar">
+    <description>A hero has arrived to defeat the forces of evil in the land of Argool, and you are this hero. Do you have what it takes? This game was one of the first adventures to hit the NES and the remarkable aspect on top of this was the multiple viewpoints the games offers. When you are in an action zone, the game is a side-scrolling action game; however, then you are travelling between zones, the game takes on an overhead view that can also lead to combat situations.</description>
+    <year>1987</year>
+    <manufacturer>Tecmo</manufacturer>
+    <rom name="Rygar (USA).nes" size="131088" />
+  </game>
+  <game name="Spy Hunter">
+    <description>A conversion of the arcade game, Spy Hunter is a driving action game played from an overhead point of view. Your car is equipped with machine guns to help you get past the numerous enemies out on the road (be careful not to shoot any civilians, though!) Occasionally you will come across a weapons van, and if you drive into the back of the van your car becomes equipped with a second weapon (such as smoke screen, oil slick, or missiles.) At several points the road splits and you can enter a boathouse which transforms your car into a boat temporarily. If you drive far enough the seasons change as well (watch out for icy conditions during winter!) The enemy cars will do anything to stop you, including running you off the road, firing guns from the back of a limmo, or dropping bombs from a helicopter.</description>
+    <year>1987</year>
+    <manufacturer>Sunsoft</manufacturer>
+    <rom name="Spy Hunter (USA).nes" size="65552" />
+  </game>
+  <game name="Section-Z">
+    <description>Alien Invaders approach the solar system from their interstellar battle platform, named Fortress Balangool. Under the command of the Master Control, named L-Brain, the Invaders defeat Earth's space forces. Only one hero, Captain Commando remains to defeat the alien armada by entering Balangool and fighting through the various sections until reaching Section-Z.
+
+Section-Z is a side-scrolling shooter where the player must travel through the maze that is Balangool. Typically this consists of traveling through a scrolling corridor and reaching the end where a new direction must be chosen. Captain Commando's abilities are shooting directly left or directly right while moving around the screen. Power-ups can be collected by defeated enemies and include; improved lasers, a 3-way cannon and shield, these can be stored until needed. There are also SMS (Special Transmission Shell) power-ups, which require energy to use Energy units,are used to absorb enemy fire. Loss of all energy or running into an enemy or a wall causes death.
+
+Certain sections of Balangool are blocked until a generator can be found and destroyed. There are four different boss creatures that must be defeated when encountered.</description>
+    <year>1987</year>
+    <manufacturer>Capcom</manufacturer>
+    <rom name="Section-Z (USA).nes" size="131072" />
+  </game>
+  <game name="Rush'n Attack">
+    <description>Depending on which title you use, and how you interpret it, this game is about a guy who a)rushes in before attacking b)attacks Russians (this was the mid-80s, when the US helped bin Laden do the same), or c)wears a rather goofy hat. One way or another, this arcade conversion arms you with a knife and sends you on a kamikaze mission against hordes of enemy fighters.
+
+There are four distinct sections of gameplay, taking in a Missile Base, a Harbour, a Bridge, and an enemy Prison Camp. Extra weapons with limited ammunition can be collected along the way, which will make the task a lot easier. The level is divided into 3 horizontal levels, which can be moved between either by jumping or using ladders, and this gives a chance to avoid the more threatening mobs of enemy fighters</description>
+    <year>1987</year>
+    <manufacturer>Konami</manufacturer>
+    <rom name="Rush'n Attack (USA).nes" size="131088" />
+  </game>
+  <game name="Friday the 13th">
+    <description>Based on the popular movie franchise, Friday the 13th casts you as one of six camp counselors (three girls or three boys) at the infamous Camp Crystal Lake, and you are tasked with destroying Jason Voorhees once and for all.
+
+To get to Jason, you must run around a camp, killing zombie ghouls and collecting weapons, until you hear an alarm sound.  When that alarm goes off, it means Jason has entered a cabin and you must find him.
+
+To save time, you can switch between all six counselors, depending on where you are.  Once you enter the house that Jason is in, the game switches to a 3D-esque maze in which you have to hurt Jason with the items you collected.  Once he's been damaged enough, he'll run away, only to sound another alarm later and enter another house.</description>
+    <year>1989</year>
+    <manufacturer>LJN</manufacturer>
+    <rom name="Friday the 13th (USA).nes" size="65552" />
+  </game>
+  <game name="Ninja Gaiden II : The Dark Sword of Chaos">
+    <description>A year after the events of the original Ninja Gaiden, a new villain named Ashtar receives word of Jaquio's defeat. Ashtar uses this opportunity to hatch a new plan to plunge the world into darkness. The ninja, Ryu Hayabusa, hits the trail to destroy all.</description>
+    <year>1990</year>
+    <manufacturer>Tecmo</manufacturer>
+    <rom name="Ninja Gaiden II - The Dark Sword of Chaos (USA).nes" size="262160" />
+  </game>
+  <game name="Zelda II : The Adventure of Link">
+    <description>The land of Hyrule is in chaos.  As Link, you'll be sent on a treacherous journey to return six precious Crystals to their origins in six stone statues.  Only by defeating the guardians of the six palaces will you gain passage to the seventh palace, take on the ultimate challenge that awaits you, and wake the Princess Zelda from her sleeping spell.  On your way, helpful villagers you encounter will offer clues and secret messages invaluable in your quest.  As you guide Link through the levels of Hyrule, close-ups and overviews will enhance your video vision.  Are you up to the challenge?</description>
+    <year>1988</year>
+    <manufacturer>Nintendo</manufacturer>
+    <rom name="Zelda II - The Adventure of Link (USA) (Collector's Edition).nes" size="262160" />
+  </game>
+  <game name="Kid Icarus">
+    <description>Far away in peaceful Angel Land lived a young angel warrior named Pit, who has been given the task of defeating the monstrous Medusa, who wishes to destroy Angel Land and all of the people, and she has started by kidnapping Palutena, the Princess of Angel Land.
+
+Young Pit must rescue the Princess and restore peace to Angel Land. He will travel from the deep caverns of the Underworld to Medusa's palace in the sky on his journey, and deadly monsters will attack him every step of the way. But he has the power of the Gods on his side! A powerful bow and arrows, Water of Life, and Angel Feathers will assist Pit on his quest to destroy Medusa and save the princess!
+
+Kid Icarus is a platform game where the player goes through several vertically outlaid levels, shooting enemies with his bow on the way and collecting hearts they leave behind. Pit's bow can shoot both forward and upwards. As Pit continues upwards, more and more of the level ends up beyond the bottom of the screen and if Pit falls down out of the screen, he dies. 
+
+The levels contain doors which lead to chambers of various types - some chambers are filled with enemies, some are treasuries which allow Pit to obtain a power-up, some are stores where Pit can buy stuff, some will replenish his health, in some Pit will be able to take a test in hopes of getting a powerful weapon, and finally some chambers give Pit a chance of receiving a strength upgrade, therefore increasing the amount of damage his attacks deal. 
+
+Pit earns experience as he defeats enemies, and he gains levels from this experience. The more levels Pit has, the more maximum health he has. 
+
+Hearts taken from enemies are used in shops to buy various items and power-ups. Items include a protective shield which harms enemies, a more powerful bow, a mallet which allows you to smash the poor Palutena's warriors turned to stone who will later help you to fight a boss, a torch to see yourself in dark areas and others.</description>
+    <year>1987</year>
+    <manufacturer>Nintendo</manufacturer>
+    <rom name="Kid Icarus (USA, Europe) (Rev 1).nes" size="131072" />
+  </game>
+  <game name="ZZZ(notgame):#NONGAME">
+    <manufacturer>Subor</manufacturer>
+    <rom name="Legendary Wings (USA).nes" size="131088" />
+  </game>
+  <game name="Disney's DuckTales">
+    <description>Duck Tales for NES is a traditional platform game in which the player takes the role of greedy Scrooge McDuck in search of treasures around the globe. He counts on his three nephews and on other Duck Tales characters to help him in his quest through inospit places such as the Amazononic forest, the African Mines, the Himalayas, Transylvania (where he meets Dracula Duck) and even the Moon.
+
+Each one of them reserves the old duck lots of adventure, different enemies and hidden rooms.
+
+The game features a 2D side-scrolling platform gameplay very similar to Mega Man. Graphics are colorful and cartoonish, music remembers players of the TV series and controls are very simple.
+</description>
+    <year>1989</year>
+    <manufacturer>Capcom</manufacturer>
+    <rom name="DuckTales (USA).nes" size="131088" />
+  </game>
+  <game name="Willow">
+    <description>Willow is an action RPG based on the movie with the same name. The player assumes the role of Willow, the chosen one who must restore human form to the benevolent sorceress Fin Raziel and destroy the evil sorceress, Bavmorda. While the game follows the movie's plot somewhat most of the time, it also expands on it and introduces characters, races and enemies not found in the movie.
+
+Gameplay is similar to other action RPGs and The Legend of Zelda. Willow is seen from a top down perspective and all enemies are visible on screen. Slaying enemies will give Willow experience points, which will eventually lead to him increasing his stats automatically. New weapons, shields and magic items are found in various treasure chests scattered across the land or given to Willow as part of the plot. Aside from battling minor enemies Willow will also face off against several boss monsters as well as characters from the movie.</description>
+    <year>1989</year>
+    <manufacturer>Capcom</manufacturer>
+    <rom name="Willow (USA).nes" size="262160" />
+  </game>
+  <game name="Disney's The Little Mermaid">
+    <description>In this version of Disney's The Little Mermaid you play as Ariel the mermaid.
+
+Ariel has already met Eric, and they plan to wed, but the sea-witch Ursala has taken control of the ocean!  So Ariel (After explaining what's going on to Eric) becomes a mermaid once more and sets off to rescue the sea.
+
+The game takes place from a side view and Ariel (Swimming most of the time, but hopping around on the land occasionally) can shoot bubbles to trap her foes and can then throw them at each other.  She can also dig through sand to find treasure and pick up sea shells to help her break chests open.
+
+The treasure she finds in the sand is usually just bonus points, but the treasure you find in chests will increase your bubble's power and range.
+</description>
+    <year>1991</year>
+    <manufacturer>Capcom USA</manufacturer>
+    <rom name="Little Mermaid, The (USA).nes" size="131088" />
+  </game>
+  <game name="Chip 'N Dale : Rescue Rangers">
+    <description>The rescue rangers are tiny heroes. Consisting of two chipmunks, two mice and a fly... these heroes may be small but there's no case too big for them to take on. This game starts out simply enough, with a mission to rescue a small kitten, but soon escalates into a wider plot that pits the rescue rangers against their arch-nemesis, the feline kingpin, Fat Cat.
+</description>
+    <year>1990</year>
+    <manufacturer>Capcom</manufacturer>
+    <rom name="Chip 'n Dale - Rescue Rangers (USA).nes" size="262160" />
+  </game>
+  <game name="Rescue : The Embassy Mission">
+    <description>Terrorists have overrun an embassy and hold the people inside as hostages. You control six counter-terrorists whose mission is to eliminate the terrorists. In the first part of the game, you have to bring three men into position so they can snipe the building. The second part involves entering the building with the other three men to kill the terrorists and rescue the hostages. Depending on how well you positioned your snipers, you can use them to assist you on that mission.</description>
+    <year>1990</year>
+    <manufacturer>Kemco Limited</manufacturer>
+    <rom name="Rescue - The Embassy Mission (USA).nes" size="262160" />
+  </game>
+  <game name="Adventures of Lolo 3">
+    <description>This time, Lolo has a red friend who will do some of the work for him. Unlike the two previous Lolo games, Adventures of Lolo 3 lets you wander around a world map to explore different locations in a non-linear fashion. However, some of the locations are blocked and will only open up after you earn the correct a key by completing another level.
+
+The gameplay is very similar to the two previous games. You have to collect all the hearts in each room while avoiding the enemies trying to stop you. Once you have eaten all the hearts, more enemies will appear to try and keep you from reaching the exit. The puzzles involve mostly pushing things to prevent enemies from stopping you.</description>
+    <year>1991</year>
+    <manufacturer>HAL Laboratory</manufacturer>
+    <rom name="Adventures of Lolo 3 (USA).nes" size="262160" />
+  </game>
+  <game name="Adventure Island">
+    <description>In the South Pacific, Master Higgins lives peacefully wearing only a grass skirt and a cap. That is until the Evil Witch Doctor decides to capture the Princess Leilani and hold her as his own. It's up to Master Higgins to gather throwing axes, fireballs and skateboards in order to aid his noble quest.
+
+The game is a side scroller, Master Higgins moves across the screen from left to right and finds his power-ups in giant eggs. This includes a skateboard which results in a great speed enhancement - until Master Higgins gets hit and loses his power. If he is not on a skateboard a hit means instant death. Another game mechanic is starvation which gets indicated through a meter which steadily decreases. If it hits zero the hero dies and the only way to fill it up is by collecting food on the way. Bosses await him at the end of levels, all the way to the Evil Witch Doctor himself.</description>
+    <year>1988</year>
+    <manufacturer>Hudson Soft</manufacturer>
+    <rom name="Adventure Island (USA).nes" size="65552" />
+  </game>
+  <game name="Batman : The Video Game">
+    <description>The NES version of Batman: The Video Game is loosely based on the 1989 movie. It is a side-scrolling game with a blue-dressed Batman fighting enemies such as robots, jet-packed soldiers, ninjas, and mutants.
+
+The game consists of five levels: Gotham City streets (with Killer Moth as the final boss), AXIS Chemical Factory (boss: Machine Intelligence System), Underground Conduit (boss: Electrocutioner), the Laboratory Ruins (boss: Dual-Container Alarm) and Gotham's Cathedral (boss: Firebug) where Batman finally faces the Joker. Before each level, a cutscene is shown using scenes from the movie.</description>
+    <year>1990</year>
+    <manufacturer>Sunsoft</manufacturer>
+    <rom name="Batman - The Video Game (USA).nes" size="262160" />
+  </game>
+  <game name="Skate or Die 2 : The Search for Double Trouble">
+    <description>In this sequel to Skate or Die, you have the option of just skateboarding on a ramp, or to go through an adventure. In the adventure, you are in a small community called Elmood. You play as the hero in this game. Basically you are trying to keep skateboarding and your life as it was after the Mayor of the town bans skateboards. After dealing with this, you set out to build your own halfpipe, and you deal with whatever comes your way. In this game, you go through many obstacles, and other skateboarders shooting paint and throwing eggs at you, you also can shoot at them, and of course upgrade your board from Lester when you run into him on his skateboard, as well as Lester who will give you tricks (giving them whatever they want, whether that's fries, drinks, CD's, etc;).
+</description>
+    <year>1990</year>
+    <manufacturer>Electronic Arts</manufacturer>
+    <rom name="Skate or Die 2 - The Search for Double Trouble (USA).nes" size="393232" />
+  </game>
+  <game name="Metal Gear">
+    <description>Crazed Colonel Vermon CaTaffy poses new terrorist threat to the world.
+Outer Heaven leader CaTaffy has activated the ultimate super weapon: Metal Gear!
+Responding to the crisis, covert unit "Fox Hound" is called into action, and that's where you come into play. Trained in hand-to-hand combat and skilled in every weapon known to man, you're Fox Hound's lethal fighting machine, code named "Solid Snake".
+But on this mission you better be sly as well, to surprise heavily armed enemies, busting 'em up quietly and rescuing their hostages before alarms are triggered.
+Plus you gottamaintain radio contact with Commander South, who'll feed you you crucial info on Metal Gear's whereabouts. To survive, capture submachine guns, Barettas, grenade launchers, and plastic explosives...
+Until you find and destroy Metal Gear, ending CaTaffy's reign of terror.
+For one player only.</description>
+    <year>1988</year>
+    <manufacturer>Konami</manufacturer>
+    <rom name="Metal Gear (USA).nes" size="131088" />
+  </game>
+  <game name="Castlevania III : Dracula's Curse">
+    <description>Only you can stop Dracula from drawing first blood!
+
+Led by the immortal Count Dracula, the greatest army of evil ever assembled is poised to bury mankind in a Tomb of Terror. Destroying this legion of Swamp Dragons, Slasher Skeletons and Forces of the Undead will be the supreme challenge for the mightiest of warriors.
+
+Your place in history is 100 years before Simon Belmont's birth. Dracula is young at heart, and it will take more than a stake to penetrate his evil. Luckily, you command the role of Trevor - Simon's forefather and the origin of the Belmont Warlord Chromosones.</description>
+    <year>1990</year>
+    <manufacturer>Konami</manufacturer>
+    <rom name="Castlevania III - Dracula's Curse (USA).nes" size="393232" />
+  </game>
+  <game name="Batman : Return of the Joker">
+    <description>The Joker lives again in SunSoft's sequel to their NES 
+original. The Joker has somehow managed to escape from Arkham Asylum once again, and Batman must fight him across seven stages to restore peace to Gotham City.
+
+Batman carries a gauntlet shooting basic bullets by default. This can be upgraded with weapon powerups located in boxes throughout the level, giving access to homing and energy weapons. Every upgrade weapon can be charged up for a secondary attack, different for each weapon. Batman also has a slide useful against most enemies and some bosses. 
+
+Boss fights introduce a system where life is measured by points instead of tick marks or bars. In these sections, Batman has significantly more health, and can take many more hits when rumbling with these stronger foes.
+
+Levels include a snowy landscape, moving train, military base, and sewers. Two levels require you to run and dodge explosions while vehicles keep pace in the background. Some levels also have Batman activate a jetpack and play through a short side-scrolling shooter. 
+
+This game is one of the few Batman games that was not based directly on a movie or television series.
+</description>
+    <year>1991</year>
+    <manufacturer>Sunsoft</manufacturer>
+    <rom name="Batman - Return of the Joker (USA).nes" size="393232" />
+  </game>
+  <game name="Super C">
+    <description>The alien Red Falcon is back, and planning on taking over the planet Earth. Now it's up to Scorpion and Mad Dog to battle through five levels and save the planet. Based on the arcade game, Super C is the sequel to Contra. Gameplay is a combination of side scrolling/platform and top down view. There is a wide variety of enemies to defeat, starting with earthly locations, and progressing to more alien. To help out, weapon upgrades can be found as the game progresses. Two players can play simultaneously, or one player can attempt to take on Red Falcon himself.</description>
+    <year>1990</year>
+    <manufacturer>Konami</manufacturer>
+    <rom name="Super C (USA).nes" size="262160" />
+  </game>
+  <game name="Disney's DuckTales 2">
+    <description>Scrooge McDuck is hot on the trail of the richest adventure ever. Pieces to the map of the Lost Treasure of McDuck have been scattered across the globe, and Scrooge must find them before the greedy Flintheart Glomgold grabs them. It's going to be a race to the finish as both of them try to find the treasure and become the richest duck in the world! Join Scrooge and his nephews as they explore the ancient pyramids of Egypt and do battle with swash-buckling pirates in the Bermuda Triangle. Help them search the haunted halls of an ancient Scottish castle and scale the watery heights of Niagara Falls. Aid Scrooge in his quest for the secret of the island of Mu and you'll gain the final clue to unravel the hidden location of the Lost Treasure of McDuck!</description>
+    <year>1993</year>
+    <manufacturer>Capcom</manufacturer>
+    <rom name="DuckTales 2 (USA).nes" size="131088" />
+  </game>
+  <game name="Final Fantasy">
+    <description>Hironobu Sakaguchi's Final Fantasy... the first of one of the longest role-playing game series known to mankind. Final Fantasy is the game for the NES console that started it all.
+
+The world is veiled in darkness. Winds don't blow, the seas are stormy, and the earth rots. All people can hope for is that the ancient prophecy will be finally fulfilled. "When the world is veiled in darkness, four warriors will come..." And indeed, they come - the four characters you have previously chosen. Their first quest is to free a princess from the evil Garland, and then the real journey begins...</description>
+    <year>1990</year>
+    <manufacturer>Nintendo</manufacturer>
+    <rom name="Final Fantasy (USA).nes" size="262160" />
+  </game>
+  <game name="Demon Sword">
+    <description>In Demon Sword you play the part of the noble fighter Victar. Victar carries with him a sword which was used long ago to defeat the evil Dark Fiend who took over the land. Now he is back, and Victar must use the sword to defeat him once again.  The game is an arcade style platform game. You begin with just part of the demon sword, and after defeating a large monster at the end of each level an additional section of the sword is restored. After all six missing parts of the sword are found, you can attempt the final level to defeat the Dark Fiend. In addition to the sword pieces, there are other items which can be found during the levels to help out; these include keys to open mystic doors, spheres to restore life, and different types of weapons.</description>
+    <year>1990</year>
+    <manufacturer>Taito</manufacturer>
+    <rom name="Demon Sword (USA).nes" size="262160" />
+  </game>
+  <game name="River City Ransom">
+    <description>The evil Slick has kidnapped Ryan's girlfriend and taken over the high school. The player is cast as either Ryan or Alex (second player) and has to fight his way through River City's merciless gangs before confronting Slick and freeing his girl. 
+
+River City Ransom is a side-scrolling beat-em-up similar to Double Dragon. The player, or players, travel through the locations of River City, encountering various gangs along the way. Gang members can be defeated with punches and kicks, or beaten up with objects scattered around. Upon their defeat, gang members drop money which Alex and Ryan can spend in malls to buy items that restore health and improve their combat abilities. The main characters have RPG-like numerical stats that can be improved this way, and can also buy books to learn combat manoeuvres. To finish the game, the player(s) have to find and defeat all the bosses.</description>
+    <year>1990</year>
+    <manufacturer>Infogrames</manufacturer>
+    <rom name="River City Ransom (USA).nes" size="262160" />
+  </game>
+  <game name="Castlevania II : Simon's Quest">
+    <description>Castlevania II: Simon's Quest is the second one of three Castlevania games released on the NES. After the vampire killer Simon Belmont destroyed Count Dracula in the original Castlevania (1987), an evil curse possessed him. The only way Simon can break the count's curse is to find five of Dracula's body parts (which are mysteriously strewn throughout Transylvania) and burn them. 
+
+Unlike most of the other Castlevania games, Simon's Quest does not feature the traditional stages but allows you to freely roam the land of Transylvania in the style of Nintendo's Metroid. In several towns Simon can talk with NPC's and buy items in shops, adding a touch of role-playing.
+</description>
+    <year>1988</year>
+    <manufacturer>Konami</manufacturer>
+    <rom name="Castlevania II - Simon's Quest (USA).nes" size="262160" />
+  </game>
+  <game name="Battletoads &amp; Double Dragon">
+    <description>Earth is under fire by Colossus, a battleship the size of a city. Using powerful laser cannons, it has destroyed most of Earth's defence forces, while its many troops clean up the rest of the planet. All expect for 5 warriors.
+
+The Battletoads, who are well aware of evil forces in the galaxy, join forces with Billy and Jimmy Lee from Double Dragon to defend Earth from the deadly ship and its troops. Using a range of special moves you must fight your way through the streets into the heart of the ship and destroy it.
+</description>
+    <year>1993</year>
+    <manufacturer>Nintendo</manufacturer>
+    <rom name="Battletoads-Double Dragon (USA).nes" size="262160" />
+  </game>
+  <game name="Super Mario Bros.">
+    <description>Super Mario Bros. follows Mario and Luigi as they race to rescue Princess Peach from the evil Bowser. In their debut platforming quest, the brothers leap through enemy-filled levels, dodge traps, and uncover hidden bonuses. The Super Mushroom makes Mario grow, the Fire Flower gives him firepower, and the Star grants brief invincibility. Each level ends with a flagpole and the higher you grab it, the more points you score. Secret bonus areas and warp zones allow shortcuts through the game. A timeless classic that defined a genre.</description>
+    <year>1985</year>
+    <manufacturer>Nintendo</manufacturer>
+    <rom name="Super Mario Bros. (USA).nes" size="40976" />
+  </game>
+  <game name="RoboCop">
+    <description>Patrolman Alex Murphy was killed on the streets of Detroit. The major corporation there, Omni Consumer Products (OCP) saw an opportunity to sell a new kind of law enforcement officer to the troubled city. They took what was left of Murphy, encased it in titanium armor, wiped his memory and created RoboCop. Now it's up to RoboCop to clean the streets of Detroit and eliminate the one responsible for his murder, Clarence Boddicker. But it looks like Clarence might not be the kingpin of this town...
+
+Based on the 1987 movie of the same name, RoboCop allows the player to control RoboCop. The majority of the game is a side scroller. RoboCop can punch unarmed citizens and shoot armed citizens. He can move left, right and duck but can not jump. Different weapons can be picked up from enemies, and power-ups to restore health and/or energy. Following levels, RoboCop will have to match a criminal's face to the proper mugshot and engage in a first-person shooting bonus round.</description>
+    <year>1989</year>
+    <manufacturer>Ocean</manufacturer>
+    <rom name="RoboCop (USA).nes" size="262160" />
+  </game>
+  <game name="Disney's Darkwing Duck">
+    <description>The kingpins of crime are at it again! The mysterious criminal organization F.O.W.L. has hatched a plan to take control of the peaceful city of St. Canard. Six of their most heinous henchmen are running rampant through the city and only the daring Darkwing Duck can bring them to justice! Join Darkwing as he explores the woods to weed out Bushroot's evil plan. Search the warehouses along the wharf for Mega Volt and pull the plug on an electrifying scheme. Track down all six of FOWL's crafty criminals and then prepare yourself as Darkwing squares off against the sinister Steelbeak in his fiendish floating fortress!</description>
+    <year>1992</year>
+    <manufacturer>Capcom</manufacturer>
+    <rom name="Darkwing Duck (USA).nes" size="262160" />
+  </game>
+  <game name="Wario's Woods">
+    <description>Wario's Woods is a puzzle game similar to Tetris or Columns, but with a twist. Instead of directly controlling the monsters and bombs that are falling down, the player controls Toad who has to carry around stacks of monsters and bombs and to combine them in the right way. One bomb plus at least two monsters of the same color have to be combined to make them disappear. If five or more objects are cleared at the same time, a diamond will appear. Destroying the diamond will clear all monsters of the diamond's color.
+There are four different ways to pick up objects. The A button lets Toad pick up the whole stack that is in front of him, the B button lets him only pick up one object, even if it's in the middle of a stack, the Y button lets him kick a monster or bomb that's in front of him and the X button places him on top of the stack that he is carrying. He can also run up walls and stacks to catch falling objects out of the air or to pick up certain parts of a stack.</description>
+    <year>1994</year>
+    <manufacturer>Nintendo</manufacturer>
+    <rom name="Wario's Woods (USA).nes" size="524304" />
+  </game>
+  <game name="Chip 'N Dale : Rescue Rangers 2">
+    <description>Following the first Rescue Rangers game, the Rangers' overcame the plot of their arch-nemesis Fatcat, and locked him up in the prison/pound. However, Fatcat's henchmen have sprung him from prison by blimp. Suddenly a television news anchor is reporting that there is a bomb threat in a local restaurant. The Rescue Rangers take it upon themselves to save the day only to learn that the whole bomb scare was a diversion in order to allow Fatcat to steal an artifact known as the Urn of the Pharoah. The team must track Fatcat and learn what he has in store for the stolen goods.
+
+Like the previous game, Chip &amp; Dale's Rescue Rangers 2 is a side-scrolling action game where 2 players can play simultaneously as Chip &amp; Dale, or 1 player can control either chipmunk. Our heroes must conquer a series of oversized (from their perspective) stages in order to thwart Fatcat's nefarious schemes. For example, the first stage has the chipmunks hopping across the tables, chairs, and counters of a restaurant, and on through the kitchen. Many enemies try to slow the player's progress. The chipmunks' offensive ability is to pick up any of the copious blocks that litter the landscape and toss it in any of 5 directions (sideways, up, and diagonal-up). Along the way, there are scattered RR blocks for the heroes to collect. The other members of the Rescue Rangers -- Monty, Gadget, and Zipper -- are on hand to lend help out at key junctures.
+</description>
+    <year>1994</year>
+    <manufacturer>Capcom</manufacturer>
+    <rom name="Chip 'n Dale - Rescue Rangers 2 (USA).nes" size="262160" />
+  </game>
+  <game name="California Games">
+    <description>California Games was the original "Extreme Games" – what today's generation might call "X-Games in the sun".  Players can select sponsors (absent in some versions) and compete in events such as skateboarding, footbag, surfing, roller skating, flying disc (frisbee) and BMX.  The surfing event is ranked by judges, which give a score to help the players improve their routine.
+
+The Atari versions (2600 and Lynx) of the game omit the flying disc and roller skating events, while the Genesis version omits only the flying disc event.</description>
+    <year>1989</year>
+    <manufacturer>Milton Bradley Co.</manufacturer>
+    <rom name="California Games (USA).nes" size="131088" />
+  </game>
+  <game name="Mega Man 5">
+    <description>Dr. Cossack, humbled by his defeat and his allowing of Dr. Wily to influence his ways, decides to help Dr. Light by providing him and Rockman with tools and weapons to help foil Dr. Wily for good. All seems calm and peaceful, until...
+
+A sudden rampage breaks out, and the cause is found to be a group of robots, led by a mysterious figure. As Dr. Light begins to investigate this rampage and attempts to find a way to stop it, he is kidnapped by the leader of the robots. Rockman hurries to save Dr. Light, but is too late...the only thing he can find at the scene is a yellow scarf...one that almost seems to belong to...Blues!?
+
+Could Rockman's supposed brother, the strange but good-hearted Blues, be the one who kidnapped Dr. Light? Is Blues the one responsible for the rampages? With these questions racing through his mind, Rockman sets off to find Blues and get the answers he wants.
+
+Like the other early Rockman / Mega Man games, the Playstation version was only released in Japan, as part of the Complete Works series.</description>
+    <year>1992</year>
+    <manufacturer>Capcom</manufacturer>
+    <rom name="Mega Man 5 (USA).nes" size="524304" />
+  </game>
+  <game name="Paperboy">
+    <description>Based on the arcade game, the object of Paperboy is to deliver papers to your customers while inflicting as much damage as possible to the houses of your non-customers. To make things more difficult, numerous obstacles get in your way including construction workers, rogue tires, skateboarders, dogs and cats, cars, and even the occasional tornado.</description>
+    <year>1988</year>
+    <manufacturer>Mindscape International</manufacturer>
+    <rom name="Paperboy (USA).nes" size="65552" />
+  </game>
+  <game name="Double Dragon II : The Revenge">
+    <description>The lovely Marian was rescued from the clutches of the Black Warriors gang by Billy &amp; Jimmy Lee in the first Double Dragon game, but now the gang has killed her in retaliation of their early defeat. The Dragons must now embark on a mission to avenge her death and defeat the Black Warriors for the second and final time.
+
+"Double Dragon II" ix essentially an improved version of the first game. In addition to offering renewed audio and visuals, as well as new traps, moves and enemy characters, it discards the conventional punch and kick buttons in favor of a direction-oriented attacking system similar to the original Technos beat-em-up Renegade. The NES version offered new stages, new moves and illustrated cut-scenes, as well as a new final boss and a new ending. 
+Unlike the first NES game, it offered 2-Player Co-Op gameplay with the option to turn off the friendly fire.</description>
+    <year>1990</year>
+    <manufacturer>Acclaim Entertainment</manufacturer>
+    <rom name="Double Dragon II - The Revenge (USA) (Rev 1).nes" size="262160" />
+  </game>
+  <game name="RoboCop 2">
+    <description>RoboCop 2 is a mission-based platform game. Missions have various objectives, such as destroying nukes or killing all the enemies. If you didn't destroy/kill enough, you'll be transported to a training mission, which is a first-person perspective shoot 'em up. Should you also fail the training, you must go to the beginning of the previous mission. Successfully completed mission or enough points scored by training allow you to proceed to the next stage. Unlike in the first RoboCop, there's no time limit, and you are able to jump.</description>
+    <year>1991</year>
+    <manufacturer>Ocean</manufacturer>
+    <rom name="RoboCop 2 (USA) (Rev 1).nes" size="262160" />
+  </game>
+  <game name="Shadowgate">
+    <description>Using the same graphical interface as Deja Vu, Shadowgate is an adventure game set in a fantasy world. Players take the part of an adventurer sent to the ancient keep of Shadowgate on a quest to find a mystic artifact known as the Staff of Ages and stop the evil Warlock Lord from summoning a horrific demon known as the Behemoth. However Shadowgate has become infested with the Warlock Lord's demonic minions, not to mention the castle's still functional booby-traps.
+
+Unlike Deja Vu, death comes at you suddenly, unexpectedly, and most of all OFTEN. Such simple acts as pulling the wrong switch or opening the wrong door can cause you to be skewered by a booby-trap or disemboweled by a monster. It's allso worth mentioning the fact that if your torch burns out (this happens quite regularly) and you forget to light a new one, you'll trip in the dark and break your neck.
+
+A Windows 3.x update to this game was created in 1991.</description>
+    <year>1989</year>
+    <manufacturer>Kemco Limited</manufacturer>
+    <rom name="Shadowgate (USA).nes" size="262160" />
+  </game>
+  <game name="Kung Fu">
+    <description>You'll need lightning fast reactions to knock out the Knife Thrower, stop the Stick Fighter, and trip up the evil Tom Tom Brothers in this action-packed martial arts contest! Are you sure you're tough enough? Because it'll take all your strength and skill to master the moves in KUNG FU, beat your opponents, and rescue the fair Sylvia who's held captive on the top floor! The action is non-stop, and just when you think you've got your enemies licked there's always a Giant, a Snake, or a fire-breathing Dragon to contend with in KUNG FU!</description>
+    <year>1985</year>
+    <manufacturer>Nintendo</manufacturer>
+    <rom name="Kung Fu (Japan, USA).nes" size="40976" />
+  </game>
+  <game name="Ghosts 'n Goblins">
+    <description>Ghosts'n Goblins is a sideways scrolling action platformer spread over six levels, each of which must be completed within three minutes (or a life is lost), taking in forest, village, mountain and cavern settings with increasing difficulty.
+
+Arthur the brave knight must rescue his beloved Princess from the Demon King Astaroth and his forces - amongst them are the various undead (ghosts, zombies), bats, ogres and goblins. Other challenges include moving platforms, ladders and water/fire hazards. 
+
+As in most games in this genre, the player can pick up power-ups such as daggers and bombs during the course of the game, giving the player greater firepower.
+</description>
+    <year>1986</year>
+    <manufacturer>Capcom</manufacturer>
+    <rom name="Ghosts'n Goblins (USA).nes" size="131088" />
+  </game>
+  <game name="Contra">
+    <description>In the year 2631, a small meteorite has fallen into the Galuga archipelago, located 20km northeast off the coast of New Zealand. Two years later, a terrorist group known as Red Falcon has seized the island in preparation for an alien invasion. The earth's marines sent two members of their elite Contra unit, Bill Rizer and Lance Bean, to neutralize the terrorists.
+
+As either, Bill (player 1) or Lance (player 2), the player must get to the end of each stage, shooting everything in sight, while avoiding enemy fire themselves. The player can upgrade their standard-issue rifle into one of four different weapons, including the powerful spread shot.</description>
+    <year>1988</year>
+    <manufacturer>Konami</manufacturer>
+    <rom name="Contra (USA).nes" size="131088" />
+  </game>
+  <game name="Dr. Mario">
+    <description>In this Tetris-style game, you play as Dr. Mario, who must drop differently coloured pills onto viruses to remove them from the bottle. Each pill is split into two, with each side a different colour. Match that colour to the colour of the virus, and it will be removed from the bottle.
+
+Included in the game is the normal mode, a time trial, and a two player battle mode to see who can remove the most viruses.</description>
+    <year>1990</year>
+    <manufacturer>Nintendo</manufacturer>
+    <rom name="Dr. Mario (Japan, USA).nes" size="65552" />
+  </game>
+  <game name="The Legend of Zelda">
+    <description>In one of the darkest times in the Kingdom of Hyrule, a young, pointy-eared boy named Link takes on an epic quest to restore the fragmented Triforce of Wisdom and save the Princess Zelda from the clutches of the evil, power-hungry Ganon.
+
+The Legend of Zelda for the NES marks the first action-adventure title of the popular Nintendo series. Players must make their way through the various forests, graveyards, plains, and deserts of the Overworld to find the secret entrances of the eight dungeons in an attempt to piece together the broken Triforce. Once all pieces are joined, Link will be able to gain entry to Death Mountain, home of Ganon, and prison of Princess Zelda.
+
+The game is drawn in a top-down perspective and is known for several factors that were revolutionary at the time: A full world that could be freely explored, power-ups that would permanently enhance your character's abilities, and a battery back-up save feature that allowed players to retain their progress instead of having to start over. The gameplay balanced out frequent action sequences with discovery, secrets, and exploration.</description>
+    <year>1987</year>
+    <manufacturer>Nintendo</manufacturer>
+    <rom name="The Legend of Zelda (USA) (Collector's Edition).nes" size="131088" />
+  </game>
+  <game name="Mega Man 2">
+    <description>After defeating Dr. Light's six robots that were reprogrammed by the villainous Dr. Wily in Mega Man, it seemed like the world was safe. But it was not to be. Dr. Wily has escaped from prison and is madder than ever, this time creating eight new Robot Masters of his own to take over the world and crush Mega Man! Is the world doomed?
+
+In this game, Metal Man, Air Man, Bubble Man, Quick Man, Crash Man, Flash Man, Heat Man and Wood Man are Dr. Wily's eight prize creations that have been sent to take over the world. As Mega Man defeats these bosses, he can steal their powers and use them for himself. Each Robot Master is weak against another's weapon, and through experimentation, Mega Man can gain the upper hand by using the weapon they're vulnerable against.
+This game introduces the 'E-Tank' - an item that can be used at any time to completely refill Mega Man's energy, and a Password System, which allows players to continue their game by recording which Robot Masters have been defeated and how many E-Tanks they have.</description>
+    <year>1989</year>
+    <manufacturer>Capcom</manufacturer>
+    <rom name="Mega Man 2 (USA).nes" size="262160" />
+  </game>
+  <game name="Ice Climber">
+    <description>In Ice Climber one or two players need to climb their way to the top of 32 different mountains. Each mountain is broken up into eight levels of platforms along with a bonus stage at the top. Attempting to stop you from making upward progress are different creatures ranging from polar bears to condors as well as treacherous landscapes with falling icicles, moving platforms, and icy floors. To help out, your only weapon is a mallet which can be used to knock out enemies as well as bust away bricks in the platforms to give you some room to jump up to the next level. When you finally reach the top, it's time to move on to the next, more difficult level.</description>
+    <year>1985</year>
+    <manufacturer>Nintendo</manufacturer>
+    <rom name="Ice Climber (USA, Europe, Korea).nes" size="24576" />
+  </game>
+  <game name="Blades of Steel">
+    <description>Based on the arcade game, Blades Of Steel is a hockey arcade action game (gameplay doesn't require the need to worry about statistics or provide the ability to customize teams.) Two players can play against each other, or one player against the computer. In one player mode there are single game and tournament mode options.  From time to time a fight may break out, which will provide a close up view of the two players. The player has control during the miniature fight game sequence, with the loser having to spend time in the penalty box.  The referee will break up fights that go on too long, and calls a few penalties such as icing. Several short clips of digitized voices are also featured.</description>
+    <year>1988</year>
+    <manufacturer>Konami</manufacturer>
+    <rom name="Blades of Steel (USA).nes" size="131088" />
+  </game>
+  <game name="Lode Runner">
+    <description>The Bungeling Empire has stolen a huge cache of gold from its rightful owners, and your mission is to infiltrate its treasury and recapture it. This entails progressing through 150 screens of platforms, ladders and ropes.
+
+The Empire has sent robotic guards down to protect the gold, and contact with any of these will cost you a life. Your method of escaping them is to press fire to dig a hole in their line of movement, thus causing them to fall in briefly, allowing you to move across the gap safely. Once all the gold has been collected, a ladder allowing you to move onto the next screen is added. Completing these screens often requires forward planning and precision.
+
+This was one of the earliest games to include a level editor, allowing the creation of new level designs with no programming skill.</description>
+    <year>1987</year>
+    <manufacturer>Brøderbund Software</manufacturer>
+    <rom name="Lode Runner (USA).nes" size="24592" />
+  </game>
+  <game name="Arkanoid">
+    <description>The original Breakout concept involves controlling a bat at the bottom of the screen and using it to catch and direct a ball so as to hit all the bricks which are arranged at the top of the screen. It was unpopular for over a decade, before Taito revived it with some new ideas in this arcade game.
+The game's plot redefines the bat as a Vaus spaceship, the ball as an energy bolt, and the bricks form a mysterious wall stopping the ship from progressing to safety.
+By the mid-80s, power-ups were popular in most types of arcade games, and Arkanoid features them. They are caught by positioning the bat below them as they fall (meaning that you risk missing the ball if you go for them at the wrong time). The power-ups include lasers (which are mounted to each side of the ship and allow you to shoot out the blocks), a catching device (so as to be able to fire the ball off at a different angle every time you hit it) and one that slows the bolt down.</description>
+    <year>1987</year>
+    <manufacturer>Taito</manufacturer>
+    <rom name="Arkanoid (USA).nes" size="49168" />
+  </game>
+  <game name="Metroid">
+    <description>It's you against the evil Mother Brain in the thrilling battle of Metroid!
+
+You're inside the fortress planet Zebes. The planet of endless secret passageways where the Metroid are multiplying. Left alone the Metroid are harmless. But in the wrong hands they could destroy the galaxy. It's up to you to prevent the Mother Brain that controls Zebes from using the Metroid for evil purposes. But that won't be easy. You'll have to use your spacesuit to absorb valuable energy for your search to gain the use of power items like the Ice Beam, Wave Beam, High Jump Boots and Varia. If you survive, it will be you and your acquired powers against the Mother Brain.</description>
+    <year>1986</year>
+    <manufacturer>Nintendo</manufacturer>
+    <rom name="Metroid (USA).nes" size="131088" />
+  </game>
+  <game name="Yo! Noid">
+    <description>Or, How a Yo-Yo Saved New Yoik!
+
+Who's got floppy ears, a furry suit, and a toothy, hilarious grin? It's Yo!NOID, the yo-yoing, pizza-chomping funnyman from those wacky Domino's Pizza TV commercials. He'll need every trick in his fuzzy hat to out-prank the scamps who are overrunning New York with monkeyshrines and shenanigans!
+
+Yo!NOID skips, skates, and scales the skyscrapers, bonking out an ever-changing gang of rascals! A mysterious NOID look-alike is behind the tomfoolery, and the real NOID's got to stop him! What could make the rollicking NOID get so serious? The reward is a lifetime supply of his favorite food!
+
+-14 romping levels of fun!
+-Incredible inventions whiz the NOID around New York!
+-Gobble your way through pizza-eating contests!</description>
+    <year>1990</year>
+    <manufacturer>Capcom</manufacturer>
+    <rom name="Yo! Noid (USA).nes" size="262160" />
+  </game>
+  <game name="Bionic Commando">
+    <description>Bionic Commando puts you in the role of a specially chosen soldier equipped with a unique bionic arm. This arm extends and retracts, granting you unprecedented strength and agility. Armed with rapid-fire, armor-piercing, and heat-seeking weapons, you are your people's last hope after two years of relentless invasion. Your mission takes you across a heavily patrolled desert and into the enemy stronghold itself. What seems like an impossible challenge becomes a battle only the Bionic Commando can endure and win.</description>
+    <year>1988</year>
+    <manufacturer>Capcom</manufacturer>
+    <rom name="Bionic Commando (USA).nes" size="262160" />
+  </game>
+  <game name="David Crane's A Boy and His Blob - Trouble on Blobolonia">
+    <description>Blob has come from the distant planet Blobolonia in search of an earth boy to help him save his world. Join him on this fantastic adventure in mysterious caverns beneath the earth searching for treasure. then travel to Blobolonia to battle the evil emperor. Discover Blob's amazing appetite for jellybeans and the different transformations that occur with each flavor. Learn to use these shapes to overcome even the most outrageous obstacles.</description>
+    <year>1990</year>
+    <manufacturer>Nintendo</manufacturer>
+    <rom name="A Boy and His Blob - Trouble on Blobolonia (USA).nes" size="262160" />
+  </game>
+  <game name="Mad Max">
+    <description>You are Mad Max. You drive your Interceptor through the post-apocalyptic wastelands and fight bandits.
+The game introduction is the speech from the beginning of the movie Mad Max 2 (a.k.a The Road Warrior), telling you how the world ended and how The Road Warrior, lost everything by "the roar of an engine" and how he in the wastelands "learned to live again".
+The game is played in a top-down view where you move your car to attack enemy cars and pick up fuel tanks (if run run out of fuel the game is over).</description>
+    <year>1990</year>
+    <manufacturer>Mindscape International</manufacturer>
+    <rom name="Mad Max (USA).nes" size="262160" />
+  </game>
+  <game name="RoboCop 3">
+    <description>RoboCop 3 is a side-scrolling platform shooter. You get missions (such as rescuing your colleagues who are being kept hostages), which are divided into several smaller levels. The levels usually consist of several platforms, and are heavily populated by enemies who shoot at you. You can gather special repair kits, which will be used to restore your health after you've completed a level. "RoboCop 3" is more of a shooter than its predecessors, having more and tougher enemies.</description>
+    <year>1992</year>
+    <manufacturer>Ocean</manufacturer>
+    <rom name="RoboCop 3 (USA).nes" size="262160" />
+  </game>
+  <game name="Bubble Bobble">
+    <description>Bubble Bobble tells the story of Bub and Bob, two humans who wander into a mysterious monster cave and are magically transformed into dragons. To return to their human form, they must reach the end of the cave. The game is a platform adventure where each level takes place on a single screen. The goal is to defeat all enemies by trapping them in bubbles and then popping them to turn them into fruit. Bubbles can also act as platforms, while power-ups such as lightning or water currents help clear enemies more quickly. Collectible items like fruit give bonus points, but if you take too long, the relentless Baron Von Blubba appears to hunt you down.</description>
+    <year>1988</year>
+    <manufacturer>Taito</manufacturer>
+    <rom name="Bubble Bobble (USA).nes" size="163856" />
+  </game>
+  <game name="Fester's Quest">
+    <description>Uncle Fester was out one night, moonbathing in the yard of the Addams Family property one day when suddenly, out of the sky, a UFO descended and started beaming alien creatures to the planet. Grabbing his gun, Fester sets off to stop the aliens and slay their boss creatures, encountering other Addams Family members along the way who will aid him.
+
+Fester's Quest is an overhead-view game in which Uncle Fester uses his gun, or later, a whip to attack enemies near him. Enemies drop money and power-ups. The money can be used at Hot Dog stands to replenish health. A variety of items can be collected, each with a different effect. Fester and the rest of the Addams family are based on their characters from the popular 1960s TV show (this game was made before the remakes in  both series and movie form).</description>
+    <year>1989</year>
+    <manufacturer>Sunsoft</manufacturer>
+    <rom name="Fester's Quest (USA).nes" size="262160" />
+  </game>
+  <game name="Popeye">
+    <description>Popeye is a conversion of the arcade action/platform game. As Popeye, you are trying to win Olive Oyl's love! She is at the top of the screen dropping tokens of her love, and you need to collect them before they hit the ground. After you have collected the required number of items, you can move on to the next, more difficult level. There are many obstacles trying to stop you from completing your task, though! Brutus wanders around the screen and is constantly trying to catch you. If you collect a can of spinach, you can temporarily knock him out, otherwise Brutus will knock you out. Other objects such as bottles or birds are also flying around the screen and will cause you to lose one of your lives if you are hit. Each level features a different layout of platforms and ladders, and will have you collecting different items as they float towards the bottom of the screen!</description>
+    <year>1983</year>
+    <manufacturer>Nintendo</manufacturer>
+    <rom name="Popeye (World) (Rev 1).nes" size="24592" />
+  </game>
+  <game name="Super Mario Bros. 3">
+    <description>Bowser is back, and along with the Bowser kids, he's out to spoil Mario's day once again. 
+
+This time, along with nabbing the Princess, the Bowser crew have also taken the magic wands from the Kings of each land and turned them into creatures.
+It's up to Mario and Luigi to get back the magic wands, defeat Bowser, and save the Princess all before the day is done.
+
+Old and new power-ups abound in each level for the Mario Brothers, including the return of the Super Mushroom and Fire Flower, plus the new power-ups including the frog suit, the warp flute, and the most important of all, the leaf, which allows the player to fly and attack enemies with your tail.</description>
+    <year>1991</year>
+    <manufacturer>Nintendo</manufacturer>
+    <rom name="Super Mario Bros. 3 (USA).nes" size="393232" />
+  </game>
+  <game name="Donkey Kong Classics">
+    <description>Donkey Kong Classics features both the original Donkey Kong and Donkey Kong Jr. on a single cartridge. In Donkey Kong, you need to guide Mario safely up the scaffolding to rescue his girlfriend, Pauline. In Donkey Kong Jr., the roles are reversed; you control Jr. who needs to rescue his father, who has been captured by Mario.</description>
+    <year>1989</year>
+    <manufacturer>Nintendo</manufacturer>
+    <rom name="Donkey Kong Classics (USA, Europe).nes" size="49168" />
+  </game>
+  <game name="Donkey Kong Jr.">
+    <description>Mario as a villain, who would have thought it? But this is the unlikely scenario of Donkey Kong Jr. on NES. Yes, the mustachioed villain has locked Donkey Kong in a cage and it's up to his offspring to get him out of the clutches of this devious plumber. Our friendly primate will have to climb along lianas to reach the top of the board, while avoiding the various objects that Mario sees fit to throw at his face.</description>
+    <year>1986</year>
+    <manufacturer>Nintendo</manufacturer>
+    <rom name="Donkey Kong Jr. (World) (Rev 1).nes" size="24592" />
+  </game>
+</datafile>

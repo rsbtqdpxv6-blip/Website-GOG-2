@@ -1,0 +1,3 @@
+The NES version of Batman: The Video Game is loosely based on the 1989 movie. It is a side-scrolling game with a blue-dressed Batman fighting enemies such as robots, jet-packed soldiers, ninjas, and mutants.
+
+The game consists of five levels: Gotham City streets (with Killer Moth as the final boss), AXIS Chemical Factory (boss: Machine Intelligence System), Underground Conduit (boss: Electrocutioner), the Laboratory Ruins (boss: Dual-Container Alarm) and Gotham's Cathedral (boss: Firebug) where Batman finally faces the Joker. Before each level, a cutscene is shown using scenes from the movie.

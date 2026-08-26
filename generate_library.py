@@ -9,6 +9,7 @@ ROMS_DIR_NAME    = "roms"
 BOXART_DIR_NAME  = "boxart"
 FANART_SUFFIX    = "f"  #unused for now, but I will add it later. (it is for fanart, so if you want to add fanart, just add a f to the end of the boxart name and it will work)
 SUPPORTED_EXTS   = [".jpg", ".png", ".jpeg", ".webp"]
+EBOOK_EXTS       = [".pdf", ".epub"]
 
 # Fallback asset if an image is completely missing from your pack
 # Prefer WebP when present, otherwise fall back to SVG or PNG
@@ -53,7 +54,8 @@ CORE_MAP = {
     "saturn": "yabause",
     "virtualboy": "virtualboy",
     "c64": "vice_c64",
-    "tg16": "pce"
+    "tg16": "pce",
+    "books": "ebooks"
 }
 
 #stuff for Favorites folder, ROM hacks folder and secret folder.
@@ -123,7 +125,8 @@ TITLE_MAP = {
     "saturn": "Sega Saturn",
     "virtualboy": "Nintendo Virtual Boy",
     "tg16": "TurboGrafx-16",
-    "c64": "Commodore 64"
+    "c64": "Commodore 64",
+    "books": "Ebooks"
 }
 
 BACKGROUND_MAP = {
@@ -143,7 +146,8 @@ BACKGROUND_MAP = {
     "secret": "#6b3f8c",
     "sms": "#9a3412",
     "snes": "#6b4c9a",
-    "tg16": "#4f6472"
+    "tg16": "#4f6472",
+    "books": "#6a4f3b"
 }
 
 def clean_display_title(filename):
@@ -303,8 +307,31 @@ def generate_arcade_json():
                 # include all supported image extensions (including .webp)
                 available_art_files = [f for f in os.listdir(boxart_dir) if f.lower().endswith(tuple(SUPPORTED_EXTS))]
 
-            # --- TARGET A: LOOSE FOLDER WEB SYSTEMS SCANS (HTML5 & DOS ENGINE FOLDERS) ---
-            if system_slug in ["html5", "dos"]:
+            # --- TARGET A: EBOOK FILE SCANS ---
+            if system_slug == "books":
+                for root, dirs, files in os.walk(system_path):
+                    dirs[:] = [d for d in dirs if not is_boxart_directory_name(d) and not is_desc_directory_name(d)]
+                    if is_boxart_directory_name(os.path.basename(root)) or is_desc_directory_name(os.path.basename(root)):
+                        continue
+                    rel_root = os.path.relpath(root, system_path)
+                    rel_prefix = '' if rel_root == '.' else rel_root.replace(os.sep, '/')
+                    for file in sorted(files, key=lambda value: value.casefold()):
+                        raw_title, ext = os.path.splitext(file)
+                        if ext.lower() not in EBOOK_EXTS or file.startswith('.'):
+                            continue
+                        relative_path = f"{rel_prefix}/{file}" if rel_prefix else file
+                        game_entry = {
+                            "id": f"books_{raw_title.lower().replace(' ', '_').replace('-', '_')}",
+                            "title": clean_display_title(file),
+                            "core": system_core,
+                            "boxart": DEFAULT_BOXART,
+                            "rom_path": f"{ASSETS_DIR_NAME}/{ROMS_DIR_NAME}/{system_slug}/{relative_path}",
+                            "game_id": allocate_game_id(next_game_id)
+                        }
+                        console_node["games"].append(game_entry)
+
+            # --- TARGET B: LOOSE FOLDER WEB SYSTEMS SCANS (HTML5 & DOS ENGINE FOLDERS) ---
+            elif system_slug in ["html5", "dos"]:
                 for game_folder in sorted(os.listdir(system_path), key=str.casefold):
                     game_folder_path = os.path.join(system_path, game_folder)
                     if os.path.isdir(game_folder_path) and not is_boxart_directory_name(game_folder) and not is_desc_directory_name(game_folder):
@@ -360,7 +387,7 @@ def generate_arcade_json():
                         game_entry["game_id"] = allocate_game_id(next_game_id)
                         console_node["games"].append(game_entry)
             
-            # --- TARGET B: CONSOLE ROMS, FLASH, & MIXED SECRET FAVORITES SCANS ---
+            # --- TARGET C: CONSOLE ROMS, FLASH, & MIXED SECRET FAVORITES SCANS ---
             else:
                 # Walk the system folder recursively so nested directories and files are indexed.
                 for root, dirs, files in os.walk(system_path):

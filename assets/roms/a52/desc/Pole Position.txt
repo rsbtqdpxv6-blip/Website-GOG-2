@@ -1,0 +1,3 @@
+Pole Position is the conversion of the arcade racing game. Enter the Grand Prix, race against other racing cars to achieve the highest score possible in the shortest amount of time.
+
+Before the player can enter the Grand Prix, the player must first qualify by competing in the Qualifying Lap within 73 seconds or less. If the player however, does not qualify in the Qualifying Lap, the player may continue to race until the Race Timer runs after 90 seconds. The player will score 50 point per 5 meters and additionally 50 points for every racing car passed. When the time runs out - Game Over. The player will have to restart the Qualifying Lap.

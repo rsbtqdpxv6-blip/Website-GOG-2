@@ -1,0 +1,3 @@
+An unreleased prototype port of the popular Williams game Stargate.
+
+The sequel to Defender and much like the arcade game you fly around blasting aliens and trying to survive long enough to save humanoids. You also have a Hyperspace button that can teleport you to a random area which can be good or bad. Also new in Stargate was an Inviso button that would cloak your fighter for a limited time.

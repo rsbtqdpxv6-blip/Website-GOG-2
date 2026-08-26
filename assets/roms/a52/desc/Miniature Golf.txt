@@ -1,0 +1,3 @@
+Unreleased prototype game by Steve Baker for the Atari 5200. However it was completed and is fully playable. Due to the Hi-Res mode used the game has some odd choices for colors but other than that is quite well done and simulates Miniature Golf very well. 
+
+Control is handled entirely by the keypad, so the non-centering 5200 joystick doesn't hinder the gameplay.  Pushing the # and * keys changes the direction the ball will be hit (represented by an arrow) and the 1-9 keys are used to indicate the power of the swing (1=lowest and 9=highest).

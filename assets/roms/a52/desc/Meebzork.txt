@@ -1,0 +1,3 @@
+An unfinished prototype game that was originally planned as a shooter but the last available version ends up being more an action/adventure game. There is an early build available of the shooter as well.
+
+You are a warrior named Meebzork who can practice or play through 6 different levels (not including another level that was going to be after you completed a board and would allow you to choose a next one). All 6 levels are different in what they require. While unfinished and unpolished you can see a lot of potential.

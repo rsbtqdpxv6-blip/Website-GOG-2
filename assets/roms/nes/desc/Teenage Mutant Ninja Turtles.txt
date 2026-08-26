@@ -1,0 +1,3 @@
+Teenage Mutant Ninja Turtles on NES is an action game in which you control the famous ninja turtles Donatello, Michelangelo, Leonardo, and Raphael. You can switch between them whenever you want to take advantage of each one's weapons and characteristics and thus defeat the evil Shredder.
+
+Gameplay takes place in two perspectives: a top-down view, which lets you run around and explore buildings, sewers and other places. When entering places from the top-down view, the perspective shifts to a side-scrolling view, where most of the battling takes place. In addition to each turtle's main weapon, sub-weapons (such as shuriken) can be acquired, to use at foes - these have a limited use.
