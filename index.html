@@ -238,10 +238,10 @@
     <script>
         if (navigator.serviceWorker) {
             navigator.serviceWorker.getRegistrations().then((registrations) => {
-                if (!registrations.length || sessionStorage.getItem('coiWorkerCleaned')) return;
-                sessionStorage.setItem('coiWorkerCleaned', 'true');
+                if (!registrations.length) return;
                 Promise.all(registrations.map((registration) => registration.unregister()))
-                    .then(() => location.reload());
+                    .then(() => location.reload())
+                    .catch(() => {});
             });
         }
     </script>
