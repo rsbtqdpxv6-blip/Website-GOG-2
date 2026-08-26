@@ -5,12 +5,14 @@ const supabase = createClient(
     Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
 );
 function corsHeaders(request?: Request) {
-    const configuredOrigin = Deno.env.get("FRONTEND_ORIGIN")?.replace(/\/$/, "");
+    const configuredOrigin = Deno.env.get("FRONTEND_ORIGIN");
     const requestOrigin = request?.headers.get("origin");
-    const normalizedRequestOrigin = requestOrigin?.replace(/\/$/, "");
-    const allowOrigin = configuredOrigin && requestOrigin && normalizedRequestOrigin === configuredOrigin
+    const normalizedConfiguredOrigin = configuredOrigin
+        ? new URL(configuredOrigin).origin
+        : undefined;
+    const allowOrigin = normalizedConfiguredOrigin && requestOrigin && requestOrigin === normalizedConfiguredOrigin
         ? requestOrigin
-        : configuredOrigin || requestOrigin || "null";
+        : requestOrigin || normalizedConfiguredOrigin || "null";
     return {
     "Access-Control-Allow-Origin": allowOrigin,
     "Access-Control-Allow-Credentials": "true",

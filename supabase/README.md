@@ -7,7 +7,7 @@ This is a custom username/password service. It does not use email or phone authe
 3. Set the Edge Function secret:
 
 ```bash
-supabase secrets set FRONTEND_ORIGIN=https://YOUR_GITHUB_USERNAME.github.io/YOUR_REPOSITORY
+supabase secrets set FRONTEND_ORIGIN=https://rsbtqdpxv6-blip.github.io/Website-GOG-2
 ```
 
 `SUPABASE_URL` and `SUPABASE_SERVICE_ROLE_KEY` are supplied automatically by Supabase Edge Functions. Never put the service-role key in `auth-config.js`.

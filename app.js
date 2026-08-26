@@ -44,6 +44,7 @@
     }
 
     // const DOM elements
+    const body = document.body;
     const wheelStage = document.getElementById('wheel-stage');
     const gamelistView = document.getElementById('gamelist-view');
     const carousel = document.getElementById('carousel-view');
