@@ -1,6 +1,11 @@
 {
   "updates": [
     {
+      "version": "3.0",
+      "title": "A Big Update",
+      "detail": "Added accounts, netplay, achievements, points, descriptions, more g-a/m/e/s, and more!"
+    },
+    {
       "version": "2.0",
       "title": "Add Arcade stuff AND MORE G-A-M-E-S!",
       "detail": "arcade stuff settings and stuff"
