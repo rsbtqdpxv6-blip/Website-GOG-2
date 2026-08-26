@@ -22,6 +22,6 @@ supabase functions deploy auth --no-verify-jwt
 
 ```js
 window.ARCADE_AUTH_CONFIG = {
-    apiBaseUrl: 'https://YOUR_PROJECT_REF.supabase.co/functions/v1/auth'
+    apiBaseUrl: 'https://YOUR_PROJECT_REF.supabase.co/functions/v1'
 };
 ```
