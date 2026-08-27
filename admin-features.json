@@ -1,0 +1,35 @@
+{
+    "features": [
+        {
+            "id": "confetti",
+            "label": "Shared Confetti",
+            "action": "shared-effect",
+            "effectType": "confetti",
+            "durationMs": 1800
+        },
+        {
+            "id": "custom-gif",
+            "label": "Shared Custom GIF",
+            "action": "shared-effect",
+            "effectType": "gif",
+            "asset": "assets/confetti.gif",
+            "durationMs": 5000
+        },
+        {
+            "id": "shared-sound",
+            "label": "Shared Sound Effect",
+            "action": "shared-effect",
+            "effectType": "sound",
+            "asset": "assets/sound/select.wav",
+            "durationMs": 5000,
+            "volume": 0.8
+        },
+        {
+            "id": "poll-example",
+            "label": "Game Poll",
+            "action": "shared-poll",
+            "title": "Do you like this game?",
+            "options": ["Yes", "No"]
+        }
+    ]
+}

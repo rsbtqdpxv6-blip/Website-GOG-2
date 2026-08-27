@@ -19,6 +19,92 @@ function getCleanGameToken(romPath) {
     return romPath.split('/').pop().split('.').shift().toLowerCase().replace(/[^a-z0-9]/g, "_");
 }
 
+async function loadGameCheats(game) {
+    const romPath = String(game?.rom_path || "").replace(/\\/g, "/");
+    const pathParts = romPath.split('/');
+    const romsIndex = pathParts.findIndex((part) => part.toLowerCase() === "roms");
+    const system = romsIndex >= 0 ? pathParts[romsIndex + 1] : "";
+    if (!system || !game?.title) return [];
+
+    try {
+        const cheatBase = `assets/roms/${encodeURIComponent(system)}`;
+        const indexUrl = new URL(`${cheatBase}/${encodeURIComponent(system)}-index.json`, window.location.href);
+        const indexResponse = await fetch(indexUrl, { cache: "no-store" });
+        let cheatDatabase;
+        if (indexResponse.ok) {
+            const cheatIndex = await indexResponse.json();
+            const romFilename = pathParts[pathParts.length - 1] || "";
+            const romTitle = romFilename.replace(/\.[^.]+$/, "");
+            const titleCandidates = [game.title, romTitle].filter(Boolean);
+            const normalizeTitle = (title) => title
+                .toLowerCase()
+                .replace(/[^a-z0-9]/g, "");
+            const chunkName = titleCandidates
+                .map(normalizeTitle)
+                .map((title) => cheatIndex[title])
+                .find(Boolean);
+            if (!chunkName) return [];
+            const chunkResponse = await fetch(new URL(`${cheatBase}/cheats/${encodeURIComponent(chunkName)}`, window.location.href), { cache: "no-store" });
+            if (!chunkResponse.ok) return [];
+            cheatDatabase = await chunkResponse.json();
+        } else {
+            const response = await fetch(new URL(`${cheatBase}/${encodeURIComponent(system)}.json`, window.location.href), { cache: "no-store" });
+            if (!response.ok) return [];
+            cheatDatabase = await response.json();
+        }
+        const romFilename = pathParts[pathParts.length - 1] || "";
+        const romTitle = romFilename.replace(/\.[^.]+$/, "");
+        const titleCandidates = [game.title, romTitle].filter(Boolean);
+        const normalizeTitle = (title) => title
+            .toLowerCase()
+            .replace(/\([^)]*\)|\[[^\]]*\]/g, "")
+            .replace(/[^a-z0-9]/g, "");
+
+        for (const title of titleCandidates) {
+            if (Array.isArray(cheatDatabase[title])) return toEmulatorJsCheats(cheatDatabase[title]);
+            const matchingKey = Object.keys(cheatDatabase).find((key) => key.toLowerCase() === title.toLowerCase());
+            if (matchingKey && Array.isArray(cheatDatabase[matchingKey])) return toEmulatorJsCheats(cheatDatabase[matchingKey]);
+        }
+
+        const normalizedCandidates = new Set(titleCandidates.map(normalizeTitle));
+        const normalizedMatches = Object.entries(cheatDatabase)
+            .filter(([key, cheats]) => normalizedCandidates.has(normalizeTitle(key)) && Array.isArray(cheats))
+            .flatMap(([, cheats]) => cheats);
+        if (normalizedMatches.length > 0) return toEmulatorJsCheats(normalizedMatches);
+
+        const baseNormalizeTitle = (title) => normalizeTitle(title.replace(/\([^)]*\)|\[[^\]]*\]/g, ""));
+        const regionPreference = ["usa", "world", "europe", "japan"];
+        for (const candidate of titleCandidates) {
+            const baseTitle = baseNormalizeTitle(candidate);
+            const compatibleKeys = Object.keys(cheatDatabase)
+                .filter((key) => baseNormalizeTitle(key) === baseTitle && Array.isArray(cheatDatabase[key]));
+            if (compatibleKeys.length === 0) continue;
+            const preferredKey = compatibleKeys.sort((left, right) => {
+                const leftRegion = regionPreference.findIndex((region) => left.toLowerCase().includes(region));
+                const rightRegion = regionPreference.findIndex((region) => right.toLowerCase().includes(region));
+                return (leftRegion < 0 ? regionPreference.length : leftRegion)
+                    - (rightRegion < 0 ? regionPreference.length : rightRegion);
+            })[0];
+            return toEmulatorJsCheats(cheatDatabase[preferredKey]);
+        }
+
+        return [];
+    } catch (error) {
+        console.warn("Unable to load game cheats:", error);
+        return [];
+    }
+}
+
+function toEmulatorJsCheats(cheats) {
+    return cheats
+        .filter((cheat) => cheat
+            && typeof cheat.desc === "string"
+            && cheat.desc.trim()
+            && typeof cheat.code === "string"
+            && cheat.code.trim())
+        .map((cheat) => [cheat.desc.trim(), cheat.code.trim()]);
+}
+
 /**
  * Initializes a persistent, limitless IndexedDB database specifically for 
  * saving full 3D emulator save states, completely bypassing localStorage bounds.
@@ -92,6 +178,8 @@ async function launchGame(game, hintsDisplay) {
     else {
         if (hintsDisplay) hintsDisplay.textContent = "Mounting local backend emulation modules...";
 
+        const gameCheats = (await loadGameCheats(game)).slice(0, 64);
+
         // Extract the binary array slice out of your local hard drive IndexedDB tables first
         let localBinaryState = null;
         try {
@@ -139,6 +227,9 @@ async function launchGame(game, hintsDisplay) {
                     window.EJS_core = isNaN("${game.core}") ? "${game.core}" : "dosbox";
                     window.EJS_gameUrl = "${absoluteLocation}";
                     window.EJS_gameID = ${gameId};
+                    window.EJS_gameName = ${JSON.stringify(game.title || "")};
+                    window.EJS_cheats = [];
+                    window.__arcadePendingCheats = ${JSON.stringify(gameCheats)};
                     window.EJS_pathtodata = "${projectRootUrl}emulatorjs/data/"; 
                     // Signaling server used to coordinate the two EmulatorJS peers.
                     window.EJS_netplayServer = ${JSON.stringify(netplayServerUrl)};
@@ -235,6 +326,44 @@ async function launchGame(game, hintsDisplay) {
 
                         const pendingNetplay = window.parent.__arcadePendingNetplay;
                         const netplay = window.EJS_emulator && window.EJS_emulator.netplay;
+                        const installAdminIdentity = async () => {
+                            const activeNetplay = window.EJS_emulator?.netplay;
+                            if (!activeNetplay || activeNetplay.__arcadeAdminIdentityInstalled) return Boolean(activeNetplay?.__arcadeAdminIdentityInstalled);
+                            let accountUser = null;
+                            try { accountUser = JSON.parse(window.parent.localStorage.getItem("arcadeAuthUser") || "null"); } catch {}
+                            const username = String(accountUser?.username || "Player").trim() || "Player";
+                            let identity = {};
+                            activeNetplay.name = username;
+                            try {
+                                const response = await fetch("${projectRootUrl}chat-identities.json", { cache: "no-store" });
+                                const identities = (await response.json()).users || [];
+                                identity = identities.find((entry) => String(entry.username || "").toLowerCase() === String(accountUser.username).toLowerCase()) || {};
+                            } catch {}
+                            const tagName = () => {
+                                const cleanName = username.replace(/^(?:\[[^\]]+\]\s*)+/i, "");
+                                const tag = String(identity.chatTag || "").trim();
+                                activeNetplay.name = tag ? tag + " " + cleanName : cleanName;
+                            };
+                            ["openMenu", "openRoom", "joinRoom", "chatSendMessage"].forEach((methodName) => {
+                                const original = activeNetplay[methodName];
+                                if (typeof original !== "function") return;
+                                activeNetplay[methodName] = function(...args) {
+                                    tagName();
+                                    return original.apply(this, args);
+                                };
+                            });
+                            activeNetplay.__arcadeIsAdmin = Boolean(identity.chatTag);
+                            activeNetplay.__arcadeAdminIdentityInstalled = true;
+                            tagName();
+                            return true;
+                        };
+                        const adminIdentityTimer = window.setInterval(() => {
+                            installAdminIdentity().then((installed) => {
+                                if (installed) window.clearInterval(adminIdentityTimer);
+                            });
+                        }, 250);
+                        installAdminIdentity();
+                        window.setTimeout(() => window.clearInterval(adminIdentityTimer), 15000);
                         if (netplay && !netplay.__arcadeJoinCodeHooked) {
                             const addJoinCodeButton = () => {
                                 const menuBody = netplay._menuElement?.querySelector(".ejs_popup_body") || netplay._menuElement;
@@ -332,7 +461,10 @@ async function launchGame(game, hintsDisplay) {
                             const startPendingNetplay = () => {
                                 const pendingEmulatorNetplay = window.EJS_emulator && window.EJS_emulator.netplay;
                                 if (!pendingEmulatorNetplay) return;
-                                pendingEmulatorNetplay.name = pendingNetplay.playerName || "Player";
+                                const pendingPlayerName = pendingNetplay.playerName || "Player";
+                                pendingEmulatorNetplay.name = window.parent.__arcadeAdmin?.isAdmin
+                                    ? "[ADMIN] " + pendingPlayerName
+                                    : pendingPlayerName;
                                 if (pendingNetplay.mode === "join") {
                                     pendingEmulatorNetplay.joinRoom(pendingNetplay.roomCode, pendingNetplay.roomName, 4, pendingNetplay.password || null);
                                 } else {
@@ -374,7 +506,113 @@ async function launchGame(game, hintsDisplay) {
                         }
                     });
                 </script>
+                <script>
+                    (() => {
+                        let accountUser = null;
+                        try { accountUser = JSON.parse(parent.localStorage.getItem("arcadeAuthUser") || "null"); } catch {}
+                        const username = String(accountUser?.username || "Player").trim() || "Player";
+                        const installUsername = () => {
+                            const activeNetplay = window.EJS_emulator?.netplay;
+                            if (!activeNetplay || activeNetplay.__arcadeUsernameGuardInstalled) return Boolean(activeNetplay?.__arcadeUsernameGuardInstalled);
+                            let chatTag = "";
+                            const setUsername = () => {
+                                const cleanName = String(username).replace(/^(?:\[[^\]]+\]\s*)+/i, "");
+                                activeNetplay.name = chatTag ? chatTag + " " + cleanName : cleanName || "Player";
+                            };
+                            setUsername();
+                            const originalOpenMenu = activeNetplay.openMenu;
+                            if (typeof originalOpenMenu === "function") {
+                                activeNetplay.openMenu = function(...args) {
+                                    setUsername();
+                                    return originalOpenMenu.apply(this, args);
+                                };
+                            }
+                            activeNetplay.__arcadeUsernameGuardInstalled = true;
+                            fetch("${projectRootUrl}chat-identities.json", { cache: "no-store" })
+                                .then((response) => response.json())
+                                .then((data) => {
+                                    const identity = (data.users || []).find((entry) => String(entry.username || "").toLowerCase() === username.toLowerCase());
+                                    chatTag = String(identity?.chatTag || "").trim();
+                                    setUsername();
+                                })
+                                .catch(() => {});
+                            return true;
+                        };
+                        const usernameGuardTimer = window.setInterval(() => {
+                            if (installUsername()) window.clearInterval(usernameGuardTimer);
+                        }, 25);
+                        window.setTimeout(() => window.clearInterval(usernameGuardTimer), 30000);
+                    })();
+                </script>
+                <script>
+                    try {
+                        const savedSettingsKey = "ejs-${gameId}-${game.core}-${String(game.title || "")}-settings";
+                        const savedSettings = JSON.parse(localStorage.getItem(savedSettingsKey) || "null");
+                        if (savedSettings && Array.isArray(savedSettings.cheats)) {
+                            savedSettings.cheats = [];
+                            localStorage.setItem(savedSettingsKey, JSON.stringify(savedSettings));
+                        }
+                    } catch {}
+                </script>
                 <script src="${projectRootUrl}emulatorjs/data/loader.js"></script>
+                <script>
+                    const installArcadeCheats = () => {
+                        const emulator = window.EJS_emulator;
+                        const pendingCheats = window.__arcadePendingCheats;
+                        if (!emulator || !emulator.started || !emulator.gameManager || !Array.isArray(pendingCheats) || emulator.__arcadeCheatsInstalled) return Boolean(emulator?.__arcadeCheatsInstalled);
+                        emulator.gameManager.resetCheat();
+                        emulator.cheats.length = 0;
+                        emulator.cheats.push(...pendingCheats.map(([desc, code]) => ({ desc, checked: false, code, is_permanent: true })));
+                        emulator.cheats.forEach((cheat) => { cheat.checked = false; });
+                        emulator.__arcadeCheatsInstalled = true;
+                        const cheatRows = emulator.elements?.cheatRows;
+                        if (cheatRows) {
+                            pendingCheats.forEach(([desc, code], index) => {
+                                const row = document.createElement("div");
+                                row.className = "ejs_cheat_row";
+                                const input = document.createElement("input");
+                                input.type = "checkbox";
+                                input.id = "arcade_cheat_" + index;
+                                const label = document.createElement("label");
+                                label.htmlFor = input.id;
+                                label.textContent = desc;
+                                input.addEventListener("change", () => {
+                                    emulator.gameManager.setCheat(index, input.checked, code);
+                                    emulator.cheats[index].checked = input.checked;
+                                    emulator.saveSettings();
+                                });
+                                row.append(input, label);
+                                cheatRows.appendChild(row);
+                            });
+                        }
+                        emulator.saveSettings();
+                        return true;
+                    };
+                    const arcadeCheatTimer = window.setInterval(() => {
+                        if (installArcadeCheats()) window.clearInterval(arcadeCheatTimer);
+                    }, 50);
+                    window.setTimeout(() => window.clearInterval(arcadeCheatTimer), 30000);
+                </script>
+                <script>
+                    (async () => {
+                        let accountUser;
+                        try { accountUser = JSON.parse(parent.localStorage.getItem("arcadeAuthUser") || "null"); } catch { return; }
+                        if (!accountUser?.username) return;
+                        try {
+                            const response = await fetch("${projectRootUrl}admins.json", { cache: "no-store" });
+                            const admins = (await response.json()).admins || [];
+                            if (!admins.some((admin) => String(admin.username || "").toLowerCase() === String(accountUser.username).toLowerCase())) return;
+                        } catch { return; }
+                        const normalizeAdminChat = () => document.querySelectorAll(".ejs_netplay_chat_log > div").forEach((line) => {
+                            const cleanText = String(line.textContent || "").replace(/^(?:\[ADMIN\]\s*)+/i, "");
+                            const sender = cleanText.split(/\s*(?::| \(private\):)/, 1)[0].trim();
+                            const names = [accountUser.username, accountUser.name].filter(Boolean).map((name) => String(name).toLowerCase());
+                            if (names.includes(sender.toLowerCase())) line.textContent = "[ADMIN] " + cleanText;
+                        });
+                        new MutationObserver(normalizeAdminChat).observe(document.documentElement, { childList: true, subtree: true, characterData: true });
+                        normalizeAdminChat();
+                    })();
+                </script>
             </body>
             </html>
         `;

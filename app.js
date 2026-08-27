@@ -52,6 +52,11 @@
     const systemDisplay = document.getElementById('system-display');
     const counterDisplay = document.getElementById('counter-display');
     const hintsDisplay = document.getElementById('control-hints');
+    const wheelHeroTitle = document.getElementById('wheel-hero-title');
+    const wheelHeroCopy = document.getElementById('wheel-hero-copy');
+    const wheelSystemCount = document.getElementById('wheel-system-count');
+    const wheelGameCount = document.getElementById('wheel-game-count');
+    const wheelFavoriteCount = document.getElementById('wheel-favorite-count');
     const gameTitleElement = document.getElementById('game-title');
     const gameDescriptionElement = document.getElementById('game-description');
     const favoriteGameBtn = document.getElementById('favorite-game-btn');
@@ -73,6 +78,36 @@
     const settingsCloseBtn = document.getElementById('settings-close');
     const settingsSaveBtn = document.getElementById('settings-save');
     const settingsSystemList = document.getElementById('settings-system-list');
+    const debugBtn = document.getElementById('debug-btn');
+    const debugOverlay = document.getElementById('debug-overlay');
+    const debugCloseBtn = document.getElementById('debug-close');
+    const debugStateList = document.getElementById('debug-state-list');
+    const debugReloadBtn = document.getElementById('debug-reload');
+    const adminBtn = document.getElementById('admin-btn');
+    const adminOverlay = document.getElementById('admin-overlay');
+    const adminCloseBtn = document.getElementById('admin-close');
+    const adminFlashBtn = document.getElementById('admin-flash');
+    const adminConfettiBtn = document.getElementById('admin-confetti');
+    const adminResetBtn = document.getElementById('admin-reset');
+    const adminBanUsernameInput = document.getElementById('admin-ban-username');
+    const adminBanReasonInput = document.getElementById('admin-ban-reason');
+    const adminBanBtn = document.getElementById('admin-ban');
+    const adminUnbanBtn = document.getElementById('admin-unban');
+    const adminRefreshBansBtn = document.getElementById('admin-refresh-bans');
+    const adminBanStatus = document.getElementById('admin-ban-status');
+    const adminBanList = document.getElementById('admin-ban-list');
+    const adminFeatureList = document.getElementById('admin-feature-list');
+    const pollCreatorOverlay = document.getElementById('poll-creator-overlay');
+    const pollCreatorCloseBtn = document.getElementById('poll-creator-close');
+    const pollCreatorQuestion = document.getElementById('poll-creator-question');
+    const pollCreatorOptions = document.getElementById('poll-creator-options');
+    const pollCreatorAddOptionBtn = document.getElementById('poll-creator-add-option');
+    const pollCreatorCancelBtn = document.getElementById('poll-creator-cancel');
+    const pollCreatorPublishBtn = document.getElementById('poll-creator-publish');
+    const pollCreatorStatus = document.getElementById('poll-creator-status');
+    const adminPointsUsernameInput = document.getElementById('admin-points-username');
+    const adminPointsAmountInput = document.getElementById('admin-points-amount');
+    const adminGivePointsBtn = document.getElementById('admin-give-points');
     const threadedCoresSwitch = document.getElementById('settings-threaded-cores');
     const searchBtn = document.getElementById('search-btn');
     const searchPanel = document.getElementById('gamelist-search-panel');
@@ -119,6 +154,7 @@
     const accountSignedIn = document.getElementById('account-signed-in');
     const accountUserLabel = document.getElementById('account-user-label');
     const accountUserEmail = document.getElementById('account-user-email');
+    const accountUserRole = document.getElementById('account-user-role');
     const accountSignOutBtn = document.getElementById('account-sign-out');
     const accountModeToggle = document.getElementById('account-mode-toggle');
     const shopOverlay = document.getElementById('shop-overlay');
@@ -128,6 +164,14 @@
     const achievementsSummary = document.getElementById('achievements-summary');
     const achievementShopList = document.getElementById('achievement-shop-list');
     const achievementPoints = document.getElementById('achievement-points');
+    const pollOverlay = document.getElementById('poll-overlay');
+    const pollTitle = document.getElementById('poll-title');
+    const pollOptions = document.getElementById('poll-options');
+    const pollResult = document.getElementById('poll-result');
+    let lastSiteEffectId = null;
+    let siteEffectPollTimer = null;
+    const pollVoterStorageKey = 'arcadePollVoterId';
+    const pollDismissedStoragePrefix = 'arcadePollDismissed:';
     let crtCanvasCtx = crtCanvas ? crtCanvas.getContext('2d') : null;
     let crtAnimationFrame = null;
 
@@ -193,6 +237,379 @@
     let accountSyncInFlight = false;
     let accountSyncDirty = false;
     let accountData = { data: {} };
+    let adminConfig = { admins: [] };
+    let adminFeatures = [];
+
+    function getAdminEntry(username = getStoredAccountUser()?.username) {
+        if (!username) return null;
+        return adminConfig.admins.find((admin) => admin.username.toLowerCase() === username.toLowerCase()) || null;
+    }
+
+    function updateAdminState() {
+        const admin = getAdminEntry();
+        const permissions = Array.isArray(admin?.permissions) ? admin.permissions : [];
+        const canModerate = Boolean(admin) && (permissions.includes('moderate') || permissions.includes('manage_users'));
+        window.__arcadeAdmin = {
+            isAdmin: Boolean(admin),
+            isModerator: canModerate,
+            hasPermission: (permission) => permissions.includes(permission),
+            permissions
+        };
+        if (accountUserRole) accountUserRole.hidden = !admin || !isAccountSignedIn();
+        if (debugBtn) debugBtn.hidden = !isAccountSignedIn() || !canModerate;
+        if (!canModerate && debugOverlay) debugOverlay.hidden = true;
+    }
+
+    async function loadAdminConfig() {
+        try {
+            const response = await fetch('admins.json');
+            const data = await response.json();
+            adminConfig = {
+                admins: Array.isArray(data?.admins)
+                    ? data.admins.filter((admin) => typeof admin?.username === 'string')
+                    : []
+            };
+        } catch (error) {
+            adminConfig = { admins: [] };
+            console.warn('Unable to load admin configuration:', error);
+        }
+        updateAdminState();
+    }
+
+    function renderDebugState() {
+        if (!debugStateList) return;
+        const user = getStoredAccountUser();
+        const state = {
+            'Signed in': isAccountSignedIn() ? 'yes' : 'no',
+            'Username': user?.username || 'none',
+            'Admin': window.__arcadeAdmin?.isAdmin ? 'yes' : 'no',
+            'View': currentViewMode,
+            'System': gameLibrary[currentSystemIdx]?.title || 'none',
+            'Games loaded': gameLibrary.reduce((total, system) => total + (system.games?.length || 0), 0),
+            'Online': navigator.onLine ? 'yes' : 'no'
+        };
+        debugStateList.replaceChildren(...Object.entries(state).map(([label, value]) => {
+            const term = document.createElement('dt');
+            term.textContent = label;
+            const description = document.createElement('dd');
+            description.textContent = String(value);
+            return [term, description];
+        }).flat());
+    }
+
+    function openDebugPanel() {
+        if (!window.__arcadeAdmin?.isModerator) return;
+        renderDebugState();
+        if (debugOverlay) debugOverlay.hidden = false;
+    }
+
+    function openAdminPanel() {
+        if (!window.__arcadeAdmin?.isAdmin) return;
+        if (adminOverlay) adminOverlay.hidden = false;
+        loadAdminBans();
+    }
+
+    function closeOverlay(overlay) {
+        if (overlay) overlay.hidden = true;
+    }
+
+    function resetAdminEffects() {
+        if (systemDisplay) systemDisplay.textContent = gameLibrary[currentSystemIdx]?.title || 'Loading Wheel...';
+        document.body.classList.remove('admin-screen-flash');
+    }
+
+    function applySiteEffect(effect) {
+        if (!effect || effect.id === lastSiteEffectId) return;
+        lastSiteEffectId = effect.id;
+        if (effect.type === 'flash') {
+            document.body.classList.remove('admin-screen-flash');
+            void document.body.offsetWidth;
+            document.body.classList.add('admin-screen-flash');
+        }
+        if (effect.type === 'confetti' && confettiOverlay) {
+            confettiOverlay.classList.remove('active');
+            void confettiOverlay.offsetWidth;
+            confettiOverlay.classList.add('active');
+            window.setTimeout(() => confettiOverlay.classList.remove('active'), effect.durationMs || confettiGifConfig.durationMs);
+        }
+        if (effect.type === 'gif' && confettiOverlay && confettiGif) {
+            confettiGif.src = effect.asset || confettiGifConfig.source;
+            confettiOverlay.classList.remove('active');
+            void confettiOverlay.offsetWidth;
+            confettiOverlay.classList.add('active');
+            window.setTimeout(() => {
+                confettiOverlay.classList.remove('active');
+                confettiGif.src = confettiGifConfig.source;
+            }, effect.durationMs || 5000);
+        }
+        if (effect.type === 'sound' && effect.asset) {
+            const sharedSound = new Audio(effect.asset);
+            sharedSound.volume = Math.min(Math.max(Number(effect.volume) || 1, 0), 1);
+            sharedSound.play().catch(() => {});
+        }
+        if (effect.type === 'poll' && pollOverlay && pollTitle && pollOptions) {
+            if (localStorage.getItem(`${pollDismissedStoragePrefix}${effect.id}`) === 'true') return;
+            pollTitle.textContent = effect.title || 'Quick poll';
+            if (pollResult) {
+                pollResult.hidden = true;
+                pollResult.textContent = '';
+            }
+            pollOptions.replaceChildren(...(effect.options || ['Yes', 'No']).map((option) => {
+                const button = document.createElement('button');
+                button.type = 'button';
+                button.textContent = option;
+                button.addEventListener('click', () => {
+                    pollOptions.querySelectorAll('button').forEach((pollButton) => { pollButton.disabled = true; });
+                    localStorage.setItem(`${pollDismissedStoragePrefix}${effect.id}`, 'true');
+                    let voterId = localStorage.getItem(pollVoterStorageKey);
+                    if (!voterId) {
+                        voterId = crypto.randomUUID();
+                        localStorage.setItem(pollVoterStorageKey, voterId);
+                    }
+                    fetch(`${authApiBaseUrl}/auth/poll-votes`, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ pollId: effect.id, voterId, option })
+                    }).then((response) => {
+                        if (!response.ok) throw new Error('Vote submission failed.');
+                        return new Promise((resolve) => window.setTimeout(resolve, 2000));
+                    })
+                    .then(() => fetch(`${authApiBaseUrl}/auth/poll-votes?pollId=${encodeURIComponent(effect.id)}`, { cache: 'no-store' }))
+                    .then((response) => {
+                        if (!response.ok) throw new Error('Vote results could not be loaded.');
+                        return response.json();
+                    })
+                    .then((votes) => {
+                            if (pollResult) {
+                                pollResult.textContent = `Total votes: ${votes.total || 0} (${option}: ${votes.votes?.[option] || 0})`;
+                                pollResult.hidden = false;
+                            }
+                            window.setTimeout(() => { pollOverlay.hidden = true; }, 1800);
+                        }).catch(() => {
+                            if (pollResult) {
+                                pollResult.textContent = 'Vote could not be shared. Please try again.';
+                                pollResult.hidden = false;
+                            }
+                        });
+                });
+                return button;
+            }));
+            pollOverlay.hidden = false;
+        }
+    }
+
+    async function pollSiteEffect() {
+        if (!authApiBaseUrl) return;
+        try {
+            const response = await fetch(`${authApiBaseUrl}/auth/site-effect`, { credentials: 'omit', cache: 'no-store' });
+            if (response.ok) applySiteEffect((await response.json()).effect);
+        } catch {
+            // Shared effects are optional and should never block the arcade.
+        }
+    }
+
+    async function publishSiteEffect(type, options = {}) {
+        if (!window.__arcadeAdmin?.isAdmin || !authApiBaseUrl) return;
+        const response = await fetch(`${authApiBaseUrl}/auth/site-effect`, {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            credentials: 'include',
+            body: JSON.stringify({
+                type,
+                message: 'The admin was here',
+                durationMs: options.durationMs || 15000,
+                asset: options.asset,
+                title: options.title,
+                options: options.options,
+                volume: options.volume
+            })
+        });
+        if (!response.ok) {
+            if (hintsDisplay) hintsDisplay.textContent = 'Site effect failed. Check the admin server configuration.';
+            return;
+        }
+        applySiteEffect((await response.json()).effect);
+    }
+
+    async function clearSiteEffect() {
+        if (!window.__arcadeAdmin?.isAdmin || !authApiBaseUrl) return;
+        await fetch(`${authApiBaseUrl}/auth/site-effect`, { method: 'DELETE', credentials: 'include' });
+        document.body.classList.remove('admin-screen-flash');
+        lastSiteEffectId = null;
+    }
+
+    function renderAdminFeatures() {
+        if (!adminFeatureList) return;
+        adminFeatureList.replaceChildren(...adminFeatures.map((feature) => {
+            const button = document.createElement('button');
+            button.type = 'button';
+            button.dataset.adminFeatureId = feature.id;
+            button.textContent = feature.label || feature.id;
+            return button;
+        }));
+    }
+
+    function renderPollCreatorOptions(options = ['Yes', 'No']) {
+        if (!pollCreatorOptions) return;
+        pollCreatorOptions.replaceChildren(...options.map((option, index) => {
+            const row = document.createElement('div');
+            row.className = 'poll-creator-option-row';
+            const input = document.createElement('input');
+            input.className = 'admin-text-input';
+            input.type = 'text';
+            input.maxLength = 40;
+            input.placeholder = `Answer ${index + 1}`;
+            input.value = option;
+            row.appendChild(input);
+            if (options.length > 2) {
+                const removeButton = document.createElement('button');
+                removeButton.type = 'button';
+                removeButton.textContent = 'Remove';
+                removeButton.addEventListener('click', () => row.remove());
+                row.appendChild(removeButton);
+            }
+            return row;
+        }));
+    }
+
+    function openPollCreator(feature) {
+        if (!window.__arcadeAdmin?.isAdmin || !pollCreatorOverlay) return;
+        pollCreatorQuestion.value = feature?.title || '';
+        renderPollCreatorOptions(Array.isArray(feature?.options) && feature.options.length > 0 ? feature.options : ['Yes', 'No']);
+        if (pollCreatorStatus) pollCreatorStatus.textContent = '';
+        pollCreatorOverlay.hidden = false;
+        pollCreatorQuestion.focus();
+    }
+
+    function closePollCreator() {
+        if (pollCreatorOverlay) pollCreatorOverlay.hidden = true;
+    }
+
+    async function publishCreatedPoll() {
+        const title = pollCreatorQuestion?.value.trim() || '';
+        const options = [...(pollCreatorOptions?.querySelectorAll('input') || [])]
+            .map((input) => input.value.trim())
+            .filter(Boolean);
+        if (title.length < 3 || options.length < 2) {
+            if (pollCreatorStatus) pollCreatorStatus.textContent = 'Enter a question and at least two answers.';
+            return;
+        }
+        if (new Set(options.map((option) => option.toLowerCase())).size !== options.length) {
+            if (pollCreatorStatus) pollCreatorStatus.textContent = 'Each answer must be different.';
+            return;
+        }
+        pollCreatorPublishBtn.disabled = true;
+        await publishSiteEffect('poll', { title, options });
+        pollCreatorPublishBtn.disabled = false;
+        closePollCreator();
+    }
+
+    async function loadAdminFeatures() {
+        try {
+            const response = await fetch('admin-features.json', { cache: 'no-store' });
+            const data = await response.json();
+            adminFeatures = Array.isArray(data?.features) ? data.features.filter((feature) => feature?.id && feature?.label) : [];
+            renderAdminFeatures();
+        } catch (error) {
+            adminFeatures = [];
+            console.warn('Unable to load admin features:', error);
+        }
+    }
+
+    async function runAdminFeature(feature) {
+        if (!window.__arcadeAdmin?.isAdmin || !feature) return;
+        if (feature.action === 'notice') {
+            setAdminBanStatus(feature.message || 'This feature is not configured yet.');
+            return;
+        }
+        if (feature.action === 'shared-effect') {
+            await publishSiteEffect(feature.effectType, {
+                durationMs: feature.durationMs,
+                asset: feature.asset,
+                volume: feature.volume
+            });
+        }
+        if (feature.action === 'shared-poll') {
+            openPollCreator(feature);
+        }
+    }
+
+    function setAdminBanStatus(message, type = '') {
+        if (!adminBanStatus) return;
+        adminBanStatus.textContent = message;
+        adminBanStatus.dataset.type = type;
+    }
+
+    async function loadAdminBans() {
+        if (!window.__arcadeAdmin?.isAdmin || !authApiBaseUrl || !adminBanList) return;
+        try {
+            const response = await fetch(`${authApiBaseUrl}/auth/ban`, { credentials: 'include', cache: 'no-store' });
+            const result = await response.json();
+            if (!response.ok) throw new Error(result.error || 'Unable to load bans.');
+            adminBanList.replaceChildren(...result.bans.map((ban) => {
+                const item = document.createElement('li');
+                const text = document.createElement('span');
+                text.textContent = `${ban.username}${ban.reason ? `: ${ban.reason}` : ''}`;
+                const button = document.createElement('button');
+                button.type = 'button';
+                button.dataset.unbanUsername = ban.username;
+                button.textContent = 'Unban';
+                item.append(text, button);
+                return item;
+            }));
+        } catch (error) {
+            setAdminBanStatus(error.message || 'Unable to load bans.', 'error');
+        }
+    }
+
+    async function updateBan(method) {
+        if (!window.__arcadeAdmin?.isAdmin || !authApiBaseUrl) return;
+        const username = adminBanUsernameInput?.value.trim() || '';
+        if (!username) {
+            setAdminBanStatus('Enter a username first.', 'error');
+            return;
+        }
+        const options = { method, credentials: 'include' };
+        if (method === 'PUT') {
+            options.headers = { 'Content-Type': 'application/json' };
+            options.body = JSON.stringify({ username, reason: adminBanReasonInput?.value.trim() || '' });
+        } else {
+            options.body = undefined;
+        }
+        const endpoint = method === 'DELETE' ? `${authApiBaseUrl}/auth/ban?username=${encodeURIComponent(username)}` : `${authApiBaseUrl}/auth/ban`;
+        try {
+            const response = await fetch(endpoint, options);
+            const result = response.status === 204 ? {} : await response.json();
+            if (!response.ok) throw new Error(result.error || 'Moderation action failed.');
+            setAdminBanStatus(method === 'PUT' ? `${username} was banned.` : `${username} was unbanned.`, 'success');
+            await loadAdminBans();
+        } catch (error) {
+            setAdminBanStatus(error.message || 'Moderation action failed.', 'error');
+        }
+    }
+
+    async function giveAccountPoints() {
+        if (!window.__arcadeAdmin?.isAdmin || !authApiBaseUrl) return;
+        const username = adminPointsUsernameInput?.value.trim() || '';
+        const amount = Number(adminPointsAmountInput?.value);
+        if (!username || !Number.isInteger(amount) || amount < 1 || amount > 100000) {
+            setAdminBanStatus('Enter a valid username and points amount.', 'error');
+            return;
+        }
+        try {
+            const response = await fetch(`${authApiBaseUrl}/auth/points`, {
+                method: 'PUT',
+                headers: { 'Content-Type': 'application/json' },
+                credentials: 'include',
+                body: JSON.stringify({ username, amount })
+            });
+            const result = await response.json();
+            if (!response.ok) throw new Error(result.error || 'Unable to give points.');
+            setAdminBanStatus(`${username} now has ${result.bonusPoints} bonus points.`, 'success');
+        } catch (error) {
+            setAdminBanStatus(error.message || 'Unable to give points.', 'error');
+        }
+    }
 
     function shouldPreferLowPerformanceMode() {
         const memoryLimit = navigator.deviceMemory && navigator.deviceMemory <= 4;
@@ -388,6 +805,8 @@
         const user = getStoredAccountUser();
         const signedIn = Boolean(user?.username);
         window.__arcadeAuthSignedIn = signedIn;
+        updateAdminState();
+        if (adminBtn) adminBtn.hidden = !signedIn || !window.__arcadeAdmin?.isAdmin;
         if (favoriteGameBtn) favoriteGameBtn.hidden = !signedIn;
         accountPasswordForm.hidden = signedIn;
         accountSignedIn.hidden = !signedIn;
@@ -1714,7 +2133,13 @@
                 fetch('library.json')
             ]);
             void settingsResult;
-            gameLibrary = await libraryResponse.json();
+            gameLibrary = (await libraryResponse.json()).map((system) => ({
+                ...system,
+                games: (system.games || []).filter((game) => {
+                    const pathParts = String(game.rom_path || '').split('/').filter(Boolean);
+                    return !pathParts.some((part) => part.toLowerCase() === 'cheats');
+                })
+            }));
             applySettingsToLibrary();
             loadFavoriteGameIds();
             rebuildFavoritesSystem();
@@ -1810,9 +2235,23 @@
             const visiblePosition = Math.max(0, selectedVisiblePosition) + 1;
             counterDisplay.textContent = `${visiblePosition} / ${visibleCount}`;
         }
-        if (hintsDisplay) hintsDisplay.textContent = " -- MADE BY WESLEY ◄ ► Select System • [R] Random System • Enter to Open Menu • Gamepad Ready";
+        if (hintsDisplay) hintsDisplay.textContent = "◄ ► Select System • [R] Random System • Enter to Open Menu • Gamepad Ready";
         document.body.style.setProperty('--system-bg-color', data.background || '#1b1e24');
         document.body.style.setProperty('--system-bg', `url('assets/backgrounds/${data.system}.jpg')`);
+        updateWheelDashboard(data);
+    }
+
+    function updateWheelDashboard(system) {
+        if (!system) return;
+        const totalGames = gameLibrary.reduce((total, entry) => total + (entry.games?.length || 0), 0);
+        const favoriteCount = gameLibrary.find((entry) => entry.system === 'favorites')?.games?.length || 0;
+        if (wheelHeroTitle) wheelHeroTitle.textContent = system.title || 'Choose your deck';
+        if (wheelHeroCopy) wheelHeroCopy.textContent = system.system === 'favorites'
+            ? 'Your saved titles, sorted into their original systems.'
+            : `${system.games?.length || 0} titles on this deck. Press Enter to browse the collection.`;
+        if (wheelSystemCount) wheelSystemCount.textContent = String(getVisibleSystemIndices().length);
+        if (wheelGameCount) wheelGameCount.textContent = String(totalGames);
+        if (wheelFavoriteCount) wheelFavoriteCount.textContent = String(favoriteCount);
     }
     // ==============================================================================
     //                    UNIFIED APPLICATION CONTROLLER (PART 2)
@@ -2308,6 +2747,17 @@
         });
     }
 
+    document.querySelectorAll('[data-wheel-action]').forEach((button) => {
+        button.addEventListener('click', () => {
+            const action = button.dataset.wheelAction;
+            if (action === 'search') {
+                toggleSearchPanel();
+                return;
+            }
+            dispatchInputAction(action);
+        });
+    });
+
     if (controllerSettingsBtn) {
         controllerSettingsBtn.addEventListener('click', () => {
             openControllerBindingsPanel();
@@ -2372,6 +2822,70 @@
     if (settingsCloseBtn) {
         settingsCloseBtn.addEventListener('click', () => {
             closeSettingsPanel();
+        });
+    }
+
+    if (debugBtn) debugBtn.addEventListener('click', openDebugPanel);
+    if (debugCloseBtn) debugCloseBtn.addEventListener('click', () => closeOverlay(debugOverlay));
+    if (debugReloadBtn) debugReloadBtn.addEventListener('click', () => window.location.reload());
+    if (debugOverlay) {
+        debugOverlay.addEventListener('click', (event) => {
+            if (event.target === debugOverlay) closeOverlay(debugOverlay);
+        });
+    }
+
+    if (adminBtn) adminBtn.addEventListener('click', openAdminPanel);
+    if (adminCloseBtn) adminCloseBtn.addEventListener('click', () => closeOverlay(adminOverlay));
+    if (adminFlashBtn) {
+        adminFlashBtn.addEventListener('click', () => {
+            publishSiteEffect('flash');
+        });
+    }
+    if (adminConfettiBtn) {
+        adminConfettiBtn.addEventListener('click', () => {
+            publishSiteEffect('confetti');
+        });
+    }
+    if (adminResetBtn) adminResetBtn.addEventListener('click', clearSiteEffect);
+    if (pollCreatorCloseBtn) pollCreatorCloseBtn.addEventListener('click', closePollCreator);
+    if (pollCreatorCancelBtn) pollCreatorCancelBtn.addEventListener('click', closePollCreator);
+    if (pollCreatorAddOptionBtn) {
+        pollCreatorAddOptionBtn.addEventListener('click', () => {
+            const optionCount = pollCreatorOptions?.querySelectorAll('input').length || 0;
+            if (optionCount >= 6) return;
+            const options = [...(pollCreatorOptions?.querySelectorAll('input') || [])].map((input) => input.value);
+            options.push('');
+            renderPollCreatorOptions(options);
+        });
+    }
+    if (pollCreatorPublishBtn) pollCreatorPublishBtn.addEventListener('click', publishCreatedPoll);
+    if (pollCreatorOverlay) {
+        pollCreatorOverlay.addEventListener('click', (event) => {
+            if (event.target === pollCreatorOverlay) closePollCreator();
+        });
+    }
+    if (adminFeatureList) {
+        adminFeatureList.addEventListener('click', (event) => {
+            const button = event.target.closest('[data-admin-feature-id]');
+            if (!button) return;
+            runAdminFeature(adminFeatures.find((feature) => feature.id === button.dataset.adminFeatureId));
+        });
+    }
+    if (adminBanBtn) adminBanBtn.addEventListener('click', () => updateBan('PUT'));
+    if (adminGivePointsBtn) adminGivePointsBtn.addEventListener('click', giveAccountPoints);
+    if (adminUnbanBtn) adminUnbanBtn.addEventListener('click', () => updateBan('DELETE'));
+    if (adminRefreshBansBtn) adminRefreshBansBtn.addEventListener('click', loadAdminBans);
+    if (adminBanList) {
+        adminBanList.addEventListener('click', (event) => {
+            const button = event.target.closest('[data-unban-username]');
+            if (!button) return;
+            adminBanUsernameInput.value = button.dataset.unbanUsername;
+            updateBan('DELETE');
+        });
+    }
+    if (adminOverlay) {
+        adminOverlay.addEventListener('click', (event) => {
+            if (event.target === adminOverlay) closeOverlay(adminOverlay);
         });
     }
 
@@ -2735,6 +3249,10 @@
     });
 
     loadEntryUpdates();
+    loadAdminConfig();
+    loadAdminFeatures();
+    pollSiteEffect();
+    siteEffectPollTimer = window.setInterval(pollSiteEffect, 5000);
     initializeAuth();
     handleAuthRedirectError();
     loadAchievements();
@@ -2753,5 +3271,4 @@
     }, 60000);
 })();
 
-//thanks for looking at my code. if you want to make changes, please do not submit a pull request with bad changes. i will reject it. thanks. -Wesley (yes two reminders)
 // Z-Z-ZZZAMNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNuh gng

@@ -1,0 +1,452 @@
+{
+  "Alien Brigade (Rumbles)": [
+    {
+      "desc": "Machine Gun (Rumble)",
+      "code": "20AE=26"
+    }
+  ],
+  "Alien Brigade": [
+    {
+      "desc": "Unlimited Ammo",
+      "code": "20CF=99"
+    },
+    {
+      "desc": "Unlimited Grenades",
+      "code": "20D2=8"
+    },
+    {
+      "desc": "Unlimited Soldiers",
+      "code": "20D5=5"
+    }
+  ],
+  "Asteroids": [
+    {
+      "desc": "Unlimited Lives (Player 1)",
+      "code": "2052=4"
+    },
+    {
+      "desc": "Unlimited Lives (Player 2)",
+      "code": "2053=4"
+    },
+    {
+      "desc": "Unlimited Lives (Both Players Co-op)",
+      "code": "2054=4"
+    }
+  ],
+  "Basketbrawl": [
+    {
+      "desc": "Unlimited Health (Player 1)",
+      "code": "2264=A"
+    },
+    {
+      "desc": "Unlimited Health (Player 2)",
+      "code": "2265=A"
+    },
+    {
+      "desc": "Unlimited Health (Player 3)",
+      "code": "2266=A"
+    },
+    {
+      "desc": "Unlimited Health (Player 4)",
+      "code": "2267=A"
+    }
+  ],
+  "Beef Drop Demo (Rumbles)": [
+    {
+      "desc": "(Rumble) on Pepper use (Player 1)",
+      "code": "213A=0"
+    },
+    {
+      "desc": "(Rumble) on Pepper use (Player 2)",
+      "code": "213A=0"
+    }
+  ],
+  "Beef Drop Demo": [
+    {
+      "desc": "Unlimited Chefs (Both Players)",
+      "code": "271B=4"
+    },
+    {
+      "desc": "Unlimited Pepper",
+      "code": "213A=4"
+    }
+  ],
+  "Bonq Demo 16jun07": [
+    {
+      "desc": "Unlimited Qs (Both Players)",
+      "code": "1FAB=5"
+    }
+  ],
+  "Bonq Demo": [
+    {
+      "desc": "Unlimited Qs (Both Players)",
+      "code": "1FCB=5"
+    }
+  ],
+  "Centipede": [
+    {
+      "desc": "Unlimited Wands (Player 1 or Both Co-Op)",
+      "code": "210E=4"
+    },
+    {
+      "desc": "Unlimited Wands (Player 2)",
+      "code": "210F=3"
+    }
+  ],
+  "Choplifter": [
+    {
+      "desc": "Unlimited Sorties",
+      "code": "193A=1"
+    }
+  ],
+  "Commando": [
+    {
+      "desc": "Unlimited Grenades (Plyr 1)",
+      "code": "2064=6"
+    },
+    {
+      "desc": "Always Have Machine Gun (Plyr 1)",
+      "code": "20CA=B4"
+    },
+    {
+      "desc": "Always Have Dagger (Unsure of Purpose)",
+      "code": "21F1=80"
+    },
+    {
+      "desc": "Unlimited Lives (Player 1)",
+      "code": "27B4=3"
+    },
+    {
+      "desc": "Unlimited Grenades (Plyr 2)",
+      "code": "2066=6"
+    },
+    {
+      "desc": "Unlimited Lives (Player 2)",
+      "code": "27B5=2"
+    }
+  ],
+  "Dark Chambers": [
+    {
+      "desc": "Unlimited Health (Player 1)",
+      "code": "1933=FF"
+    },
+    {
+      "desc": "Unlimited Health (Player 2)",
+      "code": "1934=FF"
+    }
+  ],
+  "Desert Falcon": [
+    {
+      "desc": "Unlimited Eagles (Both Players)",
+      "code": "2061=5"
+    }
+  ],
+  "Dig Dug": [
+    {
+      "desc": "Unlimited Lives (Player 1)",
+      "code": "209E=6"
+    },
+    {
+      "desc": "Unlimited Lives (Player 2)",
+      "code": "209F=6"
+    }
+  ],
+  "Donkey Kong Jr": [
+    {
+      "desc": "Unlimited Jrs (Player 1)",
+      "code": "20A1=4"
+    },
+    {
+      "desc": "Unlimited Jrs (Player 2)",
+      "code": "20B2=4"
+    }
+  ],
+  "Donkey Kong": [
+    {
+      "desc": "Unlimited Marios (Player 1)",
+      "code": "20A1=4"
+    },
+    {
+      "desc": "Unlimited Marios (Player 2)",
+      "code": "20B2=4"
+    }
+  ],
+  "Double Dragon (Rumbles)": [
+    {
+      "desc": "Unlimited Health (Player 1)",
+      "code": "1FFB=9B"
+    },
+    {
+      "desc": "Unlimited Health (Player 2)",
+      "code": "2004=9B"
+    }
+  ],
+  "Double Dragon": [
+    {
+      "desc": "Unlimited Lives (Player 1)",
+      "code": "190B=10"
+    },
+    {
+      "desc": "Unlimited Health (Player 1)",
+      "code": "1FFB=9B"
+    },
+    {
+      "desc": "Unlimited Lives (Player 2)",
+      "code": "191F=10"
+    },
+    {
+      "desc": "Unlimited Health (Player 2)",
+      "code": "2004=9B"
+    }
+  ],
+  "Dual Pacman": [
+    {
+      "desc": "Unlimited Lives (Both Players)",
+      "code": "20A4=5"
+    }
+  ],
+  "Food Fight": [
+    {
+      "desc": "Unlimited Lives (Player 1)",
+      "code": "2678=3"
+    },
+    {
+      "desc": "Unlimited Lives (Player 2)",
+      "code": "2679=3"
+    }
+  ],
+  "Galaga": [
+    {
+      "desc": "Unlimited Lives (Player 1)",
+      "code": "20B1=4"
+    },
+    {
+      "desc": "Unlimited Lives (Player 2)",
+      "code": "20B2=2"
+    }
+  ],
+  "Ikari Warriors (Rumbles)": [
+    {
+      "desc": "Rumble on Ammo Use (Player 1)",
+      "code": "22A3=99"
+    },
+    {
+      "desc": "Rumble on Ammo Use (Player 2)",
+      "code": "22A4=99"
+    }
+  ],
+  "Ikari Warriors": [
+    {
+      "desc": "Unlimited Lives (Player 1)",
+      "code": "229D=2"
+    },
+    {
+      "desc": "Unlimited Grenades (Player 1)",
+      "code": "22A5=50"
+    },
+    {
+      "desc": "Unlimited Lives (Player 2)",
+      "code": "229E=2"
+    },
+    {
+      "desc": "Unlimited Grenades (Player 2)",
+      "code": "22A6=50"
+    }
+  ],
+  "Joust": [
+    {
+      "desc": "Unlimited Lives (Player 1)",
+      "code": "208C=4"
+    },
+    {
+      "desc": "Unlimited Lives (Player 2)",
+      "code": "208D=4"
+    }
+  ],
+  "Karateka": [
+    {
+      "desc": "Unlimited Health",
+      "code": "18BF=D"
+    }
+  ],
+  "Kung Fu Master (Rumbles)": [
+    {
+      "desc": "Rumble When Hit (Player 1)",
+      "code": "20CB=27"
+    },
+    {
+      "desc": "Rumble When Hit (Player 2)",
+      "code": "20CB=27"
+    }
+  ],
+  "Kung Fu Master": [
+    {
+      "desc": "Unlimited Health (Both Players)",
+      "code": "20CB=27"
+    },
+    {
+      "desc": "Unlimited Lives (Player 1)",
+      "code": "209D=3"
+    },
+    {
+      "desc": "Unlimited Lives (Player 2)",
+      "code": "209E=3"
+    }
+  ],
+  "Mario Brothers": [
+    {
+      "desc": "Unlimited Marios (Player 1)",
+      "code": "20A1=3"
+    },
+    {
+      "desc": "Unlimited Luigis (Player 2)",
+      "code": "20B2=3"
+    }
+  ],
+  "Midnight Mutants (Rumbles)": [
+    {
+      "desc": "Rumble on Blood loss",
+      "code": "20C4=64"
+    },
+    {
+      "desc": "Rumble on Health loss",
+      "code": "20C5=27"
+    }
+  ],
+  "Midnight Mutants": [
+    {
+      "desc": "Unlimited Blood (Rumble On Hit)",
+      "code": "20C4=64"
+    },
+    {
+      "desc": "Unlimited Health (Rumble On Hit)",
+      "code": "20C5=27"
+    }
+  ],
+  "Ms. Pac-Man": [
+    {
+      "desc": "Unlimited Lives (All Players)",
+      "code": "20A4=5"
+    }
+  ],
+  "Ninja Golf (Rumbles)": [
+    {
+      "desc": "Rumble on Health loss",
+      "code": "20AD=2A"
+    }
+  ],
+  "Ninja Golf": [
+    {
+      "desc": "Unlimited Health (Rumble)",
+      "code": "20AD=2A"
+    },
+    {
+      "desc": "Unlimited Stars",
+      "code": "2095=A"
+    },
+    {
+      "desc": "Unlimited Ninjas",
+      "code": "20A3=2"
+    }
+  ],
+  "Pacman Collection": [
+    {
+      "desc": "Unlimited Lives (All Players)",
+      "code": "20A4=5"
+    }
+  ],
+  "Planet Smashers (Rumbles)": [
+    {
+      "desc": "Rumble On Shield Hit (Plyr 1)",
+      "code": "207E=6"
+    },
+    {
+      "desc": "Rumble On Shield Hit (Plyr 2)",
+      "code": "207E=6"
+    }
+  ],
+  "Planet Smashers": [
+    {
+      "desc": "Unlimited Ships (Player 1)",
+      "code": "2080=3"
+    },
+    {
+      "desc": "Unlimited Ships (Player 2)",
+      "code": "2081=3"
+    },
+    {
+      "desc": "Unlimited Shields (Both Players)",
+      "code": "207E=6"
+    },
+    {
+      "desc": "Unlimited Earth Shield",
+      "code": "2083=FF"
+    }
+  ],
+  "Rampage": [
+    {
+      "desc": "Unlimited Health (Player 1)",
+      "code": "1BDD=0"
+    },
+    {
+      "desc": "Unlimited Health (Player 2)",
+      "code": "1BFE=0"
+    }
+  ],
+  "Robotron 2084": [
+    {
+      "desc": "Unlimited Cyborgs (Player 1)",
+      "code": "20E0=4"
+    },
+    {
+      "desc": "Unlimited Cyborgs (Player 2)",
+      "code": "20E1=4"
+    }
+  ],
+  "Scrapyard Dog": [
+    {
+      "desc": "Unlimited Lives",
+      "code": "22AF=3"
+    },
+    {
+      "desc": "Unlimited Shields",
+      "code": "22B1=1"
+    },
+    {
+      "desc": "Unlimited Cans",
+      "code": "22A7=1"
+    },
+    {
+      "desc": "Unlimited Super Cans",
+      "code": "22A9=1"
+    },
+    {
+      "desc": "Unlimited Bombs",
+      "code": "22AB=1"
+    }
+  ],
+  "Tank Command": [
+    {
+      "desc": "Unlimited Tanks",
+      "code": "241E=84"
+    },
+    {
+      "desc": "Unlimited Ammo",
+      "code": "26D9=50"
+    },
+    {
+      "desc": "Unlimited Fuel",
+      "code": "26DA=18"
+    }
+  ],
+  "Tower Toppler": [
+    {
+      "desc": "Unlimited Frogs (Plyr 1)",
+      "code": "20BA=3"
+    },
+    {
+      "desc": "Unlimited Frogs (Plyr 2)",
+      "code": "20BB=3"
+    }
+  ]
+}

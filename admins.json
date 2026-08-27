@@ -1,0 +1,12 @@
+{
+    "admins": [
+        {
+            "username": "WesleyOfficial",
+            "permissions": ["manage_library", "manage_users"]
+        },
+        {
+            "username": "Bntest",
+            "permissions": ["manage_library"]
+        }
+    ]
+}

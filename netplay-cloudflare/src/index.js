@@ -159,7 +159,10 @@ export class NetplayRooms extends DurableObject {
     }
 
     publicPlayers(room) {
-        return Object.fromEntries([...room.players].map(([id, player]) => [id, { ...player }]));
+        return Object.fromEntries([...room.players].map(([id, player]) => [id, {
+            ...player,
+            admin: player.admin === true || text(player.name, 100).startsWith('[ADMIN]')
+        }]));
     }
 
     playersUpdated(room) {

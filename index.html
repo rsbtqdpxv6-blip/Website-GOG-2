@@ -10,7 +10,7 @@
 <body>
     <div id="entry-screen" class="entry-screen">
         <div class="entry-screen-card">
-            <h1>Wesley's !-G-a-m-e-s-!</h1>
+            <h1>Arcade Games</h1>
             <p class="entry-screen-subtitle">Press go to site!</p>
             <button id="enter-site-btn" class="entry-screen-btn" type="button">Go to site</button>
             <div class="entry-screen-updates">
@@ -31,8 +31,28 @@
 
     <!-- UI LAYER A: 3D Console Wheel Stage -->
     <div class="wheel-stage" id="wheel-stage">
+        <div class="wheel-atmosphere" aria-hidden="true">
+            <span class="atmosphere-line atmosphere-line-one"></span>
+            <span class="atmosphere-line atmosphere-line-two"></span>
+            <span class="atmosphere-grid"></span>
+        </div>
+        <section class="wheel-intro" aria-label="Arcade system overview">
+            <p class="eyebrow">ARCADE // SYSTEM SELECT</p>
+            <h1 id="wheel-hero-title">Choose your deck</h1>
+            <p id="wheel-hero-copy">Browse the library, then press Enter to open a system.</p>
+            <div class="system-readouts">
+                <span><b id="wheel-system-count">0</b> systems</span>
+                <span><b id="wheel-game-count">0</b> titles</span>
+                <span><b id="wheel-favorite-count">0</b> favorites</span>
+            </div>
+        </section>
         <div class="carousel-viewport" id="carousel-view">
             <!-- Programmatically built via app.js -->
+        </div>
+        <div class="wheel-command-dock" aria-label="Arcade quick actions">
+            <button type="button" data-wheel-action="random">Random deck <kbd>R</kbd></button>
+            <button type="button" data-wheel-action="select">Open library <kbd>Enter</kbd></button>
+            <button type="button" data-wheel-action="search">Search titles <kbd>/</kbd></button>
         </div>
     </div>
 
@@ -76,6 +96,8 @@
         <button class="control-settings-btn" id="shop-btn" type="button">Shop</button>
         <button class="control-settings-btn" id="controller-settings-btn" type="button">Bindings</button>
         <button class="control-settings-btn" id="settings-menu-btn" type="button">Settings</button>
+        <button class="control-settings-btn" id="debug-btn" type="button" hidden>Debug</button>
+        <button class="control-settings-btn admin-only-control" id="admin-btn" type="button" hidden>Admin</button>
     </footer>
 
     <div class="gamelist-search-panel" id="gamelist-search-panel" hidden>
@@ -96,7 +118,7 @@
         <div class="controller-bindings-panel account-panel">
             <div class="controller-bindings-header">
                 <div>
-                    <h3 id="account-panel-title">Wesley Games account</h3>
+                    <h3 id="account-panel-title">Arcade account</h3>
                     <p id="account-panel-subtitle">MAKE SURE TO SAVE YOUR PASSWORD </p>
                 </div>
                 <button class="panel-close-btn" id="account-close" type="button" aria-label="Close account">X</button>
@@ -115,6 +137,7 @@
             <div id="account-signed-in" class="account-signed-in" hidden>
                 <strong id="account-user-label"></strong>
                 <span id="account-user-email"></span>
+                <span id="account-user-role" class="account-user-role" hidden>Admin</span>
                 <button class="account-secondary-btn" id="account-sign-out" type="button">Sign out</button>
             </div>
             <button class="account-mode-btn" id="account-mode-toggle" type="button">Create an account</button>
@@ -194,6 +217,81 @@
         </div>
     </div>
 
+    <div class="controller-bindings-overlay" id="debug-overlay" hidden>
+        <div class="controller-bindings-panel utility-panel">
+            <div class="controller-bindings-header">
+                <div>
+                    <h3>Debug Panel</h3>
+                    <p>Local runtime information for troubleshooting.</p>
+                </div>
+                <button class="panel-close-btn" id="debug-close" type="button" aria-label="Close debug panel">X</button>
+            </div>
+            <dl id="debug-state-list" class="debug-state-list"></dl>
+            <div class="controller-bindings-actions">
+                <button id="debug-reload" type="button">Reload App</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="controller-bindings-overlay" id="admin-overlay" hidden>
+        <div class="controller-bindings-panel utility-panel">
+            <div class="controller-bindings-header">
+                <div>
+                    <h3>Admin Panel</h3>
+                    <p>Shared effects and account moderation.</p>
+                </div>
+                <button class="panel-close-btn" id="admin-close" type="button" aria-label="Close admin panel">X</button>
+            </div>
+            <label class="admin-field" for="admin-ban-username">Ban account username</label>
+            <input id="admin-ban-username" class="admin-text-input" type="text" maxlength="24" pattern="[A-Za-z0-9_]{3,24}" placeholder="username" />
+            <input id="admin-ban-reason" class="admin-text-input" type="text" maxlength="200" placeholder="Moderation reason (optional)" />
+            <label class="admin-field" for="admin-points-username">Give achievement points</label>
+            <input id="admin-points-username" class="admin-text-input" type="text" maxlength="24" pattern="[A-Za-z0-9_]{3,24}" placeholder="username" />
+            <input id="admin-points-amount" class="admin-text-input" type="number" min="1" max="100000" step="1" placeholder="Points" />
+            <div class="controller-bindings-actions admin-actions">
+                <button id="admin-flash" type="button">Flash Screen</button>
+                <button id="admin-confetti" type="button">Confetti</button>
+                <button id="admin-reset" type="button">Reset Effects</button>
+            </div>
+            <h4 class="admin-section-title">Extra Features</h4>
+            <div id="admin-feature-list" class="admin-feature-list"></div>
+            <div class="admin-ban-actions">
+                <button id="admin-ban" type="button">Ban Account</button>
+                <button id="admin-unban" type="button">Unban Account</button>
+                <button id="admin-refresh-bans" type="button">Refresh Bans</button>
+            </div>
+            <div class="admin-points-actions">
+                <button id="admin-give-points" type="button">Give Points</button>
+            </div>
+            <div id="admin-ban-status" class="admin-ban-status" role="status" aria-live="polite"></div>
+            <ul id="admin-ban-list" class="admin-ban-list"></ul>
+        </div>
+    </div>
+
+    <div class="controller-bindings-overlay" id="poll-creator-overlay" hidden>
+        <div class="controller-bindings-panel utility-panel poll-creator-panel">
+            <div class="controller-bindings-header">
+                <div>
+                    <h3>Create Poll</h3>
+                    <p>Write a question and add the answers people can choose.</p>
+                </div>
+                <button class="panel-close-btn" id="poll-creator-close" type="button" aria-label="Close poll creator">X</button>
+            </div>
+            <label class="admin-field" for="poll-creator-question">Question</label>
+            <input id="poll-creator-question" class="admin-text-input" type="text" maxlength="120" placeholder="What should we play next?" />
+            <div class="poll-creator-options-header">
+                <label class="admin-field" for="poll-creator-option-0">Answers</label>
+                <button id="poll-creator-add-option" type="button">Add answer</button>
+            </div>
+            <div id="poll-creator-options" class="poll-creator-options"></div>
+            <div class="controller-bindings-actions admin-actions">
+                <button id="poll-creator-cancel" type="button">Cancel</button>
+                <button id="poll-creator-publish" type="button">Publish Poll</button>
+            </div>
+            <div id="poll-creator-status" class="admin-ban-status" role="status" aria-live="polite"></div>
+        </div>
+    </div>
+
     <div class="flash-bindings-overlay" id="flash-bindings-overlay" hidden>
         <div class="flash-bindings-panel">
             <div class="controller-bindings-header">
@@ -217,7 +315,7 @@
         
         <iframe id="emu-sandbox-frame" 
             style="width: 100%; height: 100%; border: none; background: #000; display: block;" 
-            allow="gamepad *" 
+            allow="gamepad *; screen-wake-lock *" 
             crossorigin="anonymous"
             src="about:blank">
         </iframe>
@@ -231,6 +329,14 @@
 
     <div id="shop-confetti-overlay" aria-hidden="true">
         <img id="shop-confetti-gif" src="assets/confetti.gif" alt="" />
+    </div>
+
+    <div id="poll-overlay" class="poll-overlay" hidden aria-live="polite">
+        <div class="poll-panel">
+            <h3 id="poll-title"></h3>
+            <div id="poll-options" class="poll-options"></div>
+            <p id="poll-result" class="poll-result" hidden></p>
+        </div>
     </div>
 
 

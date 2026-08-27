@@ -1,0 +1,222 @@
+{
+  "Action Man - Action Force (Europe)": [
+    {
+      "desc": "Infinite Lives",
+      "code": "8E=9"
+    }
+  ],
+  "asterix": [
+    {
+      "desc": "Infinite Lives",
+      "code": "D5=4"
+    },
+    {
+      "desc": "No Lutes",
+      "code": "9D=2020202020202020"
+    },
+    {
+      "desc": "Lutes Acts Like Food",
+      "code": "8B=6C6C6C6C6C6C6C6C"
+    }
+  ],
+  "Defender (USA)": [
+    {
+      "desc": "Infinite Lives",
+      "code": "42=3"
+    },
+    {
+      "desc": "Infinite Bombs",
+      "code": "44=3"
+    }
+  ],
+  "Demon Attack (USA) (Rev 1)": [
+    {
+      "desc": "P1 Infinite Lives",
+      "code": "F2=6"
+    },
+    {
+      "desc": "P2 Infinite Lives",
+      "code": "F3=6"
+    }
+  ],
+  "Donkey Kong (USA)": [
+    {
+      "desc": "Infinite Lives",
+      "code": "23=3"
+    }
+  ],
+  "E.T. - The Extra-Terrestrial (USA)": [
+    {
+      "desc": "Max Score",
+      "code": "08"
+    },
+    {
+      "desc": "9 Items",
+      "code": "52=9A"
+    },
+    {
+      "desc": "All Telephone Parts",
+      "code": "08"
+    }
+  ],
+  "esb": [
+    {
+      "desc": "P1 Infinite Lives",
+      "code": "ED=4"
+    },
+    {
+      "desc": "P2 Infinite Lives",
+      "code": "EE=4"
+    }
+  ],
+  "Frogger (USA)": [
+    {
+      "desc": "Infinite Lives P1",
+      "code": "7=79"
+    },
+    {
+      "desc": "Infinite POW",
+      "code": "44=2A"
+    }
+  ],
+  "G.I. Joe - Cobra Strike (USA)": [
+    {
+      "desc": "Infinite Lives",
+      "code": "8E=9"
+    }
+  ],
+  "Gorf (USA)": [
+    {
+      "desc": "Infinite Lives",
+      "code": "81=9"
+    }
+  ],
+  "Jr. Pac-Man (USA)": [
+    {
+      "desc": "Infinite Lives",
+      "code": "7F=3"
+    },
+    {
+      "desc": "Infinite Power Pellet Timer",
+      "code": "52=A0"
+    }
+  ],
+  "Jungle Hunt (USA)": [
+    {
+      "desc": "Infinite Lives",
+      "code": "8=9"
+    },
+    {
+      "desc": "Infinite Oxygen (Only Enable in Underwater Stage)",
+      "code": "63=8"
+    }
+  ],
+  "Kung-Fu Master (USA)": [
+    {
+      "desc": "Infinite Energy (Disable at end of levels)",
+      "code": "4B=27"
+    },
+    {
+      "desc": "No Bosses",
+      "code": "4C=0"
+    },
+    {
+      "desc": "Infinite Time (Disable at end of levels)",
+      "code": "1B=20"
+    }
+  ],
+  "Mario Bros. (USA)": [
+    {
+      "desc": "Infinite Lives P1",
+      "code": "7=7"
+    },
+    {
+      "desc": "Infinite POW",
+      "code": "79=2A"
+    }
+  ],
+  "MegaMania - A Space Nightmare (USA)": [
+    {
+      "desc": "P1 Infinite Lives",
+      "code": "9D=6"
+    },
+    {
+      "desc": "P2 Infinite Lives",
+      "code": "9E=6"
+    }
+  ],
+  "Montezuma's Revenge - Featuring Panama Joe (USA)": [
+    {
+      "desc": "Infinite Lives",
+      "code": "3A=6"
+    },
+    {
+      "desc": "Four Items",
+      "code": "41=B1"
+    }
+  ],
+  "Ms. Pac-Man (USA)": [
+    {
+      "desc": "Infinite Lives",
+      "code": "7B=3"
+    },
+    {
+      "desc": "Infinite Power Pellet Timer",
+      "code": "74=FF"
+    }
+  ],
+  "Pac-Man (USA)": [
+    {
+      "desc": "Infinite Lives P1",
+      "code": "18=9"
+    },
+    {
+      "desc": "Infinite Lives P2",
+      "code": "2C=9"
+    },
+    {
+      "desc": "No dots",
+      "code": "08"
+    }
+  ],
+  "Popeye (USA)": [
+    {
+      "desc": "Infinite Lives",
+      "code": "C=4"
+    },
+    {
+      "desc": "Start each level with 19 items (condition)",
+      "code": "D=0"
+    },
+    {
+      "desc": "Start each level with 19 items",
+      "code": "D=13"
+    }
+  ],
+  "River Raid (USA)": [
+    {
+      "desc": "Infinite Lives",
+      "code": "40=48"
+    },
+    {
+      "desc": "Infinite Fuel",
+      "code": "37=FF"
+    },
+    {
+      "desc": "Keep score under 1 million",
+      "code": "4D=58"
+    }
+  ],
+  "Taz (USA)": [
+    {
+      "desc": "Infinite Lives",
+      "code": "D5=4"
+    }
+  ],
+  "Yars' Revenge (USA)": [
+    {
+      "desc": "Infinite Lives",
+      "code": "63=90"
+    }
+  ]
+}

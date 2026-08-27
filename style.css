@@ -7,7 +7,7 @@
 body {
   background: radial-gradient(circle at center, color-mix(in srgb, var(--system-bg-color, #1b1e24) 72%, white), var(--system-bg-color, #050608));
   color: #ffffff;
-  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
   height: 100vh;
   width: 100vw;
   overflow: hidden;
@@ -193,6 +193,161 @@ body.app-ready {
   perspective: 1600px;
   position: relative;
   overflow: visible;
+}
+.wheel-stage::before {
+  content: "";
+  position: absolute;
+  inset: 5% 7%;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 28px;
+  background: linear-gradient(120deg, rgba(0, 229, 255, 0.06), transparent 32%, rgba(255, 107, 74, 0.04));
+  box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.32), 0 0 80px rgba(0, 0, 0, 0.18);
+  pointer-events: none;
+}
+.wheel-stage .wheel-atmosphere {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  opacity: 0.65;
+}
+.wheel-stage .atmosphere-grid {
+  position: absolute;
+  left: 5%;
+  right: 5%;
+  bottom: 8%;
+  height: 28%;
+  background: linear-gradient(rgba(0, 229, 255, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 229, 255, 0.1) 1px, transparent 1px);
+  background-size: 42px 24px;
+  transform: perspective(500px) rotateX(58deg) scale(1.3);
+  transform-origin: bottom;
+  mask-image: linear-gradient(to top, black, transparent);
+}
+.wheel-stage .atmosphere-line {
+  position: absolute;
+  width: 45vw;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #ff6b4a, transparent);
+  box-shadow: 0 0 18px #ff6b4a;
+  transform: rotate(-18deg);
+  animation: signal-sweep 9s linear infinite;
+}
+.wheel-stage .atmosphere-line-one {
+  top: 23%;
+  left: -10%;
+}
+.wheel-stage .atmosphere-line-two {
+  top: 52%;
+  right: -12%;
+  animation-delay: -4s;
+  background: linear-gradient(90deg, transparent, #00e5ff, transparent);
+  box-shadow: 0 0 18px #00e5ff;
+}
+.wheel-stage .wheel-intro {
+  position: absolute;
+  z-index: 2;
+  top: 9%;
+  left: 8%;
+  max-width: 390px;
+  pointer-events: none;
+}
+.wheel-stage .wheel-intro .eyebrow {
+  color: #ff6b4a;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+}
+.wheel-stage .wheel-intro h1 {
+  margin-top: 12px;
+  font-size: clamp(2rem, 4vw, 4.5rem);
+  line-height: 0.95;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  text-shadow: 0 0 28px rgba(0, 229, 255, 0.28);
+}
+.wheel-stage .wheel-intro > p:not(.eyebrow) {
+  margin-top: 16px;
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+.wheel-stage .system-readouts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-top: 24px;
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+.wheel-stage .system-readouts b {
+  display: block;
+  margin-bottom: 3px;
+  color: #b9f227;
+  font-family: monospace;
+  font-size: 1.2rem;
+  letter-spacing: 0;
+}
+.wheel-stage .wheel-command-dock {
+  position: absolute;
+  z-index: 3;
+  right: 8%;
+  bottom: 8%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 9px;
+  background: rgba(4, 9, 16, 0.78);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.28);
+}
+.wheel-stage .wheel-command-dock .dock-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin: 0 8px;
+  color: rgba(255, 255, 255, 0.52);
+  font: 0.62rem monospace;
+  letter-spacing: 0.08em;
+}
+.wheel-stage .wheel-command-dock .dock-status i {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #b9f227;
+  box-shadow: 0 0 12px #b9f227;
+}
+.wheel-stage .wheel-command-dock button {
+  border: 1px solid rgba(0, 229, 255, 0.28);
+  border-radius: 5px;
+  padding: 8px 10px;
+  background: rgba(0, 229, 255, 0.06);
+  color: rgba(255, 255, 255, 0.82);
+  cursor: pointer;
+  font: 0.68rem "Trebuchet MS", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.wheel-stage .wheel-command-dock button:hover {
+  border-color: #00e5ff;
+  color: white;
+  background: rgba(0, 229, 255, 0.16);
+}
+.wheel-stage .wheel-command-dock kbd {
+  margin-left: 6px;
+  color: #b9f227;
+  font: 0.65rem monospace;
+}
+@keyframes signal-sweep {
+  from {
+    transform: translateX(-20%) rotate(-18deg);
+  }
+  to {
+    transform: translateX(160%) rotate(-18deg);
+  }
 }
 .wheel-stage .carousel-viewport {
   display: flex;
@@ -781,6 +936,185 @@ body.app-ready {
   font-size: 1.15rem;
 }
 
+.account-user-role {
+  width: fit-content;
+  padding: 3px 8px;
+  border: 1px solid rgba(255, 205, 92, 0.55);
+  border-radius: 999px;
+  color: #ffcf63;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.utility-panel {
+  width: min(720px, 100%);
+}
+
+.debug-state-list {
+  display: grid;
+  grid-template-columns: minmax(130px, 0.7fr) 1fr;
+  gap: 8px 16px;
+  margin-top: 16px;
+  padding: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.28);
+}
+
+.debug-state-list dt {
+  color: rgba(255, 255, 255, 0.62);
+}
+
+.debug-state-list dd {
+  color: #00e5ff;
+  font-family: monospace;
+}
+
+.admin-field {
+  display: block;
+  margin-top: 16px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.admin-text-input {
+  width: 100%;
+  margin-top: 7px;
+  padding: 11px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.45);
+  color: #ffffff;
+  font: inherit;
+}
+
+.admin-actions {
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.admin-section-title {
+  margin-top: 18px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.admin-feature-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.admin-feature-list button {
+  padding: 9px 13px;
+  border: 1px solid rgba(0, 229, 255, 0.3);
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.55);
+  color: #ffffff;
+  cursor: pointer;
+  font: inherit;
+}
+
+.admin-feature-list button:hover {
+  border-color: #00e5ff;
+}
+
+.admin-ban-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.admin-ban-actions button {
+  padding: 9px 13px;
+  border: 1px solid rgba(255, 155, 155, 0.42);
+  border-radius: 8px;
+  background: rgba(70, 15, 15, 0.45);
+  color: #ffb5b5;
+  cursor: pointer;
+  font: inherit;
+}
+
+.admin-ban-actions button:hover {
+  border-color: #ff9b9b;
+}
+
+.admin-ban-status {
+  min-height: 20px;
+  margin-top: 10px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.admin-ban-status[data-type=success] {
+  color: #7cf2b0;
+}
+
+.admin-ban-status[data-type=error] {
+  color: #ff9b9b;
+}
+
+.admin-ban-list {
+  display: grid;
+  gap: 7px;
+  max-height: 180px;
+  margin-top: 10px;
+  padding: 0;
+  overflow-y: auto;
+  list-style: none;
+}
+
+.admin-ban-list:empty::before {
+  content: "No banned accounts.";
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.admin-ban-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 7px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.admin-ban-list button {
+  padding: 5px 9px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  background: transparent;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.admin-screen-flash::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 209999;
+  pointer-events: none;
+  background: rgba(255, 230, 120, 0.42);
+  animation: admin-screen-flash 450ms ease-out;
+}
+
+@keyframes admin-screen-flash {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
 .crt-overlay {
   position: fixed;
   inset: 0;
@@ -1167,8 +1501,106 @@ body.shop-rainbow-accent .carousel-card.active {
   box-shadow: none;
 }
 
+.poll-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 220000;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgba(1, 5, 12, 0.72);
+  backdrop-filter: blur(8px);
+}
+
+.poll-overlay[hidden] {
+  display: none;
+}
+
+.poll-panel {
+  width: min(440px, 100%);
+  padding: 24px;
+  border: 1px solid rgba(0, 229, 255, 0.55);
+  border-radius: 12px;
+  background: rgba(5, 14, 25, 0.98);
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.5), 0 0 30px rgba(0, 229, 255, 0.16);
+  text-align: center;
+}
+
+.poll-panel h3 {
+  color: #ffffff;
+  font-size: 1.2rem;
+}
+
+.poll-options {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.poll-options button {
+  min-width: 96px;
+  padding: 10px 16px;
+  border: 1px solid rgba(0, 229, 255, 0.35);
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.7);
+  color: #ffffff;
+  cursor: pointer;
+  font: inherit;
+}
+
+.poll-options button:hover {
+  border-color: #00e5ff;
+}
+
+.poll-options button:disabled {
+  cursor: default;
+  opacity: 0.6;
+}
+
+.poll-result {
+  margin-top: 16px;
+  color: #00e5ff;
+  font-size: 0.85rem;
+}
+
+.poll-creator-panel {
+  text-align: left;
+}
+
+.poll-creator-options-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.poll-creator-options-header button, .poll-creator-option-row button {
+  padding: 7px 10px;
+  border: 1px solid rgba(0, 229, 255, 0.35);
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.55);
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.poll-creator-options {
+  display: grid;
+  gap: 8px;
+}
+
+.poll-creator-option-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.poll-creator-option-row .admin-text-input {
+  flex: 1;
+}
+
 body.shop-secret-message .es-footer::after {
-  content: " wesley is big brain";
+  content: "wesleys big brain";
   color: #ffd43b;
   font-size: 0.68rem;
 }
@@ -1564,6 +1996,30 @@ body::before {
   }
   .gamelist-view .preview-pane .boxart-frame {
     height: min(42vh, 260px);
+  }
+  .wheel-stage .wheel-intro {
+    top: 6%;
+    left: 8%;
+    right: 8%;
+    max-width: none;
+    text-align: center;
+  }
+  .wheel-stage .wheel-intro h1 {
+    font-size: 2.3rem;
+  }
+  .wheel-stage .system-readouts {
+    justify-content: center;
+  }
+  .wheel-stage .wheel-command-dock {
+    left: 8%;
+    right: 8%;
+    bottom: 5%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .wheel-stage .dock-status {
+    width: 100%;
+    justify-content: center;
   }
 }
 .controller-bindings-overlay {

@@ -144,32 +144,21 @@ class EmulatorJS {
 
                 // Extract the data from the cache item
                 if (cacheItem.files && cacheItem.files.length > 0) {
-                    // If there are files, return the entire cache item
-                    // so the caller can access all extracted files
-                    if (cacheItem.files.length > 0) {
-                        resolve({
-                            data: cacheItem,
-                            headers: {
-                                "content-length": cacheItem.files.reduce((sum, f) => sum + (f.bytes.byteLength || 0), 0)
-                            }
-                        });
-                    } else {
-                        let data = cacheItem.files[0].bytes;
-                        
-                        // Convert to appropriate format based on responseType
-                        if (responseType === "text" || (opts.type && opts.type.toLowerCase() === "text")) {
-                            const decoder = new TextDecoder();
-                            data = decoder.decode(data);
-                            try { data = JSON.parse(data) } catch(e) {}
-                        }
+                    let data = cacheItem.files[0].bytes;
 
-                        resolve({
-                            data: data,
-                            headers: {
-                                "content-length": data.byteLength || data.length
-                            }
-                        });
+                    // Dynamic JSON imports need the file contents, not cache metadata.
+                    if (responseType === "text" || (opts.type && opts.type.toLowerCase() === "text")) {
+                        const decoder = new TextDecoder();
+                        data = decoder.decode(data);
+                        try { data = JSON.parse(data) } catch(e) {}
                     }
+
+                    resolve({
+                        data: data,
+                        headers: {
+                            "content-length": data.byteLength || data.length
+                        }
+                    });
                 } else {
                     console.error("Invalid cache item returned:", cacheItem);
                     resolve(-1);
@@ -5884,9 +5873,9 @@ class EmulatorJS {
                             this.config.cheatPath + system + ".json";
 
                         const fetchCheatJson = async (url) => {
-                            const res = await this.downloadFile(url, "cheats", null, true, { responseType: "text", method: "GET" });
-                            if (res === -1) return null;
-                            return res.data;
+                            const response = await fetch(url, { cache: "no-store" });
+                            if (!response.ok) return null;
+                            return await response.json();
                         };
 
                         try {

@@ -1,0 +1,1284 @@
+{
+  "Ae": [
+    {
+      "desc": "Unlimited Lives",
+      "code": "8BD=2"
+    },
+    {
+      "desc": "Skip To Stage X after lvl 1 done",
+      "code": "8CD=3"
+    }
+  ],
+  "Analog Classics": [
+    {
+      "desc": "(Filler Up 2) Unlimited Lives",
+      "code": "222C=4"
+    },
+    {
+      "desc": "(Livewire) Unlimited Lives",
+      "code": "C8=3"
+    },
+    {
+      "desc": "(Popcorn) Unlimited Lives",
+      "code": "A2=4"
+    },
+    {
+      "desc": "(Blast) Unlimited Lives",
+      "code": "2C1A=3"
+    },
+    {
+      "desc": "(Death Zone) Unlimited Lives",
+      "code": "C4=3"
+    }
+  ],
+  "Asteroids (Rumbles)": [
+    {
+      "desc": "Rumble on Player 1 Death",
+      "code": "B2=4"
+    },
+    {
+      "desc": "Rumble on Player 2 Death",
+      "code": "B3=4"
+    },
+    {
+      "desc": "Rumble on Player 3 Death",
+      "code": "B4=4"
+    },
+    {
+      "desc": "Rumble on Player 4 Death",
+      "code": "B5=4"
+    }
+  ],
+  "Asteroids-Vectoredition(Rumbles)": [
+    {
+      "desc": "Rumble on Player 1 Death",
+      "code": "B2=4"
+    },
+    {
+      "desc": "Rumble on Player 2 Death",
+      "code": "B3=4"
+    },
+    {
+      "desc": "Rumble on Player 3 Death",
+      "code": "B4=4"
+    },
+    {
+      "desc": "Rumble on Player 4 Death",
+      "code": "B5=4"
+    }
+  ],
+  "Asteroids-Vectoredition": [
+    {
+      "desc": "Unlimited Lives (Player 1)",
+      "code": "B2=4"
+    },
+    {
+      "desc": "Unlimited Lives (Player 2)",
+      "code": "B3=4"
+    },
+    {
+      "desc": "Unlimited Lives (Player 3)",
+      "code": "B4=4"
+    },
+    {
+      "desc": "Unlimited Lives (Player 4)",
+      "code": "B5=4"
+    }
+  ],
+  "Asteroids": [
+    {
+      "desc": "Unlimited Lives (Player 1)",
+      "code": "B2=4"
+    },
+    {
+      "desc": "Unlimited Lives (Player 2)",
+      "code": "B3=4"
+    },
+    {
+      "desc": "Unlimited Lives (Player 3)",
+      "code": "B4=4"
+    },
+    {
+      "desc": "Unlimited Lives (Player 4)",
+      "code": "B5=4"
+    }
+  ],
+  "Astro Chase (Rumbles)": [
+    {
+      "desc": "Rumble on death",
+      "code": "AA=3"
+    }
+  ],
+  "Astro Chase": [
+    {
+      "desc": "Unlimited Lives",
+      "code": "AA=3"
+    }
+  ],
+  "Battlezone": [
+    {
+      "desc": "Unlimited Lives",
+      "code": "28=3"
+    }
+  ],
+  "Beamrider (Rumbles)": [
+    {
+      "desc": "Rumble on Player 1 Death",
+      "code": "C09=0"
+    },
+    {
+      "desc": "Rumble on Player 1 Torpedo",
+      "code": "C3B=3"
+    },
+    {
+      "desc": "Rumble on Player 2 Death",
+      "code": "C09=0"
+    },
+    {
+      "desc": "Rumble on Player 2 Torpedo",
+      "code": "C3B=3"
+    },
+    {
+      "desc": "Rumble on Player 3 Death",
+      "code": "C09=0"
+    },
+    {
+      "desc": "Rumble on Player 3 Torpedo",
+      "code": "C3B=3"
+    },
+    {
+      "desc": "Rumble on Player 4 Death",
+      "code": "C09=0"
+    },
+    {
+      "desc": "Rumble on Player 4 Torpedo",
+      "code": "C3B=3"
+    }
+  ],
+  "Beamrider": [
+    {
+      "desc": "Unlimited Lives (Player 1)",
+      "code": "C0A=3"
+    },
+    {
+      "desc": "Unlimited Torpedoes (Player 1)",
+      "code": "C3C=3"
+    },
+    {
+      "desc": "Unlimited Lives (Player 2)",
+      "code": "C0B=3"
+    },
+    {
+      "desc": "Unlimited Torpedoes (Player 2)",
+      "code": "C3D=3"
+    },
+    {
+      "desc": "Unlimited Lives (Player 3)",
+      "code": "C0C=3"
+    },
+    {
+      "desc": "Unlimited Torpedoes (Player 3)",
+      "code": "C3E=3"
+    },
+    {
+      "desc": "Unlimited Lives (Player 4)",
+      "code": "C0D=3"
+    },
+    {
+      "desc": "Unlimited Torpedoes (Player 4)",
+      "code": "C3F=3"
+    }
+  ],
+  "Beef_Drop Demo (Rumbles)": [
+    {
+      "desc": "Rumble on Pepper Use (Player 1)",
+      "code": "19D4=5"
+    },
+    {
+      "desc": "Rumble on Pepper Use (Player 2)",
+      "code": "19D4=5"
+    }
+  ],
+  "Beef_Drop Demo": [
+    {
+      "desc": "Unlimited Lives (Player 1) (1/2) (Keep Off)",
+      "code": "19C4=0"
+    },
+    {
+      "desc": "Unlimited Lives (Player 1) (2/2) (Turn On)",
+      "code": "2B=5"
+    },
+    {
+      "desc": "Unlimited Pepper (Player 1) (1/2) (Keep Off)",
+      "code": "19D4=5"
+    },
+    {
+      "desc": "Unlimited Pepper (Player 1) (2/2) (Turn On)",
+      "code": "19D4=5"
+    },
+    {
+      "desc": "Unlimited Lives (Player 2) (1/2) (Keep Off)",
+      "code": "19C4=1"
+    },
+    {
+      "desc": "Unlimited Lives (Player 2) (2/2) (Turn On)",
+      "code": "2B=5"
+    },
+    {
+      "desc": "Unlimited Pepper (Player 2) (1/2) (Keep Off)",
+      "code": "19C4=1"
+    },
+    {
+      "desc": "Unlimited Pepper (Player 2) (2/2) (Turn On)",
+      "code": "19D4=5"
+    }
+  ],
+  "Berzerk": [
+    {
+      "desc": "Unlimited Lives (Player 1)",
+      "code": "8C=2"
+    },
+    {
+      "desc": "Unlimited Lives (Player 2)",
+      "code": "8D=2"
+    }
+  ],
+  "Blaster (Rumbles)": [
+    {
+      "desc": "Rumble (Player 1)",
+      "code": "9E=4"
+    },
+    {
+      "desc": "Rumble (Player 2)",
+      "code": "9E=4"
+    }
+  ],
+  "Blaster": [
+    {
+      "desc": "Unlimited Lives (Player 1)",
+      "code": "A9=3"
+    },
+    {
+      "desc": "Unlimited Energy",
+      "code": "9E=4"
+    },
+    {
+      "desc": "Unlimited Lives (Player 2)",
+      "code": "B3=3"
+    }
+  ],
+  "Blueprint": [
+    {
+      "desc": "Unlimited Lives",
+      "code": "2C=4"
+    },
+    {
+      "desc": "Start at Level 8",
+      "code": "2D=7"
+    }
+  ],
+  "Buck Rogers": [
+    {
+      "desc": "Unlimited Ships",
+      "code": "AD=4"
+    },
+    {
+      "desc": "Unlimited Fuel",
+      "code": "9E=60"
+    }
+  ],
+  "Buried Bucks": [
+    {
+      "desc": "Unlimited Helicopters (Player 1)",
+      "code": "A7=4"
+    },
+    {
+      "desc": "Unlimited Helicopters (Player 2)",
+      "code": "A8=4"
+    }
+  ],
+  "Captain Beeble (Rumbles)": [
+    {
+      "desc": "Rumble When Fuel Below 50",
+      "code": "692=C8"
+    }
+  ],
+  "Captain Beeble": [
+    {
+      "desc": "Unlimited Lives",
+      "code": "696=5"
+    },
+    {
+      "desc": "Freeze Countdown",
+      "code": "698=1F"
+    },
+    {
+      "desc": "Reset Fuel on Trigger Press (1/2) (Keep Off)",
+      "code": "D010=0"
+    },
+    {
+      "desc": "Reset Fuel on Trigger Press (2/2) (Turn On)",
+      "code": "692=63"
+    }
+  ],
+  "Castleblast": [
+    {
+      "desc": "Unlimited Lives",
+      "code": "31A=3"
+    }
+  ],
+  "Caverns Of Mars (Rumbles)": [
+    {
+      "desc": "Rumble When Fuel Below 30",
+      "code": "1A92=99"
+    }
+  ],
+  "Caverns Of Mars": [
+    {
+      "desc": "Unlimited Ships",
+      "code": "1AAC=5"
+    },
+    {
+      "desc": "Unlimited Fuel",
+      "code": "1A92=99"
+    },
+    {
+      "desc": "Freeze Escape Timer",
+      "code": "1A96=29"
+    }
+  ],
+  "Centipede": [
+    {
+      "desc": "Unlimited Lives (Player 1)",
+      "code": "DA=4"
+    },
+    {
+      "desc": "Unlimited Lives (Player 2)",
+      "code": "DB=4"
+    }
+  ],
+  "Choplifter": [
+    {
+      "desc": "Unlimited Helicopters",
+      "code": "613=0"
+    }
+  ],
+  "Congo Bongo": [
+    {
+      "desc": "Unlimited Lives (Player 1)",
+      "code": "85=3"
+    },
+    {
+      "desc": "Unlimited Lives (Player 2)",
+      "code": "86=3"
+    },
+    {
+      "desc": "Timer Never Ends",
+      "code": "73=50"
+    }
+  ],
+  "Countermeasure": [
+    {
+      "desc": "Unlimited Tanks (Player 1)",
+      "code": "327=2"
+    },
+    {
+      "desc": "Unlimited Tanks (Player 2)",
+      "code": "328=2"
+    },
+    {
+      "desc": "Unlimited Fuel",
+      "code": "376=14"
+    },
+    {
+      "desc": "Freeze Time",
+      "code": "31E=59"
+    }
+  ],
+  "Crystal Castles": [
+    {
+      "desc": "Unlimited Bentleys (Player 1)",
+      "code": "1BB8=5"
+    },
+    {
+      "desc": "Unlimited Bentleys (Player 2)",
+      "code": "1BBB=5"
+    }
+  ],
+  "Defender (Rumbles)": [
+    {
+      "desc": "Rumble",
+      "code": "A5=3"
+    }
+  ],
+  "Defender": [
+    {
+      "desc": "Unlimited Ships (Player 1)",
+      "code": "17C6=4"
+    },
+    {
+      "desc": "Unlimited Smartbombs (Player 1)",
+      "code": "17C7=4"
+    },
+    {
+      "desc": "Unlimited Ships (Player 2)",
+      "code": "19C6=4"
+    },
+    {
+      "desc": "Unlimited Smartbombs (Player 2)",
+      "code": "19C7=4"
+    }
+  ],
+  "Dig Dug": [
+    {
+      "desc": "Unlimited Lives Both Players",
+      "code": "303=3"
+    }
+  ],
+  "Donkey Kong Jr": [
+    {
+      "desc": "Unlimited Lives (Player 1)",
+      "code": "89=3"
+    },
+    {
+      "desc": "Unlimited Lives (Player 2)",
+      "code": "8A=3"
+    },
+    {
+      "desc": "Freeze Bonus Timer",
+      "code": "A2=32"
+    }
+  ],
+  "Donkey Kong": [
+    {
+      "desc": "Unlimited Lives (Both Players)",
+      "code": "D2=E"
+    }
+  ],
+  "Forbidden Forest - Slinky": [
+    {
+      "desc": "(Forbidden) Unlimited Archers",
+      "code": "37A9=15"
+    },
+    {
+      "desc": "(Forbidden) Unlimited Arrows",
+      "code": "37D1=19"
+    },
+    {
+      "desc": "(Slinky) Unlimited Lives",
+      "code": "3548=94"
+    }
+  ],
+  "Frisky Tom": [
+    {
+      "desc": "Unlimited Tom's",
+      "code": "1403=3"
+    },
+    {
+      "desc": "Stop Timer",
+      "code": "1875=50"
+    }
+  ],
+  "Frogger (Rumbles)": [
+    {
+      "desc": "Rumble When Timer Low",
+      "code": "691=78"
+    }
+  ],
+  "Frogger": [
+    {
+      "desc": "Unlimited Frogs (Player 1)",
+      "code": "600=5"
+    },
+    {
+      "desc": "Unlimited Frogs (Player 2)",
+      "code": "620=5"
+    },
+    {
+      "desc": "Freeze Timer",
+      "code": "691=78"
+    },
+    {
+      "desc": "No Need to Hold Fire in Numpad Mode (Player 1)",
+      "code": "D010=0"
+    },
+    {
+      "desc": "No Need to Hold Fire in Numpad Mode (Player 2)",
+      "code": "D011=0"
+    }
+  ],
+  "Frogger2-Threedeep(Rumbles)": [
+    {
+      "desc": "Rumble When Timer Low",
+      "code": "F7=4C"
+    }
+  ],
+  "Frogger2-Threedeep": [
+    {
+      "desc": "Unlimited Frogs",
+      "code": "9C=5"
+    },
+    {
+      "desc": "Reset Timer on Stick 1 Button Press (1/2) (Keep Off)",
+      "code": "D010=0"
+    },
+    {
+      "desc": "Reset Timer on Stick 1 Button Press (2/2) (Turn On)",
+      "code": "F7=5F"
+    }
+  ],
+  "Galaxian": [
+    {
+      "desc": "Disable Audio Channel 0 (Annoying Bong Sound)",
+      "code": "D201=0"
+    },
+    {
+      "desc": "Unlimited Lives",
+      "code": "67=4"
+    }
+  ],
+  "Gorf": [
+    {
+      "desc": "Unlimited Lives (Player 1)",
+      "code": "28=5"
+    },
+    {
+      "desc": "Unlimited Lives (Player 2)",
+      "code": "29=5"
+    }
+  ],
+  "Gremlins (Rumbles)": [
+    {
+      "desc": "Rumble on Flash Cube Use",
+      "code": "62=0"
+    }
+  ],
+  "Gremlins": [
+    {
+      "desc": "Unlimited Lives (Player 1)",
+      "code": "B9B=3"
+    },
+    {
+      "desc": "Unlimited Lives (Player 2)",
+      "code": "B9C=3"
+    },
+    {
+      "desc": "Stop The Clock",
+      "code": "67=0"
+    },
+    {
+      "desc": "Unlimited Flash Cubes (Player 1)",
+      "code": "BA3=3"
+    },
+    {
+      "desc": "Unlimited Flash Cubes (Player 2)",
+      "code": "BA4=3"
+    }
+  ],
+  "Gyruss": [
+    {
+      "desc": "Unlimited Ships",
+      "code": "AA=5"
+    }
+  ],
+  "Hero (Rumbles)": [
+    {
+      "desc": "Dynamite Rumble",
+      "code": "38=4"
+    }
+  ],
+  "Hero": [
+    {
+      "desc": "Unlimited Lives",
+      "code": "39=4"
+    },
+    {
+      "desc": "Max Power on Stick 1 Button Press",
+      "code": "31=51"
+    },
+    {
+      "desc": "6 Dynamite on Joystick Trigger Press (1/2) (Keep Off)",
+      "code": "D010=0"
+    },
+    {
+      "desc": "6 Dynamite on Joystick Trigger Press (2/2) (Turn On)",
+      "code": "38=6"
+    }
+  ],
+  "James Bond 007": [
+    {
+      "desc": "Unlimited Lives (Player 1)",
+      "code": "89=4"
+    },
+    {
+      "desc": "Unlimited Lives (Player 2)",
+      "code": "8A=6"
+    }
+  ],
+  "Joust (Rumbles)": [
+    {
+      "desc": "Rumble on death (Player 1)",
+      "code": "A8=4"
+    },
+    {
+      "desc": "Rumble on death (Player 2)",
+      "code": "A9=4"
+    }
+  ],
+  "Joust": [
+    {
+      "desc": "Unlimited Lives (Player 1)",
+      "code": "A8=4"
+    },
+    {
+      "desc": "Unlimited Lives (Player 2)",
+      "code": "A9=4"
+    }
+  ],
+  "Jr Pac-Man": [
+    {
+      "desc": "Unlimited Lives",
+      "code": "54=4"
+    },
+    {
+      "desc": "Speed Hack (Player 1) (1/4) (Keep Off)",
+      "code": "D010=0"
+    },
+    {
+      "desc": "Speed Hack (Player 1) (2/4) (Turn On)",
+      "code": "6011=EAEA"
+    },
+    {
+      "desc": "Speed Hack (Player 1) (3/4) (Keep Off)",
+      "code": "D010=1"
+    },
+    {
+      "desc": "Speed Hack (Player 1) (4/4) (Turn On)",
+      "code": "6011=F010"
+    },
+    {
+      "desc": "Speed Hack (Player 2) (1/4) (Keep Off)",
+      "code": "D011=0"
+    },
+    {
+      "desc": "Speed Hack (Player 2) (2/4) (Turn On)",
+      "code": "6011=EAEA"
+    },
+    {
+      "desc": "Speed Hack (Player 2) (3/4) (Keep Off)",
+      "code": "D011=1"
+    },
+    {
+      "desc": "Speed Hack (Player 2) (4/4) (Turn On)",
+      "code": "6011=F010"
+    }
+  ],
+  "Jumpman Junior": [
+    {
+      "desc": "Unlimited Lives All Players",
+      "code": "70A=4"
+    },
+    {
+      "desc": "Unl Lives Plyr 1 (Multiplayer)",
+      "code": "715=4"
+    },
+    {
+      "desc": "Unl Lives Plyr 2 (Multiplayer)",
+      "code": "720=4"
+    },
+    {
+      "desc": "Unl Lives Plyr 3 (Multiplayer)",
+      "code": "72B=4"
+    },
+    {
+      "desc": "Unl Lives Plyr 4 (Multiplayer)",
+      "code": "736=4"
+    }
+  ],
+  "Jungle Hunt": [
+    {
+      "desc": "Unlimited Lives",
+      "code": "2C=9"
+    },
+    {
+      "desc": "Unlimited Air",
+      "code": "4C=10"
+    }
+  ],
+  "K-Razy Shoot-Out": [
+    {
+      "desc": "Freeze Timer",
+      "code": "D9=4C"
+    },
+    {
+      "desc": "Unlimited Lives",
+      "code": "DA=0"
+    }
+  ],
+  "Kaboom": [
+    {
+      "desc": "Never Loose Buckets",
+      "code": "90=3"
+    }
+  ],
+  "Kangaroo (Rumbles)": [
+    {
+      "desc": "Rumble When Player 1 Dies",
+      "code": "58=9"
+    },
+    {
+      "desc": "Rumble When Player 2 Dies",
+      "code": "58=9"
+    }
+  ],
+  "Kangaroo": [
+    {
+      "desc": "Unlimited Kangaroos",
+      "code": "58=9"
+    }
+  ],
+  "Keystone Kapers (Rumbles)": [
+    {
+      "desc": "Rumble On Death",
+      "code": "21=3"
+    }
+  ],
+  "Keystone Kapers": [
+    {
+      "desc": "Unlimited Cops",
+      "code": "21=3"
+    },
+    {
+      "desc": "Reset Timer on Joystick Trigger Press (1/2) (Keep Off)",
+      "code": "D010=0"
+    },
+    {
+      "desc": "Reset Timer on Joystick Trigger Press (2/2) (Turn On)",
+      "code": "28=50"
+    }
+  ],
+  "Mario Brothers": [
+    {
+      "desc": "Unlimited Lives",
+      "code": "29=5"
+    },
+    {
+      "desc": "Freeze Timer (Bonus Stage)",
+      "code": "83=13"
+    }
+  ],
+  "Meebzork (Rumbles)": [
+    {
+      "desc": "Rumble On Death",
+      "code": "A7A=5"
+    }
+  ],
+  "Meebzork": [
+    {
+      "desc": "Unlimited Lives",
+      "code": "A7A=5"
+    }
+  ],
+  "Megamania": [
+    {
+      "desc": "Unlimited Lives (Player 1)",
+      "code": "E7=4"
+    },
+    {
+      "desc": "Unlimited Lives (Player 2)",
+      "code": "E8=4"
+    },
+    {
+      "desc": "Max Energy on Trigger 1 Press (1/2) (Keep Off)",
+      "code": "D010=0"
+    },
+    {
+      "desc": "Max Energy on Trigger 1 Press (2/2) (Turn On)",
+      "code": "C6=50"
+    },
+    {
+      "desc": "Max Energy on Trigger 2 Press (1/2) (Keep Off)",
+      "code": "D011=0"
+    },
+    {
+      "desc": "Max Energy on Trigger 2 Press (2/2) (Turn On)",
+      "code": "C6=50"
+    }
+  ],
+  "Meteorites (Rumbles)": [
+    {
+      "desc": "Rumble On Death",
+      "code": "2F9=7"
+    }
+  ],
+  "Meteorites": [
+    {
+      "desc": "Unlimited Lives",
+      "code": "2F9=7"
+    }
+  ],
+  "Millipede": [
+    {
+      "desc": "Unlimited Lives (Player 1)",
+      "code": "6D3=3"
+    },
+    {
+      "desc": "Unlimited Lives (Player 2)",
+      "code": "6D4=3"
+    }
+  ],
+  "Miner 2049 (Rumbles)": [
+    {
+      "desc": "Rumble When Timer Low",
+      "code": "20EB=30"
+    }
+  ],
+  "Miner 2049": [
+    {
+      "desc": "Unlimited Lives",
+      "code": "B9=9"
+    }
+  ],
+  "Montezumasrevenge": [
+    {
+      "desc": "Unlimited Hats",
+      "code": "88=7"
+    }
+  ],
+  "Moon Patrol": [
+    {
+      "desc": "Unlimited Lives",
+      "code": "23=9"
+    },
+    {
+      "desc": "Reset Timer on Joystick Trigger Press (1/2) (Keep Off)",
+      "code": "D010=0"
+    },
+    {
+      "desc": "Reset Timer on Joystick Trigger Press (2/2) (Turn On)",
+      "code": "25=1"
+    }
+  ],
+  "Mountainking": [
+    {
+      "desc": "Stop Timer?",
+      "code": "109D=17"
+    }
+  ],
+  "Mr. Dos Castle": [
+    {
+      "desc": "Unlimited Lives",
+      "code": "77=4"
+    }
+  ],
+  "Ms Pac-Man": [
+    {
+      "desc": "Unlimited Lives (Both Players)",
+      "code": "53=404"
+    },
+    {
+      "desc": "Speed Hack (Player 1) (1/4) (Keep Off)",
+      "code": "D010=0"
+    },
+    {
+      "desc": "Speed Hack (Player 1) (2/4) (Turn On)",
+      "code": "65BB=EAEA"
+    },
+    {
+      "desc": "Speed Hack (Player 1) (3/4) (Keep Off)",
+      "code": "D010=1"
+    },
+    {
+      "desc": "Speed Hack (Player 1) (4/4) (Turn On)",
+      "code": "65BB=F014"
+    },
+    {
+      "desc": "Speed Hack (Player 2) (1/4) (Keep Off)",
+      "code": "D011=0"
+    },
+    {
+      "desc": "Speed Hack (Player 2) (2/4) (Turn On)",
+      "code": "65BB=EAEA"
+    },
+    {
+      "desc": "Speed Hack (Player 2) (3/4) (Keep Off)",
+      "code": "D011=1"
+    },
+    {
+      "desc": "Speed Hack (Player 2) (4/4) (Turn On)",
+      "code": "65BB=F014"
+    }
+  ],
+  "Pac-Man (Rumbles)": [
+    {
+      "desc": "Rumble on Death (Player 1)",
+      "code": "88=80"
+    },
+    {
+      "desc": "Rumble When Ghost Eaten (Player 1)",
+      "code": "88=80"
+    },
+    {
+      "desc": "Rumble on Death (Player 2)",
+      "code": "C3=0"
+    },
+    {
+      "desc": "Rumble When Ghost Eaten (Player 2)",
+      "code": "C3=0"
+    }
+  ],
+  "Pac-Man": [
+    {
+      "desc": "Unlimited Lives (Player 1)",
+      "code": "34=3"
+    },
+    {
+      "desc": "Unlimited Lives (Player 2)",
+      "code": "35=3"
+    }
+  ],
+  "Pengo": [
+    {
+      "desc": "Unlimited Penguins (Player 1)",
+      "code": "56=5"
+    },
+    {
+      "desc": "Unlimited Penguins (Player 2)",
+      "code": "57=3"
+    }
+  ],
+  "Pitfall": [
+    {
+      "desc": "Freeze Timer",
+      "code": "9E=9"
+    }
+  ],
+  "Popeye": [
+    {
+      "desc": "Unlimited Popeyes",
+      "code": "30C2=9"
+    }
+  ],
+  "Preppie": [
+    {
+      "desc": "Unlimited Preppies Player 1",
+      "code": "3067=3"
+    },
+    {
+      "desc": "Unlimited Preppies Player 2",
+      "code": "3068=3"
+    },
+    {
+      "desc": "Reset Timer on Trigger 1 Press (1/2) (Keep Off)",
+      "code": "D010=0"
+    },
+    {
+      "desc": "Reset Timer on Trigger 1 Press (2/2) (Turn On)",
+      "code": "2001=30"
+    },
+    {
+      "desc": "Reset Timer on Trigger 2 Press (1/2) (Keep Off)",
+      "code": "D011=0"
+    },
+    {
+      "desc": "Reset Timer on Trigger 2 Press (2/2) (Turn On)",
+      "code": "2001=30"
+    }
+  ],
+  "Q-Bert": [
+    {
+      "desc": "Unlimited Lives (Player 1)",
+      "code": "6E=4"
+    },
+    {
+      "desc": "Unlimited Lives (Player 2)",
+      "code": "6F=4"
+    }
+  ],
+  "Qix": [
+    {
+      "desc": "Unlimited Chromium Electronic Markers",
+      "code": "9C=4"
+    }
+  ],
+  "Quest For Quintana Roo": [
+    {
+      "desc": "Unlimited Lives",
+      "code": "2E=3"
+    },
+    {
+      "desc": "Unlimited Bullets",
+      "code": "E6=5"
+    },
+    {
+      "desc": "Unlimited Acid Flasks",
+      "code": "89=4"
+    }
+  ],
+  "Returnofthejedi": [
+    {
+      "desc": "Unlimited Lives (Player 1)",
+      "code": "7B=5"
+    },
+    {
+      "desc": "Unlimited LIves (Player 2)",
+      "code": "7C=5"
+    }
+  ],
+  "River Raid (Rumbles)": [
+    {
+      "desc": "Rumble on Fuel Alarm",
+      "code": "5B=FF"
+    }
+  ],
+  "River Raid": [
+    {
+      "desc": "Unlimited Lives",
+      "code": "75=5"
+    },
+    {
+      "desc": "Unlimited Fuel",
+      "code": "5B=FF"
+    }
+  ],
+  "Robotron 2084": [
+    {
+      "desc": "Unlimited Lives (Player 1)",
+      "code": "ADC=3"
+    },
+    {
+      "desc": "Unlimited Lives (Player 2)",
+      "code": "AF4=4"
+    }
+  ],
+  "Satans Hollow (Rumbles)": [
+    {
+      "desc": "Rumble on shield hit",
+      "code": "9E=3D"
+    }
+  ],
+  "Satans Hollow": [
+    {
+      "desc": "Unlimited Lives (Player 1)",
+      "code": "1A80=3"
+    },
+    {
+      "desc": "Unlimited Lives (Player 2)",
+      "code": "1E80=3"
+    },
+    {
+      "desc": "Unlimited Shield",
+      "code": "9E=3D"
+    }
+  ],
+  "Space Dungeon": [
+    {
+      "desc": "Unlimited Lives",
+      "code": "2D=3"
+    }
+  ],
+  "Space Invaders": [
+    {
+      "desc": "Unlimited Lives",
+      "code": "6B=5"
+    }
+  ],
+  "Spy Hunter": [
+    {
+      "desc": "Freeze Timer",
+      "code": "48C=99"
+    }
+  ],
+  "Star Trek (Rumbles)": [
+    {
+      "desc": "Rumble when using warp drive",
+      "code": "5E7=28"
+    },
+    {
+      "desc": "Rumble on Torpedo Use",
+      "code": "5E6=5"
+    }
+  ],
+  "Star Trek": [
+    {
+      "desc": "Unlimited Shields",
+      "code": "5E5=5"
+    },
+    {
+      "desc": "Unlimited Warp Drive",
+      "code": "5E7=28"
+    },
+    {
+      "desc": "Unlimited Photon Torpedoes",
+      "code": "5E6=5"
+    }
+  ],
+  "Stargate (Rumbles)": [
+    {
+      "desc": "Rumble on Smartbomb Use (Player 1)",
+      "code": "61=9"
+    },
+    {
+      "desc": "Rumble on Smartbomb Use (Player 2)",
+      "code": "61=9"
+    },
+    {
+      "desc": "Rumble on Stealth Use (Player 1)",
+      "code": "62=9"
+    },
+    {
+      "desc": "Rumble on Stealth Use (Player 2)",
+      "code": "62=9"
+    }
+  ],
+  "Stargate": [
+    {
+      "desc": "Unlimited Smart Bombs (Both Players)",
+      "code": "61=9"
+    },
+    {
+      "desc": "Unlimited Lives (Player 1)",
+      "code": "498=9"
+    },
+    {
+      "desc": "Unlimited Lives (Player 2)",
+      "code": "4CA=8"
+    },
+    {
+      "desc": "Unlimited Smart Bomb Reserve (Player 1)",
+      "code": "499=8"
+    },
+    {
+      "desc": "Unlimited Smart Bomb Reserve (Player 2)",
+      "code": "4CB=8"
+    },
+    {
+      "desc": "Unlimited Stealth (Both Players)",
+      "code": "62=30"
+    },
+    {
+      "desc": "Unlimited Stealth Reserve (Player 1)",
+      "code": "49A=30"
+    },
+    {
+      "desc": "Unlimited Stealth Reserve (Player 2)",
+      "code": "4CC=30"
+    }
+  ],
+  "Starwars Arcade(Rumbles)": [
+    {
+      "desc": "Rumble On Shield Hit",
+      "code": "57=9"
+    }
+  ],
+  "Starwars Arcade": [
+    {
+      "desc": "Unlimited shields?",
+      "code": "57=9"
+    }
+  ],
+  "Super Cobra": [
+    {
+      "desc": "Unlimited Lives (Player 1)",
+      "code": "88=4"
+    },
+    {
+      "desc": "Unlimited Lives (Player 2)",
+      "code": "89=4"
+    },
+    {
+      "desc": "Unlimited Fuel (Both Players)",
+      "code": "97=1E"
+    }
+  ],
+  "Tapper": [
+    {
+      "desc": "Unlimited Bartenders (Player 1)",
+      "code": "1C=4"
+    },
+    {
+      "desc": "Unlimited Bartenders (Player 2)",
+      "code": "1D=4"
+    }
+  ],
+  "Upn Down": [
+    {
+      "desc": "Unlimited Cars",
+      "code": "64F=4"
+    }
+  ],
+  "Vanguard": [
+    {
+      "desc": "Unlimited Lives (Player 1)",
+      "code": "666=5"
+    },
+    {
+      "desc": "Unlimited Lives (Player 2)",
+      "code": "667=5"
+    },
+    {
+      "desc": "Unlimited Fuel (Both Players)",
+      "code": "655=26"
+    }
+  ],
+  "Wizard Of Wor": [
+    {
+      "desc": "Unlimited Lives Player 2",
+      "code": "667=7"
+    },
+    {
+      "desc": "Unlimited Lives Player 1",
+      "code": "668=7"
+    }
+  ],
+  "Xagon": [
+    {
+      "desc": "Unlimited Lives",
+      "code": "2C=5"
+    }
+  ],
+  "Xevious": [
+    {
+      "desc": "Unlimited Solvalous (Player 1)",
+      "code": "769=5"
+    },
+    {
+      "desc": "Unlimited Solvalous (Player 2)",
+      "code": "76A=5"
+    }
+  ],
+  "Zaxxon": [
+    {
+      "desc": "Unlimited Ships (Player 1)",
+      "code": "8C=3"
+    },
+    {
+      "desc": "Unlimited Ships (Player 2)",
+      "code": "8D=3"
+    },
+    {
+      "desc": "Unlimited Fuel (Both Players)",
+      "code": "1313=2A"
+    }
+  ],
+  "Zenji": [
+    {
+      "desc": "Unlimited Faces (Both Players)",
+      "code": "A9=9"
+    },
+    {
+      "desc": "Max Timer on Trigger 1 Press (1/2) (Keep Off)",
+      "code": "D010=0"
+    },
+    {
+      "desc": "Max Timer on Trigger 1 Press (2/2) (Turn On)",
+      "code": "D1=99"
+    }
+  ],
+  "Zone Ranger": [
+    {
+      "desc": "Unlimited Ships (Both Players)",
+      "code": "80=9"
+    }
+  ]
+}

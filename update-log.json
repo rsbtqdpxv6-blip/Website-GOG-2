@@ -1,6 +1,11 @@
 {
   "updates": [
     {
+      "version": "3.1",
+      "title": "Added Cheats, More G-A-M-E-S, and better gui!",
+      "detail": "Added accounts, netplay, achievements, points, descriptions, more g-a/m/e/s, and more!"
+    },
+    {
       "version": "3.0",
       "title": "A Big Update",
       "detail": "Added accounts, netplay, achievements, points, descriptions, more g-a/m/e/s, and more!"
@@ -22,7 +27,7 @@
     },
     {
       "version": "???",
-      "title": "Hello, This is wesley's update log",
+      "title": "Hello, This is the site's update log.",
       "detail": "A New G/a/m/e Site has Begun."
     }
   ]

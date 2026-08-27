@@ -1424,14 +1424,16 @@ export class Netplay {
     chatAppend(payload) {
         if (!this.chatLog) return;
         const name = payload && payload.player_name ? payload.player_name : "Player";
+        const cleanName = name.replace(/^(?:\[ADMIN\]\s*)+/i, "");
+        const taggedName = payload && payload.admin === true ? "[ADMIN] " + cleanName : cleanName;
         const msg = payload && payload.message ? payload.message : "";
         const to = payload && payload.to ? payload.to : "all";
         const line = document.createElement("div");
         if (to && to !== "all") {
-            line.textContent = name + " (private): " + msg;
+            line.textContent = taggedName + " (private): " + msg;
             line.style.opacity = "0.95";
         } else {
-            line.textContent = name + ": " + msg;
+            line.textContent = taggedName + ": " + msg;
         }
         this.chatLog.appendChild(line);
         this.chatLog.scrollTop = this.chatLog.scrollHeight;
@@ -1466,7 +1468,7 @@ export class Netplay {
         if (!message) return;
         const to = this.chatTo.value || "all";
         this.chatInput.value = "";
-        const chatPayload = { player_name: this.name || "Player", message, to, from: this.playerID };
+        const chatPayload = { player_name: this.name || "Player", message, to, from: this.playerID, admin: this.__arcadeIsAdmin === true };
         this.chatAppend(chatPayload);
         this.sendMessage({ "chat-message": chatPayload });
     }
